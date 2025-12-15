@@ -4,3 +4,4 @@
 *.json
 mathQA/
 2_answer_math_qs/evaluation_results
+*.csv
