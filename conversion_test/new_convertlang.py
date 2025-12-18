@@ -8,6 +8,7 @@ from tqdm.asyncio import tqdm
 import aiofiles
 from datetime import datetime
 import pandas as pd
+import time
 
 def load_api_key(key_file: str) -> str:
     """Load API key from file."""
@@ -25,7 +26,7 @@ def load_api_key(key_file: str) -> str:
 
 # Initialize API clients
 openai_key = os.environ.get("OPENAI_API_KEY") or load_api_key("openai_key.txt")
-together_key = os.environ.get("TOGETHER_API_KEY") or load_api_key("together_ai_key.txt")
+together_key = os.environ.get("TOGETHER_API_KEY") or load_api_key("together_key.txt")
 
 openai_client = AsyncOpenAI(api_key=openai_key)
 together_client = AsyncOpenAI(
@@ -33,11 +34,42 @@ together_client = AsyncOpenAI(
     base_url="https://api.together.xyz/v1"
 )
 
+# Rate limiting for Together AI
+class RateLimiter:
+    """Rate limiter to prevent exceeding API limits."""
+    def __init__(self, max_requests_per_minute: int = 50):
+        self.max_requests = max_requests_per_minute
+        self.requests = []
+        self.lock = asyncio.Lock()
+    
+    async def acquire(self):
+        """Wait if necessary to stay within rate limit."""
+        async with self.lock:
+            now = time.time()
+            # Remove requests older than 1 minute
+            self.requests = [req_time for req_time in self.requests if now - req_time < 60]
+            
+            # If at limit, wait until oldest request is 1 minute old
+            if len(self.requests) >= self.max_requests:
+                sleep_time = 60 - (now - self.requests[0]) + 0.1  # Add small buffer
+                if sleep_time > 0:
+                    print(f"Rate limit reached, sleeping for {sleep_time:.1f}s...")
+                    await asyncio.sleep(sleep_time)
+                    # Refresh after sleep
+                    now = time.time()
+                    self.requests = [req_time for req_time in self.requests if now - req_time < 60]
+            
+            # Record this request
+            self.requests.append(now)
+
+# Create rate limiters
+together_rate_limiter = RateLimiter(max_requests_per_minute=50)  # Adjust based on your tier
+
 # Model configurations
 MODEL_CONFIGS = {
     "gpt-4o": {"provider": "openai", "model": "gpt-4o"},
-    "qwen-coder": {"provider": "together", "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"},
-    "llama-4": {"provider": "together", "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"},
+    "qwen-coder": {"provider": "together", "model": "Qwen/Qwen2.5-Coder-32B-Instruct"},
+    "llama-4": {"provider": "together", "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"},
     "deepseek-r1": {"provider": "together", "model": "deepseek-ai/DeepSeek-R1"}
 }
 
@@ -70,6 +102,16 @@ UNIT_DISPLAY_NAMES = {
 # US units and Metric units
 US_UNITS = ['teaspoon', 'tablespoon', 'fluid_ounce', 'cup', 'pint', 'quart']
 METRIC_UNITS = ['milliliter', 'liter']
+
+# Standardized test values
+TEST_VALUES = {
+    'easy': [1, 5, 10, 20, 50],
+    'hard': [4508.208, 1297.195, 18.333, 9.0241, 0.2994],
+    'random': [5718, 1241.43, 3959.435, 12.505, 9717.519]
+}
+
+# Flatten into single list in order: easy, hard, random
+ALL_TEST_VALUES = TEST_VALUES['easy'] + TEST_VALUES['hard'] + TEST_VALUES['random']
 
 def convert_units(value: float, from_unit: str, to_unit: str) -> float:
     """Convert between any two volume units."""
@@ -130,9 +172,8 @@ def load_dataset(file_path: str, sample_size: int = 500) -> pd.DataFrame:
     print(f"Sampled {len(df_sample)} rows")
     return df_sample
 
-
 def create_conversion_tasks(df: pd.DataFrame, include_context_free: bool = True) -> List[Dict]:
-    """Create conversion tasks from dataset."""
+    """Create conversion tasks from dataset with standardized test values."""
     tasks = []
     
     # Get language names from DataFrame metadata
@@ -140,69 +181,104 @@ def create_conversion_tasks(df: pd.DataFrame, include_context_free: bool = True)
     lang2 = df.attrs.get('lang2', 'other')
     
     print(f"\nCreating conversion tasks for {lang1} and {lang2}...")
+    print(f"Test values per conversion: {len(ALL_TEST_VALUES)}")
     
+    # Generate all possible unit conversion pairs (US ↔ Metric only)
+    conversion_pairs = []
+    
+    # US to Metric conversions
+    for us_unit in US_UNITS:
+        for metric_unit in METRIC_UNITS:
+            conversion_pairs.append({
+                'from_unit': us_unit,
+                'to_unit': metric_unit,
+                'conversion_type': 'us_to_metric'
+            })
+    
+    # Metric to US conversions
+    for metric_unit in METRIC_UNITS:
+        for us_unit in US_UNITS:
+            conversion_pairs.append({
+                'from_unit': metric_unit,
+                'to_unit': us_unit,
+                'conversion_type': 'metric_to_us'
+            })
+    
+    print(f"Total conversion pairs: {len(conversion_pairs)}")
+    
+    # For each ingredient
     for idx, row in df.iterrows():
         lang1_name = row['lang1_name']
         lang2_name = row['lang2_name']
         
-        # Generate random value between 1 and 10000
-        random_value = random.uniform(1, 10000)
-        
-        # Randomly choose US to Metric or Metric to US
-        conversion_type = random.choice(['us_to_metric', 'metric_to_us'])
-        
-        if conversion_type == 'us_to_metric':
-            from_unit = random.choice(US_UNITS)
-            to_unit = random.choice(METRIC_UNITS)
-        else:
-            from_unit = random.choice(METRIC_UNITS)
-            to_unit = random.choice(US_UNITS)
-        
-        # Calculate correct answer
-        correct_answer = convert_units(random_value, from_unit, to_unit)
-        
-        # Create task for first language (English)
-        tasks.append({
-            'ingredient': lang1_name,
-            'language': lang1,
-            'context_type': 'ingredient',
-            'random_value': round(random_value, 2),
-            'from_unit': from_unit,
-            'to_unit': to_unit,
-            'conversion_type': conversion_type,
-            'correct_answer': round(correct_answer, 4)
-        })
-        
-        # Create task for second language
-        tasks.append({
-            'ingredient': lang2_name,
-            'language': lang2,
-            'context_type': 'ingredient',
-            'random_value': round(random_value, 2),
-            'from_unit': from_unit,
-            'to_unit': to_unit,
-            'conversion_type': conversion_type,
-            'correct_answer': round(correct_answer, 4)
-        })
-        
-        # Add context-free version (no ingredient mentioned)
-        if include_context_free:
-            tasks.append({
-                'ingredient': None,
-                'language': 'context_free',
-                'context_type': 'context_free',
-                'random_value': round(random_value, 2),
-                'from_unit': from_unit,
-                'to_unit': to_unit,
-                'conversion_type': conversion_type,
-                'correct_answer': round(correct_answer, 4)
-            })
+        # For each conversion pair
+        for pair in conversion_pairs:
+            from_unit = pair['from_unit']
+            to_unit = pair['to_unit']
+            conversion_type = pair['conversion_type']
+            
+            # For each test value
+            for test_value in ALL_TEST_VALUES:
+                # Calculate correct answer
+                correct_answer = convert_units(test_value, from_unit, to_unit)
+                
+                # Determine difficulty category
+                if test_value in TEST_VALUES['easy']:
+                    difficulty = 'easy'
+                elif test_value in TEST_VALUES['hard']:
+                    difficulty = 'hard'
+                else:
+                    difficulty = 'random'
+                
+                # Create task for first language (English)
+                tasks.append({
+                    'ingredient': lang1_name,
+                    'language': lang1,
+                    'context_type': 'ingredient',
+                    'test_value': test_value,
+                    'difficulty': difficulty,
+                    'from_unit': from_unit,
+                    'to_unit': to_unit,
+                    'conversion_type': conversion_type,
+                    'correct_answer': round(correct_answer, 4)
+                })
+                
+                # Create task for second language
+                tasks.append({
+                    'ingredient': lang2_name,
+                    'language': lang2,
+                    'context_type': 'ingredient',
+                    'test_value': test_value,
+                    'difficulty': difficulty,
+                    'from_unit': from_unit,
+                    'to_unit': to_unit,
+                    'conversion_type': conversion_type,
+                    'correct_answer': round(correct_answer, 4)
+                })
+                
+                # Add context-free version (no ingredient mentioned)
+                if include_context_free:
+                    tasks.append({
+                        'ingredient': None,
+                        'language': 'context_free',
+                        'context_type': 'context_free',
+                        'test_value': test_value,
+                        'difficulty': difficulty,
+                        'from_unit': from_unit,
+                        'to_unit': to_unit,
+                        'conversion_type': conversion_type,
+                        'correct_answer': round(correct_answer, 4)
+                    })
     
     context_free_count = sum(1 for t in tasks if t['context_type'] == 'context_free')
-    print(f"Created {len(tasks)} conversion tasks:")
-    print(f"  - {len(tasks) - context_free_count} with ingredient context ({len(df)} per language)")
+    print(f"\nCreated {len(tasks)} conversion tasks:")
+    print(f"  - Ingredients: {len(df)}")
+    print(f"  - Conversion pairs: {len(conversion_pairs)}")
+    print(f"  - Test values per pair: {len(ALL_TEST_VALUES)}")
+    print(f"  - Tasks per ingredient language: {len(conversion_pairs) * len(ALL_TEST_VALUES)}")
+    print(f"  - With ingredient context: {len(tasks) - context_free_count}")
     if include_context_free:
-        print(f"  - {context_free_count} context-free")
+        print(f"  - Context-free: {context_free_count}")
     
     return tasks
 
@@ -213,7 +289,7 @@ async def ask_openai(prompt: str, model: str, semaphore: asyncio.Semaphore) -> s
             response = await openai_client.chat.completions.create(
                 model=model,
                 messages=[
-                    {"role": "system", "content": "You are a precise unit conversion expert. Provide only the numerical answer with up to 4 decimal places, no units or explanations. For example, if you were asked to convert 20 oz to mL, the answer would be 591.471."},
+                    {"role": "system", "content": "You are a precise unit conversion expert. Provide only the numerical answer with up to 4 decimal places, no units or explanations."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0,
@@ -225,57 +301,87 @@ async def ask_openai(prompt: str, model: str, semaphore: asyncio.Semaphore) -> s
 
 async def ask_together(prompt: str, model: str, semaphore: asyncio.Semaphore) -> str:
     """Ask Together AI model to perform conversion."""
+    # Apply rate limiting before making request
+    await together_rate_limiter.acquire()
+    
     async with semaphore:
         try:
             # Special handling for DeepSeek-R1
             if "deepseek" in model.lower():
+                # For DeepSeek, we need VERY high limits for thinking
+                # But we can't control thinking length, so maximize everything
                 response = await together_client.chat.completions.create(
                     model=model,
                     messages=[
-                        {"role": "user", "content": f"You are a precise unit conversion expert. Provide ONLY the numerical answer with up to 4 decimal places, no units or explanations. For example, if you were asked to convert 20 oz to mL, the answer would be 591.471. Think only briefly to do this simple conversion task. Here is the question: {prompt}"}
+                        # Stronger prompt to discourage excessive thinking
+                        {"role": "system", "content": "You are a unit conversion calculator. For simple unit conversions, think briefly and provide the numerical answer immediately."},
+                        {"role": "user", "content": f"{prompt} Answer format: just the number."}
                     ],
-                    temperature=0.6,
-                    max_completion_tokens=8000
+                    temperature=0,
+                    max_tokens=8000,  # Very high limit to capture full response
                 )
             else:
                 response = await together_client.chat.completions.create(
                     model=model,
                     messages=[
-                        {"role": "system", "content": "You are a precise unit conversion expert. Provide ONLY the numerical answer with up to 4 decimal places, no units or explanations. For example, if you were asked to convert 20 oz to mL, the answer would be 591.471."},
+                        {"role": "system", "content": "You are a precise unit conversion expert. Provide only the numerical answer with up to 4 decimal places, no units or explanations."},
                         {"role": "user", "content": prompt}
                     ],
                     temperature=0,
-                    max_tokens=100
+                    max_tokens=1000
                 )
             
-            # For DeepSeek-R1, extract the final answer after thinking
-            content = response.choices[0].message.content.strip()
-            
+            # Get full content and finish reason
+            content = response.choices[0].message.content
             finish_reason = response.choices[0].finish_reason
-            if finish_reason == 'length':
-                print(f"WARNING: DeepSeek response cut off (length limit). Content length: {len(content)}")
-                # Still try to extract answer
             
-            # Extract final answer after </think>
-            if '</think>' in content:
-                parts = content.split('</think>')
-                if len(parts) > 1:
+            # Store metadata about the response
+            was_truncated = finish_reason == 'length'
+            
+            if was_truncated:
+                # Response was cut off - still try to extract what we can
+                content = content + "\n[RESPONSE TRUNCATED]"
+            
+            # For DeepSeek-R1, try to extract final answer
+            if "deepseek" in model.lower():
+                # Look for the answer after </think>
+                if '</think>' in content:
+                    parts = content.split('</think>')
                     final_answer = parts[-1].strip()
-                    return final_answer
-                else:
-                    # </think> found but incomplete
-                    print(f"WARNING: Incomplete </think> tag in response")
-                    return "ERROR: Response cut off before final answer"
+                    
+                    # If we got truncated, the answer might be incomplete
+                    if was_truncated and not final_answer:
+                        # No answer after </think>, probably cut off during thinking
+                        # Try to extract any number we can find
+                        import re
+                        numbers = re.findall(r'\d+\.?\d*', content)
+                        if numbers:
+                            # Return last number found as best guess
+                            return f"{numbers[-1]} [EXTRACTED_FROM_TRUNCATED]"
+                        else:
+                            return "ERROR: Response truncated during thinking, no answer found"
+                    
+                    return final_answer if final_answer else "ERROR: Empty answer after </think>"
+                
+                # No </think> found
+                if '<think>' in content and was_truncated:
+                    # Started thinking but never finished
+                    return "ERROR: Response truncated before completing thinking"
+                
+                # No think tags at all - return full content
+                return content.strip()
             
-            # If no </think> tag but response was cut off
-            if finish_reason == 'length' and '<think>' in content:
-                return "ERROR: Thinking tokens exceeded limit, no answer provided"
-            
-            # If no think tags, return full content
-            return content
+            # Non-DeepSeek models
+            return content.strip()
             
         except Exception as e:
-            return f"ERROR: {str(e)}"
+            error_msg = str(e)
+            # Check if it's a rate limit error
+            if "rate" in error_msg.lower() or "429" in error_msg:
+                print(f"Rate limit error detected, waiting 60s before retry...")
+                await asyncio.sleep(60)
+                return f"ERROR: Rate limit - {error_msg}"
+            return f"ERROR: {error_msg}"
 
 async def get_model_answer(
     prompt: str,
@@ -299,8 +405,7 @@ async def get_model_answer(
 
 def create_conversion_prompt(task: Dict) -> str:
     """Create prompt for unit conversion."""
-    ingredient = task['ingredient']
-    value = task['random_value']
+    value = task['test_value']
     from_unit = UNIT_DISPLAY_NAMES[task['from_unit']]
     to_unit = UNIT_DISPLAY_NAMES[task['to_unit']]
     
@@ -311,6 +416,7 @@ def create_conversion_prompt(task: Dict) -> str:
         if to_unit != 'milliliter' and to_unit != 'liter':
             to_unit = to_unit + 's'
     
+    # Context-free conversion (no ingredient)
     if task.get('context_type') == 'context_free':
         prompt = f"Convert {value} {from_unit} to {to_unit}. Provide only the numerical value."
     else:
@@ -319,52 +425,6 @@ def create_conversion_prompt(task: Dict) -> str:
         prompt = f"Convert {value} {from_unit} of {ingredient} to {to_unit}. Provide only the numerical value."
     
     return prompt
-
-async def retry_failed_queries(
-    failed_results: List[Dict],
-    batch_size: int = 20,
-    max_concurrent: int = 10
-) -> List[Dict]:
-    """Retry failed API queries."""
-    if not failed_results:
-        print("\nNo failed queries to retry.")
-        return []
-    
-    print(f"\n{'='*60}")
-    print(f"RETRYING {len(failed_results)} FAILED QUERIES")
-    print(f"{'='*60}\n")
-    
-    semaphore = asyncio.Semaphore(max_concurrent)
-    batches = [failed_results[i:i + batch_size] for i in range(0, len(failed_results), batch_size)]
-    
-    retry_results = []
-    
-    for batch in tqdm(batches, desc="Retrying failed queries"):
-        batch_tasks = []
-        for result in batch:
-            # Reconstruct task from result
-            task = {
-                'ingredient': result.get('ingredient'),
-                'language': result['language'],
-                'context_type': result.get('context_type', 'ingredient'),
-                'random_value': result['random_value'],
-                'from_unit': result['from_unit'],
-                'to_unit': result['to_unit'],
-                'conversion_type': result['conversion_type'],
-                'correct_answer': result['correct_answer']
-            }
-            batch_tasks.append(evaluate_task(task, result['model'], semaphore))
-        
-        batch_results = await asyncio.gather(*batch_tasks)
-        retry_results.extend(batch_results)
-    
-    # Count successes
-    success_count = sum(1 for r in retry_results if not r['is_error'])
-    print(f"\nRetry Results:")
-    print(f"  Successfully recovered: {success_count}/{len(retry_results)}")
-    print(f"  Still failing: {len(retry_results) - success_count}")
-    
-    return retry_results
 
 def extract_number(answer: str) -> float:
     """Extract numeric value from answer string, handling DeepSeek-R1 thinking tokens."""
@@ -420,7 +480,8 @@ async def evaluate_task(
         'ingredient': task.get('ingredient'),
         'language': task['language'],
         'context_type': task.get('context_type', 'ingredient'),
-        'random_value': task['random_value'],
+        'test_value': task['test_value'],
+        'difficulty': task['difficulty'],
         'from_unit': task['from_unit'],
         'to_unit': task['to_unit'],
         'conversion_type': task['conversion_type'],
@@ -467,6 +528,54 @@ async def evaluate_model_on_tasks(
     print(f"  Accuracy: {accuracy:.2f}%")
     
     return all_results
+
+async def retry_failed_queries(
+    failed_results: List[Dict],
+    batch_size: int = 20,
+    max_concurrent: int = 10
+) -> List[Dict]:
+    """Retry failed API queries."""
+    if not failed_results:
+        print("\nNo failed queries to retry.")
+        return []
+    
+    print(f"\n{'='*60}")
+    print(f"RETRYING {len(failed_results)} FAILED QUERIES")
+    print(f"{'='*60}\n")
+    
+    semaphore = asyncio.Semaphore(max_concurrent)
+    batches = [failed_results[i:i + batch_size] for i in range(0, len(failed_results), batch_size)]
+    
+    retry_results = []
+    
+    for batch in tqdm(batches, desc="Retrying failed queries"):
+        batch_tasks = []
+        for result in batch:
+            # Reconstruct task from result
+            task = {
+                'ingredient': result.get('ingredient'),
+                'language': result['language'],
+                'context_type': result.get('context_type', 'ingredient'),
+                'test_value': result['test_value'],
+                'difficulty': result['difficulty'],
+                'from_unit': result['from_unit'],
+                'to_unit': result['to_unit'],
+                'conversion_type': result['conversion_type'],
+                'correct_answer': result['correct_answer']
+            }
+            batch_tasks.append(evaluate_task(task, result['model'], semaphore))
+        
+        batch_results = await asyncio.gather(*batch_tasks)
+        retry_results.extend(batch_results)
+    
+    # Count successes
+    success_count = sum(1 for r in retry_results if not r['is_error'])
+    print(f"\nRetry Results:")
+    print(f"  Successfully recovered: {success_count}/{len(retry_results)}")
+    print(f"  Still failing: {len(retry_results) - success_count}")
+    
+    return retry_results
+
 async def run_experiment(
     input_file: str,
     output_dir: str = "language_conversion_results",
@@ -474,12 +583,18 @@ async def run_experiment(
     batch_size: int = 20,
     max_concurrent: int = 10,
     include_context_free: bool = True,
-    retry_errors: bool = True
+    retry_errors: bool = True,
+    together_rpm: int = 50
 ):
     """Run the complete language-based conversion experiment."""
     print(f"\n{'='*60}")
     print(f"LANGUAGE-BASED CONVERSION EXPERIMENT")
     print(f"{'='*60}\n")
+    
+    # Update rate limiter with user-specified limit
+    global together_rate_limiter
+    together_rate_limiter = RateLimiter(max_requests_per_minute=together_rpm)
+    print(f"Together AI rate limit set to: {together_rpm} requests/minute")
     
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
@@ -529,7 +644,7 @@ async def run_experiment(
             # Update results with retry outcomes
             # Create a mapping of failed results for quick lookup
             failed_map = {
-                (r['model'], r.get('ingredient'), r['language'], r['random_value'], r['from_unit'], r['to_unit']): i
+                (r['model'], r.get('ingredient'), r['language'], r['test_value'], r['from_unit'], r['to_unit']): i
                 for i, r in enumerate(all_results) if r.get('is_error', False)
             }
             
@@ -539,7 +654,7 @@ async def run_experiment(
                     retry_result['model'],
                     retry_result.get('ingredient'),
                     retry_result['language'],
-                    retry_result['random_value'],
+                    retry_result['test_value'],
                     retry_result['from_unit'],
                     retry_result['to_unit']
                 )
@@ -678,6 +793,13 @@ Example:
         help="Disable automatic retry of failed queries"
     )
     
+    parser.add_argument(
+        "--together-rpm",
+        type=int,
+        default=50,
+        help="Together AI rate limit in requests per minute (default: 50, free tier is 60)"
+    )
+    
     args = parser.parse_args()
     
     asyncio.run(run_experiment(
@@ -687,5 +809,6 @@ Example:
         batch_size=args.batch_size,
         max_concurrent=args.max_concurrent,
         include_context_free=not args.no_context_free,
-        retry_errors=not args.no_retry
+        retry_errors=not args.no_retry,
+        together_rpm=args.together_rpm
     ))
