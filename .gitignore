@@ -1,5 +1,6 @@
 .venv
-*.txt
+openai_key.txt
+together_ai_key.txt
 
 *.json
 mathQA/
