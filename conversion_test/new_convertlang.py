@@ -9,6 +9,8 @@ import aiofiles
 from datetime import datetime
 import pandas as pd
 import time
+import signal
+import sys
 
 def load_api_key(key_file: str) -> str:
     """Load API key from file."""
@@ -26,7 +28,7 @@ def load_api_key(key_file: str) -> str:
 
 # Initialize API clients
 openai_key = os.environ.get("OPENAI_API_KEY") or load_api_key("openai_key.txt")
-together_key = os.environ.get("TOGETHER_API_KEY") or load_api_key("together_key.txt")
+together_key = os.environ.get("TOGETHER_API_KEY") or load_api_key("together_ai_key.txt")
 
 openai_client = AsyncOpenAI(api_key=openai_key)
 together_client = AsyncOpenAI(
@@ -65,11 +67,27 @@ class RateLimiter:
 # Create rate limiters
 together_rate_limiter = RateLimiter(max_requests_per_minute=50)  # Adjust based on your tier
 
+# Graceful shutdown handler
+class GracefulShutdown:
+    """Handle graceful shutdown on Ctrl+C."""
+    def __init__(self):
+        self.shutdown_requested = False
+        self.partial_results = []
+        
+    def request_shutdown(self, signum, frame):
+        """Signal handler for graceful shutdown."""
+        print("\n\n" + "="*60)
+        print("SHUTDOWN REQUESTED - Saving progress...")
+        print("="*60)
+        self.shutdown_requested = True
+
+shutdown_handler = GracefulShutdown()
+
 # Model configurations
 MODEL_CONFIGS = {
     "gpt-4o": {"provider": "openai", "model": "gpt-4o"},
-    "qwen-coder": {"provider": "together", "model": "Qwen/Qwen2.5-Coder-32B-Instruct"},
-    "llama-4": {"provider": "together", "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo"},
+    "qwen-coder": {"provider": "together", "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"},
+    "llama-4": {"provider": "together", "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"},
     "deepseek-r1": {"provider": "together", "model": "deepseek-ai/DeepSeek-R1"}
 }
 
@@ -120,6 +138,8 @@ def convert_units(value: float, from_unit: str, to_unit: str) -> float:
     # Then convert to target unit
     result = ml_value / CONVERSION_TO_ML[to_unit]
     return result
+
+
 
 def load_dataset(file_path: str, sample_size: int = 500) -> pd.DataFrame:
     """Load dataset from CSV file and sample rows."""
@@ -282,6 +302,75 @@ def create_conversion_tasks(df: pd.DataFrame, include_context_free: bool = True)
     
     return tasks
 
+async def load_existing_results(output_dir: str) -> tuple[List[Dict], set]:
+    """Load existing results from previous runs to enable resume."""
+    existing_results = []
+    completed_tasks = set()
+    
+    # Look for all result files in output directory
+    result_files = []
+    if os.path.exists(output_dir):
+        for filename in os.listdir(output_dir):
+            if filename.startswith('language_conversion_') and filename.endswith('.json'):
+                result_files.append(os.path.join(output_dir, filename))
+            elif filename.startswith('checkpoint_') and filename.endswith('.json'):
+                result_files.append(os.path.join(output_dir, filename))
+    
+    if not result_files:
+        print("No existing results found - starting fresh")
+        return existing_results, completed_tasks
+    
+    # Load most recent file
+    result_files.sort(key=os.path.getmtime, reverse=True)
+    most_recent = result_files[0]
+    
+    print(f"\nFound existing results: {os.path.basename(most_recent)}")
+    
+    try:
+        async with aiofiles.open(most_recent, 'r') as f:
+            content = await f.read()
+            existing_results = json.loads(content)
+        
+        # Create set of completed task signatures
+        for result in existing_results:
+            task_signature = (
+                result['model'],
+                result.get('ingredient'),
+                result['language'],
+                result['test_value'],
+                result['from_unit'],
+                result['to_unit']
+            )
+            completed_tasks.add(task_signature)
+        
+        print(f"Loaded {len(existing_results)} existing results")
+        print(f"Unique completed tasks: {len(completed_tasks)}")
+        
+        return existing_results, completed_tasks
+    
+    except Exception as e:
+        print(f"Error loading existing results: {e}")
+        return [], set()
+
+def filter_completed_tasks(tasks: List[Dict], completed_tasks: set, model_name: str) -> List[Dict]:
+    """Filter out tasks that have already been completed for this model."""
+    remaining_tasks = []
+    
+    for task in tasks:
+        task_signature = (
+            model_name,
+            task.get('ingredient'),
+            task['language'],
+            task['test_value'],
+            task['from_unit'],
+            task['to_unit']
+        )
+        
+        if task_signature not in completed_tasks:
+            remaining_tasks.append(task)
+    
+    return remaining_tasks
+
 async def ask_openai(prompt: str, model: str, semaphore: asyncio.Semaphore) -> str:
     """Ask OpenAI model to perform conversion."""
     async with semaphore:
@@ -318,7 +407,7 @@ async def ask_together(prompt: str, model: str, semaphore: asyncio.Semaphore) ->
                         {"role": "user", "content": f"{prompt} Answer format: just the number."}
                     ],
                     temperature=0,
-                    max_tokens=8000,  # Very high limit to capture full response
+                    max_tokens=5000,  # Very high limit to capture full response
                 )
             else:
                 response = await together_client.chat.completions.create(
@@ -493,6 +582,7 @@ async def evaluate_task(
         'prompt': prompt  # Store prompt for retry
     }
 
+
 async def evaluate_model_on_tasks(
     tasks: List[Dict],
     model_name: str,
@@ -510,7 +600,12 @@ async def evaluate_model_on_tasks(
     batches = [tasks[i:i + batch_size] for i in range(0, len(tasks), batch_size)]
     all_results = []
     
-    for batch in tqdm(batches, desc=f"Processing {model_name}"):
+    for batch_idx, batch in enumerate(tqdm(batches, desc=f"Processing {model_name}")):
+        # Check for shutdown request
+        if shutdown_handler.shutdown_requested:
+            print(f"\nShutdown requested - stopping at batch {batch_idx}/{len(batches)}")
+            break
+            
         batch_tasks = [
             evaluate_task(task, model_name, semaphore)
             for task in batch
@@ -584,11 +679,17 @@ async def run_experiment(
     max_concurrent: int = 10,
     include_context_free: bool = True,
     retry_errors: bool = True,
-    together_rpm: int = 50
+    together_rpm: int = 50,
+    resume: bool = True
 ):
     """Run the complete language-based conversion experiment."""
+    # Set up signal handler for graceful shutdown
+    signal.signal(signal.SIGINT, shutdown_handler.request_shutdown)
+    
     print(f"\n{'='*60}")
     print(f"LANGUAGE-BASED CONVERSION EXPERIMENT")
+    print(f"{'='*60}")
+    print("Press Ctrl+C to save progress and exit gracefully")
     print(f"{'='*60}\n")
     
     # Update rate limiter with user-specified limit
@@ -599,24 +700,94 @@ async def run_experiment(
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
+    # Load existing results if resuming
+    existing_results = []
+    completed_tasks = set()
+    
+    if resume:
+        existing_results, completed_tasks = await load_existing_results(output_dir)
+    
     # Load dataset
     df = load_dataset(input_file, sample_size)
     
     # Create conversion tasks
-    tasks = create_conversion_tasks(df, include_context_free=include_context_free)
+    all_tasks = create_conversion_tasks(df, include_context_free=include_context_free)
     
     # Evaluate each model
-    all_results = []
+    all_results = existing_results.copy()  # Start with existing results
     models = ["gpt-4o", "qwen-coder", "llama-4", "deepseek-r1"]
     
-    for model in models:
-        model_results = await evaluate_model_on_tasks(
-            tasks=tasks,
-            model_name=model,
-            batch_size=batch_size,
-            max_concurrent=max_concurrent
-        )
-        all_results.extend(model_results)
+    try:
+        for model in models:
+            if shutdown_handler.shutdown_requested:
+                print(f"\nSkipping remaining models due to shutdown request")
+                break
+            
+            # Filter out completed tasks for this model
+            remaining_tasks = filter_completed_tasks(all_tasks, completed_tasks, model)
+            
+            if not remaining_tasks:
+                print(f"\n{'='*60}")
+                print(f"{model} - All tasks already completed, skipping")
+                print(f"{'='*60}\n")
+                continue
+            
+            print(f"\n{'='*60}")
+            print(f"{model} - {len(remaining_tasks)} tasks remaining (out of {len(all_tasks)} total)")
+            print(f"{'='*60}\n")
+            
+            model_results = await evaluate_model_on_tasks(
+                tasks=remaining_tasks,
+                model_name=model,
+                batch_size=batch_size,
+                max_concurrent=max_concurrent
+            )
+            all_results.extend(model_results)
+            
+            # Update completed tasks
+            for result in model_results:
+                task_signature = (
+                    result['model'],
+                    result.get('ingredient'),
+                    result['language'],
+                    result['test_value'],
+                    result['from_unit'],
+                    result['to_unit']
+                )
+                completed_tasks.add(task_signature)
+            
+            # Save checkpoint after each model
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            checkpoint_file = os.path.join(output_dir, f"checkpoint_{model}_{timestamp}.json")
+            async with aiofiles.open(checkpoint_file, 'w') as f:
+                await f.write(json.dumps(all_results, indent=2))
+            print(f"Checkpoint saved: {checkpoint_file}")
+    
+    except KeyboardInterrupt:
+        print("\n\nKeyboard interrupt detected during processing")
+        shutdown_handler.shutdown_requested = True
+    
+    # Save results (partial or complete)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    status = "partial" if shutdown_handler.shutdown_requested else "complete"
+    output_file = os.path.join(output_dir, f"language_conversion_{status}_{timestamp}.json")
+    
+    print(f"\nSaving {status} results to {output_file}...")
+    async with aiofiles.open(output_file, 'w') as f:
+        await f.write(json.dumps(all_results, indent=2))
+    
+    if shutdown_handler.shutdown_requested:
+        print("\n" + "="*60)
+        print("PARTIAL RESULTS SAVED")
+        print("="*60)
+        print(f"Completed: {len(all_results)} tasks")
+        print(f"Output: {output_file}")
+        print("\nTo resume: Simply re-run the same command")
+        print("The script will automatically skip completed tasks")
+        print("="*60 + "\n")
+        return
+    
+    # Continue with normal processing if not interrupted...
     
     # Check for errors
     failed_results = [r for r in all_results if r.get('is_error', False)]
@@ -800,6 +971,12 @@ Example:
         help="Together AI rate limit in requests per minute (default: 50, free tier is 60)"
     )
     
+    parser.add_argument(
+        "--no-resume",
+        action="store_true",
+        help="Start fresh instead of resuming from previous results"
+    )
+    
     args = parser.parse_args()
     
     asyncio.run(run_experiment(
@@ -810,5 +987,6 @@ Example:
         max_concurrent=args.max_concurrent,
         include_context_free=not args.no_context_free,
         retry_errors=not args.no_retry,
-        together_rpm=args.together_rpm
+        together_rpm=args.together_rpm,
+        resume=not args.no_resume
     ))
