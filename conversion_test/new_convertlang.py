@@ -39,7 +39,7 @@ together_client = AsyncOpenAI(
 # Rate limiting for Together AI
 class RateLimiter:
     """Rate limiter to prevent exceeding API limits."""
-    def __init__(self, max_requests_per_minute: int = 50):
+    def __init__(self, max_requests_per_minute: int = 200):
         self.max_requests = max_requests_per_minute
         self.requests = []
         self.lock = asyncio.Lock()
@@ -65,7 +65,7 @@ class RateLimiter:
             self.requests.append(now)
 
 # Create rate limiters
-together_rate_limiter = RateLimiter(max_requests_per_minute=50)  # Adjust based on your tier
+together_rate_limiter = RateLimiter(max_requests_per_minute=200)  # Adjust based on your tier
 
 # Graceful shutdown handler
 class GracefulShutdown:
@@ -934,8 +934,8 @@ Example:
     parser.add_argument(
         "--sample-size",
         type=int,
-        default=500,
-        help="Number of ingredients to sample (default: 500)"
+        default=50,
+        help="Number of ingredients to sample (default: 50)"
     )
     
     parser.add_argument(
@@ -967,8 +967,8 @@ Example:
     parser.add_argument(
         "--together-rpm",
         type=int,
-        default=50,
-        help="Together AI rate limit in requests per minute (default: 50, free tier is 60)"
+        default=200,
+        help="Together AI rate limit in requests per minute (default: 200)"
     )
     
     parser.add_argument(
