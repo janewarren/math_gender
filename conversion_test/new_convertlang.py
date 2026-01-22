@@ -48,16 +48,24 @@ class RateLimiter:
         """Wait if necessary to stay within rate limit."""
         async with self.lock:
             now = time.time()
-            # Remove requests older than 1 minute
+            
+            # Remove requests older than 60 seconds
             self.requests = [req_time for req_time in self.requests if now - req_time < 60]
             
-            # If at limit, wait until oldest request is 1 minute old
+            # If we're at the limit, only wait for the oldest request to expire
             if len(self.requests) >= self.max_requests:
-                sleep_time = 60 - (now - self.requests[0]) + 0.1  # Add small buffer
+                # Calculate how long until the oldest request is 60 seconds old
+                oldest_request = self.requests[0]
+                time_since_oldest = now - oldest_request
+                sleep_time = 60 - time_since_oldest + 0.05  # Small 50ms buffer
+                
                 if sleep_time > 0:
-                    print(f"Rate limit reached, sleeping for {sleep_time:.1f}s...")
+                    # Only print if sleep time is significant
+                    if sleep_time > 0.5:
+                        print(f"Rate limit: waiting {sleep_time:.1f}s for slot to open...")
                     await asyncio.sleep(sleep_time)
-                    # Refresh after sleep
+                    
+                    # Clean up again after sleeping
                     now = time.time()
                     self.requests = [req_time for req_time in self.requests if now - req_time < 60]
             
@@ -66,6 +74,8 @@ class RateLimiter:
 
 # Create rate limiters
 together_rate_limiter = RateLimiter(max_requests_per_minute=200)  # Adjust based on your tier
+
+
 
 # Graceful shutdown handler
 class GracefulShutdown:
@@ -87,8 +97,9 @@ shutdown_handler = GracefulShutdown()
 MODEL_CONFIGS = {
     "gpt-4o": {"provider": "openai", "model": "gpt-4o"},
     "qwen-coder": {"provider": "together", "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"},
-    "llama-4": {"provider": "together", "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"},
-    "deepseek-r1": {"provider": "together", "model": "deepseek-ai/DeepSeek-R1"}
+    "llama-4": {"provider": "together", "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"}
+    # ,
+    # "deepseek-r1": {"provider": "together", "model": "deepseek-ai/DeepSeek-R1"}
 }
 
 # Conversion constants (to milliliters)
@@ -141,7 +152,7 @@ def convert_units(value: float, from_unit: str, to_unit: str) -> float:
 
 
 
-def load_dataset(file_path: str, sample_size: int = 500) -> pd.DataFrame:
+def load_dataset(file_path: str, sample_size: int = 50) -> pd.DataFrame:
     """Load dataset from CSV file and sample rows."""
     print(f"Loading dataset from {file_path}...")
     
@@ -333,9 +344,11 @@ async def load_existing_results(output_dir: str) -> tuple[List[Dict], set]:
         
         # Create set of completed task signatures
         for result in existing_results:
+            # For context-free tasks, ignore ingredient in signature since prompt is identical
+            ingredient = None if result.get('context_type') == 'context_free' else result.get('ingredient')
             task_signature = (
                 result['model'],
-                result.get('ingredient'),
+                ingredient,
                 result['language'],
                 result['test_value'],
                 result['from_unit'],
@@ -357,9 +370,11 @@ def filter_completed_tasks(tasks: List[Dict], completed_tasks: set, model_name: 
     remaining_tasks = []
     
     for task in tasks:
+        # For context-free tasks, ignore ingredient in signature since prompt is identical
+        ingredient = None if task.get('context_type') == 'context_free' else task.get('ingredient')
         task_signature = (
             model_name,
-            task.get('ingredient'),
+            ingredient,
             task['language'],
             task['test_value'],
             task['from_unit'],
@@ -388,7 +403,7 @@ async def ask_openai(prompt: str, model: str, semaphore: asyncio.Semaphore) -> s
         except Exception as e:
             return f"ERROR: {str(e)}"
 
-async def ask_together(prompt: str, model: str, semaphore: asyncio.Semaphore) -> str:
+async def ask_together(prompt: str, model: str, semaphore: asyncio.Semaphore, retry_count: int = 0) -> str:
     """Ask Together AI model to perform conversion."""
     # Apply rate limiting before making request
     await together_rate_limiter.acquire()
@@ -466,11 +481,15 @@ async def ask_together(prompt: str, model: str, semaphore: asyncio.Semaphore) ->
         except Exception as e:
             error_msg = str(e)
             # Check if it's a rate limit error
-            if "rate" in error_msg.lower() or "429" in error_msg:
-                print(f"Rate limit error detected, waiting 60s before retry...")
-                await asyncio.sleep(60)
-                return f"ERROR: Rate limit - {error_msg}"
+            if ("rate" in error_msg.lower() or "429" in error_msg) and retry_count < 3:
+                # Exponential backoff: 5s, 10s, 20s
+                wait_time = 5 * (2 ** retry_count)
+                print(f"Rate limit error (attempt {retry_count + 1}/3), waiting {wait_time}s...")
+                await asyncio.sleep(wait_time)
+                # Retry recursively
+                return await ask_together(prompt, model, semaphore, retry_count + 1)
             return f"ERROR: {error_msg}"
+
 
 async def get_model_answer(
     prompt: str,
@@ -679,7 +698,7 @@ async def run_experiment(
     max_concurrent: int = 10,
     include_context_free: bool = True,
     retry_errors: bool = True,
-    together_rpm: int = 50,
+    together_rpm: int = 200,
     resume: bool = True
 ):
     """Run the complete language-based conversion experiment."""
@@ -715,7 +734,8 @@ async def run_experiment(
     
     # Evaluate each model
     all_results = existing_results.copy()  # Start with existing results
-    models = ["gpt-4o", "qwen-coder", "llama-4", "deepseek-r1"]
+    models = ["gpt-4o", "qwen-coder", "llama-4"]
+            #   , "deepseek-r1"]
     
     try:
         for model in models:
@@ -746,9 +766,11 @@ async def run_experiment(
             
             # Update completed tasks
             for result in model_results:
+                # For context-free tasks, ignore ingredient in signature since prompt is identical
+                ingredient = None if result.get('context_type') == 'context_free' else result.get('ingredient')
                 task_signature = (
                     result['model'],
-                    result.get('ingredient'),
+                    ingredient,
                     result['language'],
                     result['test_value'],
                     result['from_unit'],

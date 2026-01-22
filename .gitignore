@@ -12,3 +12,10 @@ openfoodfacts_nutrition_final_2025-12-10.csv
 /data/jane/math_gender/conversion_test/conversion_results/summary_by_cuisine_20251214_092730.csv
 conversion_test/conversion_results/
 conversion_test/language_conversion_results
+conversion_test/test_results_medium/
+conversion_test/test_results/
+*.sh
+*.sbatch
+conversion_test/fix_timezone_answers.py
+conversion_test/analysis_output/
+!conversion_test/conversions/
