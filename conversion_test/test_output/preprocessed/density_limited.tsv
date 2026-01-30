@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+density		Convert 50 g/cm³s to lb/ft³s. Provide only the numerical value.	50.0	3121.3981	Easy
+density		Convert 1 lb/ft³ to g/cm³. Provide only the numerical value.	1.0	0.0160184630086114	Easy
+density		Convert 1 g/cm³ to kg/m³. Provide only the numerical value.	1.0	1000.0	Easy
+density		Convert 1 g/cm³ to lb/ft³. Provide only the numerical value.	1.0	62.427962	Easy
+density		Convert 10 kg/m³s to lb/in³s. Provide only the numerical value.	10.0	0.00036127292	Easy
+density		Convert 20 lb/in³s to kg/m³s. Provide only the numerical value.	20.0	553598.0942053449	Easy
+density		Convert 1 lb/in³ to kg/m³. Provide only the numerical value.	1.0	27679.90471026724	Easy
+density		Convert 10 g/cm³s to kg/m³s. Provide only the numerical value.	10.0	10000.0	Easy
+density		Convert 20 g/cm³s to lb/ft³s. Provide only the numerical value.	20.0	1248.55924	Easy
+density		Convert 5 kg/m³s to g/cm³s. Provide only the numerical value.	5.0	0.005	Easy
+density		Convert 9.0241 g/cm³s to kg/m³s. Provide only the numerical value.	9.0241	9024.1	Hard
+density		Convert 0.2994 kg/m³s to g/cm³s. Provide only the numerical value.	0.2994	0.0002994	Hard
+density		Convert 4508.208 kg/m³s to g/cm³s. Provide only the numerical value.	4508.208	4.508208	Hard
+density		Convert 9.0241 kg/m³s to g/cm³s. Provide only the numerical value.	9.0241	0.0090241	Hard
+density		Convert 4508.208 g/cm³s to lb/ft³s. Provide only the numerical value.	4508.208	281438.237712096	Hard
+density		Convert 9.0241 kg/m³s to lb/in³s. Provide only the numerical value.	9.0241	0.0003260162957371	Hard
+density		Convert 18.333 g/cm³s to kg/m³s. Provide only the numerical value.	18.333	18333.0	Hard
+density		Convert 1297.195 lb/in³s to kg/m³s. Provide only the numerical value.	1297.195	35906233.99063511	Hard
+density		Convert 1297.195 kg/m³s to g/cm³s. Provide only the numerical value.	1297.195	1.297195	Hard
+density		Convert 0.2994 kg/m³s to lb/in³s. Provide only the numerical value.	0.2994	1.08165112248e-05	Hard

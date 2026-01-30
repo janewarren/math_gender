@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+temperature		Convert 10 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	10.0	-12.22222222222222	Easy
+temperature		Convert 10 degrees Celsius to Kelvin. Provide only the numerical value.	10.0	283.15	Easy
+temperature		Convert 1 degrees Fahrenheit to Kelvin. Provide only the numerical value.	1.0	255.92777777777772	Easy
+temperature		Convert 5 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	5.0	41.0	Easy
+temperature		Convert 20 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	20.0	-6.666666666666667	Easy
+temperature		Convert 50 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	50.0	122.0	Easy
+temperature		Convert 20 Kelvin to degrees Fahrenheit. Provide only the numerical value.	20.0	-423.67	Easy
+temperature		Convert 5 Kelvin to degrees Fahrenheit. Provide only the numerical value.	5.0	-450.67	Easy
+temperature		Convert 50 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	50.0	10.0	Easy
+temperature		Convert 10 Kelvin to degrees Fahrenheit. Provide only the numerical value.	10.0	-441.67	Easy
+temperature		Convert 0.2994 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	0.2994	-17.611444444444444	Hard
+temperature		Convert 4508.208 Kelvin to degrees Celsius. Provide only the numerical value.	4508.208	4235.058	Hard
+temperature		Convert 18.333 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	18.333	-7.592777777777779	Hard
+temperature		Convert 4508.208 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	4508.208	2486.782222222222	Hard
+temperature		Convert 9.0241 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	9.0241	-12.764388888888888	Hard
+temperature		Convert 9.0241 degrees Celsius to Kelvin. Provide only the numerical value.	9.0241	282.17409999999995	Hard
+temperature		Convert 9.0241 Kelvin to degrees Celsius. Provide only the numerical value.	9.0241	-264.1259	Hard
+temperature		Convert 4508.208 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	4508.208	8146.774399999999	Hard
+temperature		Convert 18.333 degrees Celsius to Kelvin. Provide only the numerical value.	18.333	291.48299999999995	Hard
+temperature		Convert 0.2994 Kelvin to degrees Celsius. Provide only the numerical value.	0.2994	-272.8506	Hard

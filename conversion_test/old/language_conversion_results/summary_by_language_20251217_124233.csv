@@ -1,0 +1,13 @@
+model,language,correct,total,accuracy
+deepseek-r1,context_free,60,61,98.36065573770492
+deepseek-r1,english,62,62,100.0
+deepseek-r1,japanese,60,61,98.36065573770492
+gpt-4o,context_free,44,67,65.67164179104478
+gpt-4o,english,48,67,71.64179104477611
+gpt-4o,japanese,46,67,68.65671641791045
+llama-4,context_free,64,67,95.52238805970148
+llama-4,english,62,67,92.53731343283582
+llama-4,japanese,62,67,92.53731343283582
+qwen-coder,context_free,46,67,68.65671641791045
+qwen-coder,english,40,67,59.70149253731343
+qwen-coder,japanese,46,67,68.65671641791045

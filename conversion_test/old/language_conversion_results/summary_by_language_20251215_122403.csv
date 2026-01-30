@@ -1,0 +1,9 @@
+model,language,correct,total,accuracy
+deepseek-r1,english,0,111,0.0
+deepseek-r1,hindi,2,111,1.8018018018018018
+gpt-4o,english,71,111,63.96396396396396
+gpt-4o,hindi,62,111,55.85585585585585
+llama-4,english,87,111,78.37837837837837
+llama-4,hindi,86,111,77.47747747747748
+qwen-coder,english,70,111,63.06306306306306
+qwen-coder,hindi,72,111,64.86486486486487

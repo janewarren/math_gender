@@ -1,0 +1,10 @@
+model,language,correct,total,accuracy
+gpt-4o,context_free,5,10,50.0
+gpt-4o,english,5,10,50.0
+gpt-4o,japanese,5,10,50.0
+llama-4,context_free,10,10,100.0
+llama-4,english,10,10,100.0
+llama-4,japanese,10,10,100.0
+qwen-coder,context_free,7,10,70.0
+qwen-coder,english,7,10,70.0
+qwen-coder,japanese,8,10,80.0

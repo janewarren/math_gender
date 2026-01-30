@@ -1,0 +1,9 @@
+model,language,correct,total,accuracy
+deepseek-r1,english,0,67,0.0
+deepseek-r1,japanese,0,67,0.0
+gpt-4o,english,43,67,64.17910447761194
+gpt-4o,japanese,42,67,62.68656716417911
+llama-4,english,53,67,79.1044776119403
+llama-4,japanese,51,67,76.11940298507463
+qwen-coder,english,51,67,76.11940298507463
+qwen-coder,japanese,48,67,71.64179104477611

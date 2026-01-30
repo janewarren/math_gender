@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+currency		Convert 1 AUD to CAD. Provide only the numerical value.	1.0	0.8881578947368423	Easy
+currency		Convert 1 GBP to JPY. Provide only the numerical value.	1.0	189.87341772151896	Easy
+currency		Convert 5 GBP to JPY. Provide only the numerical value.	5.0	949.367088607595	Easy
+currency		Convert 5 EUR to CNH. Provide only the numerical value.	5.0	39.130434782608695	Easy
+currency		Convert 20 GBP to JPY. Provide only the numerical value.	20.0	3797.46835443038	Easy
+currency		Convert 20 EUR to CNH. Provide only the numerical value.	20.0	156.52173913043478	Easy
+currency		Convert 10 UZS to GNF. Provide only the numerical value.	10.0	6.88	Easy
+currency		Convert 5 UZS to GNF. Provide only the numerical value.	5.0	3.44	Easy
+currency		Convert 1 USD to EUR. Provide only the numerical value.	1.0	0.92	Easy
+currency		Convert 50 USD to EUR. Provide only the numerical value.	50.0	46.0	Easy
+currency		Convert 0.2994 SLL to IDR. Provide only the numerical value.	0.2994	0.2136627272727272	Hard
+currency		Convert 18.333 VND to LAK. Provide only the numerical value.	18.333	16.041375	Hard
+currency		Convert 4508.208 LBP to IRR. Provide only the numerical value.	4508.208	12622.9824	Hard
+currency		Convert 0.2994 LBP to IRR. Provide only the numerical value.	0.2994	0.83832	Hard
+currency		Convert 9.0241 JPY to CHF. Provide only the numerical value.	9.0241	0.0529413866666666	Hard
+currency		Convert 4508.208 UZS to GNF. Provide only the numerical value.	4508.208	3101.647104	Hard
+currency		Convert 18.333 UZS to GNF. Provide only the numerical value.	18.333	12.613104	Hard
+currency		Convert 0.2994 AUD to CAD. Provide only the numerical value.	0.2994	0.2659144736842105	Hard
+currency		Convert 4508.208 VND to LAK. Provide only the numerical value.	4508.208	3944.682	Hard
+currency		Convert 1297.195 SLL to IDR. Provide only the numerical value.	1297.195	925.7255227272726	Hard

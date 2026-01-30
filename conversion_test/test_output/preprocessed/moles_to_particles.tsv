@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+moles_to_particles		Convert 1 mole to particle. Provide only the numerical value.	1.0	6.02214076e+23	Easy
+moles_to_particles		Convert 5 moles to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy
+moles_to_particles		Convert 10 moles to particles. Provide only the numerical value.	10.0	6.02214076e+24	Easy
+moles_to_particles		Convert 20 moles to particles. Provide only the numerical value.	20.0	1.204428152e+25	Easy
+moles_to_particles		Convert 50 moles to particles. Provide only the numerical value.	50.0	3.01107038e+25	Easy
+moles_to_particles		Convert 4508.208 moles to particles. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard
+moles_to_particles		Convert 1297.195 moles to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard
+moles_to_particles		Convert 18.333 moles to particles. Provide only the numerical value.	18.333	1.1040390655308e+25	Hard
+moles_to_particles		Convert 9.0241 moles to particles. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard
+moles_to_particles		Convert 0.2994 moles to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard
+moles_to_particles		Convert 1 mole to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy
+moles_to_particles		Convert 5 moles to atoms. Provide only the numerical value.	5.0	3.01107038e+24	Easy
+moles_to_particles		Convert 10 moles to atoms. Provide only the numerical value.	10.0	6.02214076e+24	Easy
+moles_to_particles		Convert 20 moles to atoms. Provide only the numerical value.	20.0	1.204428152e+25	Easy
+moles_to_particles		Convert 50 moles to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy
+moles_to_particles		Convert 4508.208 moles to atoms. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard
+moles_to_particles		Convert 1297.195 moles to atoms. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard
+moles_to_particles		Convert 18.333 moles to atoms. Provide only the numerical value.	18.333	1.1040390655308e+25	Hard
+moles_to_particles		Convert 9.0241 moles to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard
+moles_to_particles		Convert 0.2994 moles to atoms. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard

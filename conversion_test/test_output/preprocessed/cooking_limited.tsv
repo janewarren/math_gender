@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+cooking	flour	Convert 5 cups of flour to teaspoons. Provide only the numerical value.	5.0	240.0	Easy
+cooking	butter	Convert 1 cup of butter to gallon. Provide only the numerical value.	1.0	0.0625	Easy
+cooking	pepper	Convert 10 teaspoons of pepper to tablespoons. Provide only the numerical value.	10.0	3.333333333333333	Easy
+cooking	watermelon	Convert 50 cups of watermelon to teaspoons. Provide only the numerical value.	50.0	2400.0	Easy
+cooking	peanut butter	Convert 1 teaspoon of peanut butter to tablespoon. Provide only the numerical value.	1.0	0.3333333333333333	Easy
+cooking	lettuce	Convert 1 cup of lettuce to gallon. Provide only the numerical value.	1.0	0.0625	Easy
+cooking	lettuce	Convert 20 cups of lettuce to teaspoons. Provide only the numerical value.	20.0	960.0	Easy
+cooking	water	Convert 50 cups of water to gallons. Provide only the numerical value.	50.0	3.125	Easy
+cooking	apples	Convert 50 cups of apples to fluid ounces. Provide only the numerical value.	50.0	400.0	Easy
+cooking	peanut butter	Convert 50 cups of peanut butter to teaspoons. Provide only the numerical value.	50.0	2400.0	Easy
+cooking	carrot	Convert 1297.195 cups of carrot to milliliters. Provide only the numerical value.	1297.195	306900.77066	Hard
+cooking	cookies	Convert 1297.195 teaspoons of cookies to tablespoons. Provide only the numerical value.	1297.195	432.3983333333333	Hard
+cooking	milk	Convert 0.2994 cups of milk to fluid ounces. Provide only the numerical value.	0.2994	2.3952	Hard
+cooking	watermelon	Convert 4508.208 cups of watermelon to milliliters. Provide only the numerical value.	4508.208	1066587.914304	Hard
+cooking	milk	Convert 0.2994 cups of milk to teaspoons. Provide only the numerical value.	0.2994	14.3712	Hard
+cooking	salmon	Convert 18.333 cups of salmon to fluid ounces. Provide only the numerical value.	18.333	146.664	Hard
+cooking	yogurt	Convert 0.2994 milliliters of yogurt to cups. Provide only the numerical value.	0.2994	0.0012654910646355	Hard
+cooking	milk	Convert 4508.208 cups of milk to gallons. Provide only the numerical value.	4508.208	281.763	Hard
+cooking	apples	Convert 4508.208 cups of apples to teaspoons. Provide only the numerical value.	4508.208	216393.984	Hard
+cooking	yogurt	Convert 9.0241 cups of yogurt to teaspoons. Provide only the numerical value.	9.0241	433.1568	Hard

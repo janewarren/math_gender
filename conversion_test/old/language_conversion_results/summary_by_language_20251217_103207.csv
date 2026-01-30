@@ -1,0 +1,13 @@
+model,language,correct,total,accuracy
+deepseek-r1,context_free,5,5,100.0
+deepseek-r1,english,5,5,100.0
+deepseek-r1,japanese,5,5,100.0
+gpt-4o,context_free,2,5,40.0
+gpt-4o,english,3,5,60.0
+gpt-4o,japanese,2,5,40.0
+llama-4,context_free,5,5,100.0
+llama-4,english,5,5,100.0
+llama-4,japanese,5,5,100.0
+qwen-coder,context_free,3,5,60.0
+qwen-coder,english,3,5,60.0
+qwen-coder,japanese,3,5,60.0

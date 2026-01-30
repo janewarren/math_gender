@@ -1,0 +1,14 @@
+Domain,Total Prompts,Answered,Answer Rate %,Valid Answers,Correct,Accuracy %,Avg Loss,Median Loss
+bits_bytes,20,20,100.0,20,8,40.0,12.2773,1.1605
+clothing_sizes_clothing_size,10,10,100.0,10,0,0.0,1.0000,1.0000
+clothing_sizes_shoe_size,10,10,100.0,10,0,0.0,1.0000,1.0000
+clothing_sizes_bra_size,10,9,90.0,9,7,77.8,0.2222,0.0000
+cooking,20,20,100.0,20,12,60.0,0.1587,0.0000
+currency,20,20,100.0,20,0,0.0,18.3267,3.5373
+density,20,20,100.0,20,7,35.0,34.1513,0.0003
+energy,20,20,100.0,20,7,35.0,0.0411,0.0032
+moles_to_particles,20,20,100.0,20,0,0.0,0.0281,0.0143
+speed,20,20,100.0,20,0,0.0,5039.9544,0.0004
+temperature,20,20,100.0,20,10,50.0,0.0123,0.0000
+timezone,20,20,100.0,20,11,55.0,24.0500,0.0000
+volume,20,20,100.0,20,4,20.0,44.9870,0.0007

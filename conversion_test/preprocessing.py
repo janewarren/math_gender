@@ -238,6 +238,30 @@ def create_prompt(
     from_display = display_names.get(from_unit, from_unit)
     to_display = display_names.get(to_unit, to_unit)
     
+    # Special handling for clothing size conversions
+    # Check if this is a clothing size conversion by looking for size_mappings
+    is_clothing_size = bool(config.get('size_mappings'))
+    
+    if is_clothing_size:
+        # Get sizing type from config (e.g., "clothing", "shoe", "bra", "pant")
+        sizing_type = config.get('sizing_type', 'clothing')
+        
+        # Map section names to readable sizing types
+        sizing_type_map = {
+            'clothing_size': 'clothing',
+            'pant_size': 'pant',
+            'shoe_size': 'shoe',
+            'bra_size': 'bra'
+        }
+        
+        # If sizing_type is a section name, map it
+        if sizing_type in sizing_type_map:
+            sizing_type = sizing_type_map[sizing_type]
+        
+        # For clothing sizes, use a more natural syntax with sizing type
+        # e.g., "Convert clothing size XS in US to UK" or "Convert shoe size 8 in US to EU"
+        return f"Convert {sizing_type} size {value} in {from_display} to {to_display} sizing. Provide only the size value."
+    
     # Handle pluralization for some units
     if conversion_type not in ['temperature', 'timezone', 'custom']:
         if isinstance(value, (int, float)) and value != 1:
@@ -260,7 +284,8 @@ def process_conversion_file(
     json_file: Path,
     numbers_file: Path,
     times_file: Optional[Path],
-    output_dir: Path
+    output_dir: Path,
+    substances_file: Optional[Path] = None
 ) -> None:
     """Process a single conversion JSON file and create TSV output."""
     print(f"\nProcessing {json_file.name}...")
@@ -285,8 +310,19 @@ def process_conversion_file(
         easy_times = times_data.get('easy', [])
         hard_times = times_data.get('hard', [])
     
+    # Load substances (contexts) if provided
+    substances_contexts = []
+    if substances_file and substances_file.exists():
+        with open(substances_file, 'r') as f:
+            substances_data = json.load(f)
+        substances_contexts = substances_data.get('contexts', [])
+    
     conversion_name = config.get('name', json_file.stem)
     conversion_type = config.get('conversion_type', 'linear')
+    
+    # Determine if this conversion should use substances as contexts
+    # density, volume, and moles_to_particles should use contexts
+    use_substances_contexts = conversion_name in ['density', 'volume', 'moles_to_particles']
     
     # Check if this is a multi-section config (like clothing_sizes)
     # Look for known sub-sections
@@ -303,6 +339,16 @@ def process_conversion_file(
             
             print(f"  Processing {section_name}...")
             section_config = config[section_name]
+            
+            # Add contexts to section_config if this conversion uses substances
+            if use_substances_contexts and substances_contexts:
+                if 'contexts' not in section_config:
+                    section_config['contexts'] = []
+                # Merge with existing contexts, avoiding duplicates
+                existing_contexts = set(section_config.get('contexts', []))
+                for ctx in substances_contexts:
+                    if ctx not in existing_contexts:
+                        section_config['contexts'].append(ctx)
             
             # Process this sub-section (pass full config for currency difficulty checking)
             section_rows = process_section(
@@ -330,6 +376,16 @@ def process_conversion_file(
                 print(f"    Saved to {output_file}")
     else:
         # Standard single-section processing
+        # Add contexts to config if this conversion uses substances
+        if use_substances_contexts and substances_contexts:
+            if 'contexts' not in config:
+                config['contexts'] = []
+            # Merge with existing contexts, avoiding duplicates
+            existing_contexts = set(config.get('contexts', []))
+            for ctx in substances_contexts:
+                if ctx not in existing_contexts:
+                    config['contexts'].append(ctx)
+        
         section_rows = process_section(
             config,
             conversion_name,
@@ -391,24 +447,10 @@ def process_section(
         from_unit = pair['from']
         to_unit = pair['to']
         
-        # For currency conversions, determine which numbers to use based on currency difficulty
-        if is_currency and (easy_currencies or hard_currencies):
-            # Check if both currencies are easy or both are hard
-            from_is_easy = from_unit in easy_currencies
-            from_is_hard = from_unit in hard_currencies
-            to_is_easy = to_unit in easy_currencies
-            to_is_hard = to_unit in hard_currencies
-            
-            # Only create pairs if both currencies are in the same difficulty category
-            if (from_is_easy and to_is_easy):
-                # Use easy numbers only
-                test_values = easy_numbers
-            elif (from_is_hard and to_is_hard):
-                # Use hard numbers only
-                test_values = hard_numbers
-            else:
-                # Skip this pair if currencies are mixed difficulty
-                continue
+        # For currency conversions, use all 200 numbers (easy + hard) for all unit pairs
+        if is_currency:
+            # Use all numbers (easy + hard) for all currency pairs
+            test_values = easy_numbers + hard_numbers
         # For clothing sizes, we need to get valid test values from the mappings
         elif section_config.get('size_mappings'):
             size_mappings = section_config.get('size_mappings', {})
@@ -472,7 +514,7 @@ def process_section(
             elif section_config.get('size_mappings'):
                 # For clothing sizes, use Easy by default (can be adjusted)
                 difficulty = 'Easy'
-            elif is_currency and (easy_currencies or hard_currencies):
+            elif is_currency:
                 # For currency, difficulty is determined by which numbers were used
                 if test_value in easy_numbers:
                     difficulty = 'Easy'
@@ -511,6 +553,12 @@ def process_section(
             # Create context-free prompt
             temp_config_for_prompt = section_config.copy()
             temp_config_for_prompt['display_names'] = display_names
+            # Pass size_mappings and sizing_type to prompt creation for clothing sizes
+            if section_config.get('size_mappings'):
+                temp_config_for_prompt['size_mappings'] = section_config.get('size_mappings')
+                # Pass section_name as sizing_type for clothing size prompts
+                if section_name:
+                    temp_config_for_prompt['sizing_type'] = section_name
             prompt = create_prompt(test_value, from_unit, to_unit, conversion_type, temp_config_for_prompt, context=None)
             
             rows.append({
@@ -524,7 +572,14 @@ def process_section(
             
             # Create prompts with contexts if available
             for context in contexts:
-                prompt_with_context = create_prompt(test_value, from_unit, to_unit, conversion_type, temp_config_for_prompt, context=context)
+                # For clothing sizes, contexts typically don't apply, but handle if needed
+                temp_config_for_context = temp_config_for_prompt.copy()
+                if section_config.get('size_mappings'):
+                    temp_config_for_context['size_mappings'] = section_config.get('size_mappings')
+                    # Pass section_name as sizing_type for clothing size prompts
+                    if section_name:
+                        temp_config_for_context['sizing_type'] = section_name
+                prompt_with_context = create_prompt(test_value, from_unit, to_unit, conversion_type, temp_config_for_context, context=context)
                 
                 rows.append({
                     'domain': domain_name,

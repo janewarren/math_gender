@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_bra_size		Convert bra size 36D in UK to Italy sizing. Provide only the size value.	36D	3D	Easy
+clothing_sizes_bra_size		Convert bra size 34D in UK to Italy sizing. Provide only the size value.	34D	2D	Easy
+clothing_sizes_bra_size		Convert bra size 36D in UK to Japan sizing. Provide only the size value.	36D	80D	Easy
+clothing_sizes_bra_size		Convert bra size 34A in UK to Italy sizing. Provide only the size value.	34A	2A	Easy
+clothing_sizes_bra_size		Convert bra size 38C in UK to Japan sizing. Provide only the size value.	38C	85C	Easy
+clothing_sizes_bra_size		Convert bra size 32C in UK to Japan sizing. Provide only the size value.	32C	70C	Easy
+clothing_sizes_bra_size		Convert bra size 36C in UK to Japan sizing. Provide only the size value.	36C	80C	Easy
+clothing_sizes_bra_size		Convert bra size 34D in UK to Japan sizing. Provide only the size value.	34D	75D	Easy
+clothing_sizes_bra_size		Convert bra size 38D in UK to Japan sizing. Provide only the size value.	38D	85D	Easy
+clothing_sizes_bra_size		Convert bra size 32B in UK to Japan sizing. Provide only the size value.	32B	70B	Easy
