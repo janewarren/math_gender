@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_women_pant_size	null	Convert women's pant size XL in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	XL	50	Easy	16	16	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size L in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	L	48	Easy	42	42	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size 4 in US numeric to EU numeric sizing. Provide only the size and nothing else.	4	36	Easy	34.0000	34	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size S in US alphanumeric (0-18) to US numeric sizing. Provide only the size and nothing else.	S	4	Easy	2	2	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size XXXL in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	XXXL	54	Easy	18	18	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size XS in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	XS	36	Easy	36	36	0.0
+clothing_sizes_women_pant_size	null	Convert women's pant size 12 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	12	44	Easy	40	40	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size XXL in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	XXL	52	Easy	18	18	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size 8 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	8	40	Easy	36	36	1.0
+clothing_sizes_women_pant_size	null	Convert women's pant size 18 in US numeric to EU numeric sizing. Provide only the size and nothing else.	18	50	Easy	46	46	1.0

@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response_gpt-4o	model_answer_gpt-4o	loss_gpt-4o	raw_response_qwen-coder	model_answer_qwen-coder	loss_qwen-coder	raw_response_llama-4	model_answer_llama-4	loss_llama-4
+cooking	soy sauce	Convert 1 cup of soy sauce to fluid ounce. Provide only the numerical value.	1.0	8.0	Easy	8.1154	8.1154	1.442499999999991	8.0000	8.0	0.0	8.1154	8.1154	1.442499999999991
+cooking	cookies	Convert 1 cup of cookies to fluid ounce. Provide only the numerical value.	1.0	8.0	Easy	8.0000	8.0	0.0	8.0000	8.0	0.0	8	8.0	0.0
+cooking	yogurt	Convert 10 cups of yogurt to gallons. Provide only the numerical value.	10.0	0.625	Easy	0.625	0.625	0.0	0.6250	0.625	0.0	0.6250	0.625	0.0
+cooking	potato	Convert 1 cup of potato to gallon. Provide only the numerical value.	1.0	0.0625	Easy	0.0625	0.0625	0.0	0.0625	0.0625	0.0	0.0625	0.0625	0.0
+cooking	soy sauce	Convert 5 cups of soy sauce to fluid ounces. Provide only the numerical value.	5.0	40.0	Easy	40.0	40.0	0.0	40.0000	40.0	0.0	40	40.0	0.0
+cooking	milk	Convert 50 cups of milk to teaspoons. Provide only the numerical value.	50.0	2400.0	Easy	2400.0000	2400.0	0.0	12000	12000.0	400.0	800.0	800.0	66.66666666666666
+cooking	yogurt	Convert 5 cups of yogurt to fluid ounces. Provide only the numerical value.	5.0	40.0	Easy	40.0	40.0	0.0	40.0000	40.0	0.0	40.0000	40.0	0.0
+cooking	apples	Convert 20 teaspoons of apples to tablespoons. Provide only the numerical value.	20.0	6.666666666666667	Easy	6.6667	6.6667	0.0	6.6667	6.6667	0.0	6.6667	6.6667	0.0
+cooking	sugar	Convert 10 teaspoons of sugar to tablespoons. Provide only the numerical value.	10.0	3.333333333333333	Easy	3.3333	3.3333	0.0	3.3333	3.3333	0.0	3.3333	3.3333	0.0
+cooking	oil	Convert 20 cups of oil to fluid ounces. Provide only the numerical value.	20.0	160.0	Easy	160.0	160.0	0.0	160.0000	160.0	0.0	160.0000	160.0	0.0
+cooking	watermelon	Convert 18.333 milliliters of watermelon to cups. Provide only the numerical value.	18.333	0.0774891372343483	Hard	0.0775	0.0775	0.0	0.0772	0.0772	0.3731326024109284	0.0775	0.0775	0.0
+cooking	cookies	Convert 0.2994 cups of cookies to milliliters. Provide only the numerical value.	0.2994	70.8344472	Hard	70.7925	70.7925	0.0	70.9464	70.9464	0.1580485264237333	70.8287	70.8287	0.0
+cooking	cookies	Convert 0.2994 cups of cookies to gallons. Provide only the numerical value.	0.2994	0.0187125	Hard	0.0187	0.0187	0.0	0.0187	0.0187	0.0	0.0187	0.0187	0.0
+cooking	soy sauce	Convert 9.0241 teaspoons of soy sauce to tablespoons. Provide only the numerical value.	9.0241	3.0080333333333336	Hard	3.0080	3.008	0.0	3.0080	3.008	0.0	3.0080	3.008	0.0
+cooking	water	Convert 1297.195 cups of water to milliliters. Provide only the numerical value.	1297.195	306900.77066	Hard	306992.0250	306992.025	0.0	306999.9708	306999.9708	0.0	306825.3644	306825.3644	0.0
+cooking	chocolate	Convert 9.0241 cups of chocolate to teaspoons. Provide only the numerical value.	9.0241	433.1568	Hard	433.1552	433.1552	0.0	144.3856	144.3856	66.66666666666666	43.3157	43.3157	89.99999538273438
+cooking	chicken	Convert 1297.195 teaspoons of chicken to tablespoons. Provide only the numerical value.	1297.195	432.3983333333333	Hard	432.3983	432.3983	0.0	432.3983	432.3983	0.0	432.3983	432.3983	0.0
+cooking	onion	Convert 9.0241 cups of onion to milliliters. Provide only the numerical value.	9.0241	2134.9937708	Hard	2134.9923	2134.9923	0.0	2136.7444	2136.7444	0.0	2134.9299	2134.9299	0.0
+cooking	soy sauce	Convert 4508.208 teaspoons of soy sauce to tablespoons. Provide only the numerical value.	4508.208	1502.736	Hard	1502.7360	1502.736	0.0	1502.7360	1502.736	0.0	1502.7360	1502.736	0.0
+cooking	milk	Convert 0.2994 cups of milk to fluid ounces. Provide only the numerical value.	0.2994	2.3952	Hard	2.3952	2.3952	0.0	2.3952	2.3952	0.0	2.3952	2.3952	0.0

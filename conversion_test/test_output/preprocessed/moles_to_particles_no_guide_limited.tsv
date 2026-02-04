@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+moles_to_particles	ammonia	Convert 50 moles of ammonia to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy
+moles_to_particles	ketchup	Convert 10 moles of ketchup to particles. Provide only the numerical value.	10.0	6.02214076e+24	Easy
+moles_to_particles	vomitoxin	Convert 10 moles of vomitoxin to atoms. Provide only the numerical value.	10.0	6.02214076e+24	Easy
+moles_to_particles	ketchup	Convert 5 moles of ketchup to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy
+moles_to_particles	spit	Convert 50 moles of spit to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy
+moles_to_particles	bismuth	Convert 50 moles of bismuth to particles. Provide only the numerical value.	50.0	3.01107038e+25	Easy
+moles_to_particles	ethanol	Convert 1 mole of ethanol to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy
+moles_to_particles	osmium	Convert 5 moles of osmium to atoms. Provide only the numerical value.	5.0	3.01107038e+24	Easy
+moles_to_particles	ethanol	Convert 10 moles of ethanol to atoms. Provide only the numerical value.	10.0	6.02214076e+24	Easy
+moles_to_particles	coffee	Convert 5 moles of coffee to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy
+moles_to_particles	spit	Convert 1297.195 moles of spit to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard
+moles_to_particles	bismuth	Convert 9.0241 moles of bismuth to particles. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard
+moles_to_particles	spit	Convert 9.0241 moles of spit to particles. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard
+moles_to_particles	matcha latte	Convert 9.0241 moles of matcha latte to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard
+moles_to_particles	vomitoxin	Convert 1297.195 moles of vomitoxin to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard
+moles_to_particles	gasoline	Convert 1297.195 moles of gasoline to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard
+moles_to_particles	barrelene	Convert 9.0241 moles of barrelene to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard
+moles_to_particles	chocolate	Convert 0.2994 moles of chocolate to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard
+moles_to_particles	oxygen	Convert 4508.208 moles of oxygen to atoms. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard
+moles_to_particles	matcha latte	Convert 4508.208 moles of matcha latte to particles. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard

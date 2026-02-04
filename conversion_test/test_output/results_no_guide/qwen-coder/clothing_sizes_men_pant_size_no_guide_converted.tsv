@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_men_pant_size	null	Convert men's pant size 40 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	40	50	Easy	40	40	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size 34 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	34	44	Easy	48.0000	48	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size L in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	L	52	Easy	42	42	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size 46 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	46	56	Easy	46	46	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size 42 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	42	52	Easy	42	42	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size XXXL in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	XXXL	58	Easy	56	56	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size L in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	L	40	Easy	34	34	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	M	38	Easy	32	32	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	M	50	Easy	42.0000	42	1.0
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to Italy sizing. Provide only the size and nothing else.	M	50	Easy	42	42	1.0

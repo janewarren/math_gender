@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_women_shoe_size		Convert women's shoe size 43.5 in EUR to Japan sizing. Provide only the size and nothing else.	43.5	27.5	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 27 in Mexico to EUR sizing. Provide only the size and nothing else.	27.0	41.0	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 42 in EUR to Japan sizing. Provide only the size and nothing else.	42.0	26.0	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 12 in US to Mexico sizing. Provide only the size and nothing else.	12.0	29.0	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 9 in US to EUR sizing. Provide only the size and nothing else.	9.0	40.0	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 12 in US to UK sizing. Provide only the size and nothing else.	12.0	9.5	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 6.5 in US to Mexico sizing. Provide only the size and nothing else.	6.5	23.5	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 10.5 in US to Japan sizing. Provide only the size and nothing else.	10.5	26.5	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 30 in Mexico to EUR sizing. Provide only the size and nothing else.	30.0	44.0	Easy
+clothing_sizes_women_shoe_size		Convert women's shoe size 8.5 in US to UK sizing. Provide only the size and nothing else.	8.5	6.0	Easy

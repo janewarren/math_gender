@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+energy	bread	Convert 10 joules of bread to calories. Provide only the numerical value.	10.0	2.390057361376673	Easy	2.3901	2.3901	0.0
+energy	salmon	Convert 5 kilocalories of salmon to kilojoules. Provide only the numerical value.	5.0	20.92	Easy	20.92	20.92	0.0
+energy	vanilla extract	Convert 1 calorie of vanilla extract to joule. Provide only the numerical value.	1.0	4.184	Easy	4.184	4.184	0.0
+energy	milk	Convert 10 calories of milk to joules. Provide only the numerical value.	10.0	41.84	Easy	41.84	41.84	0.0
+energy	parmesan cheese	Convert 50 BTUs of parmesan cheese to kilowatt-hours. Provide only the numerical value.	50.0	0.0146535137820343	Easy	0.0147	0.0147	0.3172359794187594
+energy	butter	Convert 10 calories of butter to joules. Provide only the numerical value.	10.0	41.84	Easy	41.84	41.84	0.0
+energy	chocolate	Convert 20 kilocalories of chocolate to kilojoules. Provide only the numerical value.	20.0	83.68	Easy	83.68	83.68	0.0
+energy	water	Convert 5 joules of water to watt-hours. Provide only the numerical value.	5.0	0.0013888862332695	Easy	0.0014	0.0014	0.8001927346012804
+energy	soy sauce	Convert 50 BTUs of soy sauce to kilowatt-hours. Provide only the numerical value.	50.0	0.0146535137820343	Easy	0.0147	0.0147	0.3172359794187594
+energy	carrot	Convert 1 kilojoule of carrot to joule. Provide only the numerical value.	1.0	1000.0	Easy	1000	1000.0	0.0
+energy	null	Convert 18.333 kilojoules to kilocalories. Provide only the numerical value.	18.333	4.381692160611854	Hard	4.3805	4.3805	0.0
+energy	watermelon	Convert 0.2994 BTUs of watermelon to kilowatt-hours. Provide only the numerical value.	0.2994	8.774524052682145e-05	Hard	0.0001	0.0001	13.966295379215005
+energy	potato	Convert 0.2994 watt-hours of potato to joules. Provide only the numerical value.	0.2994	1077.8420608834815	Hard	1077.84	1077.84	0.0
+energy	vanilla extract	Convert 9.0241 joules of vanilla extract to watt-hours. Provide only the numerical value.	9.0241	0.0025066896515296	Hard	0.0025	0.0025	0.2668719490471423
+energy	peanut butter	Convert 0.2994 kilowatt-hours of peanut butter to BTUs. Provide only the numerical value.	0.2994	1021.5979745659168	Hard	1021.5319	1021.5319	0.0
+energy	flour	Convert 4508.208 BTUs of flour to kilowatt-hours. Provide only the numerical value.	4508.208	1.3212217612055466	Hard	1.3205	1.3205	0.0
+energy	chicken	Convert 18.333 calories of chicken to joules. Provide only the numerical value.	18.333	76.705272	Hard	76.7284	76.7284	0.0
+energy	tomato	Convert 4508.208 BTUs of tomato to kilowatt-hours. Provide only the numerical value.	4508.208	1.3212217612055466	Hard	1.3211	1.3211	0.0
+energy	olives	Convert 4508.208 BTUs of olives to kilowatt-hours. Provide only the numerical value.	4508.208	1.3212217612055466	Hard	1.3213	1.3213	0.0
+energy	butter	Convert 0.2994 kilojoules of butter to kilocalories. Provide only the numerical value.	0.2994	0.0715583173996175	Hard	0.0715	0.0715	0.0

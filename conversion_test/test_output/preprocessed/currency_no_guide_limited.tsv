@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+currency		Convert 5 USD to EUR. Provide only the numerical value.	5.0	4.25	Easy
+currency		Convert 1 GBP to JPY. Provide only the numerical value.	1.0	213.013698630137	Easy
+currency		Convert 10 UZS to GNF. Provide only the numerical value.	10.0	7.143673469387755	Easy
+currency		Convert 20 AUD to CAD. Provide only the numerical value.	20.0	19.02777777777778	Easy
+currency		Convert 50 GBP to JPY. Provide only the numerical value.	50.0	10650.684931506848	Easy
+currency		Convert 20 UZS to GNF. Provide only the numerical value.	20.0	14.28734693877551	Easy
+currency		Convert 1 UZS to GNF. Provide only the numerical value.	1.0	0.7143673469387755	Easy
+currency		Convert 50 AUD to CAD. Provide only the numerical value.	50.0	47.56944444444445	Easy
+currency		Convert 5 GBP to JPY. Provide only the numerical value.	5.0	1065.0684931506848	Easy
+currency		Convert 10 LBP to IRR. Provide only the numerical value.	10.0	139.06627703097604	Easy
+currency		Convert 1297.195 EUR to CNH. Provide only the numerical value.	1297.195	10591.215647058823	Hard
+currency		Convert 9.0241 EUR to CNH. Provide only the numerical value.	9.0241	73.67912235294119	Hard
+currency		Convert 0.2994 GBP to JPY. Provide only the numerical value.	0.2994	63.77630136986301	Hard
+currency		Convert 9.0241 JPY to CHF. Provide only the numerical value.	9.0241	0.0452655819935691	Hard
+currency		Convert 0.2994 UZS to GNF. Provide only the numerical value.	0.2994	0.2138815836734694	Hard
+currency		Convert 18.333 JPY to CHF. Provide only the numerical value.	18.333	0.0919597427652733	Hard
+currency		Convert 0.2994 USD to EUR. Provide only the numerical value.	0.2994	0.25449	Hard
+currency		Convert 4508.208 JPY to CHF. Provide only the numerical value.	4508.208	22.61351922829582	Hard
+currency		Convert 9.0241 LBP to IRR. Provide only the numerical value.	9.0241	125.4947990555231	Hard
+currency		Convert 18.333 GBP to JPY. Provide only the numerical value.	18.333	3905.180136986301	Hard

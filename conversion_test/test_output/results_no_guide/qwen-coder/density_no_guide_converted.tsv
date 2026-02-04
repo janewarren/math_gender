@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+density	ammonia	Convert 20 kg/m³s of ammonia to lb/in³s. Provide only the numerical value.	20.0	0.00072254584	Easy	0.0007	0.0007	3.1203335140646598
+density	metallic hydrogen	Convert 10 lb/ft³s of metallic hydrogen to g/cm³s. Provide only the numerical value.	10.0	0.1601846300861143	Easy	0.1602	0.1602	0.0
+density	chocolate	Convert 5 g/cm³s of chocolate to lb/ft³s. Provide only the numerical value.	5.0	312.13981	Easy	312.1398	312.1398	0.0
+density	water	Convert 5 g/cm³s of water to lb/ft³s. Provide only the numerical value.	5.0	312.13981	Easy	312.1398	312.1398	0.0
+density	RedBull	Convert 10 kg/m³s of RedBull to lb/in³s. Provide only the numerical value.	10.0	0.00036127292	Easy	0.0004	0.0004	10.719618841068968
+density	snake venom	Convert 1 kg/m³ of snake venom to g/cm³. Provide only the numerical value.	1.0	0.001	Easy	0.0010	0.001	0.0
+density	sodium chloride	Convert 5 kg/m³s of sodium chloride to lb/in³s. Provide only the numerical value.	5.0	0.00018063646	Easy	0.0002	0.0002	10.719618841068968
+density	coffee	Convert 20 lb/ft³s of coffee to g/cm³s. Provide only the numerical value.	20.0	0.3203692601722286	Easy	0.3204	0.3204	0.0
+density	metallic hydrogen	Convert 50 kg/m³s of metallic hydrogen to lb/in³s. Provide only the numerical value.	50.0	0.0018063646	Easy	0.0029	0.0029	60.54344731954999
+density	californium	Convert 5 kg/m³s of californium to lb/in³s. Provide only the numerical value.	5.0	0.00018063646	Easy	0.0003	0.0003	66.07942826160343
+density	vomitoxin	Convert 4508.208 lb/in³s of vomitoxin to kg/m³s. Provide only the numerical value.	4508.208	124786767.85406443	Hard	124794.7200	124794.72	99.89999362741253
+density	nitrogen	Convert 4508.208 lb/in³s of nitrogen to kg/m³s. Provide only the numerical value.	4508.208	124786767.85406443	Hard	124794.7200	124794.72	99.89999362741253
+density	snake venom	Convert 4508.208 g/cm³s of snake venom to lb/ft³s. Provide only the numerical value.	4508.208	281438.237712096	Hard	280.7643	280.7643	99.90023946202818
+density	ethanol	Convert 0.2994 kg/m³s of ethanol to g/cm³s. Provide only the numerical value.	0.2994	0.0002994	Hard	0.0003	0.0003	0.20040080160319318
+density	carbon dioxide	Convert 1297.195 kg/m³s of carbon dioxide to lb/in³s. Provide only the numerical value.	1297.195	0.0468641425459399	Hard	0.0468	0.0468	0.1368691337455349
+density	water	Convert 9.0241 kg/m³s of water to lb/in³s. Provide only the numerical value.	9.0241	0.0003260162957371	Hard	0.0003	0.0003	7.980059916415836
+density	gasoline	Convert 1297.195 kg/m³s of gasoline to lb/in³s. Provide only the numerical value.	1297.195	0.0468641425459399	Hard	0.0469	0.0469	0.0
+density	cubane	Convert 18.333 lb/in³s of cubane to kg/m³s. Provide only the numerical value.	18.333	507455.6930533293	Hard	504.4444	504.4444	99.90059341004438
+density	spit	Convert 18.333 lb/ft³s of spit to g/cm³s. Provide only the numerical value.	18.333	0.2936664823368733	Hard	0.2933	0.2933	0.12479542573500296
+density	ethanol	Convert 18.333 kg/m³s of ethanol to lb/in³s. Provide only the numerical value.	18.333	0.0006623216442359	Hard	0.0007	0.0007	5.688830508863766

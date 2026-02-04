@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+energy	chocolate	Convert 20 joules of chocolate to watt-hours. Provide only the numerical value.	20.0	0.0055555449330783	Easy	0.0056	0.0056	0.8001927345958353
+energy	water	Convert 50 kilocalories of water to kilojoules. Provide only the numerical value.	50.0	209.2	Easy	209.2	209.2	0.0
+energy	chicken	Convert 20 kilocalories of chicken to kilojoules. Provide only the numerical value.	20.0	83.68	Easy	83.6800	83.68	0.0
+energy	chocolate	Convert 1 joule of chocolate to watt-hour. Provide only the numerical value.	1.0	0.0002777772466539	Easy	0.0002778	0.0002778	0.0
+energy	bread	Convert 1 BTU of bread to kilowatt-hour. Provide only the numerical value.	1.0	0.0002930702756406	Easy	0.0002931	0.0002931	0.0
+energy	salmon	Convert 50 kilocalories of salmon to kilojoules. Provide only the numerical value.	50.0	209.2	Easy	209.2	209.2	0.0
+energy	salmon	Convert 50 joules of salmon to kilojoules. Provide only the numerical value.	50.0	0.05	Easy	0.05	0.05	0.0
+energy	vanilla extract	Convert 1 watt-hour of vanilla extract to joule. Provide only the numerical value.	1.0	3600.006883378362	Easy	3600.0	3600.0	0.0
+energy	honey	Convert 1 kilowatt-hour of honey to BTU. Provide only the numerical value.	1.0	3412.150883653697	Easy	3412.1420	3412.142	0.0
+energy	pepper	Convert 5 kilocalories of pepper to kilojoules. Provide only the numerical value.	5.0	20.92	Easy	20.9200	20.92	0.0
+energy	peanut butter	Convert 18.333 joules of peanut butter to calories. Provide only the numerical value.	18.333	4.381692160611854	Hard	4.3811	4.3811	0.0
+energy	butter	Convert 18.333 watt-hours of butter to joules. Provide only the numerical value.	18.333	65998.9261929755	Hard	66000.0000	66000.0	0.0
+energy	onion	Convert 1297.195 BTUs of onion to kilowatt-hours. Provide only the numerical value.	1297.195	0.3801692962097199	Hard	0.3801	0.3801	0.0
+energy	soy sauce	Convert 4508.208 kilojoules of soy sauce to kilocalories. Provide only the numerical value.	4508.208	1077.4875717017208	Hard	1077.7060	1077.706	0.0
+energy	chocolate	Convert 4508.208 joules of chocolate to watt-hours. Provide only the numerical value.	4508.208	1.252277605583174	Hard	1.2523	1.2523	0.0
+energy	soy sauce	Convert 18.333 kilojoules of soy sauce to kilocalories. Provide only the numerical value.	18.333	4.381692160611854	Hard	4.3811	4.3811	0.0
+energy	carrot	Convert 4508.208 calories of carrot to joules. Provide only the numerical value.	4508.208	18862.342272	Hard	18864.6787	18864.6787	0.0
+energy	salt	Convert 9.0241 kilojoules of salt to joules. Provide only the numerical value.	9.0241	9024.1	Hard	9024.1	9024.1	0.0
+energy	onion	Convert 0.2994 kilojoules of onion to joules. Provide only the numerical value.	0.2994	299.4	Hard	299.4	299.4	0.0
+energy	rice	Convert 4508.208 kilojoules of rice to kilocalories. Provide only the numerical value.	4508.208	1077.4875717017208	Hard	1077.7060	1077.706	0.0

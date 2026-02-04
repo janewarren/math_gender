@@ -1,0 +1,39 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+timezone	null	Convert 1PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	3PM	Easy	6PM	6PM	180.0
+timezone	null	Convert 9PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	5AM	Easy	9PM in Llieda time is 4AM in Nagai time.	9PM	480.0
+timezone	null	Convert 3PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	6PM	Easy	6PM	6PM	0.0
+timezone	null	Convert 1PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	10:30AM	Easy	3:30PM	3:30PM	300.0
+timezone	null	Convert 1PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	10AM	Easy	10AM	10AM	0.0
+timezone	null	Convert 1AM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	10:30PM	Easy	1AM in Zhemuzhen time is 11:30PM in Noorabad time.	11:30PM	60.0
+timezone	null	Convert 3PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	11PM	Easy	11PM	11PM	0.0
+timezone	null	Convert 9PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	12AM	Easy	12PM	12PM	720.0
+timezone	null	Convert 1AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	10:30PM	Easy	1AM in Manila time is 11:30PM in Delhi time.	11:30PM	60.0
+timezone	null	Convert 12PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	9AM	Easy	9AM	9AM	0.0
+timezone	null	Convert 2:48AM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	10:48AM	Hard	"I need to convert 2:48AM from Lleida time to Nagai time.
+
+Lleida is in Spain, which uses Central European Time (CET/CEST).
+Nagai is in Japan, which uses Japan Standard Time (JST).
+
+The time difference between CET and JST is 8 hours (JST is 8 hours ahead of CET).
+
+2:48AM + 8 hours = 10:48AM
+
+10:48AM"	2:48AM	480.0
+timezone	null	Convert 3:49PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	1:18PM	Hard	3:49PM	3:49PM	150.99999999999994
+timezone	null	Convert 8:11PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	5:41PM	Hard	5:11PM	5:11PM	30.0
+timezone	null	Convert 8:11PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	4:11AM	Hard	4:11AM	4:11AM	0.0
+timezone	null	Convert 6:58PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	4:27PM	Hard	9:28PM	9:28PM	300.99999999999994
+timezone	null	Convert 8:11PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	5:41PM	Hard	5:41PM	5:41PM	0.0
+timezone	null	Convert 6:58PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	2:57AM	Hard	"I need to convert 6:58PM from Lleida time to Nagai time.
+
+Lleida is in Spain, which uses Central European Time (CET/CEST).
+Nagai is in Japan, which uses Japan Standard Time (JST).
+
+The time difference between CET and JST is 8 hours (JST is 8 hours ahead of CET).
+
+6:58PM + 8 hours = 2:58AM (next day)
+
+2:58AM"	6:58PM	479.0
+timezone	null	Convert 11:59AM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	1:59PM	Hard	6:59PM	6:59PM	300.0000000000001
+timezone	null	Convert 2:48AM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	5:48AM	Hard	5:48AM	5:48AM	0.0
+timezone	null	Convert 2:48AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	12:18AM	Hard	5:18AM	5:18AM	300.0

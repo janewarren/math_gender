@@ -1,0 +1,30 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+moles_to_particles	ammonia	Convert 50 moles of ammonia to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy	1.5054e+25	1.5054e+25	50.004489765529826
+moles_to_particles	ketchup	Convert 10 moles of ketchup to particles. Provide only the numerical value.	10.0	6.02214076e+24	Easy	6.0221e+24	6.0221e+24	0.0
+moles_to_particles	vomitoxin	Convert 10 moles of vomitoxin to atoms. Provide only the numerical value.	10.0	6.02214076e+24	Easy	6.0221e+24	6.0221e+24	0.0
+moles_to_particles	ketchup	Convert 5 moles of ketchup to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy	3.0115e24	3.0115e+24	0.0
+moles_to_particles	spit	Convert 50 moles of spit to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy	"Since ""spit"" is not a standard unit of measurement and assuming it refers to a quantity of a substance (and for the sake of this conversion, assuming it's a molecule or entity that can be counted in moles), we'll treat ""spit"" as if it were a molecule or a representative unit that can be converted using Avogadro's number.
+
+1 mole = 6.0221 * 10^23 entities (Avogadro's number)
+
+50 moles * 6.0221 * 10^23 = 3.0111 * 10^25
+
+3.0111 * 10^25"	25.0	100.0
+moles_to_particles	bismuth	Convert 50 moles of bismuth to particles. Provide only the numerical value.	50.0	3.01107038e+25	Easy	3.0110 × 10^25	25.0	100.0
+moles_to_particles	ethanol	Convert 1 mole of ethanol to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	"6.0221 * 9 = 54.1990 * (1 + 2 + 1 + 6) is not needed, just count the atoms in C2H5OH: 2 + 6 + 1 = 9. So, 6.0221 * 9 = 54.1989. 
+54.1989"	54.1989	100.0
+moles_to_particles	osmium	Convert 5 moles of osmium to atoms. Provide only the numerical value.	5.0	3.01107038e+24	Easy	3.0115e+24	3.0115e+24	0.0
+moles_to_particles	ethanol	Convert 10 moles of ethanol to atoms. Provide only the numerical value.	10.0	6.02214076e+24	Easy	"6.0221 × 10^24 × 9 × 10 = 5.4199 × 10^25 
+9 is the number of atoms in a molecule of ethanol (C2H5OH = 2C + 6H + O = 9 atoms). 
+So, 5.4199 × 10^25."	25.0	100.0
+moles_to_particles	coffee	Convert 5 moles of coffee to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy	3.0115e24	3.0115e+24	0.0
+moles_to_particles	spit	Convert 1297.195 moles of spit to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8115e+26	7.8115e+26	0.0
+moles_to_particles	bismuth	Convert 9.0241 moles of bismuth to particles. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard	5.4351	5.4351	100.0
+moles_to_particles	spit	Convert 9.0241 moles of spit to particles. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard	5.4345e+24	5.4345e+24	0.0
+moles_to_particles	matcha latte	Convert 9.0241 moles of matcha latte to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard	5.4353	5.4353	100.0
+moles_to_particles	vomitoxin	Convert 1297.195 moles of vomitoxin to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8120e+26	7.812e+26	0.0
+moles_to_particles	gasoline	Convert 1297.195 moles of gasoline to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8115e+26	7.8115e+26	0.0
+moles_to_particles	barrelene	Convert 9.0241 moles of barrelene to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard	9.0241 * 6.0221 * 10^23 * 8 = 4.3483 * 10^25	25.0	100.0
+moles_to_particles	chocolate	Convert 0.2994 moles of chocolate to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.8031	1.8031	100.0
+moles_to_particles	oxygen	Convert 4508.208 moles of oxygen to atoms. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard	2.7145e+24	2.7145e+24	99.90001496608313
+moles_to_particles	matcha latte	Convert 4508.208 moles of matcha latte to particles. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard	2715061377000000000000000.0000	2.715061377e+24	99.89999428850037

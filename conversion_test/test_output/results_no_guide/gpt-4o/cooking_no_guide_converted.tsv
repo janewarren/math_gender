@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+cooking	soy sauce	Convert 1 milliliter of soy sauce to cup. Provide only the numerical value.	1.0	0.004226757062911	Easy	0.0042	0.0042	0.6330399999987709
+cooking	water	Convert 1 milliliter of water to cup. Provide only the numerical value.	1.0	0.004226757062911	Easy	0.0042	0.0042	0.6330399999987709
+cooking	butter	Convert 10 cups of butter to fluid ounces. Provide only the numerical value.	10.0	80.0	Easy	80.0000	80.0	0.0
+cooking	onion	Convert 10 milliliters of onion to cups. Provide only the numerical value.	10.0	0.0422675706291105	Easy	0.0423	0.0423	0.0
+cooking	olives	Convert 50 cups of olives to milliliters. Provide only the numerical value.	50.0	11829.4	Easy	11829.0000	11829.0	0.0
+cooking	pepper	Convert 10 cups of pepper to teaspoons. Provide only the numerical value.	10.0	480.0	Easy	480.0000	480.0	0.0
+cooking	peanut butter	Convert 1 cup of peanut butter to gallon. Provide only the numerical value.	1.0	0.0625	Easy	0.0625	0.0625	0.0
+cooking	onion	Convert 20 teaspoons of onion to tablespoons. Provide only the numerical value.	20.0	6.666666666666667	Easy	6.6667	6.6667	0.0
+cooking	salmon	Convert 20 cups of salmon to fluid ounces. Provide only the numerical value.	20.0	160.0	Easy	160.0	160.0	0.0
+cooking	candy	Convert 10 cups of candy to gallons. Provide only the numerical value.	10.0	0.625	Easy	0.625	0.625	0.0
+cooking	potato	Convert 9.0241 cups of potato to teaspoons. Provide only the numerical value.	9.0241	433.1568	Hard	433.1552	433.1552	0.0
+cooking	yogurt	Convert 1297.195 cups of yogurt to fluid ounces. Provide only the numerical value.	1297.195	10377.56	Hard	10377.56	10377.56	0.0
+cooking	null	Convert 1297.195 cups to gallons. Provide only the numerical value.	1297.195	81.0746875	Hard	81.0747	81.0747	0.0
+cooking	cookies	Convert 18.333 teaspoons of cookies to tablespoons. Provide only the numerical value.	18.333	6.111	Hard	6.1111	6.1111	0.0
+cooking	honey	Convert 9.0241 teaspoons of honey to tablespoons. Provide only the numerical value.	9.0241	3.0080333333333336	Hard	3.0080	3.008	0.0
+cooking	apples	Convert 0.2994 cups of apples to fluid ounces. Provide only the numerical value.	0.2994	2.3952	Hard	2.3952	2.3952	0.0
+cooking	parmesan cheese	Convert 1297.195 milliliters of parmesan cheese to cups. Provide only the numerical value.	1297.195	5.482928128222902	Hard	5.4821	5.4821	0.0
+cooking	water	Convert 18.333 milliliters of water to cups. Provide only the numerical value.	18.333	0.0774891372343483	Hard	0.0775	0.0775	0.0
+cooking	salmon	Convert 9.0241 teaspoons of salmon to tablespoons. Provide only the numerical value.	9.0241	3.0080333333333336	Hard	3.0080	3.008	0.0
+cooking	chocolate	Convert 1297.195 cups of chocolate to fluid ounces. Provide only the numerical value.	1297.195	10377.56	Hard	10377.56	10377.56	0.0

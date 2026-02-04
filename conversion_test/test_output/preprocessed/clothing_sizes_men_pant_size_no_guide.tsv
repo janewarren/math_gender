@@ -1,0 +1,29 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_men_pant_size	null	Convert men's pant size XS in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	XS	46	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size S in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	S	48	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	M	50	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size L in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	L	52	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XL in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	XL	54	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XXL in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	XXL	56	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XXXL in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	XXXL	58	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XS in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XS	34	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size S in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	S	36	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	M	38	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size L in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	L	40	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XL in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XL	42	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XXL in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XXL	44	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XXXL in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XXXL	46	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 34 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	34	44	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 36 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	36	46	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 38 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	38	48	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 40 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	40	50	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 42 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	42	52	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 44 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	44	54	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size 46 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	46	56	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XS in US alphanumeric to Italy sizing. Provide only the size and nothing else.	XS	46	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size S in US alphanumeric to Italy sizing. Provide only the size and nothing else.	S	48	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to Italy sizing. Provide only the size and nothing else.	M	50	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size L in US alphanumeric to Italy sizing. Provide only the size and nothing else.	L	52	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XL in US alphanumeric to Italy sizing. Provide only the size and nothing else.	XL	54	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XXL in US alphanumeric to Italy sizing. Provide only the size and nothing else.	XXL	56	Easy
+clothing_sizes_men_pant_size	null	Convert men's pant size XXXL in US alphanumeric to Italy sizing. Provide only the size and nothing else.	XXXL	58	Easy

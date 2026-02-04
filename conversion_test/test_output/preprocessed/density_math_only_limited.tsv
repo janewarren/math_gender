@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+density		what is 50*62.427962	50.0	3121.3981	Easy
+density		what is 1*0.016018463	1.0	0.0160184630086114	Easy
+density		what is 50*0.001	50.0	0.05	Easy
+density		what is 10*3.612729e-05	10.0	0.00036127292	Easy
+density		what is 20*3.612729e-05	20.0	0.00072254584	Easy
+density		what is 20*0.016018463	20.0	0.3203692601722286	Easy
+density		what is 1*2.767990e+04	1.0	27679.90471026724	Easy
+density		what is 50*1000	50.0	50000.0	Easy
+density		what is 10*1000	10.0	10000.0	Easy
+density		what is 10*62.427962	10.0	624.27962	Easy
+density		what is 0.2994*0.001	0.2994	0.0002994	Hard
+density		what is 0.2994*0.016018463	0.2994	0.0047959278247782	Hard
+density		what is 4508.208*2.767990e+04	4508.208	124786767.85406443	Hard
+density		what is 0.2994*62.427962	0.2994	18.6909318228	Hard
+density		what is 0.2994*1000	0.2994	299.4	Hard
+density		what is 1297.195*62.427962	1297.195	80981.24016659	Hard
+density		what is 0.2994*2.767990e+04	0.2994	8287.363470254013	Hard
+density		what is 9.0241*3.612729e-05	9.0241	0.0003260162957371	Hard
+density		what is 18.333*0.001	18.333	0.018333	Hard
+density		what is 9.0241*62.427962	9.0241	563.3561718842001	Hard

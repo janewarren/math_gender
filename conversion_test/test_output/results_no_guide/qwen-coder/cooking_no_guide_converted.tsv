@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+cooking	watermelon	Convert 10 cups of watermelon to gallons. Provide only the numerical value.	10.0	0.625	Easy	0.6250	0.625	0.0
+cooking	garlic	Convert 1 cup of garlic to milliliter. Provide only the numerical value.	1.0	236.588	Easy	236.5882	236.5882	0.0
+cooking	bread	Convert 5 milliliters of bread to cups. Provide only the numerical value.	5.0	0.0211337853145552	Easy	0.0211	0.0211	0.15986399999971035
+cooking	rice	Convert 5 cups of rice to fluid ounces. Provide only the numerical value.	5.0	40.0	Easy	40.0000	40.0	0.0
+cooking	parmesan cheese	Convert 10 cups of parmesan cheese to milliliters. Provide only the numerical value.	10.0	2365.88	Easy	2365.8824	2365.8824	0.0
+cooking	carrot	Convert 5 cups of carrot to fluid ounces. Provide only the numerical value.	5.0	40.0	Easy	40.0000	40.0	0.0
+cooking	flour	Convert 1 teaspoon of flour to tablespoon. Provide only the numerical value.	1.0	0.3333333333333333	Easy	0.3333	0.3333	0.0
+cooking	salt	Convert 20 cups of salt to fluid ounces. Provide only the numerical value.	20.0	160.0	Easy	160.0000	160.0	0.0
+cooking	chicken	Convert 10 cups of chicken to gallons. Provide only the numerical value.	10.0	0.625	Easy	0.6250	0.625	0.0
+cooking	potato	Convert 1 milliliter of potato to cup. Provide only the numerical value.	1.0	0.004226757062911	Easy	0.0042	0.0042	0.6330399999987709
+cooking	potato	Convert 1297.195 cups of potato to gallons. Provide only the numerical value.	1297.195	81.0746875	Hard	81.0747	81.0747	0.0
+cooking	chocolate	Convert 1297.195 cups of chocolate to gallons. Provide only the numerical value.	1297.195	81.0746875	Hard	81.0747	81.0747	0.0
+cooking	oil	Convert 4508.208 cups of oil to teaspoons. Provide only the numerical value.	4508.208	216393.984	Hard	216394.9824	216394.9824	0.0
+cooking	parmesan cheese	Convert 18.333 milliliters of parmesan cheese to cups. Provide only the numerical value.	18.333	0.0774891372343483	Hard	0.0772	0.0772	0.3731326024109284
+cooking	soy sauce	Convert 1297.195 cups of soy sauce to fluid ounces. Provide only the numerical value.	1297.195	10377.56	Hard	10377.5600	10377.56	0.0
+cooking	salmon	Convert 18.333 cups of salmon to gallons. Provide only the numerical value.	18.333	1.1458125	Hard	1.1458	1.1458	0.0
+cooking	garlic	Convert 9.0241 cups of garlic to milliliters. Provide only the numerical value.	9.0241	2134.9937708	Hard	2136.7444	2136.7444	0.0
+cooking	carrot	Convert 1297.195 teaspoons of carrot to tablespoons. Provide only the numerical value.	1297.195	432.3983333333333	Hard	432.3983	432.3983	0.0
+cooking	chicken	Convert 1297.195 teaspoons of chicken to tablespoons. Provide only the numerical value.	1297.195	432.3983333333333	Hard	432.3983	432.3983	0.0
+cooking	salmon	Convert 9.0241 cups of salmon to milliliters. Provide only the numerical value.	9.0241	2134.9937708	Hard	2136.0000	2136.0	0.0

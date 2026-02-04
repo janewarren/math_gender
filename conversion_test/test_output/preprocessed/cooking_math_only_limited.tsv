@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+cooking		what is 50*0.3333333333	50.0	16.666666666666668	Easy
+cooking		what is 5*0.3333333333	5.0	1.6666666666666667	Easy
+cooking		what is 10*236.588	10.0	2365.88	Easy
+cooking		what is 50*0.0625	50.0	3.125	Easy
+cooking		what is 5*236.588	5.0	1182.94	Easy
+cooking		what is 20*0.0625	20.0	1.25	Easy
+cooking		what is 20*48	20.0	960.0	Easy
+cooking		what is 20*0.0042267571	20.0	0.084535141258221	Easy
+cooking		what is 1*0.0042267571	1.0	0.004226757062911	Easy
+cooking		what is 20*0.3333333333	20.0	6.666666666666667	Easy
+cooking		what is 0.2994*0.0625	0.2994	0.0187125	Hard
+cooking		what is 9.0241*0.3333333333	9.0241	3.0080333333333336	Hard
+cooking		what is 9.0241*0.0042267571	9.0241	0.0381426784114156	Hard
+cooking		what is 4508.208*48	4508.208	216393.984	Hard
+cooking		what is 4508.208*0.3333333333	4508.208	1502.736	Hard
+cooking		what is 1297.195*0.0042267571	1297.195	5.482928128222902	Hard
+cooking		what is 4508.208*0.0625	4508.208	281.763	Hard
+cooking		what is 1297.195*236.588	1297.195	306900.77066	Hard
+cooking		what is 0.2994*48	0.2994	14.3712	Hard
+cooking		what is 0.2994*0.0042267571	0.2994	0.0012654910646355	Hard

@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+timezone		what is (21+8.0)%24	9PM	5AM	Easy
+timezone		what is (12+8.0)%24	12PM	8PM	Easy
+timezone		what is (13+8.0)%24	1PM	9PM	Easy
+timezone		what is (21+3.0)%24	9PM	12AM	Easy
+timezone		what is (1-3.0)%24	1AM	10PM	Easy
+timezone		what is (12+8.0)%24	12PM	8PM	Easy
+timezone		what is (21+8.0)%24	9PM	5AM	Easy
+timezone		what is (21-3.0)%24	9PM	6PM	Easy
+timezone		what is (15+8.0)%24	3PM	11PM	Easy
+timezone		what is (21+3.0)%24	9PM	12AM	Easy
+timezone		what is (18.966666666666665-3.0)%24	6:58PM	3:57PM	Hard
+timezone		what is (2.8-2.5)%24	2:48AM	12:18AM	Hard
+timezone		what is (11.983333333333333-2.5)%24	11:59AM	9:28AM	Hard
+timezone		what is (18.966666666666665+8.0)%24	6:58PM	2:57AM	Hard
+timezone		what is (20.183333333333334+3.0)%24	8:11PM	11:11PM	Hard
+timezone		what is (11.983333333333333+2.0)%24	11:59AM	1:59PM	Hard
+timezone		what is (11.983333333333333+10.0)%24	11:59AM	9:59PM	Hard
+timezone		what is (15.816666666666666-3.0)%24	3:49PM	12:48PM	Hard
+timezone		what is (2.8+4.0)%24	2:48AM	6:48AM	Hard
+timezone		what is (20.183333333333334+8.0)%24	8:11PM	4:11AM	Hard

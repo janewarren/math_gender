@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+moles_to_particles	null	what is 1*6.022141e+23	1.0	6.02214076e+23	Easy
+moles_to_particles	null	what is 5*6.022141e+23	5.0	3.01107038e+24	Easy
+moles_to_particles	null	what is 10*6.022141e+23	10.0	6.02214076e+24	Easy
+moles_to_particles	null	what is 20*6.022141e+23	20.0	1.204428152e+25	Easy
+moles_to_particles	null	what is 50*6.022141e+23	50.0	3.01107038e+25	Easy
+moles_to_particles	null	what is 4508.208*6.022141e+23	4508.208	2.714906315135808e+27	Hard
+moles_to_particles	null	what is 1297.195*6.022141e+23	1297.195	7.8118908831682e+26	Hard
+moles_to_particles	null	what is 18.333*6.022141e+23	18.333	1.1040390655308e+25	Hard
+moles_to_particles	null	what is 9.0241*6.022141e+23	9.0241	5.4344400432316e+24	Hard
+moles_to_particles	null	what is 0.2994*6.022141e+23	0.2994	1.803028943544e+23	Hard
+moles_to_particles	null	what is 1*6.022141e+23	1.0	6.02214076e+23	Easy
+moles_to_particles	null	what is 5*6.022141e+23	5.0	3.01107038e+24	Easy
+moles_to_particles	null	what is 10*6.022141e+23	10.0	6.02214076e+24	Easy
+moles_to_particles	null	what is 20*6.022141e+23	20.0	1.204428152e+25	Easy
+moles_to_particles	null	what is 50*6.022141e+23	50.0	3.01107038e+25	Easy
+moles_to_particles	null	what is 4508.208*6.022141e+23	4508.208	2.714906315135808e+27	Hard
+moles_to_particles	null	what is 1297.195*6.022141e+23	1297.195	7.8118908831682e+26	Hard
+moles_to_particles	null	what is 18.333*6.022141e+23	18.333	1.1040390655308e+25	Hard
+moles_to_particles	null	what is 9.0241*6.022141e+23	9.0241	5.4344400432316e+24	Hard
+moles_to_particles	null	what is 0.2994*6.022141e+23	0.2994	1.803028943544e+23	Hard

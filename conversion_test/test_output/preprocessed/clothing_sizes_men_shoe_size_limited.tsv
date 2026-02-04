@@ -1,0 +1,218 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_men_shoe_size		"Convert men's shoe size 8 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  6 → 24.5
+  6.5 → 25
+  7 → 25.5
+  7.5 → 26
+  8 → 26.5
+  8.5 → 27
+  9 → 27.5
+  9.5 → 28
+  10 → 28.5
+  10.5 → 29
+  11 → 29.5
+  11.5 → 30
+  12 → 30.5
+  12.5 → 31
+  13 → 31.5
+  13.5 → 32
+  14 → 32.5
+
+Provide only the size and nothing else."	8.0	26.5	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 44 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  44.5 → 28.5
+  45 → 29
+  46 → 29.5
+  46.5 → 30
+  47 → 30.5
+
+Provide only the size and nothing else."	44.0	28.0	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 7.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  6 → 23.5
+  6.5 → 24
+  7 → 24.5
+  7.5 → 25
+  8 → 25.5
+  8.5 → 26
+  9 → 27
+  9.5 → 27.25
+  10 → 27.5
+  10.5 → 28
+  11 → 28.5
+  11.5 → 29
+  12 → 29.5
+  12.5 → 30
+  13 → 30.5
+  13.5 → 31
+  14 → 31.5
+
+Provide only the size and nothing else."	7.5	25.0	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 7.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  6 → 24.5
+  6.5 → 25
+  7 → 25.5
+  7.5 → 26
+  8 → 26.5
+  8.5 → 27
+  9 → 27.5
+  9.5 → 28
+  10 → 28.5
+  10.5 → 29
+  11 → 29.5
+  11.5 → 30
+  12 → 30.5
+  12.5 → 31
+  13 → 31.5
+  13.5 → 32
+  14 → 32.5
+
+Provide only the size and nothing else."	7.5	26.0	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 6.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  6 → 38
+  6.5 → 38.5
+  7 → 39
+  7.5 → 40
+  8 → 41
+  8.5 → 42
+  9 → 43
+  9.5 → 43.25
+  10 → 43.5
+  10.5 → 44
+  11 → 44.5
+  11.5 → 45
+  12 → 46
+  12.5 → 46.5
+  13 → 47
+  14 → 48.5
+
+Provide only the size and nothing else."	6.5	38.5	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 12.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  6 → 38
+  6.5 → 38.5
+  7 → 39
+  7.5 → 40
+  8 → 41
+  8.5 → 42
+  9 → 43
+  9.5 → 43.25
+  10 → 43.5
+  10.5 → 44
+  11 → 44.5
+  11.5 → 45
+  12 → 46
+  12.5 → 46.5
+  13 → 47
+  14 → 48.5
+
+Provide only the size and nothing else."	12.5	46.5	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 28 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  24 → 39
+  24.5 → 39.5
+  25 → 40
+  25.5 → 40.5
+  26 → 41
+  26.5 → 41.5
+  27 → 42
+  27.5 → 42.5
+  28 → 43
+  28.5 → 43.5
+  29 → 44
+  29.5 → 44.5
+  30 → 45
+  30.5 → 45.5
+  31 → 46
+  31.5 → 46.5
+  32 → 47
+
+Provide only the size and nothing else."	28.0	43.0	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 8 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  6 → 23.5
+  6.5 → 24
+  7 → 24.5
+  7.5 → 25
+  8 → 25.5
+  8.5 → 26
+  9 → 27
+  9.5 → 27.25
+  10 → 27.5
+  10.5 → 28
+  11 → 28.5
+  11.5 → 29
+  12 → 29.5
+  12.5 → 30
+  13 → 30.5
+  13.5 → 31
+  14 → 31.5
+
+Provide only the size and nothing else."	8.0	25.5	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 8 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  6 → 38
+  6.5 → 38.5
+  7 → 39
+  7.5 → 40
+  8 → 41
+  8.5 → 42
+  9 → 43
+  9.5 → 43.25
+  10 → 43.5
+  10.5 → 44
+  11 → 44.5
+  11.5 → 45
+  12 → 46
+  12.5 → 46.5
+  13 → 47
+  14 → 48.5
+
+Provide only the size and nothing else."	8.0	41.0	Easy
+clothing_sizes_men_shoe_size		"Convert men's shoe size 46 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  44.5 → 28.5
+  45 → 29
+  46 → 29.5
+  46.5 → 30
+  47 → 30.5
+
+Provide only the size and nothing else."	46.0	29.5	Easy

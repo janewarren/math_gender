@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_men_shoe_size		Convert men's shoe size 39 in EUR to Japan sizing. Provide only the size and nothing else.	39.0	24.5	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 12.5 in US to Japan sizing. Provide only the size and nothing else.	12.5	30.0	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 11.5 in US to UK sizing. Provide only the size and nothing else.	11.5	11.0	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 9 in US to EUR sizing. Provide only the size and nothing else.	9.0	43.0	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 7 in US to Japan sizing. Provide only the size and nothing else.	7.0	24.5	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 13.5 in US to Mexico sizing. Provide only the size and nothing else.	13.5	32.0	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 6 in US to UK sizing. Provide only the size and nothing else.	6.0	5.5	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 11.5 in US to Mexico sizing. Provide only the size and nothing else.	11.5	30.0	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 11 in US to EUR sizing. Provide only the size and nothing else.	11.0	44.5	Easy
+clothing_sizes_men_shoe_size		Convert men's shoe size 11 in US to Mexico sizing. Provide only the size and nothing else.	11.0	29.5	Easy

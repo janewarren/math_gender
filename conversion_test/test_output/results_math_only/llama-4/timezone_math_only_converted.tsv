@@ -1,0 +1,65 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+timezone	null	what is (21+8.0)%24	9PM	5AM	Easy	5AM	5AM	0.0
+timezone	null	what is (12+8.0)%24	12PM	8PM	Easy	20	null	null
+timezone	null	what is (13+8.0)%24	1PM	9PM	Easy	21:00 or 9PM	9PM	0.0
+timezone	null	what is (21+3.0)%24	9PM	12AM	Easy	0AM	0AM	0.0
+timezone	null	what is (1-3.0)%24	1AM	10PM	Easy	"To solve the given expression, we need to follow the order of operations.
+
+First, subtract 3.0 from 1: 1 - 3.0 = -2.0
+
+Then, apply the modulo operation (%): -2.0 % 24
+
+To handle the modulo operation with a negative number, we add 24 to -2.0 until it becomes positive: -2.0 + 24 = 22
+
+So, (-2.0) % 24 = 22.
+
+The result is 22, which is equivalent to 10PM."	10PM	0.0
+timezone	null	what is (12+8.0)%24	12PM	8PM	Easy	20	null	null
+timezone	null	what is (21+8.0)%24	9PM	5AM	Easy	5AM	5AM	0.0
+timezone	null	what is (21-3.0)%24	9PM	6PM	Easy	18	null	null
+timezone	null	what is (15+8.0)%24	3PM	11PM	Easy	23	null	null
+timezone	null	what is (21+3.0)%24	9PM	12AM	Easy	0AM	0AM	0.0
+timezone	null	what is (18.966666666666665-3.0)%24	6:58PM	3:57PM	Hard	15:58	null	null
+timezone	null	what is (2.8-2.5)%24	2:48AM	12:18AM	Hard	"0.3%24 = 0.3*24/100 = 0.072 hours. 
+0.072 * 60 = 4.32 minutes.
+So, 4 minutes and 0.32*60 seconds = 4 minutes and 19 seconds.
+Thus, the time is 0:04:19 or simply 4 minutes past midnight, which is 12:04AM. 
+12:04AM."	12:04AM	14.0
+timezone	null	what is (11.983333333333333-2.5)%24	11:59AM	9:28AM	Hard	9:30PM	9:30PM	718.0
+timezone	null	what is (18.966666666666665+8.0)%24	6:58PM	2:57AM	Hard	2:58AM	2:58AM	0.0
+timezone	null	what is (20.183333333333334+3.0)%24	8:11PM	11:11PM	Hard	"First, let's add 20.183333333333334 and 3.0: 
+20.183333333333334 + 3.0 = 23.183333333333334
+
+Then, let's take the result modulo 24:
+23.183333333333334 % 24 = 23.183333333333334
+
+Converting 23.183333333333334 to 12-hour format:
+23 hours = 11PM
+0.183333333333334 * 60 = 11 minutes
+
+So, the result is 11:11PM."	11:11PM	0.0
+timezone	null	what is (11.983333333333333+2.0)%24	11:59AM	1:59PM	Hard	"First, let's compute the sum: 11.983333333333333 + 2.0 = 13.983333333333333.
+
+Then, let's take the result modulo 24: 13.983333333333333 % 24 = 13.983333333333333.
+
+To convert this into a 12-hour format, we first separate the integer part (13) from the fractional part (0.983333333333333).
+
+13 hours is 1 PM.
+
+0.983333333333333 hours * 60 minutes/hour = 59 minutes.
+
+So, the time is 1:59PM."	1:59PM	0.0
+timezone	null	what is (11.983333333333333+10.0)%24	11:59AM	9:59PM	Hard	"First, let's compute the sum: 11.983333333333333 + 10.0 = 21.983333333333333.
+
+Then, let's take the modulus: 21.983333333333333 % 24 = 21.983333333333333.
+
+To convert this into a 12-hour format, we first separate the integer part (21) from the fractional part (0.983333333333333).
+
+21 hours is equivalent to 9PM.
+
+0.983333333333333 hours * 60 minutes/hour = 59 minutes.
+
+So, the time is 9:59PM."	9:59PM	0.0
+timezone	null	what is (15.816666666666666-3.0)%24	3:49PM	12:48PM	Hard	12:49PM	12:49PM	0.0
+timezone	null	what is (2.8+4.0)%24	2:48AM	6:48AM	Hard	6:48AM	6:48AM	0.0
+timezone	null	what is (20.183333333333334+8.0)%24	8:11PM	4:11AM	Hard	4:11AM	4:11AM	0.0

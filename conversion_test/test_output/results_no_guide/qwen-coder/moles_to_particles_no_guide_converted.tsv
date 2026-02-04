@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+moles_to_particles	RedBull	Convert 1 mole of RedBull to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	6.0221 × 10^23	23.0	100.0
+moles_to_particles	barrelene	Convert 50 moles of barrelene to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy	3.0110 × 10^25	25.0	100.0
+moles_to_particles	sodium chloride	Convert 10 moles of sodium chloride to particles. Provide only the numerical value.	10.0	6.02214076e+24	Easy	6.0221 × 10^24	24.0	100.0
+moles_to_particles	cubane	Convert 10 moles of cubane to atoms. Provide only the numerical value.	10.0	6.02214076e+24	Easy	6.0221 × 10^24	24.0	100.0
+moles_to_particles	osmium	Convert 1 mole of osmium to particle. Provide only the numerical value.	1.0	6.02214076e+23	Easy	6.0221 × 10^23	23.0	100.0
+moles_to_particles	metallic hydrogen	Convert 1 mole of metallic hydrogen to particle. Provide only the numerical value.	1.0	6.02214076e+23	Easy	6.0221 × 10^23	23.0	100.0
+moles_to_particles	bismuth	Convert 5 moles of bismuth to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy	3.0110 × 10^24	24.0	100.0
+moles_to_particles	methane	Convert 10 moles of methane to particles. Provide only the numerical value.	10.0	6.02214076e+24	Easy	6.0221e+24	6.0221e+24	0.0
+moles_to_particles	californium	Convert 1 mole of californium to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	6.0221 × 10^23	23.0	100.0
+moles_to_particles	RedBull	Convert 20 moles of RedBull to atoms. Provide only the numerical value.	20.0	1.204428152e+25	Easy	1.2044 × 10^25	25.0	100.0
+moles_to_particles	vomitoxin	Convert 0.2994 moles of vomitoxin to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.8034	1.8034	100.0
+moles_to_particles	vitamin water	Convert 0.2994 moles of vitamin water to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.8044	1.8044	100.0
+moles_to_particles	bismuth	Convert 18.333 moles of bismuth to particles. Provide only the numerical value.	18.333	1.1040390655308e+25	Hard	1.1037e+25	1.1037e+25	0.0
+moles_to_particles	oxygen	Convert 18.333 moles of oxygen to atoms. Provide only the numerical value.	18.333	1.1040390655308e+25	Hard	1.1037e+25	1.1037e+25	0.0
+moles_to_particles	null	Convert 1297.195 moles to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8107 × 10^26	26.0	100.0
+moles_to_particles	basketane	Convert 1297.195 moles of basketane to atoms. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8107 × 10^26	26.0	100.0
+moles_to_particles	osmium	Convert 1297.195 moles of osmium to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8107 × 10^26	26.0	100.0
+moles_to_particles	carbon dioxide	Convert 1297.195 moles of carbon dioxide to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8107 × 10^26	26.0	100.0
+moles_to_particles	bismuth	Convert 4508.208 moles of bismuth to particles. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard	2.7147e+27	2.7147e+27	0.0
+moles_to_particles	water	Convert 9.0241 moles of water to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard	5.4357 × 10^24	24.0	100.0

@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_women_bra_size	null	Convert women's bra size 34D in UK to France sizing. Provide only the size and nothing else.	34D	90D	Easy	85D	85D	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 32A in UK to France sizing. Provide only the size and nothing else.	32A	85A	Easy	85A	85A	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36A in UK to Australia sizing. Provide only the size and nothing else.	36A	14A	Easy	12A	12A	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 38D in UK to EUR sizing. Provide only the size and nothing else.	38D	85D	Easy	75D	75D	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 32C in UK to EUR sizing. Provide only the size and nothing else.	32C	70C	Easy	32C	32C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 38C in UK to Italy sizing. Provide only the size and nothing else.	38C	4C	Easy	40C	40C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36A in UK to EUR sizing. Provide only the size and nothing else.	36A	80A	Easy	70A	70A	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 32D in UK to Australia sizing. Provide only the size and nothing else.	32D	10D	Easy	32D	32D	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 34B in UK to US sizing. Provide only the size and nothing else.	34B	34A	Easy	34B	34B	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 34D in UK to EUR sizing. Provide only the size and nothing else.	34D	75D	Easy	75D	75D	0.0

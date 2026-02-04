@@ -1,0 +1,261 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+density	RedBull	"Convert 5 lb/in³s of RedBull to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	5.0	138399.52355133623	Easy	1383.5517	1383.5517	99.00032047474006
+density	ketchup	"Convert 1 g/cm³ of ketchup to lb/ft³.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	1.0	62.427962	Easy	62.4279	62.4279	0.0
+density	metallic hydrogen	"Convert 50 g/cm³s of metallic hydrogen to lb/ft³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	50.0	3121.3981	Easy	3112.3981	3112.3981	0.28833233415500575
+density	nitrogen	"Convert 10 lb/ft³s of nitrogen to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	10.0	0.1601846300861143	Easy	0.1602	0.1602	0.0
+density	snake venom	"Convert 50 kg/m³s of snake venom to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	50.0	0.05	Easy	0.05	0.05	0.0
+density	sodium chloride	"Convert 1 lb/ft³ of sodium chloride to g/cm³.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	1.0	0.0160184630086114	Easy	0.0160	0.016	0.11526079999981291
+density	nitrogen	"Convert 1 g/cm³ of nitrogen to lb/ft³.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	1.0	62.427962	Easy	62.4279	62.4279	0.0
+density	bismuth	"Convert 50 lb/ft³s of bismuth to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	50.0	0.8009231504305715	Easy	0.8012	0.8012	0.0
+density	ammonia	"Convert 20 g/cm³s of ammonia to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	20.0	20000.0	Easy	20000.0	20000.0	0.0
+density	sodium chloride	"Convert 10 lb/in³s of sodium chloride to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	10.0	276799.04710267246	Easy	27679.9047	27679.9047	90.00000000370927
+density	osmium	"Convert 18.333 kg/m³s of osmium to lb/in³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	18.333	0.0006623216442359	Hard	0.0006619	0.0006619	0.0
+density	bismuth	"Convert 9.0241 kg/m³s of bismuth to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	9.0241	0.0090241	Hard	0.0090241	0.0090241	0.0
+density	ethanol	"Convert 18.333 lb/in³s of ethanol to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	18.333	507455.6930533293	Hard	506.9780	506.978	99.9000941349284
+density	spit	"Convert 0.2994 lb/in³s of spit to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	0.2994	8287.363470254013	Hard	8274.0000	8274.0	0.16125116633267939
+density	hydrogen	"Convert 0.2994 lb/ft³s of hydrogen to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	0.2994	0.0047959278247782	Hard	0.0048	0.0048	0.0
+density	aerogel	"Convert 1297.195 lb/ft³s of aerogel to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	1297.195	20.779070122455703	Hard	20.7791	20.7791	0.0
+density	bubble gum	"Convert 1297.195 kg/m³s of bubble gum to lb/in³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	1297.195	0.0468641425459399	Hard	0.0469	0.0469	0.0
+density	cubane	"Convert 0.2994 lb/ft³s of cubane to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	0.2994	0.0047959278247782	Hard	0.0048	0.0048	0.0
+density	oxygen	"Convert 9.0241 g/cm³s of oxygen to lb/ft³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	9.0241	563.3561718842001	Hard	563.4170	563.417	0.0
+density	sodium chloride	"Convert 4508.208 kg/m³s of sodium chloride to lb/in³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	4508.208	0.162869346812736	Hard	0.1630	0.163	0.0

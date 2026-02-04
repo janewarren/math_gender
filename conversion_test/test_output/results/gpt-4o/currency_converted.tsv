@@ -1,0 +1,441 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+currency	null	"Convert 5 EUR to CNH.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	5.0	40.82352941176471	Easy	40.8235	40.8235	0.0
+currency	null	"Convert 20 JPY to CHF.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	20.0	0.1003215434083601	Easy	0.1003	0.1003	0.0
+currency	null	"Convert 10 EUR to CNH.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	10.0	81.64705882352942	Easy	81.6471	81.6471	0.0
+currency	null	"Convert 5 LBP to IRR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	5.0	69.53313851548802	Easy	694.8721	694.8721	899.3394729985074
+currency	null	"Convert 20 USD to EUR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	20.0	17.0	Easy	17.0000	17.0	0.0
+currency	null	"Convert 1 SLL to IDR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	1.0	684.8856209150327	Easy	0.0015	0.0015	99.99978098532746
+currency	null	"Convert 20 GBP to JPY.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	20.0	4260.273972602739	Easy	4260.2732	4260.2732	0.0
+currency	null	"Convert 50 GBP to JPY.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	50.0	10650.684931506848	Easy	10647.9452	10647.9452	0.0
+currency	null	"Convert 5 GBP to JPY.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	5.0	1065.0684931506848	Easy	1064.0411	1064.0411	0.0
+currency	null	"Convert 10 SLL to IDR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	10.0	6848.856209150326	Easy	6.8470	6.847	99.9000271024693
+currency	null	"Convert 0.2994 VND to LAK.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	0.2994	0.2473336966447245	Hard	0.2471	0.2471	0.0
+currency	null	"Convert 9.0241 SLL to IDR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	9.0241	6180.476331699347	Hard	6.1791	6.1791	99.90002226902305
+currency	null	"Convert 9.0241 USD to EUR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	9.0241	7.670485	Hard	7.6705	7.6705	0.0
+currency	null	"Convert 9.0241 LBP to IRR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	9.0241	125.4947990555231	Hard	125.4700	125.47	0.0
+currency	null	"Convert 4508.208 SLL to IDR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	4508.208	3087606.835294117	Hard	11.2920	11.292	99.99963427986131
+currency	null	"Convert 1297.195 VND to LAK.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	1297.195	1071.6100020676467	Hard	1071.0781	1071.0781	0.0
+currency	null	"Convert 4508.208 UZS to GNF.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	4508.208	3220.516588408163	Hard	3219.7883	3219.7883	0.0
+currency	null	"Convert 9.0241 JPY to CHF.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	9.0241	0.0452655819935691	Hard	0.0453	0.0453	0.0
+currency	null	"Convert 4508.208 VND to LAK.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	4508.208	3724.2209414940553	Hard	3.7070	3.707	99.90046240386285
+currency	null	"Convert 18.333 EUR to CNH.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	18.333	149.68355294117646	Hard	149.6932	149.6932	0.0

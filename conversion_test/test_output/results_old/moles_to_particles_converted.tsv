@@ -1,0 +1,181 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+moles_to_particles	hydrogen	"Convert 1 mole of hydrogen to particle.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1.0	6.02214076e+23	Easy	6.0221e+23	6.0221e+23	0.0
+moles_to_particles	ethanol	"Convert 10 moles of ethanol to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	10.0	6.02214076e+24	Easy	6.0221e+24	6.0221e+24	0.0
+moles_to_particles	methane	"Convert 20 moles of methane to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	20.0	1.204428152e+25	Easy	1.204428152e+25	1.204428152e+25	0.0
+moles_to_particles	sodium chloride	"Convert 1 mole of sodium chloride to atom.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1.0	6.02214076e+23	Easy	1.204428152e+24	1.204428152e+24	100.0
+moles_to_particles	glucose	"Convert 1 mole of glucose to atom.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1.0	6.02214076e+23	Easy	1.204428152e+25	1.204428152e+25	1899.9999999999995
+moles_to_particles	snake venom	"Convert 1 mole of snake venom to atom.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1.0	6.02214076e+23	Easy	6.0221e+23	6.0221e+23	0.0
+moles_to_particles	astatine	"Convert 10 moles of astatine to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	10.0	6.02214076e+24	Easy	6.0221e+24	6.0221e+24	0.0
+moles_to_particles	vomitoxin	"Convert 1 mole of vomitoxin to atom.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1.0	6.02214076e+23	Easy	6.0221e+23	6.0221e+23	0.0
+moles_to_particles	nitrogen	"Convert 20 moles of nitrogen to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	20.0	1.204428152e+25	Easy	1.204428152e+25	1.204428152e+25	0.0
+moles_to_particles	barrelene	"Convert 50 moles of barrelene to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	50.0	3.01107038e+25	Easy	3.01107038e+25	3.01107038e+25	0.0
+moles_to_particles	barrelene	"Convert 1297.195 moles of barrelene to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1297.195	7.8118908831682e+26	Hard	7.8120e+26	7.812e+26	0.0
+moles_to_particles	oxygen	"Convert 0.2994 moles of oxygen to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	0.2994	1.803028943544e+23	Hard	1.8023e+23	1.8023e+23	0.0
+moles_to_particles	oxygen	"Convert 4508.208 moles of oxygen to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	4508.208	2.714906315135808e+27	Hard	2.715622e+27	2.715622e+27	0.0
+moles_to_particles	ketchup	"Convert 4508.208 moles of ketchup to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	4508.208	2.714906315135808e+27	Hard	2.715646e+27	2.715646e+27	0.0
+moles_to_particles	coffee	"Convert 18.333 moles of coffee to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	18.333	1.1040390655308e+25	Hard	1.1040725e+25	1.1040725e+25	0.0
+moles_to_particles	sodium chloride	"Convert 0.2994 moles of sodium chloride to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	0.2994	1.803028943544e+23	Hard	1.8023e+23	1.8023e+23	0.0
+moles_to_particles	vomitoxin	"Convert 1297.195 moles of vomitoxin to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	1297.195	7.8118908831682e+26	Hard	7.810646e+26	7.810646e+26	0.0
+moles_to_particles	bubble gum	"Convert 0.2994 moles of bubble gum to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	0.2994	1.803028943544e+23	Hard	1.8018e+23	1.8018e+23	0.0
+moles_to_particles	californium	"Convert 4508.208 moles of californium to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	4508.208	2.714906315135808e+27	Hard	2.715982e+27	2.715982e+27	0.0
+moles_to_particles	aerogel	"Convert 9.0241 moles of aerogel to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	9.0241	5.4344400432316e+24	Hard	5.4340e+24	5.434e+24	0.0

@@ -1,0 +1,501 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+timezone	null	"Convert 9PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	7AM	Easy	9AM	9AM	120.0
+timezone	null	"Convert 1AM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1AM	10:30PM	Easy	9:30PM	9:30PM	60.0
+timezone	null	"Convert 3PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3PM	12PM	Easy	12PM	12PM	0.0
+timezone	null	"Convert 9PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	6:30PM	Easy	4:30PM	4:30PM	120.0
+timezone	null	"Convert 9PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	12AM	Easy	12AM	12AM	0.0
+timezone	null	"Convert 1AM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1AM	4AM	Easy	4AM	4AM	0.0
+timezone	null	"Convert 9PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	6:30PM	Easy	6:30PM	6:30PM	0.0
+timezone	null	"Convert 12PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	12PM	10PM	Easy	8PM	8PM	120.0
+timezone	null	"Convert 9PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	5AM	Easy	5AM	5AM	0.0
+timezone	null	"Convert 1PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1PM	9PM	Easy	9PM	9PM	0.0
+timezone	null	"Convert 8:11PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	5:11PM	Hard	5:11PM	5:11PM	0.0
+timezone	null	"Convert 8:11PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	6:11AM	Hard	5:11AM	5:11AM	60.0
+timezone	null	"Convert 8:11PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	4:11AM	Hard	4:11AM	4:11AM	0.0
+timezone	null	"Convert 11:59AM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	7:59PM	Hard	7:59PM	7:59PM	0.0
+timezone	null	"Convert 6:58PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	4:27PM	Hard	4:28PM	4:28PM	0.0
+timezone	null	"Convert 3:49PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:49PM	5:48PM	Hard	5:49PM	5:49PM	0.0
+timezone	null	"Convert 8:11PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	12:11AM	Hard	12:11AM	12:11AM	0.0
+timezone	null	"Convert 11:59AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	9:59PM	Hard	7:59PM	7:59PM	120.0
+timezone	null	"Convert 6:58PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	8:57PM	Hard	8:58PM	8:58PM	0.0
+timezone	null	"Convert 11:59AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	9:28AM	Hard	9:29AM	9:29AM	0.0

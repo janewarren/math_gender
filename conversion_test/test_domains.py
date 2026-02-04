@@ -45,7 +45,8 @@ def create_test_times_file(output_file: Path):
     return test_times
 
 def run_preprocessing_test(conversions_dir: Path, test_numbers_file: Path, 
-                          test_times_file: Path, output_dir: Path):
+                          test_times_file: Path, output_dir: Path, no_guide: bool = False,
+                          math_only: bool = False):
     """Run preprocessing with test numbers."""
     print("\n" + "="*60)
     print("RUNNING PREPROCESSING WITH TEST VALUES")
@@ -59,6 +60,14 @@ def run_preprocessing_test(conversions_dir: Path, test_numbers_file: Path,
         "--output-dir", str(output_dir)
     ]
     
+    # Add --no-guide flag if requested
+    if no_guide:
+        cmd.append("--no-guide")
+    
+    # Add --math-only flag if requested
+    if math_only:
+        cmd.append("--math-only")
+    
     result = subprocess.run(cmd, capture_output=True, text=True)
     
     if result.returncode != 0:
@@ -70,12 +79,9 @@ def run_preprocessing_test(conversions_dir: Path, test_numbers_file: Path,
     return True
 
 def run_inference_test(domain: str, input_file: Path, output_file: Path, 
-                      models: list = None, max_rows: int = None):
-    """Run inference on a single domain."""
-    if models is None:
-        models = ["gpt-4o"]  # Use just one model for testing
-    
-    print(f"\nRunning inference for {domain}...")
+                      model_name: str, max_rows: int = None):
+    """Run inference on a single domain with a single model."""
+    print(f"\nRunning inference for {domain} with {model_name}...")
     print(f"  Input: {input_file}")
     print(f"  Output: {output_file}")
     
@@ -114,17 +120,14 @@ def run_inference_test(domain: str, input_file: Path, output_file: Path,
         print(f"  ERROR: Could not read input file: {e}")
         return None
     
-    # Run main_conversion.py
+    # Run main_conversion.py with single model
     cmd = [
         sys.executable, "main_conversion.py",
         "--domain", domain,
         "--input-file", str(input_file),
-        "--output-file", str(output_file)
+        "--output-file", str(output_file),
+        "--models", model_name
     ]
-    
-    # Add model arguments if specified
-    if models:
-        cmd.extend(["--models"] + models)
     
     result = subprocess.run(cmd, capture_output=True, text=True)
     
@@ -144,20 +147,13 @@ def run_inference_test(domain: str, input_file: Path, output_file: Path,
         
         stats = {
             'domain': domain,
-            'total_prompts': total,
-            'models_tested': models if models else ['default']
+            'model': model_name,
+            'total_prompts': total
         }
         
-        # Handle single model vs multiple models
-        if len(models) == 1:
-            model_name = models[0]
-            loss_col = 'loss'
-            answer_col = 'model_answer'
-        else:
-            # For multiple models, aggregate across all
-            model_name = models[0]  # Use first model for stats
-            loss_col = f'loss_{model_name}'
-            answer_col = f'model_answer_{model_name}'
+        # Calculate statistics for single model
+        loss_col = 'loss'
+        answer_col = 'model_answer'
         
         # Check if columns exist
         has_loss = loss_col in result_df.columns
@@ -197,6 +193,10 @@ def main():
                        help='Skip preprocessing if test files already exist')
     parser.add_argument('--max-rows', type=int, default=None,
                        help='Maximum number of rows to process per domain (for faster testing)')
+    parser.add_argument('--no-guide', action='store_true',
+                       help='Use preprocessed files without conversion guides (looks for _no_guide suffix)')
+    parser.add_argument('--math-only', action='store_true',
+                       help='Use pure mathematical prompts (looks for _math_only suffix)')
     
     args = parser.parse_args()
     
@@ -205,9 +205,24 @@ def main():
     test_dir.mkdir(parents=True, exist_ok=True)
     
     preprocessed_dir = test_dir / 'preprocessed'
-    results_dir = test_dir / 'results'
+    # Use appropriate results directory based on flags
+    if args.math_only:
+        results_dir_name = 'results_math_only'
+    elif args.no_guide:
+        results_dir_name = 'results_no_guide'
+    else:
+        results_dir_name = 'results'
+    results_dir = test_dir / results_dir_name
     preprocessed_dir.mkdir(exist_ok=True)
     results_dir.mkdir(exist_ok=True)
+    
+    # Create model-specific result directories
+    model_results_dirs = {}
+    for model in args.models:
+        model_dir = results_dir / model
+        model_dir.mkdir(exist_ok=True)
+        model_results_dirs[model] = model_dir
+        print(f"Created results directory for {model}: {model_dir}")
     
     conversions_dir = Path('conversions')
     
@@ -232,7 +247,9 @@ def main():
             conversions_dir, 
             test_numbers_file,
             test_times_file,
-            preprocessed_dir
+            preprocessed_dir,
+            no_guide=args.no_guide,
+            math_only=args.math_only
         )
         if not success:
             print("ERROR: Preprocessing failed. Exiting.")
@@ -243,10 +260,11 @@ def main():
     # Define all domains
     domains = [
         "bits_bytes",
-        "clothing_sizes_clothing_size",
-        "clothing_sizes_pant_size",
-        "clothing_sizes_shoe_size",
-        "clothing_sizes_bra_size",
+        "clothing_sizes_men_shoe_size",
+        "clothing_sizes_men_pant_size",
+        "clothing_sizes_women_shoe_size",
+        "clothing_sizes_women_bra_size",
+        "clothing_sizes_women_pant_size",
         "cooking",
         "currency",
         "density",
@@ -266,12 +284,23 @@ def main():
     all_stats = []
     
     for domain in domains:
-        input_file = preprocessed_dir / f"{domain}.tsv"
-        output_file = results_dir / f"{domain}_converted.tsv"
+        # Build suffix based on flags
+        suffix_parts = []
+        if args.math_only:
+            suffix_parts.append("_math_only")
+        if args.no_guide:
+            suffix_parts.append("_no_guide")
+        suffix = "".join(suffix_parts)
+        input_file = preprocessed_dir / f"{domain}{suffix}.tsv"
         
-        stats = run_inference_test(domain, input_file, output_file, args.models, args.max_rows)
-        if stats:
-            all_stats.append(stats)
+        # Process each model separately
+        for model_name in args.models:
+            model_results_dir = model_results_dirs[model_name]
+            output_file = model_results_dir / f"{domain}{suffix}_converted.tsv"
+            
+            stats = run_inference_test(domain, input_file, output_file, model_name, args.max_rows)
+            if stats:
+                all_stats.append(stats)
     
     # Print summary
     print("\n" + "="*60)
@@ -285,6 +314,7 @@ def main():
         for stats in all_stats:
             row = {
                 'Domain': stats['domain'],
+                'Model': stats.get('model', 'unknown'),
                 'Total Prompts': stats['total_prompts']
             }
             
@@ -321,6 +351,10 @@ def main():
     print(f"\nTest outputs in: {test_dir}")
     print(f"  - Preprocessed files: {preprocessed_dir}")
     print(f"  - Results: {results_dir}")
+    print(f"  - Model-specific results:")
+    for model in args.models:
+        model_dir = model_results_dirs[model]
+        print(f"      {model}: {model_dir}")
 
 if __name__ == '__main__':
     main()

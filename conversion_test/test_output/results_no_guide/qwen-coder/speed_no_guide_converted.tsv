@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+speed	null	Convert 1 mph to km/h. Provide only the numerical value.	1.0	1.6093444978925633	Easy	1.6093	1.6093	0.0
+speed	null	Convert 10 km/hs to mphs. Provide only the numerical value.	10.0	6.21371	Easy	6.2137	6.2137	0.0
+speed	null	Convert 1 km/h to mph. Provide only the numerical value.	1.0	0.621371	Easy	0.6214	0.6214	0.0
+speed	null	Convert 5 mphs to km/hs. Provide only the numerical value.	5.0	8.046722489462816	Easy	8.0467	8.0467	0.0
+speed	null	Convert 5 km/hs to mphs. Provide only the numerical value.	5.0	3.106855	Easy	3.1069	3.1069	0.0
+speed	null	Convert 10 mphs to km/hs. Provide only the numerical value.	10.0	16.093444978925632	Easy	16.0934	16.0934	0.0
+speed	null	Convert 10 knots to km/hs. Provide only the numerical value.	10.0	18.51999325872245	Easy	18.5200	18.52	0.0
+speed	null	Convert 20 m/s to km/hs. Provide only the numerical value.	20.0	71.99994240004608	Easy	72.0000	72.0	0.0
+speed	null	Convert 5 m/s to km/hs. Provide only the numerical value.	5.0	17.99998560001152	Easy	18.0000	18.0	0.0
+speed	null	Convert 50 km/hs to m/s. Provide only the numerical value.	50.0	13.8889	Easy	13.8889	13.8889	0.0
+speed	null	Convert 4508.208 mphs to km/hs. Provide only the numerical value.	4508.208	7255.259740155237	Hard	7255.2946	7255.2946	0.0
+speed	null	Convert 1297.195 km/hs to m/s. Provide only the numerical value.	1297.195	360.33223271	Hard	360.3325	360.3325	0.0
+speed	null	Convert 9.0241 mphs to km/hs. Provide only the numerical value.	9.0241	14.522885683432282	Hard	14.5229	14.5229	0.0
+speed	null	Convert 18.333 m/s to km/hs. Provide only the numerical value.	18.333	65.99874720100223	Hard	66.0000	66.0	0.0
+speed	null	Convert 1297.195 m/s to km/hs. Provide only the numerical value.	1297.195	4669.898264081388	Hard	4670.9020	4670.902	0.0
+speed	null	Convert 0.2994 knots to km/hs. Provide only the numerical value.	0.2994	0.5544885981661503	Hard	0.5556	0.5556	0.20043727454909654
+speed	null	Convert 18.333 km/hs to m/s. Provide only the numerical value.	18.333	5.092504074	Hard	5.0925	5.0925	0.0
+speed	null	Convert 1297.195 knots to km/hs. Provide only the numerical value.	1297.195	2402.4042655248472	Hard	2402.4000	2402.4	0.0
+speed	null	Convert 1297.195 km/hs to knots. Provide only the numerical value.	1297.195	700.429520615	Hard	700.0000	700.0	0.0
+speed	null	Convert 1297.195 km/hs to mphs. Provide only the numerical value.	1297.195	806.039354345	Hard	806.0315	806.0315	0.0

@@ -1,0 +1,241 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+temperature	null	"Convert 50 degrees Fahrenheit to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	50.0	283.15	Easy	283.1500	283.15	0.0
+temperature	null	"Convert 5 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	5.0	278.15	Easy	278.15	278.15	0.0
+temperature	null	"Convert 1 Kelvin to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	1.0	-457.87	Easy	-457.87	-457.87	0.0
+temperature	null	"Convert 20 Kelvin to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	20.0	-253.15	Easy	-253.15	-253.15	0.0
+temperature	null	"Convert 50 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	50.0	323.15	Easy	323.15	323.15	0.0
+temperature	null	"Convert 20 degrees Celsius to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	20.0	68.0	Easy	68.0	68.0	0.0
+temperature	null	"Convert 1 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	1.0	274.15	Easy	274.15	274.15	0.0
+temperature	null	"Convert 1 degrees Fahrenheit to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	1.0	255.9277777777777	Easy	255.9278	255.9278	0.0
+temperature	null	"Convert 10 Kelvin to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	10.0	-441.67	Easy	-441.67	-441.67	0.0
+temperature	null	"Convert 50 Kelvin to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	50.0	-369.67	Easy	-369.67	-369.67	0.0
+temperature	null	"Convert 0.2994 Kelvin to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	0.2994	-459.13108	Hard	-459.4709	-459.4709	0.0
+temperature	null	"Convert 9.0241 degrees Fahrenheit to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	9.0241	260.3856111111111	Hard	255.3723	255.3723	1.9253410700070566
+temperature	null	"Convert 0.2994 degrees Celsius to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	0.2994	32.53892	Hard	32.5390	32.539	0.0
+temperature	null	"Convert 4508.208 degrees Fahrenheit to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	4508.208	2486.782222222222	Hard	2486.7822	2486.7822	0.0
+temperature	null	"Convert 9.0241 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	9.0241	282.17409999999995	Hard	282.1741	282.1741	0.0
+temperature	null	"Convert 4508.208 degrees Fahrenheit to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	4508.208	2759.932222222222	Hard	2753.15	2753.15	0.24573872385754664
+temperature	null	"Convert 18.333 degrees Fahrenheit to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	18.333	-7.592777777777779	Hard	-7.5928	-7.5928	0.0
+temperature	null	"Convert 1297.195 Kelvin to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	1297.195	1024.045	Hard	1024.0450	1024.045	0.0
+temperature	null	"Convert 9.0241 Kelvin to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	9.0241	-443.42662	Hard	-441.6794	-441.6794	0.39402686288884214
+temperature	null	"Convert 9.0241 Kelvin to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	9.0241	-264.1259	Hard	-264.1259	-264.1259	0.0

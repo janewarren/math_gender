@@ -1,0 +1,301 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	spit	"Convert 10 teaspoons of spit to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	49.28921623171768	Easy	49.2892	49.2892	0.0
+volume	cubane	"Convert 1 gallons of cubane to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	128.00002649788772	Easy	128.0	128.0	0.0
+volume	ketchup	"Convert 5 gallons of ketchup to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	640.0001324894387	Easy	640.0	640.0	0.0
+volume	hydrogen	"Convert 1 liters of hydrogen to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	1000.0	Easy	1000.0000	1000.0	0.0
+volume	basketane	"Convert 5 gallons of basketane to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	640.0001324894387	Easy	640.0	640.0	0.0
+volume	californium	"Convert 20 quarts of californium to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	1279.9978233919126	Easy	1280.0418	1280.0418	0.0
+volume	spit	"Convert 50 liters of spit to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	50.0	211.3375	Easy	211.338	211.338	0.0
+volume	chocolate	"Convert 50 liters of chocolate to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	50.0	211.3375	Easy	211.338	211.338	0.0
+volume	basketane	"Convert 50 teaspoons of basketane to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	50.0	1.0416659735370637	Easy	1.0427	1.0427	0.0
+volume	spit	"Convert 5 gallons of spit to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	640.0001324894387	Easy	640.0	640.0	0.0
+volume	bismuth	"Convert 1297.195 liters of bismuth to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	1297195.0	Hard	1297195.0000	1297195.0	0.0
+volume	bismuth	"Convert 0.2994 quarts of bismuth to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	19.16156741617693	Hard	19.1639	19.1639	0.0
+volume	bismuth	"Convert 0.2994 liters of bismuth to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	1.26548895	Hard	1.2651	1.2651	0.0
+volume	cubane	"Convert 18.333 teaspoons of cubane to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	18.333	90.361920117608	Hard	90.3814	90.3814	0.0
+volume	astatine	"Convert 9.0241 teaspoons of astatine to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	9.0241	0.1880019582359162	Hard	0.1881	0.1881	0.0
+volume	bismuth	"Convert 1297.195 teaspoons of bismuth to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	27.024877850848217	Hard	6.3945	6.3945	76.33846844640114
+volume	null	"Convert 9.0241 quarts to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	9.0241	577.541417903548	Hard	577.5124	577.5124	0.0
+volume	astatine	"Convert 4508.208 liters of astatine to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	4508208.0	Hard	4508208.0000	4508208.0	0.0
+volume	bismuth	"Convert 4508.208 liters of bismuth to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	19055.068164	Hard	19052.9611	19052.9611	0.0
+volume	ethanol	"Convert 0.2994 teaspoons of ethanol to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	1.4757191339776272	Hard	1.4755	1.4755	0.0

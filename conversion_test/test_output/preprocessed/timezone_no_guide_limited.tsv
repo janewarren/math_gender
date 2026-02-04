@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+timezone		Convert 9PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	11PM	Easy
+timezone		Convert 9PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	5AM	Easy
+timezone		Convert 12PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	2PM	Easy
+timezone		Convert 9PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	7AM	Easy
+timezone		Convert 1AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	10:30PM	Easy
+timezone		Convert 3PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	6PM	Easy
+timezone		Convert 12PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	3PM	Easy
+timezone		Convert 12PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	9AM	Easy
+timezone		Convert 9PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	1AM	Easy
+timezone		Convert 9PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	12AM	Easy
+timezone		Convert 8:11PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	12:11AM	Hard
+timezone		Convert 3:49PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	11:48PM	Hard
+timezone		Convert 3:49PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	6:48PM	Hard
+timezone		Convert 6:58PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	4:57AM	Hard
+timezone		Convert 2:48AM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	10:48AM	Hard
+timezone		Convert 11:59AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	9:28AM	Hard
+timezone		Convert 8:11PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	11:11PM	Hard
+timezone		Convert 2:48AM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	5:48AM	Hard
+timezone		Convert 2:48AM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	10:48AM	Hard
+timezone		Convert 11:59AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	9:59PM	Hard

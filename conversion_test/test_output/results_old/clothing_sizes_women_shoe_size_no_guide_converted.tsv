@@ -1,0 +1,201 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response_gpt-4o	model_answer_gpt-4o	loss_gpt-4o	raw_response_qwen-coder	model_answer_qwen-coder	loss_qwen-coder	raw_response_llama-4	model_answer_llama-4	loss_llama-4
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	5.5	35.5	Easy	35.5	35.5	0.0	35.5	35.5	0.0	35.5	35.5	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 43.5 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	43.5	27.5	Easy	27.5	27.5	0.0	27.5	27.5	0.0	27.5	27.5	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	8.0	25.0	Easy	25	25	0.0	25	25	0.0	25	25	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	11.0	28.0	Easy	28	28	0.0	28	28	0.0	28	28	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	7.0	37.5	Easy	37.5	37.5	0.0	37.5	37.5	0.0	37.5	37.5	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	7.0	23.0	Easy	23	23	0.0	23	23	0.0	23	23	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	5.5	21.5	Easy	21.5	21.5	0.0	21.5	21.5	0.0	21.5	21.5	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 38 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	38.0	23.5	Easy	23.5	23.5	0.0	23.5	23.5	0.0	23.5	23.5	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	8.5	39.0	Easy	39	39	0.0	39	39	0.0	39	39	0.0
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	5.5	3.0	Easy	3	3	0.0	3	3	0.0	3	3	0.0

@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response_gpt-4o	model_answer_gpt-4o	loss_gpt-4o	raw_response_qwen-coder	model_answer_qwen-coder	loss_qwen-coder	raw_response_llama-4	model_answer_llama-4	loss_llama-4
+volume	barrelene	Convert 1 quarts of barrelene to tablespoons. Provide only the numerical value.	1.0	63.99989116959563	Easy	63.9999	63.9999	0.0	64.0000	64.0	0.0	5376.0000	5376.0	8300.014284014862
+volume	aerogel	Convert 50 gallons of aerogel to ounces. Provide only the numerical value.	50.0	6400.001324894387	Easy	6400.0000	6400.0	0.0	6400.0000	6400.0	0.0	6400.0000	6400.0	0.0
+volume	bubble gum	Convert 10 gallons of bubble gum to ounces. Provide only the numerical value.	10.0	1280.000264978877	Easy	1280.0	1280.0	0.0	1280.0000	1280.0	0.0	1280.0000	1280.0	0.0
+volume	hydrogen	Convert 50 quarts of hydrogen to tablespoons. Provide only the numerical value.	50.0	3199.994558479781	Easy	3200.0000	3200.0	0.0	3200.0000	3200.0	0.0	768.0	768.0	75.99995918852895
+volume	matcha latte	Convert 1 teaspoons of matcha latte to cups. Provide only the numerical value.	1.0	0.0208333194707412	Easy	0.0208	0.0208	0.1599335659782616	0.0208	0.0208	0.1599335659782616	0.0208	0.0208	0.1599335659782616
+volume	californium	Convert 10 teaspoons of californium to cups. Provide only the numerical value.	10.0	0.2083331947074126	Easy	0.2083	0.2083	0.0	0.2083	0.2083	0.0	0.2083	0.2083	0.0
+volume	gasoline	Convert 50 teaspoons of gasoline to cups. Provide only the numerical value.	50.0	1.0416659735370637	Easy	1.0417	1.0417	0.0	1.0417	1.0417	0.0	1.0417	1.0417	0.0
+volume	ammonia	Convert 5 liters of ammonia to milliliters. Provide only the numerical value.	5.0	5000.0	Easy	5000.0	5000.0	0.0	5000.0000	5000.0	0.0	5000.0000	5000.0	0.0
+volume	chocolate	Convert 10 teaspoons of chocolate to cups. Provide only the numerical value.	10.0	0.2083331947074126	Easy	0.2083	0.2083	0.0	0.2083	0.2083	0.0	0.2083	0.2083	0.0
+volume	vomitoxin	Convert 10 liters of vomitoxin to milliliters. Provide only the numerical value.	10.0	10000.0	Easy	10000.0	10000.0	0.0	10000.0000	10000.0	0.0	10000.0000	10000.0	0.0
+volume	sodium chloride	Convert 0.2994 teaspoons of sodium chloride to milliliters. Provide only the numerical value.	0.2994	1.4757191339776272	Hard	1.4781	1.4781	0.16133598647294134	1.4756	1.4756	0.0	1.4773	1.4773	0.10712512875751645
+volume	sodium chloride	Convert 0.2994 teaspoons of sodium chloride to cups. Provide only the numerical value.	0.2994	0.0062374958495399	Hard	0.001246	0.001246	80.02403480409676	0.0062	0.0062	0.601136264365872	0.0015	0.0015	75.95188780589496
+volume	cubane	Convert 0.2994 teaspoons of cubane to cups. Provide only the numerical value.	0.2994	0.0062374958495399	Hard	0.0062375	0.0062375	0.0	0.0062	0.0062	0.601136264365872	0.0063	0.0063	1.0020712152411344
+volume	ketchup	Convert 9.0241 teaspoons of ketchup to milliliters. Provide only the numerical value.	9.0241	44.47908161966435	Hard	44.4971	44.4971	0.0	44.4829	44.4829	0.0	44.4794	44.4794	0.0
+volume	bismuth	Convert 1297.195 liters of bismuth to cups. Provide only the numerical value.	1297.195	5482.918966249999	Hard	5484.9461	5484.9461	0.0	5499.9792	5499.9792	0.3111523962877136	5485.1955	5485.1955	0.0
+volume	ethanol	Convert 4508.208 teaspoons of ethanol to cups. Provide only the numerical value.	4508.208	93.92093750455156	Hard	938.3767	938.3767	899.1134297978283	93.921	93.921	0.0	93.9209	93.9209	0.0
+volume	bubble gum	Convert 18.333 teaspoons of bubble gum to cups. Provide only the numerical value.	18.333	0.3819372458570996	Hard	0.3823	0.3823	0.0	0.3819	0.3819	0.0	0.3820	0.382	0.0
+volume	nitrogen	Convert 1297.195 liters of nitrogen to milliliters. Provide only the numerical value.	1297.195	1297195.0	Hard	1297195.0	1297195.0	0.0	1297195.0000	1297195.0	0.0	1297195.0000	1297195.0	0.0
+volume	coffee	Convert 9.0241 liters of coffee to cups. Provide only the numerical value.	9.0241	38.142614675	Hard	38.1261	38.1261	0.0	38.0000	38.0	0.37389852849671545	38.1304	38.1304	0.0
+volume	gasoline	Convert 18.333 liters of gasoline to cups. Provide only the numerical value.	18.333	77.48900775	Hard	77.2971	77.2971	0.24765802992231323	77.4167	77.4167	0.0	77.5184	77.5184	0.0

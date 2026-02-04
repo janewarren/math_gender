@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+density	water	Convert 10 lb/ft³s of water to g/cm³s. Provide only the numerical value.	10.0	0.1601846300861143	Easy	0.1602	0.1602	0.0
+density	carbon dioxide	Convert 50 g/cm³s of carbon dioxide to kg/m³s. Provide only the numerical value.	50.0	50000.0	Easy	50000	50000.0	0.0
+density	basketane	Convert 50 kg/m³s of basketane to g/cm³s. Provide only the numerical value.	50.0	0.05	Easy	0.05	0.05	0.0
+density	RedBull	Convert 50 kg/m³s of RedBull to lb/in³s. Provide only the numerical value.	50.0	0.0018063646	Easy	0.0018051	0.0018051	0.0
+density	metallic hydrogen	Convert 20 lb/in³s of metallic hydrogen to kg/m³s. Provide only the numerical value.	20.0	553598.0942053449	Easy	362880.0000	362880.0	34.45064139520001
+density	cubane	Convert 5 lb/in³s of cubane to kg/m³s. Provide only the numerical value.	5.0	138399.52355133623	Easy	89870.6048	89870.6048	35.06436836347598
+density	cubane	Convert 50 kg/m³s of cubane to lb/in³s. Provide only the numerical value.	50.0	0.0018063646	Easy	0.0018051	0.0018051	0.0
+density	coffee	Convert 1 g/cm³ of coffee to lb/ft³. Provide only the numerical value.	1.0	62.427962	Easy	62.4279	62.4279	0.0
+density	vomitoxin	Convert 1 g/cm³ of vomitoxin to lb/ft³. Provide only the numerical value.	1.0	62.427962	Easy	62.4279	62.4279	0.0
+density	osmium	Convert 50 g/cm³s of osmium to kg/m³s. Provide only the numerical value.	50.0	50000.0	Easy	50000	50000.0	0.0
+density	vitamin water	Convert 4508.208 g/cm³s of vitamin water to lb/ft³s. Provide only the numerical value.	4508.208	281438.237712096	Hard	281,276.0000	281276.0	0.0
+density	ketchup	Convert 0.2994 lb/in³s of ketchup to kg/m³s. Provide only the numerical value.	0.2994	8287.363470254013	Hard	8,281.7888	8281.7888	0.0
+density	vitamin water	Convert 0.2994 g/cm³s of vitamin water to kg/m³s. Provide only the numerical value.	0.2994	299.4	Hard	299.4	299.4	0.0
+density	ethanol	Convert 0.2994 lb/ft³s of ethanol to g/cm³s. Provide only the numerical value.	0.2994	0.0047959278247782	Hard	0.004794	0.004794	0.0
+density	snake venom	Convert 0.2994 lb/ft³s of snake venom to g/cm³s. Provide only the numerical value.	0.2994	0.0047959278247782	Hard	0.004794	0.004794	0.0
+density	basketane	Convert 1297.195 kg/m³s of basketane to lb/in³s. Provide only the numerical value.	1297.195	0.0468641425459399	Hard	0.0469	0.0469	0.0
+density	chocolate	Convert 0.2994 kg/m³s of chocolate to lb/in³s. Provide only the numerical value.	0.2994	1.08165112248e-05	Hard	0.00001083	1.083e-05	0.12470541489452125
+density	hydrogen	Convert 18.333 lb/in³s of hydrogen to kg/m³s. Provide only the numerical value.	18.333	507455.6930533293	Hard	329,366.6667	329366.6667	35.09449766575259
+density	ammonia	Convert 18.333 kg/m³s of ammonia to g/cm³s. Provide only the numerical value.	18.333	0.018333	Hard	0.0183	0.0183	0.18000327278676873
+density	basketane	Convert 1297.195 lb/in³s of basketane to kg/m³s. Provide only the numerical value.	1297.195	35906233.99063511	Hard	233,688,000.0	233688000.0	550.8284886155128

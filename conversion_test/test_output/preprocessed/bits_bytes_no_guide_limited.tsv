@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+bits_bytes		Convert 1 bit to byte. Provide only the numerical value.	1.0	0.125	Easy
+bits_bytes		Convert 20 megabytes to gigabytes. Provide only the numerical value.	20.0	0.02	Easy
+bits_bytes		Convert 10 bytes to gigabytes. Provide only the numerical value.	10.0	1e-08	Easy
+bits_bytes		Convert 5 bits to bytes. Provide only the numerical value.	5.0	0.625	Easy
+bits_bytes		Convert 5 bits to kilobytes. Provide only the numerical value.	5.0	0.000625	Easy
+bits_bytes		Convert 50 kilobits to bits. Provide only the numerical value.	50.0	50000.0	Easy
+bits_bytes		Convert 5 megabytes to gigabytes. Provide only the numerical value.	5.0	0.005	Easy
+bits_bytes		Convert 20 bytes to gigabytes. Provide only the numerical value.	20.0	2e-08	Easy
+bits_bytes		Convert 50 megabytes to gigabytes. Provide only the numerical value.	50.0	0.05	Easy
+bits_bytes		Convert 20 bits to megabytes. Provide only the numerical value.	20.0	2.5e-06	Easy
+bits_bytes		Convert 1297.195 kilobits to bits. Provide only the numerical value.	1297.195	1297195.0	Hard
+bits_bytes		Convert 9.0241 bits to kilobytes. Provide only the numerical value.	9.0241	0.0011280125	Hard
+bits_bytes		Convert 1297.195 bytes to gigabytes. Provide only the numerical value.	1297.195	1.297195e-06	Hard
+bits_bytes		Convert 0.2994 bits to bytes. Provide only the numerical value.	0.2994	0.037425	Hard
+bits_bytes		Convert 4508.208 kilobits to bits. Provide only the numerical value.	4508.208	4508208.0	Hard
+bits_bytes		Convert 0.2994 bits to megabytes. Provide only the numerical value.	0.2994	3.7425e-08	Hard
+bits_bytes		Convert 4508.208 bits to bytes. Provide only the numerical value.	4508.208	563.526	Hard
+bits_bytes		Convert 0.2994 megabytes to gigabytes. Provide only the numerical value.	0.2994	0.0002994	Hard
+bits_bytes		Convert 9.0241 bits to bytes. Provide only the numerical value.	9.0241	1.1280125	Hard
+bits_bytes		Convert 9.0241 kilobits to bits. Provide only the numerical value.	9.0241	9024.1	Hard

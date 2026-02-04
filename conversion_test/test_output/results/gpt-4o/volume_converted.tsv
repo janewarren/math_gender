@@ -1,0 +1,301 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	sodium chloride	"Convert 50 teaspoons of sodium chloride to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	50.0	246.4460811585884	Easy	246.5887	246.5887	0.0
+volume	gasoline	"Convert 5 quarts of gasoline to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	319.99945584797814	Easy	1080.0487	1080.0487	237.5157926871906
+volume	bubble gum	"Convert 1 quarts of bubble gum to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	63.99989116959563	Easy	67.6280	67.628	5.6689296873804285
+volume	basketane	"Convert 20 liters of basketane to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	84.535	Easy	84.535	84.535	0.0
+volume	ethanol	"Convert 1 teaspoons of ethanol to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	0.0208333194707412	Easy	0.0049	0.0049	76.47998434967757
+volume	nitrogen	"Convert 10 quarts of nitrogen to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	639.9989116959563	Easy	640.0000	640.0	0.0
+volume	water	"Convert 1 teaspoons of water to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	4.928921623171767	Easy	4.9289	4.9289	0.0
+volume	carbon dioxide	"Convert 5 liters of carbon dioxide to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	5000.0	Easy	5000.0	5000.0	0.0
+volume	bubble gum	"Convert 5 teaspoons of bubble gum to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	24.64460811585884	Easy	24.6371	24.6371	0.0
+volume	null	"Convert 10 quarts to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	639.9989116959563	Easy	640.0000	640.0	0.0
+volume	vitamin water	"Convert 0.2994 gallons of vitamin water to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	38.32320793346759	Hard	38.3323	38.3323	0.0
+volume	vomitoxin	"Convert 18.333 liters of vomitoxin to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	18.333	77.48900775	Hard	77.4821	77.4821	0.0
+volume	osmium	"Convert 4508.208 liters of osmium to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	4508208.0	Hard	4508208.0	4508208.0	0.0
+volume	ketchup	"Convert 1297.195 liters of ketchup to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	5482.918966249999	Hard	5484.9823	5484.9823	0.0
+volume	RedBull	"Convert 18.333 quarts of RedBull to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	18.333	1173.3100048121964	Hard	1240.0000	1240.0	5.6839194172283705
+volume	bubble gum	"Convert 0.2994 teaspoons of bubble gum to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	0.0062374958495399	Hard	0.0015	0.0015	75.95188780589496
+volume	nitrogen	"Convert 4508.208 teaspoons of nitrogen to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	22220.603892955947	Hard	22.2222	22.2222	99.8999928169952
+volume	hydrogen	"Convert 4508.208 teaspoons of hydrogen to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	93.92093750455156	Hard	22.1875	22.1875	76.37640701901559
+volume	bubble gum	"Convert 1297.195 gallons of bubble gum to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	166040.99437292747	Hard	166000.9605	166000.9605	0.0
+volume	carbon dioxide	"Convert 0.2994 teaspoons of carbon dioxide to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	1.4757191339776272	Hard	1.4750	1.475	0.0

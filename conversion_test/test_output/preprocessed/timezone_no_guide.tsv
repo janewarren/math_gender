@@ -1,0 +1,101 @@
+domain	distractor	prompt	number	answer	difficulty
+timezone	null	Convert 1AM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	4AM	Easy
+timezone	null	Convert 1PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	4PM	Easy
+timezone	null	Convert 12PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	3PM	Easy
+timezone	null	Convert 3PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	6PM	Easy
+timezone	null	Convert 9PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	12AM	Easy
+timezone	null	Convert 11:59AM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	2:59PM	Hard
+timezone	null	Convert 3:49PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	6:48PM	Hard
+timezone	null	Convert 2:48AM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	5:48AM	Hard
+timezone	null	Convert 6:58PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	9:57PM	Hard
+timezone	null	Convert 8:11PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	11:11PM	Hard
+timezone	null	Convert 1AM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	9AM	Easy
+timezone	null	Convert 1PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	9PM	Easy
+timezone	null	Convert 12PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	8PM	Easy
+timezone	null	Convert 3PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	11PM	Easy
+timezone	null	Convert 9PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	5AM	Easy
+timezone	null	Convert 11:59AM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	7:59PM	Hard
+timezone	null	Convert 3:49PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	11:48PM	Hard
+timezone	null	Convert 2:48AM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	10:48AM	Hard
+timezone	null	Convert 6:58PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	2:57AM	Hard
+timezone	null	Convert 8:11PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	4:11AM	Hard
+timezone	null	Convert 1AM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	5AM	Easy
+timezone	null	Convert 1PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	5PM	Easy
+timezone	null	Convert 12PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	4PM	Easy
+timezone	null	Convert 3PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	7PM	Easy
+timezone	null	Convert 9PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	1AM	Easy
+timezone	null	Convert 11:59AM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	3:58PM	Hard
+timezone	null	Convert 3:49PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	7:48PM	Hard
+timezone	null	Convert 2:48AM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	6:48AM	Hard
+timezone	null	Convert 6:58PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	10:57PM	Hard
+timezone	null	Convert 8:11PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	12:11AM	Hard
+timezone	null	Convert 1AM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	10PM	Easy
+timezone	null	Convert 1PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	10AM	Easy
+timezone	null	Convert 12PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	9AM	Easy
+timezone	null	Convert 3PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	12PM	Easy
+timezone	null	Convert 9PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	6PM	Easy
+timezone	null	Convert 11:59AM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	8:58AM	Hard
+timezone	null	Convert 3:49PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	12:48PM	Hard
+timezone	null	Convert 2:48AM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	11:48PM	Hard
+timezone	null	Convert 6:58PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	3:57PM	Hard
+timezone	null	Convert 8:11PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	5:11PM	Hard
+timezone	null	Convert 1AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	10:30PM	Easy
+timezone	null	Convert 1PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	10:30AM	Easy
+timezone	null	Convert 12PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	9:30AM	Easy
+timezone	null	Convert 3PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	12:30PM	Easy
+timezone	null	Convert 9PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	6:30PM	Easy
+timezone	null	Convert 11:59AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	9:28AM	Hard
+timezone	null	Convert 3:49PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	1:18PM	Hard
+timezone	null	Convert 2:48AM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	12:18AM	Hard
+timezone	null	Convert 6:58PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	4:27PM	Hard
+timezone	null	Convert 8:11PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	5:41PM	Hard
+timezone	null	Convert 1AM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	3AM	Easy
+timezone	null	Convert 1PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	3PM	Easy
+timezone	null	Convert 12PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	2PM	Easy
+timezone	null	Convert 3PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	5PM	Easy
+timezone	null	Convert 9PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	11PM	Easy
+timezone	null	Convert 11:59AM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	1:59PM	Hard
+timezone	null	Convert 3:49PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	5:48PM	Hard
+timezone	null	Convert 2:48AM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	4:48AM	Hard
+timezone	null	Convert 6:58PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	8:57PM	Hard
+timezone	null	Convert 8:11PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	10:11PM	Hard
+timezone	null	Convert 1AM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	4AM	Easy
+timezone	null	Convert 1PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	4PM	Easy
+timezone	null	Convert 12PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	3PM	Easy
+timezone	null	Convert 3PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	6PM	Easy
+timezone	null	Convert 9PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	12AM	Easy
+timezone	null	Convert 11:59AM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	2:59PM	Hard
+timezone	null	Convert 3:49PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	6:48PM	Hard
+timezone	null	Convert 2:48AM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	5:48AM	Hard
+timezone	null	Convert 6:58PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	9:57PM	Hard
+timezone	null	Convert 8:11PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	11:11PM	Hard
+timezone	null	Convert 1AM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	10:30PM	Easy
+timezone	null	Convert 1PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	10:30AM	Easy
+timezone	null	Convert 12PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	9:30AM	Easy
+timezone	null	Convert 3PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	12:30PM	Easy
+timezone	null	Convert 9PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	6:30PM	Easy
+timezone	null	Convert 11:59AM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	9:28AM	Hard
+timezone	null	Convert 3:49PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	1:18PM	Hard
+timezone	null	Convert 2:48AM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	12:18AM	Hard
+timezone	null	Convert 6:58PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	4:27PM	Hard
+timezone	null	Convert 8:11PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	5:41PM	Hard
+timezone	null	Convert 1AM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	9AM	Easy
+timezone	null	Convert 1PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	9PM	Easy
+timezone	null	Convert 12PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	8PM	Easy
+timezone	null	Convert 3PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	11PM	Easy
+timezone	null	Convert 9PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	5AM	Easy
+timezone	null	Convert 11:59AM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	7:59PM	Hard
+timezone	null	Convert 3:49PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	11:48PM	Hard
+timezone	null	Convert 2:48AM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	10:48AM	Hard
+timezone	null	Convert 6:58PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	2:57AM	Hard
+timezone	null	Convert 8:11PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	4:11AM	Hard
+timezone	null	Convert 1AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1AM	11AM	Easy
+timezone	null	Convert 1PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	1PM	11PM	Easy
+timezone	null	Convert 12PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12PM	10PM	Easy
+timezone	null	Convert 3PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3PM	1AM	Easy
+timezone	null	Convert 9PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9PM	7AM	Easy
+timezone	null	Convert 11:59AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	11:59AM	9:59PM	Hard
+timezone	null	Convert 3:49PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	3:49PM	1:48AM	Hard
+timezone	null	Convert 2:48AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:48AM	12:48PM	Hard
+timezone	null	Convert 6:58PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	6:58PM	4:57AM	Hard
+timezone	null	Convert 8:11PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	8:11PM	6:11AM	Hard

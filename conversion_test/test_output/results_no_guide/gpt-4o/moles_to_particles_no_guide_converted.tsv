@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+moles_to_particles	chocolate	Convert 50 moles of chocolate to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy	3.0110e+25	3.011e+25	0.0
+moles_to_particles	gasoline	Convert 50 moles of gasoline to atoms. Provide only the numerical value.	50.0	3.01107038e+25	Easy	3.0110e+25	3.011e+25	0.0
+moles_to_particles	snake venom	Convert 5 moles of snake venom to atoms. Provide only the numerical value.	5.0	3.01107038e+24	Easy	3.0110e+24	3.011e+24	0.0
+moles_to_particles	aerogel	Convert 10 moles of aerogel to particles. Provide only the numerical value.	10.0	6.02214076e+24	Easy	6.0221e+24	6.0221e+24	0.0
+moles_to_particles	gasoline	Convert 1 mole of gasoline to particle. Provide only the numerical value.	1.0	6.02214076e+23	Easy	6.0221e+23	6.0221e+23	0.0
+moles_to_particles	sodium chloride	Convert 1 mole of sodium chloride to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	1.2044e+24	1.2044e+24	99.9953252504181
+moles_to_particles	ethanol	Convert 1 mole of ethanol to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	2.7074e+25	2.7074e+25	4395.743470466473
+moles_to_particles	snake venom	Convert 5 moles of snake venom to particles. Provide only the numerical value.	5.0	3.01107038e+24	Easy	3.0110e+24	3.011e+24	0.0
+moles_to_particles	chocolate	Convert 20 moles of chocolate to atoms. Provide only the numerical value.	20.0	1.204428152e+25	Easy	1.2044e+25	1.2044e+25	0.0
+moles_to_particles	ammonia	Convert 5 moles of ammonia to atoms. Provide only the numerical value.	5.0	3.01107038e+24	Easy	1.8065e+25	1.8065e+25	499.95276496991085
+moles_to_particles	carbon dioxide	Convert 0.2994 moles of carbon dioxide to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.801 x 10^23	23.0	100.0
+moles_to_particles	gasoline	Convert 1297.195 moles of gasoline to atoms. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8120e+26	7.812e+26	0.0
+moles_to_particles	oxygen	Convert 4508.208 moles of oxygen to atoms. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard	2.7150e+27	2.715e+27	0.0
+moles_to_particles	ketchup	Convert 0.2994 moles of ketchup to particles. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.8015e+23	1.8015e+23	0.0
+moles_to_particles	barrelene	Convert 0.2994 moles of barrelene to atoms. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.801 x 10^23	23.0	100.0
+moles_to_particles	gasoline	Convert 9.0241 moles of gasoline to atoms. Provide only the numerical value.	9.0241	5.4344400432316e+24	Hard	5.4324e+24	5.4324e+24	0.0
+moles_to_particles	methane	Convert 1297.195 moles of methane to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8120e+26	7.812e+26	0.0
+moles_to_particles	aerogel	Convert 4508.208 moles of aerogel to particles. Provide only the numerical value.	4508.208	2.714906315135808e+27	Hard	2.7140e+27	2.714e+27	0.0
+moles_to_particles	sodium chloride	Convert 1297.195 moles of sodium chloride to particles. Provide only the numerical value.	1297.195	7.8118908831682e+26	Hard	7.8120e+26	7.812e+26	0.0
+moles_to_particles	californium	Convert 0.2994 moles of californium to atoms. Provide only the numerical value.	0.2994	1.803028943544e+23	Hard	1.801 x 10^23	23.0	100.0

@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+currency	null	Convert 20 JPY to CHF. Provide only the numerical value.	20.0	0.1003215434083601	Easy	0.1684	0.1684	67.86025641025645
+currency	null	Convert 20 USD to EUR. Provide only the numerical value.	20.0	17.0	Easy	18.2000	18.2	7.05882352941176
+currency	null	Convert 5 EUR to CNH. Provide only the numerical value.	5.0	40.82352941176471	Easy	39.4700	39.47	3.315561959654191
+currency	null	Convert 50 USD to EUR. Provide only the numerical value.	50.0	42.5	Easy	46.1538	46.1538	8.597176470588227
+currency	null	Convert 1 AUD to CAD. Provide only the numerical value.	1.0	0.951388888888889	Easy	0.9250	0.925	2.7737226277372278
+currency	null	Convert 10 SLL to IDR. Provide only the numerical value.	10.0	6848.856209150326	Easy	10.0000	10.0	99.85399021829893
+currency	null	Convert 20 LBP to IRR. Provide only the numerical value.	20.0	278.1325540619521	Easy	66.6667	66.6667	76.03060158677059
+currency	null	Convert 50 AUD to CAD. Provide only the numerical value.	50.0	47.56944444444445	Easy	46.2963	46.2963	2.676391240875919
+currency	null	Convert 50 VND to LAK. Provide only the numerical value.	50.0	41.30489255923923	Easy	42.5000	42.5	2.8933798557804167
+currency	null	Convert 10 JPY to CHF. Provide only the numerical value.	10.0	0.05016077170418	Easy	0.0826	0.0826	64.67051282051305
+currency	null	Convert 4508.208 VND to LAK. Provide only the numerical value.	4508.208	3724.2209414940553	Hard	127.4568	127.4568	96.57762517309546
+currency	null	Convert 18.333 SLL to IDR. Provide only the numerical value.	18.333	12556.008088235292	Hard	3055.4951	3055.4951	75.66507540829849
+currency	null	Convert 1297.195 GBP to JPY. Provide only the numerical value.	1297.195	276320.30479452055	Hard	170447.6745	170447.6745	38.31518294439143
+currency	null	Convert 0.2994 USD to EUR. Provide only the numerical value.	0.2994	0.25449	Hard	0.2713	0.2713	6.605367597940977
+currency	null	Convert 1297.195 JPY to CHF. Provide only the numerical value.	1297.195	6.506830225080385	Hard	11.2345	11.2345	72.65703286212927
+currency	null	Convert 1297.195 EUR to CNH. Provide only the numerical value.	1297.195	10591.215647058823	Hard	9456.7324	9456.7324	10.711548937008644
+currency	null	Convert 4508.208 SLL to IDR. Provide only the numerical value.	4508.208	3087606.835294117	Hard	101434.6848	101434.6848	96.71477975626591
+currency	null	Convert 0.2994 EUR to CNH. Provide only the numerical value.	0.2994	2.444512941176471	Hard	2.3456	2.3456	4.046325119018066
+currency	null	Convert 9.0241 LBP to IRR. Provide only the numerical value.	9.0241	125.4947990555231	Hard	399.9996	399.9996	218.73798994891155
+currency	null	Convert 0.2994 LBP to IRR. Provide only the numerical value.	0.2994	4.163644334307422	Hard	130.4500	130.45	3033.0726048121724

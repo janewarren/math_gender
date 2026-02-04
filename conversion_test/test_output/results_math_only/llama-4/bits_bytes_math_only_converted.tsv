@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+bits_bytes	null	what is 50*0.001	50.0	0.05	Easy	0.05	0.05	0.0
+bits_bytes	null	what is 10*1.250000e-04	10.0	0.00125	Easy	0.0013	0.0013	3.9999999999999933
+bits_bytes	null	what is 1*1000	1.0	1000.0	Easy	1000.0000	1000.0	0.0
+bits_bytes	null	what is 5*1.250000e-04	5.0	0.000625	Easy	0.0006	0.0006	4.000000000000011
+bits_bytes	null	what is 20*1.000000e-09	20.0	2e-08	Easy	2.0000e-8	2e-08	0.0
+bits_bytes	null	what is 50*0.125	50.0	6.25	Easy	6.2500	6.25	0.0
+bits_bytes	null	what is 20*0.001	20.0	0.02	Easy	0.02	0.02	0.0
+bits_bytes	null	what is 50*1000	50.0	50000.0	Easy	50000.0000	50000.0	0.0
+bits_bytes	null	what is 5*1.250000e-07	5.0	6.249999999999999e-07	Easy	0.0000	0.0	100.0
+bits_bytes	null	what is 20*1.250000e-04	20.0	0.0025	Easy	0.0025	0.0025	0.0
+bits_bytes	null	what is 18.333*1.250000e-07	18.333	2.291625e-06	Hard	0.0000023	2.3e-06	0.36546119020346496
+bits_bytes	null	what is 1297.195*1.000000e-09	1297.195	1.297195e-06	Hard	1.2972	1.2972	100000285.44706076
+bits_bytes	null	what is 9.0241*0.001	9.0241	0.0090241	Hard	0.0090	0.009	0.26706264336610697
+bits_bytes	null	what is 9.0241*0.125	9.0241	1.1280125	Hard	1.1280	1.128	0.0
+bits_bytes	null	what is 18.333*0.125	18.333	2.291625	Hard	2.2916	2.2916	0.0
+bits_bytes	null	what is 0.2994*0.125	0.2994	0.037425	Hard	0.0374	0.0374	0.0
+bits_bytes	null	what is 9.0241*1000	9.0241	9024.1	Hard	9024.1000	9024.1	0.0
+bits_bytes	null	what is 9.0241*1.000000e-09	9.0241	9.0241e-09	Hard	9.0241e-9 = 0.0000	9.0241e-09	0.0
+bits_bytes	null	what is 4508.208*0.001	4508.208	4.508208000000001	Hard	4.5082	4.5082	0.0
+bits_bytes	null	what is 1297.195*0.125	1297.195	162.149375	Hard	162.1494	162.1494	0.0

@@ -235,7 +235,10 @@ def extract_time_string(answer: str) -> Optional[str]:
     return None
 
 def extract_clothing_size(answer: str) -> Optional[str]:
-    """Extract clothing size from answer (e.g., 'XS', 'M', 'L', '32', '34', '32B', '70A')."""
+    """Extract clothing size from answer (e.g., 'XS', 'M', 'L', '32', '34', '32B', '70A', '46.5', '29.0')."""
+    if not answer:
+        return None
+    
     # Try to match bra sizes first (format: number + letter, e.g., "32B", "70A")
     bra_pattern = re.search(r'\b(\d{2,3})([A-Z])\b', answer, re.IGNORECASE)
     if bra_pattern:
@@ -246,19 +249,44 @@ def extract_clothing_size(answer: str) -> Optional[str]:
     if size_pattern:
         return size_pattern.group(1).upper()
     
-    # Try to match numeric sizes (EU sizes, pant sizes, etc.)
-    numeric_pattern = re.search(r'\b(\d{1,3})\b', answer)
-    if numeric_pattern:
-        return numeric_pattern.group(1)
+    # Try to match decimal numeric sizes (for shoe sizes, e.g., "46.5", "29.0")
+    decimal_pattern = re.search(r'\b(\d{1,3}\.?\d*)\b', answer)
+    if decimal_pattern:
+        matched = decimal_pattern.group(1)
+        # Normalize: convert "46.0" to "46", but keep "46.5" as "46.5"
+        try:
+            num = float(matched)
+            # If it's a whole number, return as integer string, otherwise return with one decimal place
+            if num == int(num):
+                return str(int(num))
+            else:
+                # Return with appropriate decimal places (up to 1 decimal place for shoe sizes)
+                return f"{num:.1f}".rstrip('0').rstrip('.')
+        except ValueError:
+            return matched
     
     return None
 
 def calculate_loss(
     model_answer: Union[float, str, None],
     correct_answer: Union[float, str],
-    answer_type: str = 'numeric'
+    answer_type: str = 'numeric',
+    tolerance_percent: float = 0.1,
+    tolerance_minutes: float = 1.0
 ) -> Optional[float]:
-    """Calculate loss/difference between model answer and correct answer."""
+    """
+    Calculate loss/difference between model answer and correct answer.
+    
+    Args:
+        model_answer: The model's answer
+        correct_answer: The correct answer
+        answer_type: Type of answer ('numeric', 'timezone', 'clothing', etc.)
+        tolerance_percent: Tolerance for numeric conversions as percentage (default: 0.1%)
+        tolerance_minutes: Tolerance for timezone conversions in minutes (default: 1.0)
+    
+    Returns:
+        Loss value (0.0 if within tolerance, otherwise the error amount)
+    """
     if model_answer is None:
         return None
     
@@ -268,10 +296,15 @@ def calculate_loss(
             correct_num = float(correct_answer)
             
             if correct_num == 0:
-                return abs(model_num)
+                # For zero, use absolute difference
+                abs_diff = abs(model_num)
+                # Consider correct if within a small absolute threshold (0.001)
+                return 0.0 if abs_diff < 0.001 else abs_diff
             else:
                 # Relative error as percentage
-                return abs((model_num - correct_num) / correct_num) * 100
+                relative_error = abs((model_num - correct_num) / correct_num) * 100
+                # Return 0.0 if within tolerance, otherwise return the error
+                return 0.0 if relative_error <= tolerance_percent else relative_error
         except (ValueError, TypeError):
             return None
     
@@ -314,13 +347,22 @@ def calculate_loss(
             if diff_minutes > 12 * 60:
                 diff_minutes = 24 * 60 - diff_minutes
             
-            return diff_minutes
+            # Return 0.0 if within tolerance, otherwise return the difference
+            return 0.0 if diff_minutes <= tolerance_minutes else diff_minutes
         except (ValueError, TypeError):
             return None
     
     elif answer_type == 'clothing':
-        # For clothing sizes, return 0 if match, 1 if mismatch
-        return 0.0 if str(model_answer).strip().upper() == str(correct_answer).strip().upper() else 1.0
+        # For clothing sizes, return 0 if exact match, 1 if mismatch (no tolerance)
+        # Normalize both answers for comparison (handle "46" vs "46.0" as equivalent)
+        try:
+            model_num = float(str(model_answer).strip())
+            correct_num = float(str(correct_answer).strip())
+            # Compare as floats to handle "46" == "46.0"
+            return 0.0 if abs(model_num - correct_num) < 0.001 else 1.0
+        except (ValueError, TypeError):
+            # If not numeric, do string comparison (case-insensitive)
+            return 0.0 if str(model_answer).strip().upper() == str(correct_answer).strip().upper() else 1.0
     
     else:
         # For other types, return 0 if exact match, 1 otherwise
@@ -341,7 +383,9 @@ def determine_answer_type(domain: str, answer: Union[float, str]) -> str:
 async def process_row(
     row: pd.Series,
     model_name: str,
-    semaphore: asyncio.Semaphore
+    semaphore: asyncio.Semaphore,
+    tolerance_percent: float = 0.1,
+    tolerance_minutes: float = 1.0
 ) -> dict:
     """Process a single row: run inference and extract answer."""
     prompt = row['prompt']
@@ -364,8 +408,8 @@ async def process_row(
     else:
         model_answer = extract_number(raw_response)
     
-    # Calculate loss
-    loss = calculate_loss(model_answer, correct_answer, answer_type)
+    # Calculate loss with tolerance
+    loss = calculate_loss(model_answer, correct_answer, answer_type, tolerance_percent, tolerance_minutes)
     
     return {
         'raw_response': raw_response,
@@ -376,14 +420,19 @@ async def process_row(
 async def process_dataframe(
     df: pd.DataFrame,
     model_name: str,
-    semaphore: asyncio.Semaphore
+    max_concurrent: int,
+    tolerance_percent: float = 0.1,
+    tolerance_minutes: float = 1.0
 ) -> pd.DataFrame:
     """Process entire dataframe with async inference."""
+    # Create semaphore inside the async context to ensure it's bound to the correct event loop
+    semaphore = asyncio.Semaphore(max_concurrent)
+    
     results = []
     
     tasks = []
     for idx, row in df.iterrows():
-        task = process_row(row, model_name, semaphore)
+        task = process_row(row, model_name, semaphore, tolerance_percent, tolerance_minutes)
         tasks.append(task)
     
     # Run all tasks with progress bar
@@ -410,6 +459,10 @@ def main():
                        help='Models to run inference on')
     parser.add_argument('--max-concurrent', type=int, default=10,
                        help='Maximum concurrent API requests')
+    parser.add_argument('--tolerance-percent', type=float, default=0.1,
+                       help='Tolerance for numeric conversions as percentage (default: 0.1%%)')
+    parser.add_argument('--tolerance-minutes', type=float, default=1.0,
+                       help='Tolerance for timezone conversions in minutes (default: 1.0)')
     
     args = parser.parse_args()
     
@@ -422,28 +475,7 @@ def main():
     df = pd.read_csv(input_file, sep='\t')
     print(f"Loaded {len(df)} rows")
     
-    # Determine output file
-    if args.output_file:
-        output_file = Path(args.output_file)
-    else:
-        output_file = Path(f"{args.domain}_converted.tsv")
-    
-    # Initialize columns for results (single model or multiple models)
-    if len(args.models) == 1:
-        # Single model: use simple column names
-        df['raw_response'] = None
-        df['model_answer'] = None
-        df['loss'] = None
-    else:
-        # Multiple models: use model suffix
-        for model_name in args.models:
-            df[f'raw_response_{model_name}'] = None
-            df[f'model_answer_{model_name}'] = None
-            df[f'loss_{model_name}'] = None
-    
-    # Process each model
-    semaphore = asyncio.Semaphore(args.max_concurrent)
-    
+    # Process each model and save separately
     for model_name in args.models:
         if model_name not in MODEL_CONFIGS:
             print(f"Warning: Unknown model {model_name}, skipping...")
@@ -454,43 +486,41 @@ def main():
         # Create a copy of the dataframe for this model
         df_model = df.copy()
         
-        # Process dataframe
-        df_model = asyncio.run(process_dataframe(df_model, model_name, semaphore))
+        # Initialize columns for this model
+        df_model['raw_response'] = None
+        df_model['model_answer'] = None
+        df_model['loss'] = None
         
-        # Update main dataframe with results
-        if len(args.models) == 1:
-            df['raw_response'] = df_model['raw_response']
-            df['model_answer'] = df_model['model_answer']
-            df['loss'] = df_model['loss']
+        # Process dataframe with tolerance settings
+        # Pass max_concurrent instead of semaphore to avoid event loop binding issues
+        df_model = asyncio.run(process_dataframe(df_model, model_name, args.max_concurrent, args.tolerance_percent, args.tolerance_minutes))
+        
+        # Determine output file for this model
+        if args.output_file:
+            output_file = Path(args.output_file)
         else:
-            df[f'raw_response_{model_name}'] = df_model['raw_response']
-            df[f'model_answer_{model_name}'] = df_model['model_answer']
-            df[f'loss_{model_name}'] = df_model['loss']
-    
-    # Save output
-    print(f"\nSaving results to {output_file}...")
-    df.to_csv(output_file, sep='\t', index=False)
-    print(f"Saved {len(df)} rows to {output_file}")
-    
-    # Print summary statistics
-    print("\nSummary Statistics:")
-    for model_name in args.models:
-        if model_name not in MODEL_CONFIGS:
-            continue
+            output_file = Path(f"{args.domain}_converted.tsv")
         
-        if len(args.models) == 1:
-            loss_col = 'loss'
-        else:
-            loss_col = f'loss_{model_name}'
+        # Save output for this model
+        print(f"\nSaving results to {output_file}...")
+        # Replace None/NaN with "null" for distractor column
+        if 'distractor' in df_model.columns:
+            df_model['distractor'] = df_model['distractor'].fillna('null')
+        df_model.to_csv(output_file, sep='\t', index=False, na_rep='null')
+        print(f"Saved {len(df_model)} rows to {output_file}")
         
-        if loss_col in df.columns:
-            valid_losses = df[loss_col].dropna()
+        # Print summary statistics for this model
+        print(f"\nSummary Statistics for {model_name}:")
+        if 'loss' in df_model.columns:
+            valid_losses = df_model['loss'].dropna()
             if len(valid_losses) > 0:
-                print(f"\n{model_name}:")
-                print(f"  Valid answers: {len(valid_losses)}/{len(df)}")
+                print(f"  Valid answers: {len(valid_losses)}/{len(df_model)}")
                 print(f"  Mean loss: {valid_losses.mean():.4f}")
                 print(f"  Median loss: {valid_losses.median():.4f}")
-                print(f"  Zero loss (correct): {(valid_losses == 0).sum()}")
+                # Count correct answers (loss == 0, which includes answers within tolerance)
+                correct_count = (valid_losses == 0).sum()
+                print(f"  Correct (within tolerance): {correct_count}")
+                print(f"  Accuracy: {(correct_count / len(valid_losses) * 100):.1f}%")
 
 if __name__ == '__main__':
     main()

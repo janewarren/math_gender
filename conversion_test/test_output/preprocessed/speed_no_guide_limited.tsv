@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+speed		Convert 1 km/h to knots. Provide only the numerical value.	1.0	0.539957	Easy
+speed		Convert 20 mphs to km/hs. Provide only the numerical value.	20.0	32.186889957851264	Easy
+speed		Convert 1 km/h to m/s. Provide only the numerical value.	1.0	0.277778	Easy
+speed		Convert 50 km/hs to mphs. Provide only the numerical value.	50.0	31.06855	Easy
+speed		Convert 10 mphs to km/hs. Provide only the numerical value.	10.0	16.093444978925632	Easy
+speed		Convert 50 mphs to km/hs. Provide only the numerical value.	50.0	80.46722489462817	Easy
+speed		Convert 5 km/hs to knots. Provide only the numerical value.	5.0	2.6997850000000003	Easy
+speed		Convert 20 km/hs to knots. Provide only the numerical value.	20.0	10.79914	Easy
+speed		Convert 20 knots to km/hs. Provide only the numerical value.	20.0	37.03998651744491	Easy
+speed		Convert 10 knots to km/hs. Provide only the numerical value.	10.0	18.51999325872245	Easy
+speed		Convert 0.2994 knots to km/hs. Provide only the numerical value.	0.2994	0.5544885981661503	Hard
+speed		Convert 0.2994 km/hs to mphs. Provide only the numerical value.	0.2994	0.1860384774	Hard
+speed		Convert 9.0241 knots to km/hs. Provide only the numerical value.	9.0241	16.71262711660373	Hard
+speed		Convert 4508.208 mphs to km/hs. Provide only the numerical value.	4508.208	7255.259740155237	Hard
+speed		Convert 18.333 mphs to km/hs. Provide only the numerical value.	18.333	29.504112679864363	Hard
+speed		Convert 18.333 km/hs to mphs. Provide only the numerical value.	18.333	11.391594542999998	Hard
+speed		Convert 9.0241 mphs to km/hs. Provide only the numerical value.	9.0241	14.522885683432282	Hard
+speed		Convert 18.333 km/hs to m/s. Provide only the numerical value.	18.333	5.092504074	Hard
+speed		Convert 1297.195 km/hs to mphs. Provide only the numerical value.	1297.195	806.039354345	Hard
+speed		Convert 4508.208 km/hs to knots. Provide only the numerical value.	4508.208	2434.238467056	Hard

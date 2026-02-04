@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+currency	null	Convert 10 USD to EUR. Provide only the numerical value.	10.0	8.5	Easy	9.4510	9.451	11.188235294117653
+currency	null	Convert 5 SLL to IDR. Provide only the numerical value.	5.0	3424.428104575163	Easy	3.7250	3.725	99.89122271263271
+currency	null	Convert 50 UZS to GNF. Provide only the numerical value.	50.0	35.71836734693878	Easy	35.7143	35.7143	0.0
+currency	null	Convert 5 GBP to JPY. Provide only the numerical value.	5.0	1065.0684931506848	Easy	915.1500	915.15	14.075948553054657
+currency	null	Convert 1 LBP to IRR. Provide only the numerical value.	1.0	13.906627703097604	Easy	2.8180	2.818	79.7362807133155
+currency	null	Convert 20 UZS to GNF. Provide only the numerical value.	20.0	14.28734693877551	Easy	14.4510	14.451	1.1454405210833092
+currency	null	Convert 1 USD to EUR. Provide only the numerical value.	1.0	0.85	Easy	0.9463	0.9463	11.32941176470589
+currency	null	Convert 1 VND to LAK. Provide only the numerical value.	1.0	0.8260978511847846	Easy	0.8361	0.8361	1.210770467550582
+currency	null	Convert 10 SLL to IDR. Provide only the numerical value.	10.0	6848.856209150326	Easy	7.4380	7.438	99.89139792437075
+currency	null	Convert 5 AUD to CAD. Provide only the numerical value.	5.0	4.756944444444445	Easy	4.3520	4.352	8.512700729927005
+currency	null	Convert 1297.195 SLL to IDR. Provide only the numerical value.	1297.195	888430.2030228758	Hard	973.6790	973.679	99.89040455888521
+currency	null	Convert 18.333 AUD to CAD. Provide only the numerical value.	18.333	17.4418125	Hard	15.7551	15.7551	9.670511593906886
+currency	null	Convert 0.2994 UZS to GNF. Provide only the numerical value.	0.2994	0.2138815836734694	Hard	0.2891	0.2891	35.16825293446757
+currency	null	Convert 0.2994 GBP to JPY. Provide only the numerical value.	0.2994	63.77630136986301	Hard	54.9432	54.9432	13.850131130428062
+currency	null	Convert 9.0241 GBP to JPY. Provide only the numerical value.	9.0241	1922.25691780822	Hard	1660.6784	1660.6784	13.60788536562921
+currency	null	Convert 18.333 USD to EUR. Provide only the numerical value.	18.333	15.583049999999998	Hard	17.2767	17.2767	10.868539855804888
+currency	null	Convert 0.2994 AUD to CAD. Provide only the numerical value.	0.2994	0.2848458333333333	Hard	0.2611	0.2611	8.336380790778627
+currency	null	Convert 4508.208 SLL to IDR. Provide only the numerical value.	4508.208	3087606.835294117	Hard	3.3661	3.3661	99.99989098029057
+currency	null	Convert 0.2994 LBP to IRR. Provide only the numerical value.	0.2994	4.163644334307422	Hard	0.8371	0.8371	79.8950166539803
+currency	null	Convert 1297.195 UZS to GNF. Provide only the numerical value.	1297.195	926.6737506122448	Hard	1.1681	1.1681	99.87394700678333

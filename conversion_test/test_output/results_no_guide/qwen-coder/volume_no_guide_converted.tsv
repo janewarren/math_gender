@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	ethanol	Convert 1 quarts of ethanol to tablespoons. Provide only the numerical value.	1.0	63.99989116959563	Easy	64.0000	64.0	0.0
+volume	basketane	Convert 20 liters of basketane to milliliters. Provide only the numerical value.	20.0	20000.0	Easy	20000	20000.0	0.0
+volume	chocolate	Convert 1 teaspoons of chocolate to milliliters. Provide only the numerical value.	1.0	4.928921623171767	Easy	4.9289	4.9289	0.0
+volume	sodium chloride	Convert 5 liters of sodium chloride to cups. Provide only the numerical value.	5.0	21.13375	Easy	21.1338	21.1338	0.0
+volume	ketchup	Convert 50 liters of ketchup to cups. Provide only the numerical value.	50.0	211.3375	Easy	211.3376	211.3376	0.0
+volume	vomitoxin	Convert 1 liters of vomitoxin to cups. Provide only the numerical value.	1.0	4.22675	Easy	4.2267	4.2267	0.0
+volume	gasoline	Convert 50 quarts of gasoline to tablespoons. Provide only the numerical value.	50.0	3199.994558479781	Easy	3200.0000	3200.0	0.0
+volume	gasoline	Convert 5 teaspoons of gasoline to cups. Provide only the numerical value.	5.0	0.1041665973537063	Easy	0.1042	0.1042	0.0
+volume	cubane	Convert 1 gallons of cubane to ounces. Provide only the numerical value.	1.0	128.00002649788772	Easy	128.0000	128.0	0.0
+volume	nitrogen	Convert 1 quarts of nitrogen to tablespoons. Provide only the numerical value.	1.0	63.99989116959563	Easy	64.0000	64.0	0.0
+volume	oxygen	Convert 1297.195 teaspoons of oxygen to milliliters. Provide only the numerical value.	1297.195	6393.772484970301	Hard	6394.4765	6394.4765	0.0
+volume	ethanol	Convert 1297.195 liters of ethanol to cups. Provide only the numerical value.	1297.195	5482.918966249999	Hard	5499.9792	5499.9792	0.3111523962877136
+volume	coffee	Convert 1297.195 gallons of coffee to ounces. Provide only the numerical value.	1297.195	166040.99437292747	Hard	165944.9600	165944.96	0.0
+volume	RedBull	Convert 1297.195 teaspoons of RedBull to cups. Provide only the numerical value.	1297.195	27.024877850848217	Hard	27.0249	27.0249	0.0
+volume	osmium	Convert 0.2994 teaspoons of osmium to milliliters. Provide only the numerical value.	0.2994	1.4757191339776272	Hard	1.4763	1.4763	0.0
+volume	snake venom	Convert 18.333 liters of snake venom to cups. Provide only the numerical value.	18.333	77.48900775	Hard	77.4167	77.4167	0.0
+volume	vitamin water	Convert 1297.195 liters of vitamin water to milliliters. Provide only the numerical value.	1297.195	1297195.0	Hard	1297195.0000	1297195.0	0.0
+volume	nitrogen	Convert 1297.195 liters of nitrogen to milliliters. Provide only the numerical value.	1297.195	1297195.0	Hard	1297195.0000	1297195.0	0.0
+volume	nitrogen	Convert 4508.208 teaspoons of nitrogen to milliliters. Provide only the numerical value.	4508.208	22220.603892955947	Hard	22270.5556	22270.5556	0.22479905264810293
+volume	vitamin water	Convert 0.2994 quarts of vitamin water to tablespoons. Provide only the numerical value.	0.2994	19.16156741617693	Hard	19.1616	19.1616	0.0

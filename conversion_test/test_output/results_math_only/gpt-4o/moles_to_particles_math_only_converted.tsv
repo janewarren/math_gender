@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+moles_to_particles	null	what is 1*6.022141e+23	1.0	6.02214076e+23	Easy	602214100000000000000000	6.022141e+23	0.0
+moles_to_particles	null	what is 5*6.022141e+23	5.0	3.01107038e+24	Easy	3.0110705e+24	3.0110705e+24	0.0
+moles_to_particles	null	what is 10*6.022141e+23	10.0	6.02214076e+24	Easy	6.022141e+24	6.022141e+24	0.0
+moles_to_particles	null	what is 20*6.022141e+23	20.0	1.204428152e+25	Easy	1.2044282e+25	1.2044282e+25	0.0
+moles_to_particles	null	what is 50*6.022141e+23	50.0	3.01107038e+25	Easy	3.0110705e+25	3.0110705e+25	0.0
+moles_to_particles	null	what is 4508.208*6.022141e+23	4508.208	2.714906315135808e+27	Hard	2.7140e+27	2.714e+27	0.0
+moles_to_particles	null	what is 1297.195*6.022141e+23	1297.195	7.8118908831682e+26	Hard	7.8101e+26	7.8101e+26	0.0
+moles_to_particles	null	what is 18.333*6.022141e+23	18.333	1.1040390655308e+25	Hard	1.1040e+25	1.104e+25	0.0
+moles_to_particles	null	what is 9.0241*6.022141e+23	9.0241	5.4344400432316e+24	Hard	5.4340e+24	5.434e+24	0.0
+moles_to_particles	null	what is 0.2994*6.022141e+23	0.2994	1.803028943544e+23	Hard	1.8010e+23	1.801e+23	0.11252972678363724
+moles_to_particles	null	what is 1*6.022141e+23	1.0	6.02214076e+23	Easy	602214100000000000000000	6.022141e+23	0.0
+moles_to_particles	null	what is 5*6.022141e+23	5.0	3.01107038e+24	Easy	3.0110705e+24	3.0110705e+24	0.0
+moles_to_particles	null	what is 10*6.022141e+23	10.0	6.02214076e+24	Easy	6.022141e+24	6.022141e+24	0.0
+moles_to_particles	null	what is 20*6.022141e+23	20.0	1.204428152e+25	Easy	1.2044282e+25	1.2044282e+25	0.0
+moles_to_particles	null	what is 50*6.022141e+23	50.0	3.01107038e+25	Easy	3.0110705e+25	3.0110705e+25	0.0
+moles_to_particles	null	what is 4508.208*6.022141e+23	4508.208	2.714906315135808e+27	Hard	2.7140e+27	2.714e+27	0.0
+moles_to_particles	null	what is 1297.195*6.022141e+23	1297.195	7.8118908831682e+26	Hard	7.8101e+26	7.8101e+26	0.0
+moles_to_particles	null	what is 18.333*6.022141e+23	18.333	1.1040390655308e+25	Hard	1.1040e+25	1.104e+25	0.0
+moles_to_particles	null	what is 9.0241*6.022141e+23	9.0241	5.4344400432316e+24	Hard	5.4340e+24	5.434e+24	0.0
+moles_to_particles	null	what is 0.2994*6.022141e+23	0.2994	1.803028943544e+23	Hard	1.8010e+23	1.801e+23	0.11252972678363724

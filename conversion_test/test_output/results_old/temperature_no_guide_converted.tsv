@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response_gpt-4o	model_answer_gpt-4o	loss_gpt-4o	raw_response_qwen-coder	model_answer_qwen-coder	loss_qwen-coder	raw_response_llama-4	model_answer_llama-4	loss_llama-4
+temperature	null	Convert 20 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	20.0	-6.666666666666667	Easy	-6.6667	-6.6667	0.0	-6.6667	-6.6667	0.0	-6.6667	-6.6667	0.0
+temperature	null	Convert 5 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	5.0	-15.0	Easy	-15.0000	-15.0	0.0	-15.0000	-15.0	0.0	-15.0000	-15.0	0.0
+temperature	null	Convert 20 degrees Celsius to Kelvin. Provide only the numerical value.	20.0	293.15	Easy	293.15	293.15	0.0	293.1500	293.15	0.0	293.1500	293.15	0.0
+temperature	null	Convert 1 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	1.0	-17.22222222222222	Easy	-17.2222	-17.2222	0.0	-17.2222	-17.2222	0.0	-17.2222	-17.2222	0.0
+temperature	null	Convert 1 degrees Fahrenheit to Kelvin. Provide only the numerical value.	1.0	255.9277777777777	Easy	255.9278	255.9278	0.0	255.9278	255.9278	0.0	255.9278	255.9278	0.0
+temperature	null	Convert 50 Kelvin to degrees Fahrenheit. Provide only the numerical value.	50.0	-369.67	Easy	-369.67	-369.67	0.0	-369.6700	-369.67	0.0	-369.67	-369.67	0.0
+temperature	null	Convert 50 degrees Celsius to Kelvin. Provide only the numerical value.	50.0	323.15	Easy	323.15	323.15	0.0	323.1500	323.15	0.0	323.15	323.15	0.0
+temperature	null	Convert 5 degrees Celsius to Kelvin. Provide only the numerical value.	5.0	278.15	Easy	278.15	278.15	0.0	278.15	278.15	0.0	278.15	278.15	0.0
+temperature	null	Convert 1 degrees Celsius to Kelvin. Provide only the numerical value.	1.0	274.15	Easy	274.15	274.15	0.0	274.15	274.15	0.0	274.15	274.15	0.0
+temperature	null	Convert 10 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	10.0	50.0	Easy	50.	50.0	0.0	50.0000	50.0	0.0	50.0000	50.0	0.0
+temperature	null	Convert 18.333 Kelvin to degrees Fahrenheit. Provide only the numerical value.	18.333	-426.6705999999999	Hard	-426.5274	-426.5274	0.0	-427.0662	-427.0662	0.0	-427.126	-427.126	0.10673339105156396
+temperature	null	Convert 4508.208 Kelvin to degrees Fahrenheit. Provide only the numerical value.	4508.208	7655.104399999999	Hard	7640.9944	7640.9944	0.1843214574578457	7655.1044	7655.1044	0.0	7555.1048	7555.1048	1.3063126872573965
+temperature	null	Convert 0.2994 degrees Fahrenheit to Kelvin. Provide only the numerical value.	0.2994	255.53855555555555	Hard	255.3724	255.3724	0.0	255.4833	255.4833	0.0	256.7056	256.7056	0.4566999456920445
+temperature	null	Convert 1297.195 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	1297.195	2366.951	Hard	2366.9510	2366.951	0.0	2367.9510	2367.951	0.0	2366.9510	2366.951	0.0
+temperature	null	Convert 9.0241 Kelvin to degrees Fahrenheit. Provide only the numerical value.	9.0241	-443.42662	Hard	-442.5946	-442.5946	0.18763420202422668	-443.4462	-443.4462	0.0	-434.9030	-434.903	1.922216577795892
+temperature	null	Convert 0.2994 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	0.2994	32.53892	Hard	32.5390	32.539	0.0	0.2994	0.2994	99.07987112049202	0.5389	0.5389	98.34382948174064
+temperature	null	Convert 1297.195 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	1297.195	702.8861111111111	Hard	703.9972	703.9972	0.15807523741400525	702.8861	702.8861	0.0	709.5528	709.5528	0.9484735554598439
+temperature	null	Convert 1297.195 Kelvin to degrees Celsius. Provide only the numerical value.	1297.195	1024.045	Hard	1024.0450	1024.045	0.0	1024.0450	1024.045	0.0	1024.0450	1024.045	0.0
+temperature	null	Convert 9.0241 degrees Fahrenheit to degrees Celsius. Provide only the numerical value.	9.0241	-12.764388888888888	Hard	-12.7644	-12.7644	0.0	-12.7661	-12.7661	0.0	-12.7644	-12.7644	0.0
+temperature	null	Convert 18.333 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	18.333	64.9994	Hard	64.9994	64.9994	0.0	64.9994	64.9994	0.0	64.9994	64.9994	0.0

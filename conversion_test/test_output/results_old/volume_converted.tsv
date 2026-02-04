@@ -1,0 +1,301 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	barrelene	"Convert 50 teaspoons of barrelene to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	50.0	246.4460811585884	Easy	245.9999	245.9999	0.1810461568270173
+volume	vitamin water	"Convert 5 gallons of vitamin water to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	640.0001324894387	Easy	640.0000	640.0	0.0
+volume	chocolate	"Convert 1 liters of chocolate to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	4.22675	Easy	4.2268	4.2268	0.0
+volume	matcha latte	"Convert 10 teaspoons of matcha latte to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	0.2083331947074126	Easy	0.0493	0.0493	76.33598425385935
+volume	metallic hydrogen	"Convert 20 teaspoons of metallic hydrogen to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	0.4166663894148253	Easy	0.0983	0.0983	76.4079843017685
+volume	methane	"Convert 10 teaspoons of methane to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	49.28921623171768	Easy	49.2912	49.2912	0.0
+volume	bismuth	"Convert 20 teaspoons of bismuth to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	0.4166663894148253	Easy	0.0985	0.0985	76.35998426982906
+volume	oxygen	"Convert 1 liters of oxygen to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	1000.0	Easy	1000.0	1000.0	0.0
+volume	bismuth	"Convert 5 teaspoons of bismuth to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	5.0	24.64460811585884	Easy	24.6395	24.6395	0.0
+volume	osmium	"Convert 20 liters of osmium to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	20000.0	Easy	20000.0	20000.0	0.0
+volume	californium	"Convert 0.2994 liters of californium to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	299.4	Hard	299.4	299.4	0.0
+volume	vomitoxin	"Convert 0.2994 liters of vomitoxin to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	1.26548895	Hard	1.2660	1.266	0.0
+volume	californium	"Convert 1297.195 teaspoons of californium to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	6393.772484970301	Hard	6389.9999	6389.9999	0.0
+volume	ketchup	"Convert 9.0241 teaspoons of ketchup to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	9.0241	0.1880019582359162	Hard	0.0445	0.0445	76.33003378392543
+volume	gasoline	"Convert 0.2994 quarts of gasoline to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	19.16156741617693	Hard	20.2473	20.2473	5.666199221815503
+volume	vitamin water	"Convert 4508.208 teaspoons of vitamin water to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	22220.603892955947	Hard	22299.9999	22299.9999	0.3573080525917688
+volume	spit	"Convert 0.2994 teaspoons of spit to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	1.4757191339776272	Hard	1.4731	1.4731	0.17748187424849432
+volume	ammonia	"Convert 4508.208 liters of ammonia to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	4508208.0	Hard	4508208.0	4508208.0	0.0
+volume	bismuth	"Convert 4508.208 teaspoons of bismuth to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	4508.208	93.92093750455156	Hard	22.1871	22.1871	76.37683290914256
+volume	astatine	"Convert 1297.195 liters of astatine to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	1297195.0	Hard	1297195.0	1297195.0	0.0

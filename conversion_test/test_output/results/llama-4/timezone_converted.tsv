@@ -1,0 +1,594 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+timezone	null	"Convert 1PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1PM	11PM	Easy	"To solve this, we need to know the timezones for Kafue and Lavrentiya.
+
+Kafue is in Zambia, which is in the CAT (Central Africa Time) timezone, equivalent to +2 UTC.
+
+Lavrentiya is likely referring to Lavrentiya, a settlement in Russia. It is in the Anadyr Time (ANAT) timezone, equivalent to +12 UTC.
+
+The offset between CAT (+2) and ANAT (+12) is +10 hours.
+
+1PM (+2) + 10 hours = 11PM.
+
+11PM"	1PM	600.0
+timezone	null	"Convert 1PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1PM	4PM	Easy	4PM	4PM	0.0
+timezone	null	"Convert 12PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	12PM	8PM	Easy	"London is BST (+1) and Shanghai is CST_China (+8), so the offset is +7. 
+12PM + 7 hours = 7PM. 
+
+7PM"	12PM	480.0
+timezone	null	"Convert 9PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	6:30PM	Easy	"Manila is PHT (+8) and Delhi is IST (+5.5). 
+9PM PHT is 6:30PM IST."	6:30PM	0.0
+timezone	null	"Convert 12PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	12PM	3PM	Easy	"Los Angeles is PST (-8) and New York is EST (-5), so the offset difference is 3 hours. 
+12PM PST is 3PM EST. 
+
+3PM"	12PM	180.0
+timezone	null	"Convert 1AM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1AM	4AM	Easy	"To solve this, we need to determine the timezones for Yorba Linda and Altoona.
+
+Yorba Linda is in California, which is PST (-8).
+Altoona is in Pennsylvania, which is EST (-5).
+
+The offset between PST and EST is 3 hours. 
+1AM PST is 4AM EST.
+
+The time in Altoona is 4AM."	1AM	180.0
+timezone	null	"Convert 1PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1PM	10AM	Easy	"Tokyo is JST (+9) and Dhaka is BST_Bangladesh (+6). 
+1PM - 3 hours = 10AM
+10AM"	1PM	180.0
+timezone	null	"Convert 9PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	6:30PM	Easy	"To solve this, we need to know the timezones for Zhemuzhen and Noorabad.
+
+Zhemuzhen is in China, so it is likely in CST_China (+8).
+Noorabad is in Iran, so it is likely in IST (+3.5) or TST (+3) or IRST (+3.5) if we consider standard time for Iran.
+
+Let's assume Noorabad is in IRST (+3.5).
+
+The offset between CST_China (+8) and IRST (+3.5) is 4.5 hours.
+
+9PM in CST_China is 21:00.
+Subtracting 4.5 hours: 21:00 - 4.5 = 16:30.
+
+So, 9PM in Zhemuzhen is 4:30PM in Noorabad.
+
+The answer is 4:30PM."	4:30PM	120.0
+timezone	null	"Convert 3PM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3PM	7PM	Easy	"Istanbul is in TST (+3) and Jakarta is in WIB (+7). 
+3PM + 4 hours = 7PM. 
+7PM."	3PM	240.0
+timezone	null	"Convert 12PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	12PM	8PM	Easy	"To solve this, we need to know the timezones for Lleida and Nagai.
+
+Lleida is a city in Spain, so it is in the CET (Central European Time) timezone, which is UTC+1.
+
+Nagai is likely referring to Nagai, a city in Japan, so it is in the JST (Japan Standard Time) timezone, which is UTC+9.
+
+The offset between CET and JST is 8 hours (JST is 8 hours ahead of CET).
+
+12PM CET is 8PM JST.
+
+The answer is 8PM."	12PM	480.0
+timezone	null	"Convert 8:11PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	11:11PM	Hard	"Los Angeles is PST (-8) and New York is EST (-5), so the offset is 3 hours. 
+8:11PM PST is 11:11PM EST.
+The answer is 11:11PM."	8:11PM	180.0
+timezone	null	"Convert 6:58PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	4:27PM	Hard	"Manila is PHT (+8) and Delhi is IST (+5.5). 
+6:58PM PHT is 6:58PM - 2.5 hours. 
+4:28PM IST. 
+4:28PM."	6:58PM	150.99999999999994
+timezone	null	"Convert 11:59AM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	1:59PM	Hard	"Hilo is HST (-10) and Salem is likely in Oregon, so it's PST (-8). The offset between HST and PST is 2 hours. 
+
+11:59AM + 2 hours = 1:59PM"	11:59AM	120.0
+timezone	null	"Convert 3:49PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:49PM	1:48AM	Hard	"Kafue is in Zambia, which is in CAT (Central African Time), UTC+2. 
+Lavrentiya is likely referring to Lavrentiya, a settlement in Russia, which is in SRET (Srednekolymsk Time), UTC+11.
+
+To convert 3:49PM CAT to SRET:
+CAT is UTC+2, SRET is UTC+11. 
+The difference is 9 hours. 
+3:49PM + 9 hours = 12:49AM (next day).
+
+12:49AM"	3:49PM	599.0
+timezone	null	"Convert 3:49PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:49PM	11:48PM	Hard	"London is BST (+1) and Shanghai is CST_China (+8), so the offset is +7. 
+3:49PM + 7 hours = 10:49PM. 
+
+10:49PM"	3:49PM	479.00000000000006
+timezone	null	"Convert 3:49PM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:49PM	6:48PM	Hard	"To solve this, we need to determine the timezones for Yorba Linda and Altoona.
+
+Yorba Linda is in California, so it is in PST (-8).
+Altoona is in Pennsylvania, so it is in EST (-5).
+
+The offset between PST and EST is 3 hours (since -5 - (-8) = 3).
+
+3:49PM + 3 hours = 6:49PM
+
+6:49PM"	3:49PM	179.00000000000006
+timezone	null	"Convert 2:48AM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	2:48AM	6:48AM	Hard	"Istanbul is in TST (+3) and Jakarta is in WIB (+7). 
+2:48AM + 4 hours = 6:48AM. 
+6:48AM."	2:48AM	240.0
+timezone	null	"Convert 11:59AM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	8:58AM	Hard	"Tokyo is JST (+9) and Dhaka is BST_Bangladesh (+6). 
+9 - 6 = 3 hours difference.
+11:59AM - 3 hours = 8:59AM. 
+8:59AM."	11:59AM	180.99999999999994
+timezone	null	"Convert 8:11PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	10:11PM	Hard	"Hilo is HST (-10) and Salem is likely in EST (-5) or PST (-8). Assuming Salem is in EST (-5), the offset between Hilo and Salem is 5 hours. 
+
+8:11PM + 5 hours = 1:11AM. 
+
+1:11AM."	8:11PM	120.0
+timezone	null	"Convert 3:49PM in Hilo time to Salem time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:49PM	5:48PM	Hard	"Hilo is HST (-10) and Salem is likely in EST (-5) or PST (-8). Assuming Salem is in EST (-5), the offset between Hilo and Salem is 5 hours. 
+
+3:49PM + 5 hours = 8:49PM
+
+So, 8:49PM."	3:49PM	119.00000000000006

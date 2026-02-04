@@ -1,0 +1,25 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+timezone	null	what is (21+3.0)%24	9PM	12AM	Easy	0.0	null	null
+timezone	null	what is (15+10.0)%24	3PM	1AM	Easy	1AM	1AM	0.0
+timezone	null	what is (13+3.0)%24	1PM	4PM	Easy	4.0	null	null
+timezone	null	what is (13+10.0)%24	1PM	11PM	Easy	23.0	null	null
+timezone	null	what is (12+8.0)%24	12PM	8PM	Easy	8.0	null	null
+timezone	null	what is (15+2.0)%24	3PM	5PM	Easy	17.0	null	null
+timezone	null	what is (13+8.0)%24	1PM	9PM	Easy	9.0	null	null
+timezone	null	what is (15+3.0)%24	3PM	6PM	Easy	18.0	null	null
+timezone	null	what is (15-2.5)%24	3PM	12:30PM	Easy	12.5	null	null
+timezone	null	what is (1+3.0)%24	1AM	4AM	Easy	4.0	null	null
+timezone	null	what is (20.183333333333334+8.0)%24	8:11PM	4:11AM	Hard	"(20.183333333333334+8.0)%24 = 4.183333333333334
+
+In time format: 4:11AM"	4:11AM	0.0
+timezone	null	what is (11.983333333333333+8.0)%24	11:59AM	7:59PM	Hard	7.983333333333333PM	33PM	0.0
+timezone	null	what is (2.8+8.0)%24	2:48AM	10:48AM	Hard	10.8	null	null
+timezone	null	what is (2.8-2.5)%24	2:48AM	12:18AM	Hard	0.3	null	null
+timezone	null	what is (15.816666666666666-2.5)%24	3:49PM	1:18PM	Hard	13.316666666666666	null	null
+timezone	null	what is (11.983333333333333-2.5)%24	11:59AM	9:28AM	Hard	9.483333333333333	null	null
+timezone	null	what is (11.983333333333333-3.0)%24	11:59AM	8:58AM	Hard	(11.983333333333333-3.0)%24 = 8.983333333333333	null	null
+timezone	null	what is (15.816666666666666+8.0)%24	3:49PM	11:48PM	Hard	"(15.816666666666666+8.0)%24 = 23.816666666666666
+
+In time format: 11:49PM"	11:49PM	0.0
+timezone	null	what is (2.8+8.0)%24	2:48AM	10:48AM	Hard	10.8	null	null
+timezone	null	what is (11.983333333333333+10.0)%24	11:59AM	9:59PM	Hard	1:59PM	1:59PM	480.0000000000001

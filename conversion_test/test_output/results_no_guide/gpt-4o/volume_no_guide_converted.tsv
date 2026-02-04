@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	nitrogen	Convert 50 liters of nitrogen to cups. Provide only the numerical value.	50.0	211.3375	Easy	211.3376	211.3376	0.0
+volume	aerogel	Convert 5 teaspoons of aerogel to milliliters. Provide only the numerical value.	5.0	24.64460811585884	Easy	24.6133	24.6133	0.12703840009001777
+volume	matcha latte	Convert 5 liters of matcha latte to milliliters. Provide only the numerical value.	5.0	5000.0	Easy	5000.0	5000.0	0.0
+volume	bismuth	Convert 5 liters of bismuth to cups. Provide only the numerical value.	5.0	21.13375	Easy	21.1338	21.1338	0.0
+volume	cubane	Convert 1 teaspoons of cubane to milliliters. Provide only the numerical value.	1.0	4.928921623171767	Easy	4.9289	4.9289	0.0
+volume	ketchup	Convert 1 liters of ketchup to milliliters. Provide only the numerical value.	1.0	1000.0	Easy	1000.0	1000.0	0.0
+volume	ammonia	Convert 1 quarts of ammonia to tablespoons. Provide only the numerical value.	1.0	63.99989116959563	Easy	64.0000	64.0	0.0
+volume	oxygen	Convert 20 quarts of oxygen to tablespoons. Provide only the numerical value.	20.0	1279.9978233919126	Easy	1280.0000	1280.0	0.0
+volume	nitrogen	Convert 20 liters of nitrogen to cups. Provide only the numerical value.	20.0	84.535	Easy	84.5351	84.5351	0.0
+volume	ketchup	Convert 50 liters of ketchup to cups. Provide only the numerical value.	50.0	211.3375	Easy	211.3376	211.3376	0.0
+volume	aerogel	Convert 4508.208 teaspoons of aerogel to cups. Provide only the numerical value.	4508.208	93.92093750455156	Hard	938.5433	938.5433	899.2908130357159
+volume	barrelene	Convert 0.2994 liters of barrelene to cups. Provide only the numerical value.	0.2994	1.26548895	Hard	1.2651	1.2651	0.0
+volume	ethanol	Convert 0.2994 liters of ethanol to cups. Provide only the numerical value.	0.2994	1.26548895	Hard	1.2651	1.2651	0.0
+volume	ethanol	Convert 18.333 quarts of ethanol to tablespoons. Provide only the numerical value.	18.333	1173.3100048121964	Hard	1173.3120	1173.312	0.0
+volume	osmium	Convert 4508.208 teaspoons of osmium to cups. Provide only the numerical value.	4508.208	93.92093750455156	Hard	938.5433	938.5433	899.2908130357159
+volume	aerogel	Convert 0.2994 teaspoons of aerogel to cups. Provide only the numerical value.	0.2994	0.0062374958495399	Hard	0.0012475	0.0012475	79.99998669190266
+volume	sodium chloride	Convert 1297.195 gallons of sodium chloride to ounces. Provide only the numerical value.	1297.195	166040.99437292747	Hard	166,841.0240	166841.024	0.481826569452887
+volume	glucose	Convert 1297.195 teaspoons of glucose to milliliters. Provide only the numerical value.	1297.195	6393.772484970301	Hard	6394.9750	6394.975	0.0
+volume	ethanol	Convert 18.333 teaspoons of ethanol to milliliters. Provide only the numerical value.	18.333	90.361920117608	Hard	90.6675	90.6675	0.33817329467356505
+volume	methane	Convert 0.2994 teaspoons of methane to milliliters. Provide only the numerical value.	0.2994	1.4757191339776272	Hard	1.4723	1.4723	0.23169273196393425

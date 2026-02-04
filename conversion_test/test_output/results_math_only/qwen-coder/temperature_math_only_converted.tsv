@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+temperature	null	what is (1-273.15*9/5)+32	1.0	-457.87	Easy	-459.6700	-459.67	0.39312468604626016
+temperature	null	what is 10+273.15	10.0	283.15	Easy	283.1500	283.15	0.0
+temperature	null	what is (50-273.15*9/5)+32	50.0	-369.67	Easy	-427.6700	-427.67	15.68966916438986
+temperature	null	what is (5-32)*5/9	5.0	-15.0	Easy	-15.0000	-15.0	0.0
+temperature	null	what is (10-273.15*9/5)+32	10.0	-441.67	Easy	-441.6700	-441.67	0.0
+temperature	null	what is (5-32)*5/9+273.15	5.0	258.15	Easy	258.1500	258.15	0.0
+temperature	null	what is 50-273.15	50.0	-223.15	Easy	-223.1500	-223.15	0.0
+temperature	null	what is (50*9/5)+32	50.0	122.0	Easy	122.0000	122.0	0.0
+temperature	null	what is (20-273.15*9/5)+32	20.0	-423.67	Easy	-423.6700	-423.67	0.0
+temperature	null	what is 50+273.15	50.0	323.15	Easy	323.1500	323.15	0.0
+temperature	null	what is (1297.195-273.15*9/5)+32	1297.195	1875.281	Hard	-459.6700	-459.67	124.51205979263908
+temperature	null	what is 9.0241+273.15	9.0241	282.17409999999995	Hard	282.1741	282.1741	0.0
+temperature	null	what is 1297.195+273.15	1297.195	1570.3449999999998	Hard	1570.3450	1570.345	0.0
+temperature	null	what is 0.2994-273.15	0.2994	-272.8506	Hard	-272.8506	-272.8506	0.0
+temperature	null	what is (4508.208-32)*5/9+273.15	4508.208	2759.932222222222	Hard	2777.1500	2777.15	0.6238478481154366
+temperature	null	what is (0.2994*9/5)+32	0.2994	32.53892	Hard	32.5388	32.5388	0.0
+temperature	null	what is (4508.208*9/5)+32	4508.208	8146.774399999999	Hard	8146.7744	8146.7744	0.0
+temperature	null	what is 18.333+273.15	18.333	291.48299999999995	Hard	291.4830	291.483	0.0
+temperature	null	what is 18.333-273.15	18.333	-254.817	Hard	-254.8170	-254.817	0.0
+temperature	null	what is (4508.208-273.15*9/5)+32	4508.208	7655.104399999999	Hard	4040.0580	4040.058	47.223998669436824

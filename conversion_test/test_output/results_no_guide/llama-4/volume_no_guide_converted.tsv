@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	astatine	Convert 20 liters of astatine to cups. Provide only the numerical value.	20.0	84.535	Easy	84.5351	84.5351	0.0
+volume	ethanol	Convert 50 quarts of ethanol to tablespoons. Provide only the numerical value.	50.0	3199.994558479781	Easy	960.0000	960.0	69.99994898566119
+volume	gasoline	Convert 50 teaspoons of gasoline to milliliters. Provide only the numerical value.	50.0	246.4460811585884	Easy	246.4461	246.4461	0.0
+volume	cubane	Convert 20 gallons of cubane to ounces. Provide only the numerical value.	20.0	2560.0005299577547	Easy	2560.0000	2560.0	0.0
+volume	carbon dioxide	Convert 50 quarts of carbon dioxide to tablespoons. Provide only the numerical value.	50.0	3199.994558479781	Easy	768.0	768.0	75.99995918852895
+volume	ketchup	Convert 20 teaspoons of ketchup to milliliters. Provide only the numerical value.	20.0	98.57843246343536	Easy	98.5784	98.5784	0.0
+volume	water	Convert 1 liters of water to milliliters. Provide only the numerical value.	1.0	1000.0	Easy	1000.0000	1000.0	0.0
+volume	methane	Convert 5 quarts of methane to tablespoons. Provide only the numerical value.	5.0	319.99945584797814	Easy	240	240.0	24.999872464153007
+volume	methane	Convert 10 gallons of methane to ounces. Provide only the numerical value.	10.0	1280.000264978877	Easy	1280.0000	1280.0	0.0
+volume	osmium	Convert 10 liters of osmium to milliliters. Provide only the numerical value.	10.0	10000.0	Easy	10000.0000	10000.0	0.0
+volume	methane	Convert 1297.195 liters of methane to cups. Provide only the numerical value.	1297.195	5482.918966249999	Hard	5483.2519	5483.2519	0.0
+volume	cubane	Convert 4508.208 teaspoons of cubane to milliliters. Provide only the numerical value.	4508.208	22220.603892955947	Hard	26353.3134	26353.3134	18.598547217495486
+volume	matcha latte	Convert 18.333 quarts of matcha latte to tablespoons. Provide only the numerical value.	18.333	1173.3100048121964	Hard	292.992	292.992	75.02859442105438
+volume	chocolate	Convert 0.2994 quarts of chocolate to tablespoons. Provide only the numerical value.	0.2994	19.16156741617693	Hard	4.7904	4.7904	74.999957488051
+volume	bubble gum	Convert 9.0241 quarts of bubble gum to tablespoons. Provide only the numerical value.	9.0241	577.541417903548	Hard	144.3856	144.3856	74.99995748805101
+volume	astatine	Convert 9.0241 teaspoons of astatine to milliliters. Provide only the numerical value.	9.0241	44.47908161966435	Hard	44.4531	44.4531	0.0
+volume	hydrogen	Convert 0.2994 quarts of hydrogen to tablespoons. Provide only the numerical value.	0.2994	19.16156741617693	Hard	5.7504	5.7504	69.98992892854218
+volume	ketchup	Convert 4508.208 liters of ketchup to cups. Provide only the numerical value.	4508.208	19055.068164	Hard	19058.3059	19058.3059	0.0
+volume	basketane	Convert 4508.208 gallons of basketane to ounces. Provide only the numerical value.	4508.208	577050.7434579894	Hard	72133.2480	72133.248	87.49966986131238
+volume	vitamin water	Convert 1297.195 teaspoons of vitamin water to milliliters. Provide only the numerical value.	1297.195	6393.772484970301	Hard	6485.9750	6485.975	1.4420675000000063

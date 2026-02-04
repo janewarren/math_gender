@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response_gpt-4o	model_answer_gpt-4o	loss_gpt-4o	raw_response_qwen-coder	model_answer_qwen-coder	loss_qwen-coder	raw_response_llama-4	model_answer_llama-4	loss_llama-4
+density	sodium chloride	Convert 10 kg/m³s of sodium chloride to lb/in³s. Provide only the numerical value.	10.0	0.00036127292	Easy	0.0003605	0.0003605	0.21394351948660376	0.0004	0.0004	10.719618841068968	0.0004	0.0004	10.719618841068968
+density	carbon dioxide	Convert 1 lb/in³ of carbon dioxide to kg/m³. Provide only the numerical value.	1.0	27679.90471026724	Easy	27.6799	27.6799	99.90000001701692	27.6799	27.6799	99.90000001701692	16.0185	16.0185	99.94212949730981
+density	water	Convert 5 lb/in³s of water to kg/m³s. Provide only the numerical value.	5.0	138399.52355133623	Easy	226757.3696	226757.3696	63.842594093822434	27679.9047	27679.9047	80.00000000741856	2310.0000	2310.0	98.3309191096
+density	vitamin water	Convert 50 g/cm³s of vitamin water to kg/m³s. Provide only the numerical value.	50.0	50000.0	Easy	50000.0	50000.0	0.0	50000	50000.0	0.0	50000.0000	50000.0	0.0
+density	hydrogen	Convert 10 lb/ft³s of hydrogen to g/cm³s. Provide only the numerical value.	10.0	0.1601846300861143	Easy	0.1602	0.1602	0.0	0.1602	0.1602	0.0	0.1602	0.1602	0.0
+density	glucose	Convert 10 g/cm³s of glucose to lb/ft³s. Provide only the numerical value.	10.0	624.27962	Easy	624.2796	624.2796	0.0	62.4279	62.4279	90.00000993144707	624.28	624.28	0.0
+density	vomitoxin	Convert 10 lb/ft³s of vomitoxin to g/cm³s. Provide only the numerical value.	10.0	0.1601846300861143	Easy	0.1602	0.1602	0.0	0.1602	0.1602	0.0	0.1602	0.1602	0.0
+density	vitamin water	Convert 20 lb/ft³s of vitamin water to g/cm³s. Provide only the numerical value.	20.0	0.3203692601722286	Easy	0.3204	0.3204	0.0	0.3204	0.3204	0.0	0.3204	0.3204	0.0
+density	vitamin water	Convert 50 lb/in³s of vitamin water to kg/m³s. Provide only the numerical value.	50.0	1383995.235513362	Easy	138,255.0000	138255.0	90.01044248908	1389.1544	1389.1544	99.89962722671622	800.9232	800.9232	99.94212962736805
+density	glucose	Convert 20 g/cm³s of glucose to kg/m³s. Provide only the numerical value.	20.0	20000.0	Easy	20000.0	20000.0	0.0	20000	20000.0	0.0	20000.0000	20000.0	0.0
+density	ketchup	Convert 18.333 kg/m³s of ketchup to g/cm³s. Provide only the numerical value.	18.333	0.018333	Hard	0.0183	0.0183	0.18000327278676873	0.0183	0.0183	0.18000327278676873	0.0183	0.0183	0.18000327278676873
+density	vomitoxin	Convert 9.0241 kg/m³s of vomitoxin to g/cm³s. Provide only the numerical value.	9.0241	0.0090241	Hard	0.0090	0.009	0.26706264336610697	0.0090	0.009	0.26706264336610697	0.0090	0.009	0.26706264336610697
+density	methane	Convert 0.2994 lb/ft³s of methane to g/cm³s. Provide only the numerical value.	0.2994	0.0047959278247782	Hard	0.004794	0.004794	0.0	0.0048	0.0048	0.0	0.0048	0.0048	0.0
+density	RedBull	Convert 0.2994 g/cm³s of RedBull to lb/ft³s. Provide only the numerical value.	0.2994	18.6909318228	Hard	18.6863	18.6863	0.0	18.6963	18.6963	0.0	18.6871	18.6871	0.0
+density	osmium	Convert 1297.195 g/cm³s of osmium to kg/m³s. Provide only the numerical value.	1297.195	1297195.0	Hard	1297195	1297195.0	0.0	1297195.0000	1297195.0	0.0	1297195.0000	1297195.0	0.0
+density	chocolate	Convert 4508.208 lb/in³s of chocolate to kg/m³s. Provide only the numerical value.	4508.208	124786767.85406443	Hard	812,000,000.0000	812000000.0	550.7100183487541	124794.7200	124794.72	99.89999362741253	112311.9141	112311.9141	99.90999693634876
+density	methane	Convert 18.333 lb/ft³s of methane to g/cm³s. Provide only the numerical value.	18.333	0.2936664823368733	Hard	0.2937	0.2937	0.0	0.2936	0.2936	0.0	0.2937	0.2937	0.0
+density	carbon dioxide	Convert 0.2994 kg/m³s of carbon dioxide to lb/in³s. Provide only the numerical value.	0.2994	1.08165112248e-05	Hard	6.7871e-06	6.7871e-06	37.25241106911998	0.00001073	1.073e-05	0.7998071004784573	0.0000108	1.08e-05	0.1526483397173723
+density	null	Convert 18.333 kg/m³s to g/cm³s. Provide only the numerical value.	18.333	0.018333	Hard	0.0183	0.0183	0.18000327278676873	0.0183	0.0183	0.18000327278676873	0.0183	0.0183	0.18000327278676873
+density	matcha latte	Convert 1297.195 kg/m³s of matcha latte to g/cm³s. Provide only the numerical value.	1297.195	1.297195	Hard	1.2972	1.2972	0.0	1.2972	1.2972	0.0	1.2972	1.2972	0.0

@@ -1,0 +1,301 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+volume	coffee	"Convert 1 teaspoons of coffee to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	0.0208333194707412	Easy	0.0208	0.0208	0.1599335659782616
+volume	matcha latte	"Convert 10 teaspoons of matcha latte to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	0.2083331947074126	Easy	0.0493	0.0493	76.33598425385935
+volume	metallic hydrogen	"Convert 10 gallons of metallic hydrogen to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	1280.000264978877	Easy	1280.0000	1280.0	0.0
+volume	ammonia	"Convert 1 liters of ammonia to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	1000.0	Easy	1000.0	1000.0	0.0
+volume	snake venom	"Convert 1 liters of snake venom to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1.0	1000.0	Easy	1000.0	1000.0	0.0
+volume	ethanol	"Convert 50 teaspoons of ethanol to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	50.0	1.0416659735370637	Easy	1.0417	1.0417	0.0
+volume	barrelene	"Convert 20 teaspoons of barrelene to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	0.4166663894148253	Easy	0.4167	0.4167	0.0
+volume	gasoline	"Convert 10 teaspoons of gasoline to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	0.2083331947074126	Easy	0.2083	0.2083	0.0
+volume	vitamin water	"Convert 20 teaspoons of vitamin water to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	20.0	0.4166663894148253	Easy	0.4167	0.4167	0.0
+volume	snake venom	"Convert 10 quarts of snake venom to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	10.0	639.9989116959563	Easy	640.0000	640.0	0.0
+volume	glucose	"Convert 9.0241 liters of glucose to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	9.0241	38.142614675	Hard	38.2364	38.2364	0.24588069223653986
+volume	glucose	"Convert 18.333 gallons of glucose to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	18.333	2346.6244857857755	Hard	2346.6667	2346.6667	0.0
+volume	vitamin water	"Convert 1297.195 liters of vitamin water to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	5482.918966249999	Hard	5486.7724	5486.7724	0.0
+volume	oxygen	"Convert 18.333 gallons of oxygen to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	18.333	2346.6244857857755	Hard	2346.6667	2346.6667	0.0
+volume	snake venom	"Convert 1297.195 quarts of snake venom to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	83020.3388257436	Hard	87742.0833	87742.0833	5.687455075517279
+volume	metallic hydrogen	"Convert 0.2994 gallons of metallic hydrogen to ounces.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	38.32320793346759	Hard	38.3232	38.3232	0.0
+volume	cubane	"Convert 9.0241 liters of cubane to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	9.0241	38.142614675	Hard	38.1647	38.1647	0.0
+volume	chocolate	"Convert 18.333 liters of chocolate to cups.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	18.333	77.48900775	Hard	77.7778	77.7778	0.3726880216762102
+volume	methane	"Convert 1297.195 liters of methane to milliliters.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	1297.195	1297195.0	Hard	1297195.0	1297195.0	0.0
+volume	sodium chloride	"Convert 0.2994 quarts of sodium chloride to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	0.2994	19.16156741617693	Hard	19.1200	19.12	0.21693118978270723

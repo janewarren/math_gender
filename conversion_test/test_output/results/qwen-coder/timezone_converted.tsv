@@ -1,0 +1,571 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+timezone	null	"Convert 9PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	12AM	Easy	12AM	12AM	0.0
+timezone	null	"Convert 1AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1AM	11AM	Easy	"I need to find the time difference between Kafue time and Lavrentiya time.
+
+First, let me identify what timezones these locations use:
+- Kafue, Zambia uses Central Africa Time (CAT), which is UTC+2
+- Lavrentiya, Russia uses Russia East time, which is UTC+12
+
+The time difference is 10 hours (UTC+12 - UTC+2 = 10 hours).
+
+Converting 1AM in Kafue time to Lavrentiya time:
+1AM + 10 hours = 11AM
+
+11AM"	1AM	600.0
+timezone	null	"Convert 3PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3PM	12PM	Easy	1PM	1PM	60.0
+timezone	null	"Convert 9PM in London time to Shanghai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9PM	5AM	Easy	5AM	5AM	0.0
+timezone	null	"Convert 1AM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1AM	10:30PM	Easy	"1AM in Zhemuzhen time (CST_China, UTC+8) to Noorabad time (assume IST, UTC+5.5):
+
+11:30PM previous day"	11:30PM	60.0
+timezone	null	"Convert 3PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3PM	12:30PM	Easy	5:30PM	5:30PM	300.0
+timezone	null	"Convert 12PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	12PM	9AM	Easy	11AM	11AM	120.0
+timezone	null	"Convert 3PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3PM	11PM	Easy	"I need to identify the timezones for Llieda and Nagai.
+
+Llieda is in Spain, which uses CET (Central European Time) = +1
+Nagai is in Japan, which uses JST (Japan Standard Time) = +9
+
+3PM in Llieda (CET +1) to Nagai (JST +9):
+
+Time difference = +9 - (+1) = +8 hours
+
+3PM + 8 hours = 11PM
+
+11PM"	3PM	480.0
+timezone	null	"Convert 12PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	12PM	3PM	Easy	3PM	3PM	0.0
+timezone	null	"Convert 1PM in Zhemuzhen time to Noorabad time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	1PM	10:30AM	Easy	3PM	3PM	270.0
+timezone	null	"Convert 2:48AM in Yorba Linda time to Altoona time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	2:48AM	5:48AM	Hard	5:48AM	5:48AM	0.0
+timezone	null	"Convert 6:58PM in Los Angeles time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	9:57PM	Hard	9:58PM	9:58PM	0.0
+timezone	null	"Convert 6:58PM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	2:57AM	Hard	"I need to identify the timezones for Llieda and Nagai, then convert between them.
+
+Llieda is in Spain, which uses CET (Central European Time) = +1 UTC
+Nagai is in Japan, which uses JST (Japan Standard Time) = +9 UTC
+
+The time difference is +9 - (+1) = +8 hours
+
+6:58PM + 8 hours = 2:58AM (next day)
+
+2:58AM"	6:58PM	479.0
+timezone	null	"Convert 8:11PM in Manila time to Delhi time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	8:11PM	5:41PM	Hard	5:41PM	5:41PM	0.0
+timezone	null	"Convert 11:59AM in Llieda time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	7:59PM	Hard	"I need to find the time zone offsets for Llieda and Nagai.
+
+Looking at the conversion guide, I can see:
+- Llieda time is not listed directly, but ""BST"" (British Summer Time) is +1
+- Nagai time is not listed directly either
+
+Let me reconsider the available time zones. Based on the context and the names:
+- Llieda is likely in BST (British Summer Time) at +1 UTC
+- Nagai is likely in JST (Japan Standard Time) at +9 UTC
+
+Converting 11:59AM from BST (+1) to JST (+9):
+- Time difference: +9 - (+1) = +8 hours
+- 11:59AM + 8 hours = 7:59PM
+
+7:59PM"	11:59AM	480.0000000000001
+timezone	null	"Convert 11:59AM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	9:59PM	Hard	"To convert from Kafue time to Lavrentiya time, I need to identify their UTC offsets.
+
+Kafue is in Zambia, which uses Central Africa Time (CAT), equivalent to UTC+2.
+
+Lavrentiya is in Russia, which uses Russia_East time at UTC+12 according to the guide.
+
+The difference is +10 hours (UTC+12 - UTC+2 = +10).
+
+11:59AM + 10 hours = 9:59PM
+
+9:59PM"	11:59AM	600.0000000000001
+timezone	null	"Convert 11:59AM in Istanbul time to Jakarta time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:59AM	3:58PM	Hard	4:59PM	4:59PM	61.00000000000005
+timezone	null	"Convert 3:49PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:49PM	1:48AM	Hard	"3:49PM
+
+Kafue time (Central Africa Time) is UTC+2, and Lavrentiya time (Russia East) is UTC+12. The 10-hour difference means 3:49PM in Kafue time converts to 1:49AM the next day in Lavrentiya time."	3:49PM	599.0
+timezone	null	"Convert 6:58PM in Kafue time to Lavrentiya time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	4:57AM	Hard	"I need to find the time zone offsets for Kafue and Lavrentiya.
+
+Kafue is in Zambia, which uses Central Africa Time (CAT), equivalent to UTC+2.
+Lavrentiya is in Russia, which uses Russia_East time, equivalent to UTC+12.
+
+6:58PM in Kafue time (UTC+2) to Lavrentiya time (UTC+12):
+
+The time difference is +10 hours.
+
+6:58PM + 10 hours = 4:58AM
+
+4:58AM"	6:58PM	599.0
+timezone	null	"Convert 6:58PM in Tokyo time to Dhaka time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+Timezone offsets (hours from UTC):
+  HST: -10
+  PST: -8
+  MST: -7
+  CST: -6
+  EST: -5
+  GMT: +0
+  UTC: +0
+  CET: +1
+  BST: +1
+  CEST: +2
+  TST: +3
+  IST: +5.5
+  BST_Bangladesh: +6
+  WIB: +7
+  CST_China: +8
+  PHT: +8
+  JST: +9
+  AEST: +10
+  Russia_East: +12
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:58PM	3:57PM	Hard	3:58PM	3:58PM	1.0000000000000497

@@ -1,0 +1,261 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+energy	salt	"Convert 10 kilojoules of salt to kilocalories.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	10.0	2.390057361376673	Easy	2.3901	2.3901	0.0
+energy	cookies	"Convert 20 watt-hours of cookies to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	20.0	72000.13766756724	Easy	83768.0000	83768.0	16.344221988527735
+energy	onion	"Convert 5 BTUs of onion to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	5.0	0.0014653513782034	Easy	0.0054	0.0054	268.5122954346071
+energy	parmesan cheese	"Convert 5 BTUs of parmesan cheese to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	5.0	0.0014653513782034	Easy	0.0056	0.0056	282.16089896922216
+energy	rice	"Convert 5 BTUs of rice to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	5.0	0.0014653513782034	Easy	0.0054	0.0054	268.5122954346071
+energy	yogurt	"Convert 20 calories of yogurt to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	20.0	83.68	Easy	83.68	83.68	0.0
+energy	garlic	"Convert 1 watt-hour of garlic to joule.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	1.0	3600.006883378362	Easy	4184.0	4184.0	16.222
+energy	tomato	"Convert 20 watt-hours of tomato to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	20.0	72000.13766756724	Easy	83712.0000	83712.0	16.266444359464636
+energy	flour	"Convert 10 kilojoules of flour to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	10.0	10000.0	Easy	41840.0	41840.0	318.40000000000003
+energy	bread	"Convert 20 watt-hours of bread to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	20.0	72000.13766756724	Easy	83768.0000	83768.0	16.344221988527735
+energy	tomato	"Convert 0.2994 BTUs of tomato to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	0.2994	8.774524052682145e-05	Hard	0.0001	0.0001	13.966295379215005
+energy	watermelon	"Convert 0.2994 joules of watermelon to watt-hours.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	0.2994	8.316650764818356e-05	Hard	0.0001	0.0001	20.24071086768076
+energy	candy	"Convert 1297.195 kilojoules of candy to kilocalories.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	1297.195	310.0370458891013	Hard	310.0	310.0	0.0
+energy	chocolate	"Convert 1297.195 joules of chocolate to kilojoules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	1297.195	1.297195	Hard	0.3100	0.31	76.10228223204683
+energy	peanut butter	"Convert 0.2994 joules of peanut butter to kilojoules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	0.2994	0.0002994	Hard	0.0000715	7.15e-05	76.1189044756179
+energy	carrot	"Convert 18.333 BTUs of carrot to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	18.333	0.0053728573633207	Hard	0.0054	0.0054	0.5051806672664926
+energy	milk	"Convert 1297.195 calories of milk to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	1297.195	5427.463879999999	Hard	5430.3243	5430.3243	0.0
+energy	tomato	"Convert 0.2994 calories of tomato to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	0.2994	1.2526896	Hard	1.2540	1.254	0.10460691938369518
+energy	onion	"Convert 0.2994 calories of onion to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	0.2994	1.2526896	Hard	1.2541	1.2541	0.11258974290198648
+energy	chocolate	"Convert 18.333 calories of chocolate to joules.
+
+Conversion guide:
+Conversion factors (relative to joules):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	18.333	76.705272	Hard	76.6981	76.6981	0.0

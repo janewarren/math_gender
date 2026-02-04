@@ -1,0 +1,301 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+cooking	salmon	"Convert 50 teaspoons of salmon to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	50.0	16.666666666666668	Easy	16.6667	16.6667	0.0
+cooking	honey	"Convert 10 teaspoons of honey to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	10.0	3.333333333333333	Easy	3.3333	3.3333	0.0
+cooking	lettuce	"Convert 20 cups of lettuce to fluid ounces.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	20.0	160.0	Easy	160.0	160.0	0.0
+cooking	cookies	"Convert 20 cups of cookies to fluid ounces.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	20.0	160.0	Easy	160.0	160.0	0.0
+cooking	salmon	"Convert 1 cup of salmon to fluid ounce.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	1.0	8.0	Easy	8.0	8.0	0.0
+cooking	flour	"Convert 10 teaspoons of flour to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	10.0	3.333333333333333	Easy	3.3333	3.3333	0.0
+cooking	potato	"Convert 10 cups of potato to teaspoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	10.0	480.0	Easy	480.0	480.0	0.0
+cooking	carrot	"Convert 50 teaspoons of carrot to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	50.0	16.666666666666668	Easy	16.6667	16.6667	0.0
+cooking	apples	"Convert 20 teaspoons of apples to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	20.0	6.666666666666667	Easy	6.6667	6.6667	0.0
+cooking	butter	"Convert 10 teaspoons of butter to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	10.0	3.333333333333333	Easy	3.3333	3.3333	0.0
+cooking	milk	"Convert 1297.195 cups of milk to milliliters.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	1297.195	306900.77066	Hard	306870.6866	306870.6866	0.0
+cooking	oil	"Convert 4508.208 teaspoons of oil to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	4508.208	1502.736	Hard	938.5433	938.5433	37.544365743550436
+cooking	carrot	"Convert 9.0241 cups of carrot to milliliters.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	9.0241	2134.9937708	Hard	2135.6788	2135.6788	0.0
+cooking	chocolate	"Convert 18.333 cups of chocolate to teaspoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	18.333	879.9839999999999	Hard	880.0	880.0	0.0
+cooking	oil	"Convert 4508.208 cups of oil to gallons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	4508.208	281.763	Hard	281.7630	281.763	0.0
+cooking	carrot	"Convert 9.0241 cups of carrot to teaspoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	9.0241	433.1568	Hard	433.1568	433.1568	0.0
+cooking	peanut butter	"Convert 9.0241 cups of peanut butter to teaspoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	9.0241	433.1568	Hard	433.1568	433.1568	0.0
+cooking	candy	"Convert 1297.195 cups of candy to fluid ounces.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	1297.195	10377.56	Hard	10375.56	10375.56	0.0
+cooking	watermelon	"Convert 18.333 cups of watermelon to gallons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	18.333	1.1458125	Hard	1.1458	1.1458	0.0
+cooking	olives	"Convert 4508.208 teaspoons of olives to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	4508.208	1502.736	Hard	1502.7360	1502.736	0.0

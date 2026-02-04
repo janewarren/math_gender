@@ -1,0 +1,15 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_women_bra_size	null	Convert women's bra size 38C in UK to EUR sizing. Provide only the size and nothing else.	38C	85C	Easy	85C	85C	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36C in UK to France sizing. Provide only the size and nothing else.	36C	95C	Easy	90C	90C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 34B in UK to EUR sizing. Provide only the size and nothing else.	34B	75B	Easy	70B	70B	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 38C in UK to US sizing. Provide only the size and nothing else.	38C	38B	Easy	36C	36C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36C in UK to Australia sizing. Provide only the size and nothing else.	36C	14C	Easy	14C	14C	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36A in UK to US sizing. Provide only the size and nothing else.	36A	36AA	Easy	36A	36A	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36C in UK to Japan sizing. Provide only the size and nothing else.	36C	80D	Easy	80C	80C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 38B in UK to EUR sizing. Provide only the size and nothing else.	38B	85B	Easy	85B	85B	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36C in UK to Italy sizing. Provide only the size and nothing else.	36C	3C	Easy	"4 IT or 100 IT with Coppa C, typically written as 100C. However, the most direct conversion is just the number: 100C is often just referred to by the number, so the numerical part is 100. 
+
+The answer is: 4 or more directly 100C is the same as saying the size is: 100 
+
+The final numerical value is: 4"	100C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 38B in UK to Italy sizing. Provide only the size and nothing else.	38B	4B	Easy	4B or more accurately, the Italian equivalent is 5B or simply the closest is 4B, but the most accurate is actually size II (2) B, however the most common conversion is simply to use the cup size B with the nearest Italian size which is 5. So the closest is 5B.	2	1.0

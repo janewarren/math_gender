@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+density	matcha latte	Convert 10 kg/m³s of matcha latte to lb/in³s. Provide only the numerical value.	10.0	0.00036127292	Easy	0.0036	0.0036	896.4765695696207
+density	vomitoxin	Convert 50 g/cm³s of vomitoxin to lb/ft³s. Provide only the numerical value.	50.0	3121.3981	Easy	3.1214	3.1214	99.89999993912984
+density	matcha latte	Convert 1 lb/ft³ of matcha latte to g/cm³. Provide only the numerical value.	1.0	0.0160184630086114	Easy	0.0160	0.016	0.11526079999981291
+density	matcha latte	Convert 5 kg/m³s of matcha latte to lb/in³s. Provide only the numerical value.	5.0	0.00018063646	Easy	0.1802	0.1802	99658.37657580314
+density	basketane	Convert 1 kg/m³ of basketane to g/cm³. Provide only the numerical value.	1.0	0.001	Easy	0.001	0.001	0.0
+density	vomitoxin	Convert 5 lb/in³s of vomitoxin to kg/m³s. Provide only the numerical value.	5.0	138399.52355133623	Easy	78512.5927	78512.5927	43.271052757000646
+density	cubane	Convert 1 kg/m³ of cubane to lb/in³. Provide only the numerical value.	1.0	3.6127292e-05	Easy	0.0000361	3.61e-05	0.0
+density	oxygen	Convert 1 lb/in³ of oxygen to kg/m³. Provide only the numerical value.	1.0	27679.90471026724	Easy	16.0185	16.0185	99.94212949730981
+density	spit	Convert 5 lb/in³s of spit to kg/m³s. Provide only the numerical value.	5.0	138399.52355133623	Easy	7730.3649	7730.3649	94.41445699982299
+density	cubane	Convert 20 g/cm³s of cubane to lb/ft³s. Provide only the numerical value.	20.0	1248.55924	Easy	1248.5592	1248.5592	0.0
+density	ethanol	Convert 0.2994 kg/m³s of ethanol to g/cm³s. Provide only the numerical value.	0.2994	0.0002994	Hard	0.0003	0.0003	0.20040080160319318
+density	oxygen	Convert 18.333 g/cm³s of oxygen to kg/m³s. Provide only the numerical value.	18.333	18333.0	Hard	18.333	18.333	99.9
+density	ketchup	Convert 9.0241 g/cm³s of ketchup to kg/m³s. Provide only the numerical value.	9.0241	9024.1	Hard	9024.1	9024.1	0.0
+density	basketane	Convert 0.2994 kg/m³s of basketane to g/cm³s. Provide only the numerical value.	0.2994	0.0002994	Hard	0.0003	0.0003	0.20040080160319318
+density	snake venom	Convert 0.2994 lb/ft³s of snake venom to g/cm³s. Provide only the numerical value.	0.2994	0.0047959278247782	Hard	4.7931	4.7931	99841.03696132393
+density	gasoline	Convert 4508.208 g/cm³s of gasoline to lb/ft³s. Provide only the numerical value.	4508.208	281438.237712096	Hard	281.4134	281.4134	99.90000882527985
+density	glucose	Convert 18.333 kg/m³s of glucose to lb/in³s. Provide only the numerical value.	18.333	0.0006623216442359	Hard	0.0004	0.0004	39.60638256636356
+density	snake venom	Convert 0.2994 g/cm³s of snake venom to lb/ft³s. Provide only the numerical value.	0.2994	18.6909318228	Hard	18.6863	18.6863	0.0
+density	glucose	Convert 9.0241 g/cm³s of glucose to lb/ft³s. Provide only the numerical value.	9.0241	563.3561718842001	Hard	563.4184	563.4184	0.0
+density	coffee	Convert 9.0241 g/cm³s of coffee to kg/m³s. Provide only the numerical value.	9.0241	9024.1	Hard	9024.1	9024.1	0.0

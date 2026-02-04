@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+energy	peanut butter	Convert 1 calorie of peanut butter to joule. Provide only the numerical value.	1.0	4.184	Easy	4.1840	4.184	0.0
+energy	flour	Convert 10 kilowatt-hours of flour to BTUs. Provide only the numerical value.	10.0	34121.508836536974	Easy	34121.4163	34121.4163	0.0
+energy	flour	Convert 5 BTUs of flour to kilowatt-hours. Provide only the numerical value.	5.0	0.0014653513782034	Easy	0.0015	0.0015	2.364526509613084
+energy	milk	Convert 20 watt-hours of milk to joules. Provide only the numerical value.	20.0	72000.13766756724	Easy	72000	72000.0	0.0
+energy	peanut butter	Convert 1 watt-hour of peanut butter to joule. Provide only the numerical value.	1.0	3600.006883378362	Easy	3600.0000	3600.0	0.0
+energy	butter	Convert 20 calories of butter to joules. Provide only the numerical value.	20.0	83.68	Easy	83.6800	83.68	0.0
+energy	chicken	Convert 20 kilojoules of chicken to kilocalories. Provide only the numerical value.	20.0	4.780114722753346	Easy	4.7824	4.7824	0.0
+energy	cookies	Convert 20 joules of cookies to kilojoules. Provide only the numerical value.	20.0	0.02	Easy	0.0200	0.02	0.0
+energy	milk	Convert 1 joule of milk to calorie. Provide only the numerical value.	1.0	0.2390057361376673	Easy	0.2390	0.239	0.0
+energy	onion	Convert 10 kilojoules of onion to kilocalories. Provide only the numerical value.	10.0	2.390057361376673	Easy	2.3901	2.3901	0.0
+energy	chocolate	Convert 4508.208 joules of chocolate to calories. Provide only the numerical value.	4508.208	1077.4875717017208	Hard	1077.5267	1077.5267	0.0
+energy	garlic	Convert 18.333 kilojoules of garlic to kilocalories. Provide only the numerical value.	18.333	4.381692160611854	Hard	4.3817	4.3817	0.0
+energy	chocolate	Convert 9.0241 joules of chocolate to watt-hours. Provide only the numerical value.	9.0241	0.0025066896515296	Hard	0.0025	0.0025	0.2668719490471423
+energy	sugar	Convert 0.2994 kilocalories of sugar to kilojoules. Provide only the numerical value.	0.2994	1.2526896	Hard	1.2527	1.2527	0.0
+energy	peanut butter	Convert 0.2994 kilowatt-hours of peanut butter to BTUs. Provide only the numerical value.	0.2994	1021.5979745659168	Hard	1023.9429	1023.9429	0.22953505121029028
+energy	potato	Convert 4508.208 kilocalories of potato to kilojoules. Provide only the numerical value.	4508.208	18862.342272	Hard	18864.0000	18864.0	0.0
+energy	cookies	Convert 4508.208 kilojoules of cookies to joules. Provide only the numerical value.	4508.208	4508208.0	Hard	4508208.0000	4508208.0	0.0
+energy	cookies	Convert 18.333 BTUs of cookies to kilowatt-hours. Provide only the numerical value.	18.333	0.0053728573633207	Hard	0.0054	0.0054	0.5051806672664926
+energy	milk	Convert 18.333 joules of milk to calories. Provide only the numerical value.	18.333	4.381692160611854	Hard	4.3817	4.3817	0.0
+energy	watermelon	Convert 0.2994 joules of watermelon to kilojoules. Provide only the numerical value.	0.2994	0.0002994	Hard	0.0003	0.0003	0.20040080160319318

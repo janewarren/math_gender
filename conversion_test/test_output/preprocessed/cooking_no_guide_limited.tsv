@@ -1,0 +1,21 @@
+domain	distractor	prompt	number	answer	difficulty
+cooking	lettuce	Convert 20 teaspoons of lettuce to tablespoons. Provide only the numerical value.	20.0	6.666666666666667	Easy
+cooking	cookies	Convert 10 cups of cookies to teaspoons. Provide only the numerical value.	10.0	480.0	Easy
+cooking	vanilla extract	Convert 5 milliliters of vanilla extract to cups. Provide only the numerical value.	5.0	0.0211337853145552	Easy
+cooking	rice	Convert 50 cups of rice to fluid ounces. Provide only the numerical value.	50.0	400.0	Easy
+cooking	salmon	Convert 50 cups of salmon to teaspoons. Provide only the numerical value.	50.0	2400.0	Easy
+cooking	apples	Convert 1 cup of apples to fluid ounce. Provide only the numerical value.	1.0	8.0	Easy
+cooking	butter	Convert 20 cups of butter to fluid ounces. Provide only the numerical value.	20.0	160.0	Easy
+cooking	water	Convert 10 cups of water to teaspoons. Provide only the numerical value.	10.0	480.0	Easy
+cooking	apples	Convert 1 cup of apples to milliliter. Provide only the numerical value.	1.0	236.588	Easy
+cooking	parmesan cheese	Convert 5 teaspoons of parmesan cheese to tablespoons. Provide only the numerical value.	5.0	1.6666666666666667	Easy
+cooking	water	Convert 0.2994 cups of water to gallons. Provide only the numerical value.	0.2994	0.0187125	Hard
+cooking	peanut butter	Convert 1297.195 cups of peanut butter to milliliters. Provide only the numerical value.	1297.195	306900.77066	Hard
+cooking	chicken	Convert 0.2994 cups of chicken to teaspoons. Provide only the numerical value.	0.2994	14.3712	Hard
+cooking	parmesan cheese	Convert 18.333 milliliters of parmesan cheese to cups. Provide only the numerical value.	18.333	0.0774891372343483	Hard
+cooking	carrot	Convert 1297.195 cups of carrot to milliliters. Provide only the numerical value.	1297.195	306900.77066	Hard
+cooking	bread	Convert 18.333 cups of bread to gallons. Provide only the numerical value.	18.333	1.1458125	Hard
+cooking	sugar	Convert 9.0241 cups of sugar to gallons. Provide only the numerical value.	9.0241	0.56400625	Hard
+cooking	milk	Convert 18.333 milliliters of milk to cups. Provide only the numerical value.	18.333	0.0774891372343483	Hard
+cooking	lettuce	Convert 18.333 milliliters of lettuce to cups. Provide only the numerical value.	18.333	0.0774891372343483	Hard
+cooking	peanut butter	Convert 1297.195 teaspoons of peanut butter to tablespoons. Provide only the numerical value.	1297.195	432.3983333333333	Hard

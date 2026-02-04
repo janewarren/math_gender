@@ -1,0 +1,11 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_women_bra_size	null	Convert women's bra size 38A in UK to EUR sizing. Provide only the size and nothing else.	38A	85A	Easy	85A	85A	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 32C in UK to EUR sizing. Provide only the size and nothing else.	32C	70C	Easy	70C	70C	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 32A in UK to Italy sizing. Provide only the size and nothing else.	32A	1A	Easy	70A	70A	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 32C in UK to US sizing. Provide only the size and nothing else.	32C	32B	Easy	32C	32C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36C in UK to Italy sizing. Provide only the size and nothing else.	36C	3C	Easy	3C	null	null
+clothing_sizes_women_bra_size	null	Convert women's bra size 38B in UK to France sizing. Provide only the size and nothing else.	38B	100B	Easy	100B	100B	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36B in UK to EUR sizing. Provide only the size and nothing else.	36B	80B	Easy	80B	80B	0.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 38B in UK to Japan sizing. Provide only the size and nothing else.	38B	85C	Easy	85B	85B	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 36C in UK to Japan sizing. Provide only the size and nothing else.	36C	80D	Easy	80C	80C	1.0
+clothing_sizes_women_bra_size	null	Convert women's bra size 34A in UK to France sizing. Provide only the size and nothing else.	34A	90A	Easy	90A	90A	0.0

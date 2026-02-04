@@ -1,0 +1,221 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_women_bra_size	null	"Convert women's bra size 38A in UK to EUR sizing.
+
+Conversion guide:
+Size conversion table (UK to EUR):
+  32A → 70A
+  32B → 70B
+  32C → 70C
+  32D → 70D
+  34A → 75A
+  34B → 75B
+  34C → 75C
+  34D → 75D
+  36A → 80A
+  36B → 80B
+  36C → 80C
+  36D → 80D
+  38A → 85A
+  38B → 85B
+  38C → 85C
+  38D → 85D
+
+Provide only the size and nothing else."	38A	85A	Easy	85A	85A	0.0
+clothing_sizes_women_bra_size	null	"Convert women's bra size 32D in UK to Italy sizing.
+
+Conversion guide:
+Size conversion table (UK to Italy):
+  32A → 1A
+  32B → 1B
+  32C → 1C
+  32D → 1D
+  34A → 2A
+  34B → 2B
+  34C → 2C
+  34D → 2D
+  36A → 3A
+  36B → 3B
+  36C → 3C
+  36D → 3D
+  38A → 4A
+  38B → 4B
+  38C → 4C
+  38D → 4D
+
+Provide only the size and nothing else."	32D	1D	Easy	1D	null	null
+clothing_sizes_women_bra_size	null	"Convert women's bra size 38A in UK to US sizing.
+
+Conversion guide:
+Size conversion table (UK to US):
+  32A → 32AA
+  32B → 32A
+  32C → 32B
+  32D → 32C
+  34A → 34AA
+  34B → 34A
+  34C → 34B
+  34D → 34C
+  36A → 36AA
+  36B → 36A
+  36C → 36B
+  36D → 36C
+  38A → 38AA
+  38B → 38A
+  38C → 38B
+  38D → 38C
+
+Provide only the size and nothing else."	38A	38AA	Easy	38AA	null	null
+clothing_sizes_women_bra_size	null	"Convert women's bra size 34D in UK to Australia sizing.
+
+Conversion guide:
+Size conversion table (UK to Australia):
+  32A → 10A
+  32B → 10B
+  32C → 10C
+  32D → 10D
+  34A → 12A
+  34B → 12B
+  34C → 12C
+  34D → 12D
+  36A → 14A
+  36B → 14B
+  36C → 14C
+  36D → 14D
+  38A → 16A
+  38B → 16B
+  38C → 16C
+  38D → 16D
+
+Provide only the size and nothing else."	34D	12D	Easy	12D	12D	0.0
+clothing_sizes_women_bra_size	null	"Convert women's bra size 32C in UK to Italy sizing.
+
+Conversion guide:
+Size conversion table (UK to Italy):
+  32A → 1A
+  32B → 1B
+  32C → 1C
+  32D → 1D
+  34A → 2A
+  34B → 2B
+  34C → 2C
+  34D → 2D
+  36A → 3A
+  36B → 3B
+  36C → 3C
+  36D → 3D
+  38A → 4A
+  38B → 4B
+  38C → 4C
+  38D → 4D
+
+Provide only the size and nothing else."	32C	1C	Easy	1C	null	null
+clothing_sizes_women_bra_size	null	"Convert women's bra size 34B in UK to EUR sizing.
+
+Conversion guide:
+Size conversion table (UK to EUR):
+  32A → 70A
+  32B → 70B
+  32C → 70C
+  32D → 70D
+  34A → 75A
+  34B → 75B
+  34C → 75C
+  34D → 75D
+  36A → 80A
+  36B → 80B
+  36C → 80C
+  36D → 80D
+  38A → 85A
+  38B → 85B
+  38C → 85C
+  38D → 85D
+
+Provide only the size and nothing else."	34B	75B	Easy	75B	75B	0.0
+clothing_sizes_women_bra_size	null	"Convert women's bra size 38D in UK to France sizing.
+
+Conversion guide:
+Size conversion table (UK to France):
+  32A → 85A
+  32B → 85B
+  32C → 85C
+  32D → 85D
+  34A → 90A
+  34B → 90B
+  34C → 90C
+  34D → 90D
+  36A → 95A
+  36B → 95B
+  36C → 95C
+  36D → 95D
+  38A → 100A
+  38B → 100B
+  38C → 100C
+  38D → 100D
+
+Provide only the size and nothing else."	38D	100D	Easy	100D	100D	0.0
+clothing_sizes_women_bra_size	null	"Convert women's bra size 32C in UK to EUR sizing.
+
+Conversion guide:
+Size conversion table (UK to EUR):
+  32A → 70A
+  32B → 70B
+  32C → 70C
+  32D → 70D
+  34A → 75A
+  34B → 75B
+  34C → 75C
+  34D → 75D
+  36A → 80A
+  36B → 80B
+  36C → 80C
+  36D → 80D
+  38A → 85A
+  38B → 85B
+  38C → 85C
+  38D → 85D
+
+Provide only the size and nothing else."	32C	70C	Easy	70C	70C	0.0
+clothing_sizes_women_bra_size	null	"Convert women's bra size 34A in UK to EUR sizing.
+
+Conversion guide:
+Size conversion table (UK to EUR):
+  32A → 70A
+  32B → 70B
+  32C → 70C
+  32D → 70D
+  34A → 75A
+  34B → 75B
+  34C → 75C
+  34D → 75D
+  36A → 80A
+  36B → 80B
+  36C → 80C
+  36D → 80D
+  38A → 85A
+  38B → 85B
+  38C → 85C
+  38D → 85D
+
+Provide only the size and nothing else."	34A	75A	Easy	75A	75A	0.0
+clothing_sizes_women_bra_size	null	"Convert women's bra size 34A in UK to France sizing.
+
+Conversion guide:
+Size conversion table (UK to France):
+  32A → 85A
+  32B → 85B
+  32C → 85C
+  32D → 85D
+  34A → 90A
+  34B → 90B
+  34C → 90C
+  34D → 90D
+  36A → 95A
+  36B → 95B
+  36C → 95C
+  36D → 95D
+  38A → 100A
+  38B → 100B
+  38C → 100C
+  38D → 100D
+
+Provide only the size and nothing else."	34A	90A	Easy	90A	90A	0.0
