@@ -1,526 +1,877 @@
 #!/usr/bin/env python3
 """
-Main conversion script to run inference on preprocessed TSV files.
+Parallelized conversion inference script.
 
-This script:
-1. Loads a TSV file from preprocessing.py
-2. Runs inference for selected chat models
-3. Compares model answers with correct answers
-4. Outputs [domain]_converted.tsv with additional columns
+Uses LiteLLM for unified API calls (OpenAI + Together AI) and
+ThreadPoolExecutor for parallel row processing within each task.
+
+Features:
+  - Discovers all model × domain × condition tasks automatically
+  - Resumes from per-file checkpoints (compatible with old output files)
+  - Exponential-backoff retry via tenacity for transient API errors
+  - Thread-safe rate limiter per provider
+  - Auto-restart failed tasks up to N times
+  - Graceful shutdown on SIGTERM / SIGINT (saves checkpoint)
+
+Usage:
+  # Run everything (all models, all domains, all conditions)
+  python main_conversion.py
+
+  # Filter to specific models / conditions / domains
+  python main_conversion.py --models gpt-4o gpt-5.2
+  python main_conversion.py --conditions regular no_guide
+  python main_conversion.py --domains cooking temperature
+
+  # Tune concurrency
+  python main_conversion.py --max-workers 20 --checkpoint-every 100
 """
 
-import json
-import pandas as pd
-import argparse
-import asyncio
-from pathlib import Path
-from typing import Optional, Union, List
-import re
 import os
-from openai import AsyncOpenAI
-from tqdm.asyncio import tqdm
+import sys
+import re
 import time
+import signal
+import argparse
+import logging
+from pathlib import Path
+from typing import Optional, Union
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from threading import Lock
 
-# Load API keys
-def load_api_key(key_file: str) -> str:
-    """Load API key from file."""
-    try:
-        with open(key_file, 'r') as f:
-            api_key = f.read().strip()
-        if not api_key:
-            raise ValueError(f"API key file '{key_file}' is empty")
-        return api_key
-    except FileNotFoundError:
-        raise FileNotFoundError(
-            f"API key file '{key_file}' not found. "
-            f"Please create the file with your API key."
-        )
-
-# Initialize API clients
-openai_key = os.environ.get("OPENAI_API_KEY") or load_api_key("openai_key.txt")
-together_key = os.environ.get("TOGETHER_API_KEY") or load_api_key("together_ai_key.txt")
-
-openai_client = AsyncOpenAI(api_key=openai_key)
-together_client = AsyncOpenAI(
-    api_key=together_key,
-    base_url="https://api.together.xyz/v1"
+import pandas as pd
+import numpy as np
+from tqdm import tqdm
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_exponential,
+    retry_if_exception_type,
+    before_sleep_log,
 )
+import litellm
 
-# Rate limiting for Together AI
-class RateLimiter:
-    """Rate limiter to prevent exceeding API limits."""
-    def __init__(self, max_requests_per_minute: int = 200):
-        self.max_requests = max_requests_per_minute
-        self.requests = []
-        self.lock = asyncio.Lock()
-    
-    async def acquire(self):
-        """Wait if necessary to stay within rate limit."""
-        async with self.lock:
-            now = time.time()
-            
-            # Remove requests older than 60 seconds
-            self.requests = [req_time for req_time in self.requests if now - req_time < 60]
-            
-            # If we're at the limit, only wait for the oldest request to expire
-            if len(self.requests) >= self.max_requests:
-                oldest_request = self.requests[0]
-                time_since_oldest = now - oldest_request
-                sleep_time = 60 - time_since_oldest + 0.05
-                
-                if sleep_time > 0:
-                    if sleep_time > 0.5:
-                        print(f"Rate limit: waiting {sleep_time:.1f}s for slot to open...")
-                    await asyncio.sleep(sleep_time)
-                    
-                    now = time.time()
-                    self.requests = [req_time for req_time in self.requests if now - req_time < 60]
-            
-            self.requests.append(now)
+# ── Logging ───────────────────────────────────────────────────────
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s  %(levelname)-8s  %(message)s",
+    datefmt="%H:%M:%S",
+)
+log = logging.getLogger("conversion")
 
-together_rate_limiter = RateLimiter(max_requests_per_minute=200)
+# Suppress noisy litellm debug output
+litellm.suppress_debug_info = True
+logging.getLogger("LiteLLM").setLevel(logging.WARNING)
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
-# Model configurations
+# ── Graceful Shutdown ─────────────────────────────────────────────
+_shutdown = False
+
+
+def _signal_handler(signum, _frame):
+    global _shutdown
+    _shutdown = True
+    log.warning("Signal %s received — will save checkpoint and stop after current batch.", signum)
+
+
+signal.signal(signal.SIGTERM, _signal_handler)
+signal.signal(signal.SIGINT, _signal_handler)
+
+# ══════════════════════════════════════════════════════════════════
+#  CONFIGURATION
+# ══════════════════════════════════════════════════════════════════
+
+DEFAULT_BASE_DIR = Path("full_results")
+PREPROCESSED_SUBDIR = "preprocessed"
+
+# Model registry — each entry carries everything LiteLLM needs.
+# "litellm_model" uses the provider prefix that LiteLLM expects.
 MODEL_CONFIGS = {
-    "gpt-4o": {"provider": "openai", "model": "gpt-4o"},
-    "qwen-coder": {"provider": "together", "model": "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8"},
-    "llama-4": {"provider": "together", "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"}
+    # ── Standard models ──────────────────────────────────────────
+    "gpt-4o": {
+        "litellm_model": "gpt-4o",
+        "reasoning": False,
+    },
+    "qwen-coder": {
+        "litellm_model": "together_ai/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+        "reasoning": False,
+    },
+    "llama-4": {
+        "litellm_model": "together_ai/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "reasoning": False,
+    },
+    # ── Reasoning / CoT models ───────────────────────────────────
+    "gpt-5.2": {
+        "litellm_model": "gpt-5.2",
+        "reasoning": True,
+        "extra_params": {"reasoning_effort": "medium"},
+    },
+    "deepseek-v3.1": {
+        "litellm_model": "together_ai/deepseek-ai/DeepSeek-V3.1",
+        "reasoning": True,
+        "extra_body": {"thinking": {"type": "enabled"}},
+    },
+    "qwen3-235b-thinking": {
+        "litellm_model": "together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507",
+        "reasoning": True,
+        "extra_body": {"enable_thinking": True},
+    },
+    "qwen3-next-thinking": {
+        "litellm_model": "together_ai/Qwen/Qwen3-Next-80B-A3B-Thinking",
+        "reasoning": True,
+        "extra_body": {"enable_thinking": True},
+    },
 }
 
-async def ask_openai(prompt: str, model: str, semaphore: asyncio.Semaphore, is_timezone: bool = False) -> str:
-    """Ask OpenAI model to perform conversion."""
-    async with semaphore:
-        try:
-            if is_timezone:
-                system_content = "You are a precise timezone conversion expert. Provide the time in the same format as the input (e.g., 1AM, 3:49PM), no explanations."
-            else:
-                system_content = "You are a precise unit conversion expert. Provide only the numerical answer with up to 4 decimal places, no units or explanations."
-            
-            response = await openai_client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_content},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0,
-                max_tokens=500
-            )
-            content = response.choices[0].message.content.strip()
-            finish_reason = response.choices[0].finish_reason
-            
-            if finish_reason == 'length':
-                if not is_timezone:
-                    numbers = re.findall(r'-?\d+\.?\d*[eE][+-]?\d*', content)
-                    if not numbers:
-                        numbers = re.findall(r'-?\d+\.?\d*', content)
-                    if numbers:
-                        return f"{numbers[-1]} [TRUNCATED]"
-                return f"{content} [TRUNCATED]"
-            
-            return content
-        except Exception as e:
-            return f"ERROR: {str(e)}"
+# Condition → (input-file suffix, output subdirectory)
+CONDITIONS = {
+    "regular":   {"suffix": "",            "output_dir": "results"},
+    "no_guide":  {"suffix": "_no_guide",   "output_dir": "results_no_guide"},
+    "math_only": {"suffix": "_math_only",  "output_dir": "results_math_only"},
+}
 
-async def ask_together(prompt: str, model: str, semaphore: asyncio.Semaphore, retry_count: int = 0, is_timezone: bool = False) -> str:
-    """Ask Together AI model to perform conversion."""
-    await together_rate_limiter.acquire()
-    
-    async with semaphore:
-        try:
-            if is_timezone:
-                system_content = "You are a precise timezone conversion expert. Provide the time in the same format as the input (e.g., 1AM, 3:49PM), no explanations."
-            else:
-                system_content = "You are a precise unit conversion expert. Provide only the numerical answer with up to 4 decimal places, no units or explanations."
-            
-            response = await together_client.chat.completions.create(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_content},
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=0,
-                max_tokens=1000
-            )
-            content = response.choices[0].message.content.strip()
-            finish_reason = response.choices[0].finish_reason
-            
-            if finish_reason == 'length':
-                if not is_timezone:
-                    numbers = re.findall(r'-?\d+\.?\d*[eE][+-]?\d*', content)
-                    if not numbers:
-                        numbers = re.findall(r'-?\d+\.?\d*', content)
-                    if numbers:
-                        return f"{numbers[-1]} [TRUNCATED]"
-                return f"{content} [TRUNCATED]"
-            
-            return content
-        except Exception as e:
-            error_msg = str(e)
-            if ("rate" in error_msg.lower() or "429" in error_msg) and retry_count < 3:
-                wait_time = 5 * (2 ** retry_count)
-                print(f"Rate limit error (attempt {retry_count + 1}/3), waiting {wait_time}s...")
-                await asyncio.sleep(wait_time)
-                return await ask_together(prompt, model, semaphore, retry_count + 1, is_timezone)
-            return f"ERROR: {error_msg}"
+# ══════════════════════════════════════════════════════════════════
+#  API KEY SETUP
+# ══════════════════════════════════════════════════════════════════
 
-async def get_model_answer(
-    prompt: str,
-    model_name: str,
-    semaphore: asyncio.Semaphore,
-    is_timezone: bool = False
-) -> str:
-    """Route question to appropriate model provider."""
-    config = MODEL_CONFIGS.get(model_name)
-    if not config:
-        return f"ERROR: Unknown model {model_name}"
-    
-    provider = config["provider"]
-    model = config["model"]
-    
-    if provider == "openai":
-        return await ask_openai(prompt, model, semaphore, is_timezone)
-    elif provider == "together":
-        return await ask_together(prompt, model, semaphore, is_timezone=is_timezone)
+def _load_key_file(path: str) -> str:
+    with open(path) as f:
+        return f.read().strip()
+
+
+def setup_api_keys():
+    """Ensure LiteLLM can find API keys (env vars take priority over files).
+
+    LiteLLM expects OPENAI_API_KEY and TOGETHER_AI_API_KEY.
+    """
+    # OpenAI
+    if not os.environ.get("OPENAI_API_KEY"):
+        try:
+            os.environ["OPENAI_API_KEY"] = _load_key_file("openai_key.txt")
+        except FileNotFoundError:
+            log.warning("No OPENAI_API_KEY env var or openai_key.txt — OpenAI models will fail.")
+
+    # Together AI — litellm checks TOGETHER_AI_API_KEY
+    together_key = (
+        os.environ.get("TOGETHER_AI_API_KEY")
+        or os.environ.get("TOGETHERAI_API_KEY")
+        or os.environ.get("TOGETHER_API_KEY")
+    )
+    if not together_key:
+        try:
+            together_key = _load_key_file("together_ai_key.txt")
+        except FileNotFoundError:
+            log.warning("No Together AI API key found — Together models will fail.")
+    if together_key:
+        os.environ["TOGETHER_AI_API_KEY"] = together_key
+
+# ══════════════════════════════════════════════════════════════════
+#  THREAD-SAFE RATE LIMITER
+# ══════════════════════════════════════════════════════════════════
+
+class RateLimiter:
+    """Sliding-window rate limiter (thread-safe)."""
+
+    def __init__(self, max_per_minute: int):
+        self.max_per_minute = max_per_minute
+        self._timestamps: list[float] = []
+        self._lock = Lock()
+
+    def acquire(self):
+        while True:
+            with self._lock:
+                now = time.time()
+                self._timestamps = [t for t in self._timestamps if now - t < 60]
+                if len(self._timestamps) < self.max_per_minute:
+                    self._timestamps.append(now)
+                    return  # slot acquired
+                sleep_for = 60.0 - (now - self._timestamps[0]) + 0.1
+            # sleep *outside* the lock so other threads aren't blocked
+            time.sleep(max(sleep_for, 0.05))
+
+
+# One limiter per provider
+_rate_limiters = {
+    "openai":   RateLimiter(max_per_minute=500),
+    "together": RateLimiter(max_per_minute=200),
+}
+
+# ══════════════════════════════════════════════════════════════════
+#  SYSTEM PROMPTS
+# ══════════════════════════════════════════════════════════════════
+
+def get_system_prompt(is_timezone: bool, is_reasoning: bool) -> str:
+    """Return the system prompt appropriate for the domain and model type."""
+    if is_reasoning:
+        if is_timezone:
+            return (
+                "You are a precise timezone conversion expert. "
+                "Provide your final answer within <answer> and </answer> tags in the same "
+                "format as the input (e.g., <answer>1AM</answer>, <answer>3:49PM</answer>)."
+            )
+        return (
+            "You are a precise conversion expert. "
+            "Provide your final answer within <answer> and </answer> tags. "
+            "For numerical answers, provide only the number (e.g., <answer>42.5</answer>). "
+            "For size answers, provide only the size (e.g., <answer>M</answer> or <answer>32</answer>)."
+        )
     else:
-        return f"ERROR: Unknown provider {provider}"
+        if is_timezone:
+            return (
+                "You are a precise timezone conversion expert. Provide the time in the same "
+                "format as the input (e.g., 1AM, 3:49PM), within <answer> and </answer> tags "
+                "(e.g., <answer>1AM</answer>, <answer>3:49PM</answer>)."
+            )
+        return (
+            "You are a precise unit conversion expert. Provide only the numerical answer "
+            "with up to 4 decimal places, within <answer> and </answer> tags "
+            "(e.g., <answer>42.5</answer>). "
+        )
+
+# ══════════════════════════════════════════════════════════════════
+#  RESPONSE HELPERS
+# ══════════════════════════════════════════════════════════════════
+
+def _build_full_response(response) -> str:
+    """Build the full raw response string, capturing any reasoning/thinking content."""
+    msg = response.choices[0].message
+    content = (msg.content or "").strip()
+
+    reasoning = ""
+
+    # 1. LiteLLM stores provider-specific data (e.g. Together reasoning) here
+    psf = getattr(msg, "provider_specific_fields", None) or {}
+    for key in ("reasoning_content", "reasoning", "thinking_content"):
+        val = psf.get(key)
+        if val and isinstance(val, str) and val.strip():
+            reasoning = val.strip()
+            break
+
+    # 2. Direct message attributes (OpenAI reasoning models, etc.)
+    if not reasoning:
+        for attr in ("reasoning_content", "thinking_content", "reasoning"):
+            val = getattr(msg, attr, None)
+            if val and isinstance(val, str) and val.strip():
+                reasoning = val.strip()
+                break
+
+    # 3. model_extra dict (fallback for various providers)
+    if not reasoning:
+        extra = getattr(msg, "model_extra", None) or {}
+        val = extra.get("reasoning", "")
+        reasoning = val.strip() if isinstance(val, str) else ""
+
+    if reasoning:
+        return f"[REASONING]\n{reasoning}\n[/REASONING]\n{content}"
+    return content
+
+
+def _get_reasoning_tokens(response) -> Optional[int]:
+    """Extract reasoning-token count from response usage stats."""
+    try:
+        usage = response.usage
+        if usage and hasattr(usage, "completion_tokens_details"):
+            details = usage.completion_tokens_details
+            if details and hasattr(details, "reasoning_tokens"):
+                return details.reasoning_tokens
+    except Exception:
+        pass
+    return None
+
+# ══════════════════════════════════════════════════════════════════
+#  MODEL API CALL  (with retry + rate limiting)
+# ══════════════════════════════════════════════════════════════════
+
+class RetryableAPIError(Exception):
+    """Raised for transient API errors that should be retried."""
+    pass
+
+
+def _is_retryable(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    return any(p in msg for p in (
+        "rate", "429", "500", "502", "503", "504",
+        "timeout", "connection", "overloaded", "capacity",
+        "try again", "temporarily", "server_error",
+    ))
+
+
+@retry(
+    stop=stop_after_attempt(6),
+    wait=wait_exponential(multiplier=2, min=4, max=120),
+    retry=retry_if_exception_type(RetryableAPIError),
+    before_sleep=before_sleep_log(log, logging.WARNING),
+    reraise=True,
+)
+def call_model(model_name: str, prompt: str, domain: str) -> dict:
+    """Call a model via LiteLLM.  Returns {'response': str, 'reasoning_tokens': int|None}."""
+    config = MODEL_CONFIGS[model_name]
+    is_reasoning = config.get("reasoning", False)
+    is_timezone = ("timezone" in domain)
+
+    # Rate-limit before sending
+    provider = "together" if "together_ai" in config["litellm_model"] else "openai"
+    _rate_limiters[provider].acquire()
+
+    messages = [
+        {"role": "system", "content": get_system_prompt(is_timezone, is_reasoning)},
+        {"role": "user", "content": prompt},
+    ]
+
+    params: dict = {
+        "model": config["litellm_model"],
+        "messages": messages,
+    }
+
+    if is_reasoning:
+        params["max_tokens"] = 16000
+    else:
+        params["temperature"] = 0
+        params["max_tokens"] = 1000 if provider == "together" else 500
+
+    # Model-specific extra parameters
+    if "extra_body" in config:
+        params["extra_body"] = config["extra_body"]
+    if "extra_params" in config:
+        params.update(config["extra_params"])
+
+    try:
+        response = litellm.completion(**params)
+    except Exception as exc:
+        if _is_retryable(exc):
+            raise RetryableAPIError(str(exc)) from exc
+        # Non-retryable → return as ERROR row
+        return {"response": f"ERROR: {exc}", "reasoning_tokens": None}
+
+    full_response = _build_full_response(response)
+    reasoning_tokens = _get_reasoning_tokens(response)
+
+    # Flag truncated responses
+    if response.choices[0].finish_reason == "length":
+        full_response += " [TRUNCATED]"
+
+    return {"response": full_response, "reasoning_tokens": reasoning_tokens}
+
+# ══════════════════════════════════════════════════════════════════
+#  ANSWER EXTRACTION
+# ══════════════════════════════════════════════════════════════════
+
+def extract_answer_from_tags(response: str) -> Optional[str]:
+    """Extract the last <answer>…</answer> value.  Returns None if no tag found."""
+    matches = re.findall(r"<answer>\s*(.*?)\s*</answer>", response, re.DOTALL)
+    return matches[-1].strip() if matches else None
+
 
 def extract_number(answer: str) -> Optional[float]:
-    """Extract numeric value from answer string, handling scientific notation."""
-    if not answer or answer.startswith('ERROR:'):
+    """Extract a numeric value from *answer*, handling scientific notation."""
+    if not answer or answer.startswith("ERROR:"):
         return None
-    
     cleaned = answer.replace("[TRUNCATED]", "").replace(",", "").strip()
-    
-    # Try scientific notation first
-    sci_pattern = re.search(r'-?\d+\.?\d*[eE][+-]?\d+', cleaned)
-    if sci_pattern:
+
+    # Scientific notation first
+    sci = re.search(r"-?\d+\.?\d*[eE][+-]?\d+", cleaned)
+    if sci:
         try:
-            return float(sci_pattern.group(0))
+            return float(sci.group(0))
         except ValueError:
             pass
-    
-    # Fall back to regular number extraction
-    matches = re.findall(r'-?\d+\.?\d*', cleaned)
+
+    # Plain numbers (take the last reasonable one)
+    matches = re.findall(r"-?\d+\.?\d*", cleaned)
+    for m in reversed(matches):
+        try:
+            num = float(m)
+            if abs(num) > 1e-10 or num == 0:
+                return num
+        except ValueError:
+            continue
     if matches:
-        for match in reversed(matches):
-            try:
-                num = float(match)
-                if abs(num) > 1e-10 or abs(num) == 0:
-                    return num
-            except ValueError:
-                continue
         try:
             return float(matches[-1])
         except ValueError:
-            return None
+            pass
     return None
+
 
 def extract_time_string(answer: str) -> Optional[str]:
-    """Extract time string from answer (e.g., '1AM', '3:49PM')."""
-    # Pattern 1: HH:MMAM/PM or HH:MM AM/PM
-    time_pattern1 = re.search(r'(\d{1,2}):(\d{2})\s*(AM|PM)', answer, re.IGNORECASE)
-    if time_pattern1:
-        h = int(time_pattern1.group(1))
-        m = int(time_pattern1.group(2))
-        period = time_pattern1.group(3).upper()
-        return f"{h}:{m:02d}{period}"
-    
-    # Pattern 2: HHAM/PM or HH AM/PM
-    time_pattern2 = re.search(r'(\d{1,2})\s*(AM|PM)', answer, re.IGNORECASE)
-    if time_pattern2:
-        h = int(time_pattern2.group(1))
-        period = time_pattern2.group(2).upper()
-        return f"{h}{period}"
-    
+    """Extract a time string like '1AM' or '3:49PM'."""
+    m = re.search(r"(\d{1,2}):(\d{2})\s*(AM|PM)", answer, re.IGNORECASE)
+    if m:
+        return f"{int(m.group(1))}:{int(m.group(2)):02d}{m.group(3).upper()}"
+    m = re.search(r"(\d{1,2})\s*(AM|PM)", answer, re.IGNORECASE)
+    if m:
+        return f"{int(m.group(1))}{m.group(2).upper()}"
     return None
+
 
 def extract_clothing_size(answer: str) -> Optional[str]:
-    """Extract clothing size from answer (e.g., 'XS', 'M', 'L', '32', '34', '32B', '70A', '46.5', '29.0')."""
+    """Extract a clothing size (e.g. 'M', '32B', '46.5')."""
     if not answer:
         return None
-    
-    # Try to match bra sizes first (format: number + letter, e.g., "32B", "70A")
-    bra_pattern = re.search(r'\b(\d{2,3})([A-Z])\b', answer, re.IGNORECASE)
-    if bra_pattern:
-        return f"{bra_pattern.group(1)}{bra_pattern.group(2).upper()}"
-    
-    # Try to match standard alphanumeric sizes
-    size_pattern = re.search(r'\b(XS|S|M|L|XL|XXL|XXXL)\b', answer, re.IGNORECASE)
-    if size_pattern:
-        return size_pattern.group(1).upper()
-    
-    # Try to match decimal numeric sizes (for shoe sizes, e.g., "46.5", "29.0")
-    decimal_pattern = re.search(r'\b(\d{1,3}\.?\d*)\b', answer)
-    if decimal_pattern:
-        matched = decimal_pattern.group(1)
-        # Normalize: convert "46.0" to "46", but keep "46.5" as "46.5"
+    # Bra size: number + letter  (32B, 70A)
+    m = re.search(r"\b(\d{2,3})([A-Z])\b", answer, re.IGNORECASE)
+    if m:
+        return f"{m.group(1)}{m.group(2).upper()}"
+    # Alpha sizes
+    m = re.search(r"\b(XS|S|M|L|XL|XXL|XXXL)\b", answer, re.IGNORECASE)
+    if m:
+        return m.group(1).upper()
+    # Numeric sizes (shoe sizes, pants)
+    m = re.search(r"\b(\d{1,3}\.?\d*)\b", answer)
+    if m:
         try:
-            num = float(matched)
-            # If it's a whole number, return as integer string, otherwise return with one decimal place
-            if num == int(num):
-                return str(int(num))
-            else:
-                # Return with appropriate decimal places (up to 1 decimal place for shoe sizes)
-                return f"{num:.1f}".rstrip('0').rstrip('.')
+            num = float(m.group(1))
+            return str(int(num)) if num == int(num) else f"{num:.1f}".rstrip("0").rstrip(".")
         except ValueError:
-            return matched
-    
+            return m.group(1)
     return None
 
+# ══════════════════════════════════════════════════════════════════
+#  ANSWER TYPE + LOSS CALCULATION
+# ══════════════════════════════════════════════════════════════════
+
+def determine_answer_type(domain: str, answer) -> str:
+    if "timezone" in domain:
+        return "timezone"
+    if "clothing_sizes" in domain or "bra_size" in domain:
+        return "clothing"
+    if isinstance(answer, str) and not answer.replace(".", "").replace("-", "").isdigit():
+        return "string"
+    return "numeric"
+
+
 def calculate_loss(
-    model_answer: Union[float, str, None],
-    correct_answer: Union[float, str],
-    answer_type: str = 'numeric',
+    model_answer,
+    correct_answer,
+    answer_type: str = "numeric",
     tolerance_percent: float = 0.1,
-    tolerance_minutes: float = 1.0
+    tolerance_minutes: float = 1.0,
 ) -> Optional[float]:
-    """
-    Calculate loss/difference between model answer and correct answer.
-    
-    Args:
-        model_answer: The model's answer
-        correct_answer: The correct answer
-        answer_type: Type of answer ('numeric', 'timezone', 'clothing', etc.)
-        tolerance_percent: Tolerance for numeric conversions as percentage (default: 0.1%)
-        tolerance_minutes: Tolerance for timezone conversions in minutes (default: 1.0)
-    
-    Returns:
-        Loss value (0.0 if within tolerance, otherwise the error amount)
-    """
+    """Return 0.0 if within tolerance, the error magnitude otherwise, or None on parse failure."""
     if model_answer is None:
         return None
-    
-    if answer_type == 'numeric':
+
+    # ── Numeric ──────────────────────────────────────────────────
+    if answer_type == "numeric":
         try:
-            model_num = float(model_answer)
-            correct_num = float(correct_answer)
-            
-            if correct_num == 0:
-                # For zero, use absolute difference
-                abs_diff = abs(model_num)
-                # Consider correct if within a small absolute threshold (0.001)
-                return 0.0 if abs_diff < 0.001 else abs_diff
-            else:
-                # Relative error as percentage
-                relative_error = abs((model_num - correct_num) / correct_num) * 100
-                # Return 0.0 if within tolerance, otherwise return the error
-                return 0.0 if relative_error <= tolerance_percent else relative_error
+            m, c = float(model_answer), float(correct_answer)
         except (ValueError, TypeError):
             return None
-    
-    elif answer_type == 'timezone':
-        # For timezone, calculate difference in minutes
-        def parse_time_string(time_str: str) -> float:
-            """Parse time string to hours (0-24)."""
-            time_str = time_str.strip().upper()
-            
-            match = re.match(r'(\d{1,2}):(\d{2})(AM|PM)', time_str)
-            if match:
-                h = int(match.group(1))
-                m = int(match.group(2))
-                period = match.group(3)
-                if period == 'PM' and h != 12:
+        if c == 0:
+            return 0.0 if abs(m) < 0.001 else abs(m)
+        rel = abs((m - c) / c) * 100
+        return 0.0 if rel <= tolerance_percent else rel
+
+    # ── Timezone ─────────────────────────────────────────────────
+    if answer_type == "timezone":
+        def _to_hours(s: str) -> float:
+            s = s.strip().upper()
+            m2 = re.match(r"(\d{1,2}):(\d{2})(AM|PM)", s)
+            if m2:
+                h, mi, p = int(m2.group(1)), int(m2.group(2)), m2.group(3)
+                if p == "PM" and h != 12:
                     h += 12
-                elif period == 'AM' and h == 12:
+                elif p == "AM" and h == 12:
                     h = 0
-                return h + m / 60.0
-            
-            match = re.match(r'(\d{1,2})(AM|PM)', time_str)
-            if match:
-                h = int(match.group(1))
-                period = match.group(2)
-                if period == 'PM' and h != 12:
+                return h + mi / 60.0
+            m2 = re.match(r"(\d{1,2})(AM|PM)", s)
+            if m2:
+                h, p = int(m2.group(1)), m2.group(2)
+                if p == "PM" and h != 12:
                     h += 12
-                elif period == 'AM' and h == 12:
+                elif p == "AM" and h == 12:
                     h = 0
                 return float(h)
-            
-            raise ValueError(f"Could not parse time: {time_str}")
-        
+            raise ValueError(f"Cannot parse time: {s}")
         try:
-            model_hours = parse_time_string(str(model_answer))
-            correct_hours = parse_time_string(str(correct_answer))
-            
-            diff_minutes = abs((model_hours - correct_hours) * 60)
-            
-            # Handle day rollover
-            if diff_minutes > 12 * 60:
-                diff_minutes = 24 * 60 - diff_minutes
-            
-            # Return 0.0 if within tolerance, otherwise return the difference
-            return 0.0 if diff_minutes <= tolerance_minutes else diff_minutes
+            diff = abs((_to_hours(str(model_answer)) - _to_hours(str(correct_answer))) * 60)
+            if diff > 720:
+                diff = 1440 - diff
+            return 0.0 if diff <= tolerance_minutes else diff
         except (ValueError, TypeError):
             return None
-    
-    elif answer_type == 'clothing':
-        # For clothing sizes, return 0 if exact match, 1 if mismatch (no tolerance)
-        # Normalize both answers for comparison (handle "46" vs "46.0" as equivalent)
+
+    # ── Clothing ─────────────────────────────────────────────────
+    if answer_type == "clothing":
         try:
-            model_num = float(str(model_answer).strip())
-            correct_num = float(str(correct_answer).strip())
-            # Compare as floats to handle "46" == "46.0"
-            return 0.0 if abs(model_num - correct_num) < 0.001 else 1.0
+            return 0.0 if abs(float(str(model_answer).strip()) - float(str(correct_answer).strip())) < 0.001 else 1.0
         except (ValueError, TypeError):
-            # If not numeric, do string comparison (case-insensitive)
             return 0.0 if str(model_answer).strip().upper() == str(correct_answer).strip().upper() else 1.0
-    
-    else:
-        # For other types, return 0 if exact match, 1 otherwise
-        return 0.0 if str(model_answer).strip() == str(correct_answer).strip() else 1.0
 
-def determine_answer_type(domain: str, answer: Union[float, str]) -> str:
-    """Determine the type of answer based on domain and answer value."""
-    if domain == 'timezone' or 'timezone' in domain:
-        return 'timezone'
-    elif 'clothing_sizes' in domain or 'bra_size' in domain:
-        return 'clothing'
-    elif isinstance(answer, str) and not answer.replace('.', '').replace('-', '').isdigit():
-        # Non-numeric string
-        return 'string'
-    else:
-        return 'numeric'
+    # ── Fallback (exact string match) ────────────────────────────
+    return 0.0 if str(model_answer).strip() == str(correct_answer).strip() else 1.0
 
-async def process_row(
-    row: pd.Series,
+# ══════════════════════════════════════════════════════════════════
+#  SINGLE-ROW PROCESSING  (runs inside a worker thread)
+# ══════════════════════════════════════════════════════════════════
+
+def process_row(
+    prompt: str,
+    domain: str,
+    correct_answer,
     model_name: str,
-    semaphore: asyncio.Semaphore,
-    tolerance_percent: float = 0.1,
-    tolerance_minutes: float = 1.0
+    tolerance_percent: float,
+    tolerance_minutes: float,
 ) -> dict:
-    """Process a single row: run inference and extract answer."""
-    prompt = row['prompt']
-    domain = row['domain']
-    correct_answer = row['answer']
-    
-    # Determine if this is a timezone conversion
-    is_timezone = (domain == 'timezone')
-    
-    # Get raw model response
-    raw_response = await get_model_answer(prompt, model_name, semaphore, is_timezone)
-    
-    # Extract model answer based on domain
+    """Process one row end-to-end.  Thread-safe (no shared mutable state)."""
+    config = MODEL_CONFIGS.get(model_name, {})
+    is_reasoning = config.get("reasoning", False)
+
+    # 1) Call model
+    result = call_model(model_name, prompt, domain)
+    raw_response = result["response"]
+    reasoning_tokens = result["reasoning_tokens"]
+
+    # 2) Extract answer
     answer_type = determine_answer_type(domain, correct_answer)
-    
-    if answer_type == 'timezone':
-        model_answer = extract_time_string(raw_response)
-    elif answer_type == 'clothing':
-        model_answer = extract_clothing_size(raw_response)
+
+    if is_reasoning:
+        tagged = extract_answer_from_tags(raw_response)
+        source = tagged if tagged is not None else raw_response
     else:
-        model_answer = extract_number(raw_response)
-    
-    # Calculate loss with tolerance
-    loss = calculate_loss(model_answer, correct_answer, answer_type, tolerance_percent, tolerance_minutes)
-    
+        source = raw_response
+
+    if answer_type == "timezone":
+        model_answer = extract_time_string(source)
+    elif answer_type == "clothing":
+        model_answer = extract_clothing_size(source)
+    else:
+        model_answer = extract_number(source)
+
+    # 3) Compute loss
+    loss = calculate_loss(model_answer, correct_answer, answer_type,
+                          tolerance_percent, tolerance_minutes)
+
     return {
-        'raw_response': raw_response,
-        'model_answer': model_answer,
-        'loss': loss
+        "raw_response": raw_response,
+        "model_answer": model_answer,
+        "loss": loss,
+        "reasoning_tokens": reasoning_tokens,
     }
 
-async def process_dataframe(
-    df: pd.DataFrame,
+# ══════════════════════════════════════════════════════════════════
+#  CHECKPOINT  (per output file)
+# ══════════════════════════════════════════════════════════════════
+
+_ckpt_lock = Lock()
+
+RESULT_COLS = ("raw_response", "model_answer", "loss", "reasoning_tokens")
+
+
+def save_checkpoint(df: pd.DataFrame, output_file: Path):
+    """Write current DataFrame state to the output TSV (thread-safe)."""
+    with _ckpt_lock:
+        tmp = df.copy()
+        if "distractor" in tmp.columns:
+            tmp["distractor"] = tmp["distractor"].fillna("null")
+        output_file.parent.mkdir(parents=True, exist_ok=True)
+        tmp.to_csv(output_file, sep="\t", index=False, na_rep="null")
+
+
+def load_checkpoint(output_file: Path, df: pd.DataFrame) -> int:
+    """If *output_file* already exists, restore results into *df* in-place.
+
+    Returns the number of rows already processed (= index to resume from).
+    """
+    if not output_file.exists():
+        return 0
+    try:
+        ckpt = pd.read_csv(output_file, sep="\t")
+        if "raw_response" not in ckpt.columns:
+            return 0
+        mask = ckpt["raw_response"].notna() & (ckpt["raw_response"].astype(str) != "null")
+        start = int(mask.sum())
+        if start > 0 and start <= len(df):
+            for col in RESULT_COLS:
+                if col in ckpt.columns:
+                    df[col] = ckpt[col]
+            log.info("  Resuming from checkpoint: %d / %d rows already done.", start, len(df))
+        return start
+    except Exception as exc:
+        log.warning("  Could not load checkpoint (%s). Starting from scratch.", exc)
+        return 0
+
+# ══════════════════════════════════════════════════════════════════
+#  TASK PROCESSING  (one model × domain × condition)
+# ══════════════════════════════════════════════════════════════════
+
+def process_task(
+    *,
     model_name: str,
-    max_concurrent: int,
+    input_file: Path,
+    output_file: Path,
+    max_workers: int = 10,
+    checkpoint_every: int = 50,
     tolerance_percent: float = 0.1,
-    tolerance_minutes: float = 1.0
-) -> pd.DataFrame:
-    """Process entire dataframe with async inference."""
-    # Create semaphore inside the async context to ensure it's bound to the correct event loop
-    semaphore = asyncio.Semaphore(max_concurrent)
-    
-    results = []
-    
+    tolerance_minutes: float = 1.0,
+) -> bool:
+    """Run inference for one task.  Returns True on success."""
+
+    # Load input
+    df = pd.read_csv(input_file, sep="\t")
+    for col in RESULT_COLS:
+        df[col] = None
+
+    # Resume from checkpoint
+    start_idx = load_checkpoint(output_file, df)
+    if start_idx >= len(df):
+        log.info("  Already complete (%d rows). Skipping.", len(df))
+        return True
+
+    pending = list(range(start_idx, len(df)))
+    log.info("  %d rows to process (%d already done).", len(pending), start_idx)
+
+    # Process in checkpoint-sized batches
+    for batch_off in range(0, len(pending), checkpoint_every):
+        if _shutdown:
+            log.warning("  Shutdown requested — saving checkpoint.")
+            save_checkpoint(df, output_file)
+            return True
+
+        batch_idx = pending[batch_off : batch_off + checkpoint_every]
+        results: dict[int, dict] = {}
+
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = {}
+            for idx in batch_idx:
+                row = df.iloc[idx]
+                fut = pool.submit(
+                    process_row,
+                    prompt=str(row["prompt"]),
+                    domain=str(row["domain"]),
+                    correct_answer=row["answer"],
+                    model_name=model_name,
+                    tolerance_percent=tolerance_percent,
+                    tolerance_minutes=tolerance_minutes,
+                )
+                futures[fut] = idx
+
+            done_count = start_idx + batch_off
+            desc = f"  [{done_count + len(batch_idx)}/{len(df)}]"
+            for fut in tqdm(as_completed(futures), total=len(futures),
+                            desc=desc, leave=False):
+                idx = futures[fut]
+                try:
+                    results[idx] = fut.result()
+                except Exception as exc:
+                    results[idx] = {
+                        "raw_response": f"ERROR: {exc}",
+                        "model_answer": None,
+                        "loss": None,
+                        "reasoning_tokens": None,
+                    }
+
+        # Write results into DataFrame (main thread only — safe)
+        for idx, res in results.items():
+            for col in RESULT_COLS:
+                df.at[idx, col] = res[col]
+
+        # Checkpoint
+        save_checkpoint(df, output_file)
+
+    # Final summary
+    valid = pd.to_numeric(df["loss"], errors="coerce").dropna()
+    if len(valid):
+        correct = (valid == 0).sum()
+        log.info("  Done — %d/%d correct (%.1f%%), mean loss %.4f",
+                 correct, len(valid), correct / len(valid) * 100, valid.mean())
+    else:
+        log.info("  Done — no valid losses computed.")
+    return True
+
+# ══════════════════════════════════════════════════════════════════
+#  TASK-LEVEL AUTO-RESTART
+# ══════════════════════════════════════════════════════════════════
+
+def run_task_with_retry(max_retries: int = 3, **task_kwargs) -> bool:
+    """Run process_task with auto-restart on failure."""
+    for attempt in range(1, max_retries + 1):
+        try:
+            return process_task(**task_kwargs)
+        except KeyboardInterrupt:
+            raise
+        except Exception as exc:
+            if attempt == max_retries:
+                log.error("  Task failed after %d attempts: %s", max_retries, exc)
+                return False
+            wait = min(30 * (2 ** (attempt - 1)), 300)
+            log.warning("  Task failed (attempt %d/%d): %s  — retrying in %ds",
+                        attempt, max_retries, exc, wait)
+            time.sleep(wait)
+    return False
+
+# ══════════════════════════════════════════════════════════════════
+#  TASK DISCOVERY
+# ══════════════════════════════════════════════════════════════════
+
+def discover_tasks(
+    base_dir: Path,
+    models: list[str],
+    conditions: list[str],
+    domains: Optional[list[str]] = None,
+) -> list[dict]:
+    """Scan the preprocessed directory and build the full task list.
+
+    Each task is a dict with keys:
+        model, domain, condition, input_file, output_file, status, processed
+    """
+    preproc_dir = base_dir / PREPROCESSED_SUBDIR
+
+    # Auto-discover domains from preprocessed filenames
+    if domains is None:
+        raw_names = set()
+        for f in preproc_dir.glob("*.tsv"):
+            name = f.stem
+            for suf in ("_no_guide", "_math_only"):
+                name = name.replace(suf, "")
+            raw_names.add(name)
+        domains = sorted(raw_names)
+
     tasks = []
-    for idx, row in df.iterrows():
-        task = process_row(row, model_name, semaphore, tolerance_percent, tolerance_minutes)
-        tasks.append(task)
-    
-    # Run all tasks with progress bar
-    results = await tqdm.gather(*tasks, desc=f"Processing {model_name}")
-    
-    # Add results to dataframe
-    for idx, result in enumerate(results):
-        df.at[idx, 'raw_response'] = result['raw_response']
-        df.at[idx, 'model_answer'] = result['model_answer']
-        df.at[idx, 'loss'] = result['loss']
-    
-    return df
+    for model in models:
+        if model not in MODEL_CONFIGS:
+            log.warning("Unknown model '%s' — skipping.", model)
+            continue
+        for domain in domains:
+            for cond in conditions:
+                cfg = CONDITIONS[cond]
+                input_file = preproc_dir / f"{domain}{cfg['suffix']}.tsv"
+                if not input_file.exists():
+                    continue
+
+                output_dir = base_dir / cfg["output_dir"] / model
+                output_file = output_dir / f"{domain}{cfg['suffix']}_converted.tsv"
+
+                # Quick status check (use pd.read_csv for correct multi-line TSV handling)
+                status, processed = "pending", 0
+                if output_file.exists():
+                    try:
+                        n_input = len(pd.read_csv(input_file, sep="\t", usecols=["domain"]))
+                        ckpt = pd.read_csv(output_file, sep="\t", usecols=["raw_response"])
+                        mask = ckpt["raw_response"].notna() & (ckpt["raw_response"].astype(str) != "null")
+                        processed = int(mask.sum())
+                        status = "complete" if processed >= n_input else ("partial" if processed > 0 else "pending")
+                    except Exception:
+                        pass
+
+                tasks.append({
+                    "model": model,
+                    "domain": domain,
+                    "condition": cond,
+                    "input_file": input_file,
+                    "output_file": output_file,
+                    "status": status,
+                    "processed": processed,
+                })
+
+    return tasks
+
+# ══════════════════════════════════════════════════════════════════
+#  MAIN
+# ══════════════════════════════════════════════════════════════════
 
 def main():
-    parser = argparse.ArgumentParser(description='Run conversion inference on preprocessed TSV files')
-    parser.add_argument('--domain', type=str, required=True,
-                       help='Domain name (e.g., temperature, volume)')
-    parser.add_argument('--input-file', type=str, required=True,
-                       help='Input TSV file from preprocessing.py')
-    parser.add_argument('--output-file', type=str, default=None,
-                       help='Output TSV file (default: [domain]_converted.tsv)')
-    parser.add_argument('--models', type=str, nargs='+', 
-                       default=['gpt-4o', 'qwen-coder', 'llama-4'],
-                       help='Models to run inference on')
-    parser.add_argument('--max-concurrent', type=int, default=10,
-                       help='Maximum concurrent API requests')
-    parser.add_argument('--tolerance-percent', type=float, default=0.1,
-                       help='Tolerance for numeric conversions as percentage (default: 0.1%%)')
-    parser.add_argument('--tolerance-minutes', type=float, default=1.0,
-                       help='Tolerance for timezone conversions in minutes (default: 1.0)')
-    
+    parser = argparse.ArgumentParser(
+        description="Run conversion inference across all model × domain × condition tasks.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument(
+        "--base-dir", type=Path, default=DEFAULT_BASE_DIR,
+        help="Root results directory (default: %(default)s)",
+    )
+    parser.add_argument(
+        "--models", nargs="+", default=list(MODEL_CONFIGS.keys()),
+        help="Models to run (default: all). Choices: " + ", ".join(MODEL_CONFIGS.keys()),
+    )
+    parser.add_argument(
+        "--conditions", nargs="+", default=list(CONDITIONS.keys()),
+        choices=list(CONDITIONS.keys()),
+        help="Conditions to run (default: all).",
+    )
+    parser.add_argument(
+        "--domains", nargs="+", default=None,
+        help="Domains to run (default: auto-discover from preprocessed/).",
+    )
+    parser.add_argument(
+        "--max-workers", type=int, default=10,
+        help="Concurrent threads per task for API calls (default: 10).",
+    )
+    parser.add_argument(
+        "--checkpoint-every", type=int, default=50,
+        help="Save checkpoint every N rows (default: 50).",
+    )
+    parser.add_argument(
+        "--max-task-retries", type=int, default=3,
+        help="Auto-restart failed tasks up to N times (default: 3).",
+    )
+    parser.add_argument(
+        "--tolerance-percent", type=float, default=0.1,
+        help="Numeric answer tolerance in %% (default: 0.1).",
+    )
+    parser.add_argument(
+        "--tolerance-minutes", type=float, default=1.0,
+        help="Timezone answer tolerance in minutes (default: 1.0).",
+    )
+    parser.add_argument(
+        "--list-tasks", action="store_true",
+        help="List all tasks and their status, then exit.",
+    )
     args = parser.parse_args()
-    
-    # Load input TSV
-    input_file = Path(args.input_file)
-    if not input_file.exists():
-        raise FileNotFoundError(f"Input file not found: {input_file}")
-    
-    print(f"Loading {input_file}...")
-    df = pd.read_csv(input_file, sep='\t')
-    print(f"Loaded {len(df)} rows")
-    
-    # Process each model and save separately
-    for model_name in args.models:
-        if model_name not in MODEL_CONFIGS:
-            print(f"Warning: Unknown model {model_name}, skipping...")
-            continue
-        
-        print(f"\nProcessing with {model_name}...")
-        
-        # Create a copy of the dataframe for this model
-        df_model = df.copy()
-        
-        # Initialize columns for this model
-        df_model['raw_response'] = None
-        df_model['model_answer'] = None
-        df_model['loss'] = None
-        
-        # Process dataframe with tolerance settings
-        # Pass max_concurrent instead of semaphore to avoid event loop binding issues
-        df_model = asyncio.run(process_dataframe(df_model, model_name, args.max_concurrent, args.tolerance_percent, args.tolerance_minutes))
-        
-        # Determine output file for this model
-        if args.output_file:
-            output_file = Path(args.output_file)
-        else:
-            output_file = Path(f"{args.domain}_converted.tsv")
-        
-        # Save output for this model
-        print(f"\nSaving results to {output_file}...")
-        # Replace None/NaN with "null" for distractor column
-        if 'distractor' in df_model.columns:
-            df_model['distractor'] = df_model['distractor'].fillna('null')
-        df_model.to_csv(output_file, sep='\t', index=False, na_rep='null')
-        print(f"Saved {len(df_model)} rows to {output_file}")
-        
-        # Print summary statistics for this model
-        print(f"\nSummary Statistics for {model_name}:")
-        if 'loss' in df_model.columns:
-            valid_losses = df_model['loss'].dropna()
-            if len(valid_losses) > 0:
-                print(f"  Valid answers: {len(valid_losses)}/{len(df_model)}")
-                print(f"  Mean loss: {valid_losses.mean():.4f}")
-                print(f"  Median loss: {valid_losses.median():.4f}")
-                # Count correct answers (loss == 0, which includes answers within tolerance)
-                correct_count = (valid_losses == 0).sum()
-                print(f"  Correct (within tolerance): {correct_count}")
-                print(f"  Accuracy: {(correct_count / len(valid_losses) * 100):.1f}%")
 
-if __name__ == '__main__':
+    # Setup
+    setup_api_keys()
+
+    # Discover tasks
+    tasks = discover_tasks(args.base_dir, args.models, args.conditions, args.domains)
+
+    n_complete = sum(1 for t in tasks if t["status"] == "complete")
+    n_partial = sum(1 for t in tasks if t["status"] == "partial")
+    n_pending = sum(1 for t in tasks if t["status"] == "pending")
+
+    log.info("Discovered %d tasks: %d complete, %d partial, %d pending.",
+             len(tasks), n_complete, n_partial, n_pending)
+
+    if args.list_tasks:
+        fmt = "  {status:8s}  {model:25s}  {condition:10s}  {domain:40s}  ({processed} rows)"
+        for t in tasks:
+            print(fmt.format(**t))
+        return
+
+    # Process tasks (skip completed ones)
+    work = [t for t in tasks if t["status"] != "complete"]
+    if not work:
+        log.info("All tasks already complete. Nothing to do!")
+        return
+
+    log.info("Processing %d tasks (%d workers, checkpoint every %d rows).",
+             len(work), args.max_workers, args.checkpoint_every)
+
+    succeeded, failed, skipped = 0, 0, 0
+    for i, task in enumerate(work, 1):
+        if _shutdown:
+            log.warning("Shutdown — stopping after %d/%d tasks.", i - 1, len(work))
+            break
+
+        label = f"{task['model']} / {task['domain']} / {task['condition']}"
+        log.info("\n[%d/%d] %s  (status: %s)", i, len(work), label, task["status"])
+
+        ok = run_task_with_retry(
+            max_retries=args.max_task_retries,
+            model_name=task["model"],
+            input_file=task["input_file"],
+            output_file=task["output_file"],
+            max_workers=args.max_workers,
+            checkpoint_every=args.checkpoint_every,
+            tolerance_percent=args.tolerance_percent,
+            tolerance_minutes=args.tolerance_minutes,
+        )
+        if ok:
+            succeeded += 1
+        else:
+            failed += 1
+
+    log.info("\nFinished: %d succeeded, %d failed, %d skipped (already complete).",
+             succeeded, failed, n_complete)
+
+
+if __name__ == "__main__":
     main()

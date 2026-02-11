@@ -186,7 +186,8 @@ def run_inference_test(domain: str, input_file: Path, output_file: Path,
 def main():
     parser = argparse.ArgumentParser(description='Test all domains with small samples')
     parser.add_argument('--models', type=str, nargs='+', default=['gpt-4o'],
-                       help='Models to test (default: gpt-4o)')
+                       help='Models to test (default: gpt-4o). '
+                            'Reasoning models: gpt-5.2, deepseek-v3.1, qwen3-235b, qwen3-next-thinking')
     parser.add_argument('--test-dir', type=str, default='test_output',
                        help='Directory for test outputs')
     parser.add_argument('--skip-preprocessing', action='store_true',

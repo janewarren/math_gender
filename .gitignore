@@ -19,6 +19,11 @@ conversion_test/test_results/
 conversion_test/fix_timezone_answers.py
 conversion_test/analysis_output/
 conversion_test/slurm_logs
+conversion_test/full_results/results
+conversion_test/full_results/results_math_only
+conversion_test/full_results/results_no_guide
+conversion_test/sbatch_jobs
+
 # include
 !conversion_test/conversions/
 

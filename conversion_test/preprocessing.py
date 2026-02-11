@@ -458,12 +458,28 @@ def create_conversion_guide(
         guide_parts.append("  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32")
     
     elif conversion_type == 'timezone':
-        # Include timezone offsets
+        # Include city timezone offsets relative to GMT
+        city_to_timezone = config.get('city_to_timezone', {})
         timezone_offsets = config.get('timezone_offsets', {})
-        if timezone_offsets:
-            guide_parts.append("Timezone offsets (hours from UTC):")
-            for tz, offset in sorted(timezone_offsets.items(), key=lambda x: x[1]):
-                guide_parts.append(f"  {tz}: {offset:+g}")
+        
+        if city_to_timezone and timezone_offsets:
+            guide_parts.append("City timezones (relative to GMT):")
+            # Create list of (city, offset) tuples
+            city_offsets = []
+            for city, tz in city_to_timezone.items():
+                if tz in timezone_offsets:
+                    offset = timezone_offsets[tz]
+                    city_offsets.append((city, offset))
+            
+            # Sort by offset for readability
+            city_offsets.sort(key=lambda x: x[1])
+            
+            # Format as "City: GMT+offset" or "City: GMT-offset"
+            for city, offset in city_offsets:
+                if offset >= 0:
+                    guide_parts.append(f"  {city}: GMT+{offset:.1f}")
+                else:
+                    guide_parts.append(f"  {city}: GMT{offset:.1f}")
     
     elif config.get('size_mappings'):
         # Include relevant size mappings for clothing sizes

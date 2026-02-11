@@ -1,5 +1,5 @@
 domain	distractor	prompt	number	answer	difficulty
-bits_bytes		"Convert 10 bits to bytes.
+bits_bytes		"Convert 50 bytes to gigabytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -12,8 +12,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	10.0	1.25	Easy
-bits_bytes		"Convert 20 bytes to gigabytes.
+Provide only the numerical value."	50.0	5e-08	Easy
+bits_bytes		"Convert 50 kilobits to bits.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -26,8 +26,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	20.0	2e-08	Easy
-bits_bytes		"Convert 5 megabytes to gigabytes.
+Provide only the numerical value."	50.0	50000.0	Easy
+bits_bytes		"Convert 5 bits to kilobytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -40,8 +40,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	5.0	0.005	Easy
-bits_bytes		"Convert 20 bits to megabytes.
+Provide only the numerical value."	5.0	0.000625	Easy
+bits_bytes		"Convert 5 bits to bytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -54,8 +54,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	20.0	2.5e-06	Easy
-bits_bytes		"Convert 10 bytes to gigabytes.
+Provide only the numerical value."	5.0	0.625	Easy
+bits_bytes		"Convert 1 bit to megabyte.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -68,8 +68,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	10.0	1e-08	Easy
-bits_bytes		"Convert 1 bit to kilobyte.
+Provide only the numerical value."	1.0	1.25e-07	Easy
+bits_bytes		"Convert 20 bits to kilobytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -82,8 +82,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	1.0	0.000125	Easy
-bits_bytes		"Convert 1 kilobit to bit.
+Provide only the numerical value."	20.0	0.0025	Easy
+bits_bytes		"Convert 1 bit to byte.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -96,7 +96,7 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	1.0	1000.0	Easy
+Provide only the numerical value."	1.0	0.125	Easy
 bits_bytes		"Convert 5 kilobits to bits.
 
 Conversion guide:
@@ -111,7 +111,7 @@ Conversion factors (relative to bits):
   megabytes: 1.25e-07
 
 Provide only the numerical value."	5.0	5000.0	Easy
-bits_bytes		"Convert 10 kilobits to bits.
+bits_bytes		"Convert 20 megabytes to gigabytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -124,8 +124,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	10.0	10000.0	Easy
-bits_bytes		"Convert 5 bytes to gigabytes.
+Provide only the numerical value."	20.0	0.02	Easy
+bits_bytes		"Convert 1 kilobit to bit.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -138,8 +138,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	5.0	5e-09	Easy
-bits_bytes		"Convert 18.333 bits to megabytes.
+Provide only the numerical value."	1.0	1000.0	Easy
+bits_bytes		"Convert 1297.195 bytes to gigabytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -152,63 +152,7 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	18.333	2.291625e-06	Hard
-bits_bytes		"Convert 0.2994 bits to bytes.
-
-Conversion guide:
-Conversion factors (relative to bits):
-  bits: 1.0
-  bytes: 0.125
-  gigabits: 1e-09
-  gigabytes: 1.25e-10
-  kilobits: 0.001
-  kilobytes: 0.000125
-  megabits: 1e-06
-  megabytes: 1.25e-07
-
-Provide only the numerical value."	0.2994	0.037425	Hard
-bits_bytes		"Convert 1297.195 bits to kilobytes.
-
-Conversion guide:
-Conversion factors (relative to bits):
-  bits: 1.0
-  bytes: 0.125
-  gigabits: 1e-09
-  gigabytes: 1.25e-10
-  kilobits: 0.001
-  kilobytes: 0.000125
-  megabits: 1e-06
-  megabytes: 1.25e-07
-
-Provide only the numerical value."	1297.195	0.1621493749999999	Hard
-bits_bytes		"Convert 4508.208 kilobits to bits.
-
-Conversion guide:
-Conversion factors (relative to bits):
-  bits: 1.0
-  bytes: 0.125
-  gigabits: 1e-09
-  gigabytes: 1.25e-10
-  kilobits: 0.001
-  kilobytes: 0.000125
-  megabits: 1e-06
-  megabytes: 1.25e-07
-
-Provide only the numerical value."	4508.208	4508208.0	Hard
-bits_bytes		"Convert 18.333 bits to kilobytes.
-
-Conversion guide:
-Conversion factors (relative to bits):
-  bits: 1.0
-  bytes: 0.125
-  gigabits: 1e-09
-  gigabytes: 1.25e-10
-  kilobits: 0.001
-  kilobytes: 0.000125
-  megabits: 1e-06
-  megabytes: 1.25e-07
-
-Provide only the numerical value."	18.333	0.002291625	Hard
+Provide only the numerical value."	1297.195	1.297195e-06	Hard
 bits_bytes		"Convert 4508.208 bits to megabytes.
 
 Conversion guide:
@@ -223,7 +167,7 @@ Conversion factors (relative to bits):
   megabytes: 1.25e-07
 
 Provide only the numerical value."	4508.208	0.000563526	Hard
-bits_bytes		"Convert 9.0241 bits to bytes.
+bits_bytes		"Convert 9.0241 bits to megabytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -236,8 +180,8 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	9.0241	1.1280125	Hard
-bits_bytes		"Convert 9.0241 bits to kilobytes.
+Provide only the numerical value."	9.0241	1.1280125e-06	Hard
+bits_bytes		"Convert 0.2994 bits to bytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -250,7 +194,21 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	9.0241	0.0011280125	Hard
+Provide only the numerical value."	0.2994	0.037425	Hard
+bits_bytes		"Convert 18.333 bits to kilobytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	18.333	0.002291625	Hard
 bits_bytes		"Convert 18.333 kilobits to bits.
 
 Conversion guide:
@@ -265,7 +223,7 @@ Conversion factors (relative to bits):
   megabytes: 1.25e-07
 
 Provide only the numerical value."	18.333	18333.0	Hard
-bits_bytes		"Convert 4508.208 bytes to gigabytes.
+bits_bytes		"Convert 18.333 bits to bytes.
 
 Conversion guide:
 Conversion factors (relative to bits):
@@ -278,4 +236,46 @@ Conversion factors (relative to bits):
   megabits: 1e-06
   megabytes: 1.25e-07
 
-Provide only the numerical value."	4508.208	4.508208e-06	Hard
+Provide only the numerical value."	18.333	2.291625	Hard
+bits_bytes		"Convert 9.0241 kilobits to bits.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	9.0241	9024.1	Hard
+bits_bytes		"Convert 18.333 bits to megabytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	18.333	2.291625e-06	Hard
+bits_bytes		"Convert 1297.195 bits to bytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	1297.195	162.149375	Hard

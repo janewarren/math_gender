@@ -1,54 +1,4 @@
 domain	distractor	prompt	number	answer	difficulty
-speed		"Convert 50 km/hs to knots.
-
-Conversion guide:
-Conversion factors (relative to km_h):
-  km_h: 1.0
-  knots: 0.539957
-  m_s: 0.277778
-  mph: 0.621371
-
-Provide only the numerical value."	50.0	26.99785	Easy
-speed		"Convert 20 knots to km/hs.
-
-Conversion guide:
-Conversion factors (relative to km_h):
-  km_h: 1.0
-  knots: 0.539957
-  m_s: 0.277778
-  mph: 0.621371
-
-Provide only the numerical value."	20.0	37.03998651744491	Easy
-speed		"Convert 5 mphs to km/hs.
-
-Conversion guide:
-Conversion factors (relative to km_h):
-  km_h: 1.0
-  knots: 0.539957
-  m_s: 0.277778
-  mph: 0.621371
-
-Provide only the numerical value."	5.0	8.046722489462816	Easy
-speed		"Convert 20 km/hs to mphs.
-
-Conversion guide:
-Conversion factors (relative to km_h):
-  km_h: 1.0
-  knots: 0.539957
-  m_s: 0.277778
-  mph: 0.621371
-
-Provide only the numerical value."	20.0	12.42742	Easy
-speed		"Convert 20 m/s to km/hs.
-
-Conversion guide:
-Conversion factors (relative to km_h):
-  km_h: 1.0
-  knots: 0.539957
-  m_s: 0.277778
-  mph: 0.621371
-
-Provide only the numerical value."	20.0	71.99994240004608	Easy
 speed		"Convert 20 mphs to km/hs.
 
 Conversion guide:
@@ -59,7 +9,7 @@ Conversion factors (relative to km_h):
   mph: 0.621371
 
 Provide only the numerical value."	20.0	32.186889957851264	Easy
-speed		"Convert 1 km/h to m/s.
+speed		"Convert 10 km/hs to knots.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -68,8 +18,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	1.0	0.277778	Easy
-speed		"Convert 50 knots to km/hs.
+Provide only the numerical value."	10.0	5.399570000000001	Easy
+speed		"Convert 5 km/hs to m/s.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -78,8 +28,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	50.0	92.59996629361228	Easy
-speed		"Convert 20 km/hs to m/s.
+Provide only the numerical value."	5.0	1.3888900000000002	Easy
+speed		"Convert 10 km/hs to m/s.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -88,8 +38,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	20.0	5.555560000000001	Easy
-speed		"Convert 10 km/hs to mphs.
+Provide only the numerical value."	10.0	2.7777800000000004	Easy
+speed		"Convert 50 m/s to km/hs.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -98,8 +48,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	10.0	6.21371	Easy
-speed		"Convert 18.333 km/hs to knots.
+Provide only the numerical value."	50.0	179.9998560001152	Easy
+speed		"Convert 50 km/hs to m/s.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -108,8 +58,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	18.333	9.899031681	Hard
-speed		"Convert 4508.208 km/hs to m/s.
+Provide only the numerical value."	50.0	13.8889	Easy
+speed		"Convert 1 m/s to km/h.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -118,8 +68,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	4508.208	1252.281001824	Hard
-speed		"Convert 18.333 mphs to km/hs.
+Provide only the numerical value."	1.0	3.599997120002304	Easy
+speed		"Convert 1 mph to km/h.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -128,8 +78,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	18.333	29.504112679864363	Hard
-speed		"Convert 1297.195 mphs to km/hs.
+Provide only the numerical value."	1.0	1.6093444978925633	Easy
+speed		"Convert 10 m/s to km/hs.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -138,7 +88,17 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	1297.195	2087.633635943744	Hard
+Provide only the numerical value."	10.0	35.99997120002304	Easy
+speed		"Convert 5 m/s to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	5.0	17.99998560001152	Easy
 speed		"Convert 0.2994 km/hs to m/s.
 
 Conversion guide:
@@ -149,7 +109,7 @@ Conversion factors (relative to km_h):
   mph: 0.621371
 
 Provide only the numerical value."	0.2994	0.0831667332	Hard
-speed		"Convert 0.2994 mphs to km/hs.
+speed		"Convert 9.0241 km/hs to m/s.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -158,8 +118,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	0.2994	0.4818377426690334	Hard
-speed		"Convert 1297.195 km/hs to mphs.
+Provide only the numerical value."	9.0241	2.5066964498000006	Hard
+speed		"Convert 18.333 knots to km/hs.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -168,8 +128,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	1297.195	806.039354345	Hard
-speed		"Convert 9.0241 km/hs to knots.
+Provide only the numerical value."	18.333	33.95270364121587	Hard
+speed		"Convert 4508.208 knots to km/hs.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -178,8 +138,8 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	9.0241	4.872625963700001	Hard
-speed		"Convert 9.0241 m/s to km/hs.
+Provide only the numerical value."	4508.208	8349.198176891863	Hard
+speed		"Convert 9.0241 mphs to km/hs.
 
 Conversion guide:
 Conversion factors (relative to km_h):
@@ -188,7 +148,17 @@ Conversion factors (relative to km_h):
   m_s: 0.277778
   mph: 0.621371
 
-Provide only the numerical value."	9.0241	32.48673401061279	Hard
+Provide only the numerical value."	9.0241	14.522885683432282	Hard
+speed		"Convert 1297.195 knots to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	1297.195	2402.4042655248472	Hard
 speed		"Convert 0.2994 m/s to km/hs.
 
 Conversion guide:
@@ -199,3 +169,33 @@ Conversion factors (relative to km_h):
   mph: 0.621371
 
 Provide only the numerical value."	0.2994	1.0778391377286898	Hard
+speed		"Convert 0.2994 km/hs to mphs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	0.2994	0.1860384774	Hard
+speed		"Convert 1297.195 mphs to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	1297.195	2087.633635943744	Hard
+speed		"Convert 0.2994 km/hs to knots.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	0.2994	0.1616631258	Hard

@@ -1,0 +1,1736 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	5	35	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	5.5	35.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	6	36	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	6.5	37	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	7	37.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	7.5	38	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	8	38.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	8.5	39	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	9	40	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	9.5	41	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	10	42	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	10.5	43	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	11	43.25	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	11.5	43.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 12 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  5 → 35
+  5.5 → 35.5
+  6 → 36
+  6.5 → 37
+  7 → 37.5
+  7.5 → 38
+  8 → 38.5
+  8.5 → 39
+  9 → 40
+  9.5 → 41
+  10 → 42
+  10.5 → 43
+  11 → 43.25
+  11.5 → 43.5
+  12 → 44
+
+Provide only the size and nothing else."	12	44	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	5	2.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	5.5	3	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	6	3.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	6.5	4	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	7	4.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	7.5	5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	8	5.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	8.5	6	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	9	6.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	9.5	7	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	10	7.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	10.5	8	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	11	8.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	11.5	9	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 12 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  5 → 2.5
+  5.5 → 3
+  6 → 3.5
+  6.5 → 4
+  7 → 4.5
+  7.5 → 5
+  8 → 5.5
+  8.5 → 6
+  9 → 6.5
+  9.5 → 7
+  10 → 7.5
+  10.5 → 8
+  11 → 8.5
+  11.5 → 9
+  12 → 9.5
+
+Provide only the size and nothing else."	12	9.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	5	22	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	5.5	22.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	6	23	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	6.5	23.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	7	25	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	7.5	24.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	8	25	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	8.5	25.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	9	26	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	9.5	27.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	10	27	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	10.5	27.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	11	28	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	11.5	28.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 12 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	12	29	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	5	21	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 5.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	5.5	21.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	6	22	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	6.5	22.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	7	23	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 7.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	7.5	23.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	8	24	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	8.5	24.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	9	25	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 9.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	9.5	25.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	10	26	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	10.5	26.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	11	27	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 11.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	11.5	27.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 12 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	12	28	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 38 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	38	23.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 38.5 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	38.5	24	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 39 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	39	24.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 40 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	40	25	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 41 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	41	25.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 42 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	42	26	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 43 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	43	27	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 43.5 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	43.5	27.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 44 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	44	28	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 45 in EUR to Japan sizing.
+
+Conversion guide:
+Size conversion table (EUR to Japan):
+  38 → 23.5
+  38.5 → 24
+  39 → 24.5
+  40 → 25
+  41 → 25.5
+  42 → 26
+  43 → 27
+  43.5 → 27.5
+  44 → 28
+  45 → 29
+
+Provide only the size and nothing else."	45	29	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 23 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	23	37	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 23.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	23.5	37.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 24 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	24	38	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 24.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	24.5	38.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 25 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	25	39	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 25.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	25.5	39.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 26 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	26	40	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 26.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	26.5	40.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 27 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	27	41	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 27.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	27.5	41.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 28 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	28	42	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 28.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	28.5	42.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 29 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	29	43	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 29.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	29.5	43.5	Easy
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 30 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	30	44	Easy

@@ -1,4 +1,82 @@
 domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
+clothing_sizes_men_pant_size	null	"Convert men's pant size XS in US alphanumeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to EU numeric):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	XS	46	Easy	46	46	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size S in US alphanumeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to EU numeric):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	S	48	Easy	48	48	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size M in US alphanumeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to EU numeric):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	M	50	Easy	50	50	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size L in US alphanumeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to EU numeric):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	L	52	Easy	52	52	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size XL in US alphanumeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to EU numeric):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	XL	54	Easy	54	54	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size XXL in US alphanumeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to EU numeric):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	XXL	56	Easy	56	56	0.0
 clothing_sizes_men_pant_size	null	"Convert men's pant size XXXL in US alphanumeric to EU numeric sizing.
 
 Conversion guide:
@@ -12,10 +90,231 @@ Size conversion table (US alphanumeric to EU numeric):
   XXXL → 58
 
 Provide only the size and nothing else."	XXXL	58	Easy	58	58	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size L in US alphanumeric to EU numeric sizing.
+clothing_sizes_men_pant_size	null	"Convert men's pant size XS in US alphanumeric to US numeric sizing.
 
 Conversion guide:
-Size conversion table (US alphanumeric to EU numeric):
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	XS	34	Easy	34	34	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size S in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	S	36	Easy	36	36	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size M in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	M	38	Easy	38	38	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size L in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	L	40	Easy	40	40	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size XL in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	XL	42	Easy	42	42	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size XXL in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	XXL	44	Easy	44	44	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size XXXL in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	XXXL	46	Easy	46	46	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 34 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	34	44	Easy	44	44	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 36 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	36	46	Easy	46	46	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 38 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	38	48	Easy	48	48	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 40 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	40	50	Easy	50	50	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 42 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	42	52	Easy	52	52	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 44 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	44	54	Easy	54	54	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size 46 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	46	56	Easy	56	56	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size XS in US alphanumeric to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to Italy):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	XS	46	Easy	46	46	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size S in US alphanumeric to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to Italy):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	S	48	Easy	48	48	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size M in US alphanumeric to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to Italy):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	M	50	Easy	50	50	0.0
+clothing_sizes_men_pant_size	null	"Convert men's pant size L in US alphanumeric to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to Italy):
   L → 52
   M → 50
   S → 48
@@ -38,23 +337,10 @@ Size conversion table (US alphanumeric to Italy):
   XXXL → 58
 
 Provide only the size and nothing else."	XL	54	Easy	54	54	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size L in US alphanumeric to US numeric sizing.
+clothing_sizes_men_pant_size	null	"Convert men's pant size XXL in US alphanumeric to Italy sizing.
 
 Conversion guide:
-Size conversion table (US alphanumeric to US numeric):
-  L → 40
-  M → 38
-  S → 36
-  XL → 42
-  XS → 34
-  XXL → 44
-  XXXL → 46
-
-Provide only the size and nothing else."	L	40	Easy	40	40	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size M in US alphanumeric to EU numeric sizing.
-
-Conversion guide:
-Size conversion table (US alphanumeric to EU numeric):
+Size conversion table (US alphanumeric to Italy):
   L → 52
   M → 50
   S → 48
@@ -63,20 +349,7 @@ Size conversion table (US alphanumeric to EU numeric):
   XXL → 56
   XXXL → 58
 
-Provide only the size and nothing else."	M	50	Easy	50	50	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size XS in US alphanumeric to EU numeric sizing.
-
-Conversion guide:
-Size conversion table (US alphanumeric to EU numeric):
-  L → 52
-  M → 50
-  S → 48
-  XL → 54
-  XS → 46
-  XXL → 56
-  XXXL → 58
-
-Provide only the size and nothing else."	XS	46	Easy	46	46	0.0
+Provide only the size and nothing else."	XXL	56	Easy	56	56	0.0
 clothing_sizes_men_pant_size	null	"Convert men's pant size XXXL in US alphanumeric to Italy sizing.
 
 Conversion guide:
@@ -90,42 +363,3 @@ Size conversion table (US alphanumeric to Italy):
   XXXL → 58
 
 Provide only the size and nothing else."	XXXL	58	Easy	58	58	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size 40 in UK numeric to EU numeric sizing.
-
-Conversion guide:
-Size conversion table (UK numeric to EU numeric):
-  34 → 44
-  36 → 46
-  38 → 48
-  40 → 50
-  42 → 52
-  44 → 54
-  46 → 56
-
-Provide only the size and nothing else."	40	50	Easy	50	50	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size XXL in US alphanumeric to EU numeric sizing.
-
-Conversion guide:
-Size conversion table (US alphanumeric to EU numeric):
-  L → 52
-  M → 50
-  S → 48
-  XL → 54
-  XS → 46
-  XXL → 56
-  XXXL → 58
-
-Provide only the size and nothing else."	XXL	56	Easy	56	56	0.0
-clothing_sizes_men_pant_size	null	"Convert men's pant size 46 in UK numeric to EU numeric sizing.
-
-Conversion guide:
-Size conversion table (UK numeric to EU numeric):
-  34 → 44
-  36 → 46
-  38 → 48
-  40 → 50
-  42 → 52
-  44 → 54
-  46 → 56
-
-Provide only the size and nothing else."	46	56	Easy	56	56	0.0

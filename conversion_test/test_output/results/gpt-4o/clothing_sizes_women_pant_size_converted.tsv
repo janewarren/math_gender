@@ -1,31 +1,20 @@
 domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss
-clothing_sizes_women_pant_size	null	"Convert women's pant size XXXL in US alphanumeric (0-18) to US numeric sizing.
+clothing_sizes_women_pant_size	null	"Convert women's pant size 0 in US numeric to EU numeric sizing.
 
 Conversion guide:
-Size conversion table (US alphanumeric (0-18) to US numeric):
-  L → 12
-  M → 8
-  S → 4
-  XL → 14
-  XS → 0
-  XXL → 16
-  XXXL → 18
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
 
-Provide only the size and nothing else."	XXXL	18	Easy	18	18	0.0
-clothing_sizes_women_pant_size	null	"Convert women's pant size XL in US alphanumeric (0-18) to Italy sizing.
-
-Conversion guide:
-Size conversion table (US alphanumeric (0-18) to Italy):
-  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
-  L → 48
-  M → 44
-  S → 40
-  XL → 50
-  XS → 36
-  XXL → 52
-  XXXL → 54
-
-Provide only the size and nothing else."	XL	50	Easy	50	50	0.0
+Provide only the size and nothing else."	0	32	Easy	32	32	0.0
 clothing_sizes_women_pant_size	null	"Convert women's pant size 2 in US numeric to EU numeric sizing.
 
 Conversion guide:
@@ -42,6 +31,22 @@ Size conversion table (US numeric to EU numeric):
   18 → 50
 
 Provide only the size and nothing else."	2	34	Easy	34	34	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 4 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	4	36	Easy	36	36	0.0
 clothing_sizes_women_pant_size	null	"Convert women's pant size 6 in US numeric to EU numeric sizing.
 
 Conversion guide:
@@ -58,10 +63,12 @@ Size conversion table (US numeric to EU numeric):
   18 → 50
 
 Provide only the size and nothing else."	6	38	Easy	38	38	0.0
-clothing_sizes_women_pant_size	null	"Convert women's pant size 10 in UK numeric to EU numeric sizing.
+clothing_sizes_women_pant_size	null	"Convert women's pant size 8 in US numeric to EU numeric sizing.
 
 Conversion guide:
-Size conversion table (UK numeric to EU numeric):
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
   4 → 36
   6 → 38
   8 → 40
@@ -69,12 +76,31 @@ Size conversion table (UK numeric to EU numeric):
   12 → 44
   14 → 46
   16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	8	40	Easy	40	40	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 10 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
 
 Provide only the size and nothing else."	10	42	Easy	42	42	0.0
-clothing_sizes_women_pant_size	null	"Convert women's pant size 16 in UK numeric to EU numeric sizing.
+clothing_sizes_women_pant_size	null	"Convert women's pant size 12 in US numeric to EU numeric sizing.
 
 Conversion guide:
-Size conversion table (UK numeric to EU numeric):
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
   4 → 36
   6 → 38
   8 → 40
@@ -82,8 +108,109 @@ Size conversion table (UK numeric to EU numeric):
   12 → 44
   14 → 46
   16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	12	44	Easy	44	44	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 14 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	14	46	Easy	46	46	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 16 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
 
 Provide only the size and nothing else."	16	48	Easy	48	48	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 18 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	18	50	Easy	50	50	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XS in US alphanumeric (0-18) to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to US numeric):
+  L → 12
+  M → 8
+  S → 4
+  XL → 14
+  XS → 0
+  XXL → 16
+  XXXL → 18
+
+Provide only the size and nothing else."	XS	0	Easy	0	0	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size S in US alphanumeric (0-18) to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to US numeric):
+  L → 12
+  M → 8
+  S → 4
+  XL → 14
+  XS → 0
+  XXL → 16
+  XXXL → 18
+
+Provide only the size and nothing else."	S	4	Easy	4	4	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size M in US alphanumeric (0-18) to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to US numeric):
+  L → 12
+  M → 8
+  S → 4
+  XL → 14
+  XS → 0
+  XXL → 16
+  XXXL → 18
+
+Provide only the size and nothing else."	M	8	Easy	8	8	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size L in US alphanumeric (0-18) to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to US numeric):
+  L → 12
+  M → 8
+  S → 4
+  XL → 14
+  XS → 0
+  XXL → 16
+  XXXL → 18
+
+Provide only the size and nothing else."	L	12	Easy	12	12	0.0
 clothing_sizes_women_pant_size	null	"Convert women's pant size XL in US alphanumeric (0-18) to US numeric sizing.
 
 Conversion guide:
@@ -97,6 +224,137 @@ Size conversion table (US alphanumeric (0-18) to US numeric):
   XXXL → 18
 
 Provide only the size and nothing else."	XL	14	Easy	14	14	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XXL in US alphanumeric (0-18) to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to US numeric):
+  L → 12
+  M → 8
+  S → 4
+  XL → 14
+  XS → 0
+  XXL → 16
+  XXXL → 18
+
+Provide only the size and nothing else."	XXL	16	Easy	16	16	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XXXL in US alphanumeric (0-18) to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to US numeric):
+  L → 12
+  M → 8
+  S → 4
+  XL → 14
+  XS → 0
+  XXL → 16
+  XXXL → 18
+
+Provide only the size and nothing else."	XXXL	18	Easy	18	18	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 4 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	4	36	Easy	36	36	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 6 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	6	38	Easy	38	38	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 8 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	8	40	Easy	40	40	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 10 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	10	42	Easy	42	42	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 12 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	12	44	Easy	44	44	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 14 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	14	46	Easy	46	46	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size 16 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	16	48	Easy	48	48	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XS in US alphanumeric (0-18) to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
+
+Provide only the size and nothing else."	XS	36	Easy	36	36	0.0
 clothing_sizes_women_pant_size	null	"Convert women's pant size S in US alphanumeric (0-18) to Italy sizing.
 
 Conversion guide:
@@ -111,29 +369,73 @@ Size conversion table (US alphanumeric (0-18) to Italy):
   XXXL → 54
 
 Provide only the size and nothing else."	S	40	Easy	40	40	0.0
-clothing_sizes_women_pant_size	null	"Convert women's pant size L in US alphanumeric (0-18) to US numeric sizing.
+clothing_sizes_women_pant_size	null	"Convert women's pant size M in US alphanumeric (0-18) to Italy sizing.
 
 Conversion guide:
-Size conversion table (US alphanumeric (0-18) to US numeric):
-  L → 12
-  M → 8
-  S → 4
-  XL → 14
-  XS → 0
-  XXL → 16
-  XXXL → 18
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
 
-Provide only the size and nothing else."	L	12	Easy	12	12	0.0
-clothing_sizes_women_pant_size	null	"Convert women's pant size 4 in UK numeric to EU numeric sizing.
+Provide only the size and nothing else."	M	44	Easy	44	44	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size L in US alphanumeric (0-18) to Italy sizing.
 
 Conversion guide:
-Size conversion table (UK numeric to EU numeric):
-  4 → 36
-  6 → 38
-  8 → 40
-  10 → 42
-  12 → 44
-  14 → 46
-  16 → 48
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
 
-Provide only the size and nothing else."	4	36	Easy	36	36	0.0
+Provide only the size and nothing else."	L	48	Easy	48	48	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XL in US alphanumeric (0-18) to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
+
+Provide only the size and nothing else."	XL	50	Easy	50	50	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XXL in US alphanumeric (0-18) to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
+
+Provide only the size and nothing else."	XXL	52	Easy	52	52	0.0
+clothing_sizes_women_pant_size	null	"Convert women's pant size XXXL in US alphanumeric (0-18) to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
+
+Provide only the size and nothing else."	XXXL	54	Easy	54	54	0.0
