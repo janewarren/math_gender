@@ -24,6 +24,9 @@ conversion_test/full_results/results
 conversion_test/full_results/results_math_only
 conversion_test/full_results/results_no_guide
 conversion_test/sbatch_jobs
+/conversion_test/full_results_backup
+conversion_test/full_results/clean_results.tsv
+conversion_test/old
 
 # include
 !conversion_test/conversions/

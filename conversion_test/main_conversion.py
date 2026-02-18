@@ -98,24 +98,30 @@ def save_checkpoint(df: pd.DataFrame, output_file: Path):
     tmp.to_csv(output_file, sep="\t", index=False, na_rep="null")
 
 
-def load_checkpoint(output_file: Path, df: pd.DataFrame) -> int:
-    """Restore results from existing output file.  Returns resume index."""
+def load_checkpoint(output_file: Path, df: pd.DataFrame) -> list[int]:
+    """Restore results from existing output file.
+
+    Returns list of row indices that still need processing (supports sparse checkpoints).
+    """
     if not output_file.exists():
-        return 0
+        return list(range(len(df)))
     try:
         ckpt = pd.read_csv(output_file, sep="\t")
         if "raw_response" not in ckpt.columns:
-            return 0
-        done = int((ckpt["raw_response"].notna() & (ckpt["raw_response"].astype(str) != "null")).sum())
-        if 0 < done <= len(df):
-            for col in RESULT_COLS:
-                if col in ckpt.columns:
-                    df[col] = ckpt[col]
-            log.info("  Resuming: %d / %d rows done.", done, len(df))
-        return done
+            return list(range(len(df)))
+        for col in RESULT_COLS:
+            if col in ckpt.columns:
+                df[col] = ckpt[col]
+        done_mask = ckpt["raw_response"].notna()
+        done_mask &= ~ckpt["raw_response"].astype(str).isin(["null", "nan", ""])
+        done_mask &= ~ckpt["raw_response"].astype(str).str.startswith("ERROR:")
+        n_done = int(done_mask.sum())
+        pending = [i for i in range(len(df)) if i >= len(ckpt) or not done_mask.iloc[i]]
+        log.info("  Resuming: %d / %d rows done, %d pending.", n_done, len(df), len(pending))
+        return pending
     except Exception as exc:
         log.warning("  Checkpoint unreadable (%s). Starting fresh.", exc)
-        return 0
+        return list(range(len(df)))
 
 
 # ── Task Processing ──────────────────────────────────────────────
@@ -128,13 +134,10 @@ def process_task(*, model_name, input_file, output_file,
     for col in RESULT_COLS:
         df[col] = None
 
-    start_idx = load_checkpoint(output_file, df)
-    if start_idx >= len(df):
+    pending = load_checkpoint(output_file, df)
+    if not pending:
         log.info("  Already complete (%d rows). Skipping.", len(df))
         return True
-
-    pending = list(range(start_idx, len(df)))
-    log.info("  %d rows to process (%d done).", len(pending), start_idx)
 
     all_times: list[float] = []
     task_start = time.time()
@@ -148,18 +151,64 @@ def process_task(*, model_name, input_file, output_file,
         batch = pending[batch_off : batch_off + checkpoint_every]
         results: dict[int, dict] = {}
 
+        # Wall-clock timeout for entire batch (generous upper bound)
+        batch_timeout = max(len(batch) * 10, 600)
+
+        # ── Stall detection: abort batch if no row completes for STALL_LIMIT ──
+        STALL_LIMIT = 600  # 10 minutes with zero progress → API is likely down
+        last_progress = time.time()
+        consecutive_errors = 0
+        CIRCUIT_BREAKER_THRESHOLD = 10  # consecutive errors before cooldown
+
         with ThreadPoolExecutor(max_workers=max_workers) as pool:
             futures = {
                 pool.submit(process_row, str(df.iloc[i]["prompt"]), str(df.iloc[i]["domain"]),
                             df.iloc[i]["answer"], model_name, tolerance_percent, tolerance_minutes): i
                 for i in batch
             }
-            desc = f"  [{start_idx + batch_off + len(batch)}/{len(df)}]"
-            for fut in tqdm(as_completed(futures), total=len(futures), desc=desc, leave=False):
-                try:
-                    results[futures[fut]] = fut.result()
-                except Exception as exc:
-                    results[futures[fut]] = _error_result(str(exc))
+            n_done = len(df) - len(pending) + batch_off + len(batch)
+            desc = f"  [{n_done}/{len(df)}]"
+            done_iter = as_completed(futures, timeout=batch_timeout)
+            stalled = False
+            try:
+                for fut in tqdm(done_iter, total=len(futures), desc=desc, leave=False):
+                    try:
+                        res = fut.result()
+                        results[futures[fut]] = res
+                        is_error = str(res.get("raw_response", "")).startswith("ERROR:")
+                        if is_error:
+                            consecutive_errors += 1
+                        else:
+                            consecutive_errors = 0
+                            last_progress = time.time()
+                    except Exception as exc:
+                        results[futures[fut]] = _error_result(str(exc))
+                        consecutive_errors += 1
+
+                    # Circuit breaker: too many consecutive errors → API is down
+                    if consecutive_errors >= CIRCUIT_BREAKER_THRESHOLD:
+                        log.warning("  Circuit breaker: %d consecutive errors. Pausing 5min.",
+                                    consecutive_errors)
+                        time.sleep(300)
+                        consecutive_errors = 0
+                        last_progress = time.time()  # reset stall timer after cooldown
+
+                    # Stall detection: no successful row for too long
+                    if time.time() - last_progress > STALL_LIMIT:
+                        log.warning("  Stall detected: no progress for %ds. Aborting batch.",
+                                    STALL_LIMIT)
+                        stalled = True
+                        break
+
+            except TimeoutError:
+                log.warning("  Batch timed out after %ds — %d/%d rows completed.",
+                            batch_timeout, len(results), len(batch))
+
+            # Mark any unfinished rows as errors (don't save them → they stay pending)
+            if stalled:
+                for fut, idx in futures.items():
+                    if idx not in results:
+                        fut.cancel()
 
         for idx, res in results.items():
             for col in RESULT_COLS:
@@ -167,8 +216,13 @@ def process_task(*, model_name, input_file, output_file,
 
         batch_times = [r["call_seconds"] for r in results.values() if r.get("call_seconds")]
         all_times.extend(batch_times)
-        _log_timing(f"[{start_idx + batch_off + len(batch)}/{len(df)}]", batch_times, time.time() - task_start)
+        _log_timing(f"[{n_done}/{len(df)}]", batch_times, time.time() - task_start)
         save_checkpoint(df, output_file)
+
+        # If stalled, return False so the task-retry logic can handle it
+        if stalled:
+            log.warning("  Task paused due to stall. Will retry later.")
+            return False
 
     # Final summary
     valid = pd.to_numeric(df["loss"], errors="coerce").dropna()
@@ -183,7 +237,14 @@ def process_task(*, model_name, input_file, output_file,
 def run_task_with_retry(max_retries=3, **kwargs) -> bool:
     for attempt in range(1, max_retries + 1):
         try:
-            return process_task(**kwargs)
+            ok = process_task(**kwargs)
+            if ok:
+                return True
+            # process_task returned False (stall) — wait longer before retry
+            if attempt < max_retries:
+                wait = min(120 * 2 ** (attempt - 1), 600)
+                log.warning("  Task stalled (attempt %d/%d) — retry in %ds", attempt, max_retries, wait)
+                time.sleep(wait)
         except KeyboardInterrupt:
             raise
         except Exception as exc:

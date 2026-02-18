@@ -103,8 +103,9 @@ def convert_timezone(value: str, from_unit: str, to_unit: str, timezone_offsets:
     
     def format_time_string(hours: float) -> str:
         """Format hours (0-24) to time string like '1AM' or '3:49PM'."""
-        h = int(hours) % 24
-        m = int((hours % 1) * 60)
+        total_minutes = round(hours * 60)       # avoid float truncation
+        h = (total_minutes // 60) % 24
+        m = total_minutes % 60
         
         if m == 0:
             if h == 0:

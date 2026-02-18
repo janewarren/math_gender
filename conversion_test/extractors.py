@@ -71,22 +71,56 @@ def extract_number(answer: str) -> Optional[float]:
 
 
 def extract_time_string(answer: str) -> Optional[str]:
-    """Extract a time string like '1AM' or '3:49PM'."""
+    """Extract a time string like '1AM' or '3:49PM'.
+
+    Also handles bare numbers (e.g. '4', '20.85') which are interpreted
+    as 24-hour decimal time — common in math_only timezone responses.
+    """
+    if not answer:
+        return None
+    # 1) proper H:MM AM/PM
     m = re.search(r"(\d{1,2}):(\d{2})\s*(AM|PM)", answer, re.IGNORECASE)
     if m and 1 <= int(m.group(1)) <= 12 and 0 <= int(m.group(2)) <= 59:
         return f"{int(m.group(1))}:{int(m.group(2)):02d}{m.group(3).upper()}"
+    # 2) bare H AM/PM
     m = re.search(r"(\d{1,2})\s*(AM|PM)", answer, re.IGNORECASE)
     if m and 1 <= int(m.group(1)) <= 12:
         return f"{int(m.group(1))}{m.group(2).upper()}"
+    # 3) bare number → interpret as 24-hour decimal time
+    m = re.search(r"-?\d+\.?\d*", answer)
+    if m:
+        try:
+            hours = float(m.group(0)) % 24
+            return _hours_to_time_string(hours)
+        except (ValueError, OverflowError):
+            pass
     return None
 
 
+def _hours_to_time_string(hours: float) -> str:
+    """Convert 24h decimal hours to a time string like '7:13PM'."""
+    hours = hours % 24
+    total_min = round(hours * 60)
+    h = (total_min // 60) % 24
+    m = total_min % 60
+    if m == 0:
+        if h == 0:     return "12AM"
+        elif h < 12:   return f"{h}AM"
+        elif h == 12:  return "12PM"
+        else:          return f"{h-12}PM"
+    else:
+        if h == 0:     return f"12:{m:02d}AM"
+        elif h < 12:   return f"{h}:{m:02d}AM"
+        elif h == 12:  return f"12:{m:02d}PM"
+        else:          return f"{h-12}:{m:02d}PM"
+
+
 def extract_clothing_size(answer: str) -> Optional[str]:
-    """Extract a clothing size (e.g. 'M', '32B', '46.5')."""
+    """Extract a clothing size (e.g. 'M', '32B', '32AA', '1A', '46.5')."""
     if not answer:
         return None
-    # Bra size: number + letter  (32B, 70A)
-    m = re.search(r"\b(\d{2,3})([A-Z])\b", answer, re.IGNORECASE)
+    # Bra size: number + one or more cup letters (32B, 32AA, 70A, 1B, 100D)
+    m = re.search(r"\b(\d{1,3})([A-Za-z]{1,3})\b", answer)
     if m:
         return f"{m.group(1)}{m.group(2).upper()}"
     # Alpha sizes
