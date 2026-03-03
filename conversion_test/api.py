@@ -22,6 +22,30 @@ from config import MODEL_CONFIGS, get_system_prompt
 
 log = logging.getLogger("conversion")
 
+
+# ── Fatal (non-recoverable) Error Detection ──────────────────────
+
+class FatalAPIError(Exception):
+    """Non-recoverable API error (billing, auth) — should stop execution."""
+    pass
+
+
+FATAL_ERROR_PATTERNS = [
+    "credit limit exceeded",
+    "insufficient_quota",
+    "billing hard limit",
+    "invalid api key",
+    "invalid_api_key",
+    "account deactivated",
+    "account has been disabled",
+]
+
+
+def _is_fatal(error_msg: str) -> bool:
+    """Check whether an API error is non-recoverable (billing, auth, etc.)."""
+    msg_lower = error_msg.lower()
+    return any(pat in msg_lower for pat in FATAL_ERROR_PATTERNS)
+
 # Suppress noisy litellm debug output
 litellm.suppress_debug_info = True
 litellm.request_timeout = 120  # global fallback
@@ -55,7 +79,7 @@ class RateLimiter:
 
 rate_limiters = {
     "openai":   RateLimiter(max_per_minute=450),
-    "together": RateLimiter(max_per_minute=425),
+    "together": RateLimiter(max_per_minute=1000),
 }
 
 # ── Response Parsing ─────────────────────────────────────────────
@@ -239,21 +263,28 @@ def call_model(model_name: str, prompt: str, domain: str) -> dict:
 
     t0 = time.time()
 
-    if use_streaming:
-        # Submit to a separate thread so we can enforce a HARD wall-clock timeout.
-        # Even if the stream iterator blocks forever in __next__(), the
-        # future.result(timeout=...) will raise FuturesTimeout.
-        future = _timeout_pool.submit(_do_streaming_call, params, timeout_val, model_name, provider)
+    try:
+        if use_streaming:
+            # Submit to a separate thread so we can enforce a HARD wall-clock timeout.
+            # Even if the stream iterator blocks forever in __next__(), the
+            # future.result(timeout=...) will raise FuturesTimeout.
+            future = _timeout_pool.submit(_do_streaming_call, params, timeout_val, model_name, provider)
 
-        try:
-            result = future.result(timeout=timeout_val + 30)  # +30s grace for setup/teardown
-        except FuturesTimeout:
-            future.cancel()
-            elapsed = time.time() - t0
-            log.warning("HARD TIMEOUT: %s stuck for %.0fs — will retry", model_name, elapsed)
-            raise TimeoutError(f"Hard timeout after {elapsed:.0f}s for {model_name}")
-    else:
-        result = _do_non_streaming_call(params, model_name)
+            try:
+                result = future.result(timeout=timeout_val + 30)  # +30s grace for setup/teardown
+            except FuturesTimeout:
+                future.cancel()
+                elapsed = time.time() - t0
+                log.warning("HARD TIMEOUT: %s stuck for %.0fs — will retry", model_name, elapsed)
+                raise TimeoutError(f"Hard timeout after {elapsed:.0f}s for {model_name}")
+        else:
+            result = _do_non_streaming_call(params, model_name)
+    except FatalAPIError:
+        raise
+    except Exception as exc:
+        if _is_fatal(str(exc)):
+            raise FatalAPIError(str(exc)) from exc
+        raise
 
     call_duration = time.time() - t0
     if call_duration > timeout_val * 0.8:

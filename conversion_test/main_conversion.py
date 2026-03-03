@@ -26,7 +26,7 @@ from config import (
     PREPROCESSED_SUBDIR, RESULT_COLS, setup_api_keys,
 )
 from extractors import extract_answer, determine_answer_type, calculate_loss
-from api import call_model
+from api import call_model, FatalAPIError
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s  %(levelname)-8s  %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger("conversion")
@@ -71,6 +71,8 @@ def process_row(prompt, domain, correct_answer, model_name, tolerance_percent, t
     config = MODEL_CONFIGS.get(model_name, {})
     try:
         result = call_model(model_name, prompt, domain)
+    except FatalAPIError:
+        raise  # propagate immediately — don't wrap as ERROR:
     except Exception as exc:
         return _error_result(str(exc))
 
@@ -160,6 +162,7 @@ def process_task(*, model_name, input_file, output_file,
         consecutive_errors = 0
         CIRCUIT_BREAKER_THRESHOLD = 10  # consecutive errors before cooldown
 
+        fatal = False
         with ThreadPoolExecutor(max_workers=max_workers) as pool:
             futures = {
                 pool.submit(process_row, str(df.iloc[i]["prompt"]), str(df.iloc[i]["domain"]),
@@ -181,6 +184,11 @@ def process_task(*, model_name, input_file, output_file,
                         else:
                             consecutive_errors = 0
                             last_progress = time.time()
+                    except FatalAPIError as exc:
+                        log.error("FATAL API ERROR: %s", exc)
+                        log.error("Saving checkpoint and stopping.")
+                        fatal = True
+                        break
                     except Exception as exc:
                         results[futures[fut]] = _error_result(str(exc))
                         consecutive_errors += 1
@@ -204,8 +212,8 @@ def process_task(*, model_name, input_file, output_file,
                 log.warning("  Batch timed out after %ds — %d/%d rows completed.",
                             batch_timeout, len(results), len(batch))
 
-            # Mark any unfinished rows as errors (don't save them → they stay pending)
-            if stalled:
+            # Cancel unfinished futures on stall or fatal error
+            if stalled or fatal:
                 for fut, idx in futures.items():
                     if idx not in results:
                         fut.cancel()
@@ -218,6 +226,11 @@ def process_task(*, model_name, input_file, output_file,
         all_times.extend(batch_times)
         _log_timing(f"[{n_done}/{len(df)}]", batch_times, time.time() - task_start)
         save_checkpoint(df, output_file)
+
+        # Fatal error (billing/auth): save and exit immediately
+        if fatal:
+            log.error("Exiting due to fatal API error (checkpoint saved).")
+            raise SystemExit(1)
 
         # If stalled, return False so the task-retry logic can handle it
         if stalled:

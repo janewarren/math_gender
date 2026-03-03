@@ -50,24 +50,24 @@ MODEL_CONFIGS = {
         "reasoning": True,
         "extra_body": {"thinking": {"type": "enabled"}},
         "extra_params": {"frequency_penalty": 0.2},
-        "timeout": 300,         # 5 min — DeepSeek can be slow
-        "max_workers": 100,     # ~5-20s latency × 14 RPS
+        "timeout": 300, 
+        "max_workers": 100,
     },
     "qwen3-235b-thinking": {
         "litellm_model": "together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507",
         "reasoning": True,
         "extra_body": {"enable_thinking": True},
-        "stream": False,        # non-streaming — streaming endpoint is unstable
-        "timeout": 180,         # 3 min — Qwen thinking is fast
-        "max_workers": 15,      # low concurrency — model prone to hangs
+        "stream": False,        # streaming endpoint is unstable
+        "timeout": 600, 
+        "max_workers": 50,      
     },
     "qwen3-next-thinking": {
         "litellm_model": "together_ai/Qwen/Qwen3-Next-80B-A3B-Thinking",
         "reasoning": True,
         "extra_body": {"enable_thinking": True},
-        "stream": False,        # non-streaming — streaming endpoint is unstable
-        "timeout": 180,         # 3 min — Qwen thinking is fast
-        "max_workers": 15,      # low concurrency — model prone to hangs
+        "stream": False,        # streaming endpoint is unstable
+        "timeout": 600,  
+        "max_workers": 50,
     },
 }
 

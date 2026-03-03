@@ -27,6 +27,7 @@ conversion_test/sbatch_jobs
 /conversion_test/full_results_backup
 conversion_test/full_results/clean_results.tsv
 conversion_test/old
+conversion_test/full_results/energy_wrong_guide_backup
 
 # include
 !conversion_test/conversions/
