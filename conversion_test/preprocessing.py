@@ -69,11 +69,11 @@ def convert_timezone(value: str, from_unit: str, to_unit: str, timezone_offsets:
     """Convert time between timezones."""
     # Parse time string to hours (0-24)
     def parse_time_string(time_str: str) -> float:
-        """Parse time string like '1AM' or '3:49PM' to hours (0-24)."""
+        """Parse time string like '1:00 AM', '1AM', or '3:49PM' to hours (0-24)."""
         time_str = time_str.strip().upper()
         
-        # Pattern 1: HH:MMAM/PM
-        match = re.match(r'(\d{1,2}):(\d{2})(AM|PM)', time_str)
+        # Pattern 1: HH:MM AM/PM  (optional space before AM/PM)
+        match = re.match(r'(\d{1,2}):(\d{2})\s?(AM|PM)', time_str)
         if match:
             h = int(match.group(1))
             m = int(match.group(2))
@@ -86,8 +86,8 @@ def convert_timezone(value: str, from_unit: str, to_unit: str, timezone_offsets:
             
             return h + m / 60.0
         
-        # Pattern 2: HHAM/PM
-        match = re.match(r'(\d{1,2})(AM|PM)', time_str)
+        # Pattern 2: HH AM/PM  (optional space before AM/PM)
+        match = re.match(r'(\d{1,2})\s?(AM|PM)', time_str)
         if match:
             h = int(match.group(1))
             period = match.group(2)
@@ -102,29 +102,29 @@ def convert_timezone(value: str, from_unit: str, to_unit: str, timezone_offsets:
         raise ValueError(f"Could not parse time string: {time_str}")
     
     def format_time_string(hours: float) -> str:
-        """Format hours (0-24) to time string like '1AM' or '3:49PM'."""
+        """Format hours (0-24) to time string like '1:00 AM' or '3:49 PM'."""
         total_minutes = round(hours * 60)       # avoid float truncation
         h = (total_minutes // 60) % 24
         m = total_minutes % 60
         
         if m == 0:
             if h == 0:
-                return "12AM"
+                return "12:00 AM"
             elif h < 12:
-                return f"{h}AM"
+                return f"{h}:00 AM"
             elif h == 12:
-                return "12PM"
+                return "12:00 PM"
             else:
-                return f"{h-12}PM"
+                return f"{h-12}:00 PM"
         else:
             if h == 0:
-                return f"12:{m:02d}AM"
+                return f"12:{m:02d} AM"
             elif h < 12:
-                return f"{h}:{m:02d}AM"
+                return f"{h}:{m:02d} AM"
             elif h == 12:
-                return f"12:{m:02d}PM"
+                return f"12:{m:02d} PM"
             else:
-                return f"{h-12}:{m:02d}PM"
+                return f"{h-12}:{m:02d} PM"
     
     # Get timezone offsets
     from_tz = city_to_tz.get(from_unit, from_unit)
@@ -346,11 +346,11 @@ def get_math_expression(
     elif conversion_type == 'timezone':
         # Parse time string to hours
         def parse_time_string(time_str: str) -> float:
-            """Parse time string like '1AM' or '3:49PM' to hours (0-24)."""
+            """Parse time string like '1:00 AM', '1AM', or '3:49PM' to hours (0-24)."""
             time_str = time_str.strip().upper()
             
-            # Pattern 1: HH:MMAM/PM
-            match = re.match(r'(\d{1,2}):(\d{2})(AM|PM)', time_str)
+            # Pattern 1: HH:MM AM/PM  (optional space before AM/PM)
+            match = re.match(r'(\d{1,2}):(\d{2})\s?(AM|PM)', time_str)
             if match:
                 h = int(match.group(1))
                 m = int(match.group(2))
@@ -363,8 +363,8 @@ def get_math_expression(
                 
                 return h + m / 60.0
             
-            # Pattern 2: HHAM/PM
-            match = re.match(r'(\d{1,2})(AM|PM)', time_str)
+            # Pattern 2: HH AM/PM  (optional space before AM/PM)
+            match = re.match(r'(\d{1,2})\s?(AM|PM)', time_str)
             if match:
                 h = int(match.group(1))
                 period = match.group(2)

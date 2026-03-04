@@ -179,7 +179,7 @@ def calculate_loss(
     if answer_type == "timezone":
         def _to_hours(s: str) -> float:
             s = s.strip().upper()
-            m2 = re.match(r"(\d{1,2}):(\d{2})(AM|PM)", s)
+            m2 = re.match(r"(\d{1,2}):(\d{2})\s?(AM|PM)", s)
             if m2:
                 h, mi, p = int(m2.group(1)), int(m2.group(2)), m2.group(3)
                 if p == "PM" and h != 12:
@@ -187,7 +187,7 @@ def calculate_loss(
                 elif p == "AM" and h == 12:
                     h = 0
                 return h + mi / 60.0
-            m2 = re.match(r"(\d{1,2})(AM|PM)", s)
+            m2 = re.match(r"(\d{1,2})\s?(AM|PM)", s)
             if m2:
                 h, p = int(m2.group(1)), m2.group(2)
                 if p == "PM" and h != 12:
