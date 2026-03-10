@@ -133,6 +133,15 @@ def process_task(*, model_name, input_file, output_file,
                  tolerance_percent=0.1, tolerance_minutes=1.0) -> bool:
     """Run inference for one model × domain × condition task."""
     df = pd.read_csv(input_file, sep="\t")
+    # Claude: only run on "easy" rows (numbers from numbers.json "easy" list)
+    if (model_name == "claude-haiku-4-5" and "difficulty" in df.columns) or (model_name == "gpt-oss-120b" and "difficulty" in df.columns):
+        n_total = len(df)
+        df = df.loc[df["difficulty"] == "Easy"].copy()
+        df = df.reset_index(drop=True)
+        if len(df) == 0:
+            log.info("  No easy rows — skipping.")
+            return True
+        log.info("  New Model: filtered to %d easy rows (skipped %d hard).", len(df), n_total - len(df))
     for col in RESULT_COLS:
         df[col] = None
 

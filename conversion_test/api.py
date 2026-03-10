@@ -78,8 +78,9 @@ class RateLimiter:
 
 
 rate_limiters = {
-    "openai":   RateLimiter(max_per_minute=450),
-    "together": RateLimiter(max_per_minute=1000),
+    "openai":     RateLimiter(max_per_minute=450),
+    "anthropic":  RateLimiter(max_per_minute=400),
+    "together":   RateLimiter(max_per_minute=1000),
 }
 
 # ── Response Parsing ─────────────────────────────────────────────
@@ -225,7 +226,13 @@ def call_model(model_name: str, prompt: str, domain: str) -> dict:
     is_timezone = ("timezone" in domain)
 
     # Rate-limit before sending
-    provider = "together" if "together_ai" in config["litellm_model"] else "openai"
+    lm = config["litellm_model"]
+    if "together_ai" in lm:
+        provider = "together"
+    elif "anthropic/" in lm:
+        provider = "anthropic"
+    else:
+        provider = "openai"
     t_rl = time.time()
     rate_limiters[provider].acquire()
     rl_wait = time.time() - t_rl
