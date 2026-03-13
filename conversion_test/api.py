@@ -78,7 +78,7 @@ class RateLimiter:
 
 
 rate_limiters = {
-    "openai":     RateLimiter(max_per_minute=450),
+    "openai":     RateLimiter(max_per_minute=350),
     "anthropic":  RateLimiter(max_per_minute=400),
     "together":   RateLimiter(max_per_minute=1000),
 }

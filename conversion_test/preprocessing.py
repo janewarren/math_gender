@@ -721,7 +721,8 @@ def process_conversion_file(
     output_dir: Path,
     substances_file: Optional[Path] = None,
     include_guide: bool = True,
-    math_only: bool = False
+    math_only: bool = False,
+    easy_only: bool = False
 ) -> None:
     """Process a single conversion JSON file and create TSV output."""
     print(f"\nProcessing {json_file.name}...")
@@ -801,7 +802,8 @@ def process_conversion_file(
                 hard_times,
                 full_config=config,
                 include_guide=include_guide,
-                math_only=math_only
+                math_only=math_only,
+                easy_only=easy_only
             )
             
             # Group rows by domain (to handle gender-specific domains)
@@ -848,7 +850,8 @@ def process_conversion_file(
             hard_times,
             full_config=config,
             include_guide=include_guide,
-            math_only=math_only
+            math_only=math_only,
+            easy_only=easy_only
         )
         
         # Create DataFrame
@@ -884,7 +887,8 @@ def process_section(
     hard_times: List,
     full_config: Optional[Dict] = None,
     include_guide: bool = True,
-    math_only: bool = False
+    math_only: bool = False,
+    easy_only: bool = False
 ) -> List[Dict]:
     """Process a single section (or main config) and return rows."""
     unit_pairs = section_config.get('unit_pairs', [])
@@ -915,8 +919,8 @@ def process_section(
         
         # For currency conversions, use all 200 numbers (easy + hard) for all unit pairs
         if is_currency:
-            # Use all numbers (easy + hard) for all currency pairs
-            test_values = easy_numbers + hard_numbers
+            # Use all numbers (easy + hard) for all currency pairs, or easy only if requested
+            test_values = easy_numbers if easy_only else (easy_numbers + hard_numbers)
         # For clothing sizes, we need to get valid test values from the mappings
         elif section_config.get('size_mappings'):
             size_mappings = section_config.get('size_mappings', {})
@@ -1001,11 +1005,11 @@ def process_section(
         elif conversion_type == 'timezone':
             # For timezone, use time strings from times.json
             if easy_times or hard_times:
-                test_values = easy_times + hard_times
+                test_values = easy_times if easy_only else (easy_times + hard_times)
             else:
                 # Fallback: generate from numbers if times.json not provided
                 test_values = []
-                for num in easy_numbers + hard_numbers:
+                for num in (easy_numbers if easy_only else (easy_numbers + hard_numbers)):
                     if isinstance(num, (int, float)):
                         h = int(num) % 24
                         if h == 0:
@@ -1019,7 +1023,7 @@ def process_section(
                     else:
                         test_values.append(str(num))
         else:
-            test_values = easy_numbers + hard_numbers
+            test_values = easy_numbers if easy_only else (easy_numbers + hard_numbers)
         
         # Process each test value
         for test_value in test_values:
@@ -1169,6 +1173,8 @@ def main():
                        help='Exclude conversion guides from prompts (creates files with _no_guide suffix)')
     parser.add_argument('--math-only', action='store_true',
                        help='Create pure mathematical prompts (e.g., "what is 5*0.067628") instead of conversion prompts. Only works for linear conversions and currency.')
+    parser.add_argument('--easy-only', action='store_true',
+                       help='Use only easy (integer) numbers from numbers.json; skip hard numbers. Use for smaller/faster runs (e.g., volume).')
     
     args = parser.parse_args()
     
@@ -1212,7 +1218,7 @@ def main():
             continue
         
         try:
-            process_conversion_file(json_file, numbers_file, times_file, output_dir, substances_file, include_guide=not args.no_guide, math_only=args.math_only)
+            process_conversion_file(json_file, numbers_file, times_file, output_dir, substances_file, include_guide=not args.no_guide, math_only=args.math_only, easy_only=args.easy_only)
         except Exception as e:
             print(f"Error processing {json_file}: {e}")
             import traceback
