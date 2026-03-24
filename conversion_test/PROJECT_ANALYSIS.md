@@ -17,29 +17,35 @@ The project evaluates large language models (LLMs) on **unit and conversion task
 
 With-guide and no-guide use **the same set of prompts** (same conversions, same inputs); the only difference is that the with-guide prompt includes the conversion guide and the no-guide prompt omits it.
 
-| Condition                | Suffix       | Output directory     | Description |
-|--------------------------|--------------|----------------------|-------------|
-| **in_domain_with_guide** | (none)       | `results/`           | Full conversion prompt **with** an in-prompt conversion guide (factors, tables, or formulas). |
-| **in_domain_no_guide**   | `_no_guide`  | `results_no_guide/`  | Same task, **without** the conversion guide in the prompt. |
+
+| Condition                | Suffix       | Output directory     | Description                                                                                                                                                                                                                         |
+| ------------------------ | ------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **in_domain_with_guide** | (none)       | `results/`           | Full conversion prompt **with** an in-prompt conversion guide (factors, tables, or formulas).                                                                                                                                       |
+| **in_domain_no_guide**   | `_no_guide`  | `results_no_guide/`  | Same task, **without** the conversion guide in the prompt.                                                                                                                                                                          |
 | **math_only**            | `_math_only` | `results_math_only/` | Same conversion expressed as a single math expression (e.g. `what is 1*1000` for liters→ml, `what is (1+3)%24` for timezone). Only supported for linear, currency, temperature, and timezone — **not** for clothing (table lookup). |
+
 
 ### 1.4 Domains
 
-| Category | Domains | Conversion type | Math-only? |
-|----------|---------|-----------------|------------|
-| **Numeric/linear** | volume, speed, density, energy, bits_bytes, moles_to_particles | Linear factor multiplication | Yes |
-| **Cooking** | cooking | Linear factor (with substance distractors, e.g. "1 cup of flour") | Yes |
-| **Currency** | currency | Exchange rate multiplication | Yes |
-| **Temperature** | temperature | Formula-based (e.g. F = C×9/5 + 32) | Yes |
-| **Timezone** | timezone | City-to-city time offset (e.g. LA → NY) | Yes |
-| **Clothing** | men's/women's clothing, shoe, pant, bra sizes | Discrete lookup table (US ↔ EUR, etc.) | **No** |
+
+| Category           | Domains                                                        | Conversion type                                                   | Math-only? |
+| ------------------ | -------------------------------------------------------------- | ----------------------------------------------------------------- | ---------- |
+| **Numeric/linear** | volume, speed, density, energy, bits_bytes, moles_to_particles | Linear factor multiplication                                      | Yes        |
+| **Cooking**        | cooking                                                        | Linear factor (with substance distractors, e.g. "1 cup of flour") | Yes        |
+| **Currency**       | currency                                                       | Exchange rate multiplication                                      | Yes        |
+| **Temperature**    | temperature                                                    | Formula-based (e.g. F = C×9/5 + 32)                               | Yes        |
+| **Timezone**       | timezone                                                       | City-to-city time offset (e.g. LA → NY)                           | Yes        |
+| **Clothing**       | men's/women's clothing, shoe, pant, bra sizes                  | Discrete lookup table (US ↔ EUR, etc.)                            | **No**     |
+
 
 ### 1.5 Models
 
-| Type | Models | Notes |
-|------|--------|-------|
-| **Non-reasoning** | `gpt-4o`, `claude-haiku-4-5`, `qwen-coder`, `llama-4`, `gpt-oss-120b` | temperature=0, no chain-of-thought |
-| **Reasoning** | `gpt-5.2`, `deepseek-v3.1`, `qwen3-235b-thinking`, `qwen3-next-thinking` | Reasoning/thinking enabled; responses include internal reasoning then final answer |
+
+| Type              | Models                                                                   | Notes                                                                              |
+| ----------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| **Non-reasoning** | `gpt-4o`, `claude-haiku-4-5`, `qwen-coder`, `llama-4`, `gpt-oss-120b`    | temperature=0, no chain-of-thought                                                 |
+| **Reasoning**     | `gpt-5.2`, `deepseek-v3.1`, `qwen3-235b-thinking`, `qwen3-next-thinking` | Reasoning/thinking enabled; responses include internal reasoning then final answer |
+
 
 ---
 
@@ -120,10 +126,12 @@ Provide only the numerical value.
 
 #### gpt-4o (non-reasoning)
 
-| Condition | Raw response | Correct? |
-|-----------|-------------|----------|
-| **With guide** | `<answer>1000.0</answer>` | Yes |
-| **Math only** | `<answer>1000</answer>` | Yes |
+
+| Condition      | Raw response              | Correct? |
+| -------------- | ------------------------- | -------- |
+| **With guide** | `<answer>1000.0</answer>` | Yes      |
+| **Math only**  | `<answer>1000</answer>`   | Yes      |
+
 
 #### qwen3-235b-thinking (reasoning)
 
@@ -185,10 +193,12 @@ Provide only the numerical value.
 
 #### gpt-4o (non-reasoning)
 
-| Condition | Raw response | Correct? |
-|-----------|-------------|----------|
-| **With guide** | `41.0` | Yes |
-| **Math only** | `<answer>41</answer>` | Yes |
+
+| Condition      | Raw response          | Correct? |
+| -------------- | --------------------- | -------- |
+| **With guide** | `41.0`                | Yes      |
+| **Math only**  | `<answer>41</answer>` | Yes      |
+
 
 #### qwen3-235b-thinking (reasoning)
 
@@ -268,10 +278,12 @@ Provide the time in the same format (e.g., 1AM, 3:49PM).
 
 #### gpt-4o (non-reasoning)
 
-| Condition | Raw response | Correct? |
-|-----------|-------------|----------|
-| **With guide** | `4AM` | Yes |
-| **Math only** | `<answer>4.0</answer>` | Yes |
+
+| Condition      | Raw response           | Correct? |
+| -------------- | ---------------------- | -------- |
+| **With guide** | `4AM`                  | Yes      |
+| **Math only**  | `<answer>4.0</answer>` | Yes      |
+
 
 #### qwen3-235b-thinking (reasoning)
 
@@ -355,10 +367,12 @@ Provide only the numerical value.
 
 #### gpt-4o (non-reasoning)
 
-| Condition | Raw response | Correct? |
-|-----------|-------------|----------|
-| **With guide** | `8.5` | Yes |
-| **Math only** | `8.5` | Yes |
+
+| Condition      | Raw response | Correct? |
+| -------------- | ------------ | -------- |
+| **With guide** | `8.5`        | Yes      |
+| **Math only**  | `8.5`        | Yes      |
+
 
 #### qwen3-235b-thinking (reasoning)
 
@@ -436,10 +450,12 @@ Provide only the numerical value.
 
 #### gpt-4o (non-reasoning)
 
-| Condition | Raw response | Correct? |
-|-----------|-------------|----------|
-| **With guide** | `0.0625` | Yes |
-| **Math only** | `<answer>0.0625</answer>` | Yes |
+
+| Condition      | Raw response              | Correct? |
+| -------------- | ------------------------- | -------- |
+| **With guide** | `0.0625`                  | Yes      |
+| **Math only**  | `<answer>0.0625</answer>` | Yes      |
+
 
 #### qwen3-235b-thinking (reasoning)
 
@@ -470,7 +486,7 @@ multiplying any number by 1 should just give the number itself, right? So
 
 Let me verify: 0.0625 is 1/16. Because 1 divided by 16 is 0.0625. 16 × 0.0625
 = 1.0. Yes, so 0.0625 is indeed 1/16. So if I multiply 1 by 1/16, that's just
-1/16, which is 0.0625. So that checks out.
+1/16, which is 0.0625. So that checks out.round
 [/REASONING]
 <answer>0.0625</answer>
 ```
@@ -510,11 +526,13 @@ Provide only the size and nothing else.
 
 #### gpt-4o (non-reasoning)
 
-| Condition | Raw response | Correct? |
-|-----------|-------------|----------|
-| **With guide** | `38.0` | Yes |
-| **No guide** | `<answer>38.5</answer>` | **No** (gold is 38) |
-| **Math only** | N/A | — |
+
+| Condition      | Raw response            | Correct?            |
+| -------------- | ----------------------- | ------------------- |
+| **With guide** | `38.0`                  | Yes                 |
+| **No guide**   | `<answer>38.5</answer>` | **No** (gold is 38) |
+| **Math only**  | N/A                     | —                   |
+
 
 #### qwen3-235b-thinking (reasoning)
 
@@ -550,22 +568,205 @@ should be 38.
 
 ---
 
-## 4. Summary: Same Input, Both Models, All Conditions
+## 4. Error Analysis: Cross-Domain and Cross-Condition Failures
 
-| Domain | Input | Gold | gpt-4o (with guide) | gpt-4o (math only) | qwen3-235b (with guide) | qwen3-235b (math only) |
-|--------|-------|------|---------------------|---------------------|--------------------------|------------------------|
-| Volume | 1 L → ml | 1000 | 1000.0 | 1000 | 1000.0 | 1000 |
-| Temperature | 5°C → °F | 41 | 41.0 | 41 | 41 | 41 |
-| Timezone | 1AM LA → NY | 4AM | 4AM | 4.0 | 4AM | 4.0 |
-| Currency | 10 USD → EUR | 8.5 | 8.5 | 8.5 | 8.5 | 8.5 |
-| Cooking | 1 cup flour → gal | 0.0625 | 0.0625 | 0.0625 | 0.0625 | 0.0625 |
-| Clothing | US 6 → EUR | 38 | 38.0 | N/A | 38 | N/A |
+This section presents real error examples drawn from the `full_results` data. The goal is to expose *when and why* models fail, by mapping errors across domains and across conditions for the same input.
+
+### 4.1 Math-Only Correct, No-Guide Wrong (gpt-4o)
+
+The most striking pattern: **gpt-4o can perform the raw arithmetic correctly, but fails the identical computation when it is phrased as a domain-specific conversion without the guide.** Every pair below shares the same underlying multiplication or addition, the same gold answer, and the same model.
+
+#### 4.1.1 Temperature — 75 000 °C → Kelvin
+
+
+| Condition     | Prompt                                                                       | Model response | Gold      | Correct?              |
+| ------------- | ---------------------------------------------------------------------------- | -------------- | --------- | --------------------- |
+| **Math only** | `what is 75000+273.15`                                                       | `75273.15`     | 75 273.15 | Yes                   |
+| **No guide**  | `Convert 75000 degrees Celsius to Kelvin. Provide only the numerical value.` | `750273.15`    | 75 273.15 | **No** (loss = 896.7) |
+
+
+**What went wrong:** The model inserted an extra zero, answering 750 273.15 instead of 75 273.15. It performed `750000 + 273.15` rather than `75000 + 273.15` — a place-value error that vanishes when the problem is presented as pure addition.
+
+#### 4.1.2 Density — 48.291 g/cm³ → kg/m³
+
+
+| Condition     | Prompt                                                               | Model response | Gold   | Correct?               |
+| ------------- | -------------------------------------------------------------------- | -------------- | ------ | ---------------------- |
+| **Math only** | `what is 48.291*1000`                                                | `48291`        | 48 291 | Yes                    |
+| **No guide**  | `Convert 48.291 g/cm³s to kg/m³s. Provide only the numerical value.` | `48291000`     | 48 291 | **No** (loss = 99 900) |
+
+
+**What went wrong:** The model multiplied by 1 000 000 instead of 1 000 — it applied the wrong conversion factor (perhaps confusing g/cm³ → kg/m³ with g/cm³ → g/m³). The math-only version gets the same multiplication exactly right.
+
+#### 4.1.3 Volume — 350 teaspoons → cups
+
+
+| Condition     | Prompt                                                             | Model response | Gold   | Correct?              |
+| ------------- | ------------------------------------------------------------------ | -------------- | ------ | --------------------- |
+| **Math only** | `what is 350*0.0208333195`                                         | `7.2917`       | 7.2917 | Yes                   |
+| **No guide**  | `Convert 350 teaspoons to cups. Provide only the numerical value.` | `73.9583`      | 7.2917 | **No** (loss = 914.3) |
+
+
+**What went wrong:** The no-guide answer is ~10× too large. The model likely recalled that 1 cup ≈ 48 teaspoons (correct), but then divided 350/48 ≈ 7.29 incorrectly — possibly confusing tablespoons (1 cup = 16 tbsp) with teaspoons, yielding 350/4.73 ≈ 73.96.
+
+#### 4.1.4 Cooking — 0.0019 cups → fluid ounces
+
+
+| Condition     | Prompt                                                                   | Model response | Gold   | Correct?            |
+| ------------- | ------------------------------------------------------------------------ | -------------- | ------ | ------------------- |
+| **Math only** | `what is 0.0019*8`                                                       | `0.0152`       | 0.0152 | Yes                 |
+| **No guide**  | `Convert 0.0019 cups to fluid ounces. Provide only the numerical value.` | `0.152`        | 0.0152 | **No** (loss = 900) |
+
+
+**What went wrong:** A decimal-place error: the model answered 0.152 instead of 0.0152, exactly 10× too large. The arithmetic itself is trivial (multiply by 8), and the model solves it perfectly in the math-only framing.
+
+#### 4.1.5 Speed — 25 000 km/h → knots
+
+
+| Condition     | Prompt                                                            | Model response  | Gold       | Correct?                |
+| ------------- | ----------------------------------------------------------------- | --------------- | ---------- | ----------------------- |
+| **Math only** | `what is 25000*0.539957`                                          | `13498.925`     | 13 498.925 | Yes                     |
+| **No guide**  | `Convert 25000 km/hs to knots. Provide only the numerical value.` | `48648648.6486` | 13 498.925 | **No** (loss = 360 289) |
+
+
+**What went wrong:** The no-guide answer is off by more than 3 000×. The model appears to have used a completely wrong conversion factor — perhaps converting m/s → knots instead of km/h → knots, or confusing the direction of the conversion.
+
+### 4.2 Math-Only Correct, No-Guide Wrong (qwen3-235b-thinking)
+
+The reasoning model shows a different failure mode: rather than arithmetic mistakes, it often **refuses to answer or substitutes memorized (incorrect) values** for domain knowledge it believes it should know.
+
+#### 4.2.1 Currency — 1 USD → EUR
+
+
+| Condition     | Prompt                                                    | Model response | Gold | Correct?                |
+| ------------- | --------------------------------------------------------- | -------------- | ---- | ----------------------- |
+| **Math only** | `what is 1*0.85`                                          | `0.85`         | 0.85 | Yes                     |
+| **No guide**  | `Convert 1 USD to EUR. Provide only the numerical value.` | `N/A`          | 0.85 | **No** (loss = 238 018) |
+
+
+**Full reasoning trace (no-guide, abridged):**
+
+> *"I cannot provide real-time currency exchange rates as they fluctuate constantly and require live financial data access. My knowledge cutoff is July 2024, and I lack current market connectivity. For accurate conversions, please check a reliable financial service or use a currency converter API."*
+
+**What went wrong:** When given pure arithmetic (`1*0.85`), the model computes correctly. But when asked to convert USD to EUR, it refuses, which we can see in some sense as a good thing (although the model didn't follow the instructions given).
+
+#### 4.2.2 Cooking — 1 cup → milliliters
+
+
+| Condition     | Prompt                                                           | Model response | Gold    | Correct?            |
+| ------------- | ---------------------------------------------------------------- | -------------- | ------- | ------------------- |
+| **Math only** | `what is 1*236.588`                                              | `236.588`      | 236.588 | Yes                 |
+| **No guide**  | `Convert 1 cup to milliliter. Provide only the numerical value.` | `240`          | 236.588 | **No** (loss = 1.4) |
+
+
+**Full reasoning trace (no-guide, abridged):**
+
+> *"I know that in the US customary system, 1 cup is defined as 240 milliliters. But wait, is that exact? Actually, the precise conversion is 1 US cup = 236.5882365 mL, but for most practical purposes, it's rounded to 240 mL."*
+
+**What went wrong:** The model *knows* the precise conversion factor (236.588) but deliberately rounds to 240 because it believes "for most practical purposes" the rounded figure is better. In the math-only version, no such rounding temptation exists.
+
+### 4.3 Cross-Domain Errors: Same Input Number, Different Outcomes (gpt-4o, with guide)
+
+The same input number produces correct answers in some domains but large errors in others — even though the guide is provided in all cases.
+
+#### Input number = 3 (with guide)
+
+
+| Domain          | Conversion       | Gold   | gpt-4o response | Correct?              |
+| --------------- | ---------------- | ------ | --------------- | --------------------- |
+| **Temperature** | 3 °C → °F        | 37.4   | `37.4`          | Yes                   |
+| **Cooking**     | 3 cups → gallons | 0.1875 | `0.1875`        | Yes                   |
+| **Currency**    | 3 USD → CHF      | 2.34   | `4170.0`        | **No** (loss = 9 895) |
+| **Currency**    | 3 CAD → AUD      | 3.153  | `2.8542`        | **No** (loss = 9.5)   |
+| **Currency**    | 3 CHF → AUD      | 5.538  | `3.6923`        | **No** (loss = 33.3)  |
+
+
+**3 USD → CHF prompt (with guide):**
+
+```
+Convert 3 USD to CHF.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  ...
+
+Provide only the numerical value.
+```
+
+**What went wrong:** The gold answer is `3 × 0.78 = 2.34`, but the model answered `4170.0` — a catastrophic misinterpretation of the exchange rate table. For temperature and cooking (simpler, well-known conversions), the same number is handled flawlessly. Currency conversions with cross-rates (where the model must reason about the relative-to-USD table) are a consistent failure point even with the guide present.
+
+### 4.4 Cross-Domain Errors: Same Input Number, Different Outcomes (qwen3-235b-thinking, no guide)
+
+In the no-guide condition, the reasoning model shows a stark split: correct on domains where conversion factors are well-known (cooking, bits/bytes, temperature), but failing on obscure currencies.
+
+#### Input number = 42 (no guide)
+
+
+| Domain          | Conversion            | Gold   | qwen3 response | Correct?             |
+| --------------- | --------------------- | ------ | -------------- | -------------------- |
+| **Cooking**     | 42 cups → gallons     | 2.625  | `2.625`        | Yes                  |
+| **Temperature** | 42 °F → °C (inferred) | ~5.56  | correct        | Yes                  |
+| **Bits/Bytes**  | 42 bits → bytes       | 5.25   | `5.25`         | Yes                  |
+| **Currency**    | 42 SLL → IDR          | 28 765 | `56.7`         | **No** (loss = 99.8) |
+
+
+**Reasoning trace (42 SLL → IDR, abridged):**
+
+> *"... Since the user says 'Provide only the numerical value,' and it's a conversion, likely expects one decimal place. So the answer should be 56.7."*
+
+**What went wrong:** Without the exchange rate table, the model fabricated a rate. SLL (Sierra Leonean Leone) to IDR (Indonesian Rupiah) is an obscure cross-rate that the model cannot derive from memory. The gold answer (28 765) is 507× larger than the model's guess (56.7). In contrast, cooking (cups → gallons = ÷16) is common knowledge.
+
+#### Input number = 1 (no guide)
+
+
+| Domain         | Conversion       | Gold   | qwen3 response | Correct?                |
+| -------------- | ---------------- | ------ | -------------- | ----------------------- |
+| **Cooking**    | 1 cup → gallons  | 0.0625 | `0.0625`       | Yes                     |
+| **Bits/Bytes** | 1 kilobit → bits | 1000   | `1000`         | Yes                     |
+| **Currency**   | 1 USD → EUR      | 0.85   | `N/A`          | **No** (loss = 238 018) |
+
+
+The model refuses to convert even the most common currency pair (USD → EUR) without a guide, while easily handling cooking and bit/byte conversions from memory.
+
+### 4.5 Summary of Error Patterns
+
+
+| Pattern                               | gpt-4o                                                                                     | qwen3-235b-thinking                                                                |
+| ------------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| **Math-only correct, no-guide wrong** | Frequent. Arithmetic errors (place-value, decimal shifts) when domain language is present. | Less frequent for arithmetic, but refuses or substitutes memorized approximations. |
+| **Cross-domain: familiar domains**    | Generally correct (temperature, cooking).                                                  | Generally correct (temperature, cooking, bits/bytes).                              |
+| **Cross-domain: currency**            | Large errors even *with* guide — misreads the exchange rate table.                         | Refuses or fabricates rates *without* guide; accurate *with* guide.                |
+| **Dominant error type**               | Computation errors despite knowing the method.                                             | Knowledge/confidence errors — correct method, wrong or missing facts.              |
+
+
+**Key takeaway:** The non-reasoning model (gpt-4o) can do the math but gets confused by domain-specific wrapping. The reasoning model (qwen3-235b-thinking) reasons correctly about procedures but fails when it lacks the factual knowledge (exchange rates, precise conversion factors) — and sometimes *overrides* correct knowledge with rounded approximations.
 
 ---
 
-## 5. References in Code
+## 5. Summary: Same Input, Both Models, All Conditions
+
+
+| Domain      | Input             | Gold   | gpt-4o (with guide) | gpt-4o (math only) | qwen3-235b (with guide) | qwen3-235b (math only) |
+| ----------- | ----------------- | ------ | ------------------- | ------------------ | ----------------------- | ---------------------- |
+| Volume      | 1 L → ml          | 1000   | 1000.0              | 1000               | 1000.0                  | 1000                   |
+| Temperature | 5°C → °F          | 41     | 41.0                | 41                 | 41                      | 41                     |
+| Timezone    | 1AM LA → NY       | 4AM    | 4AM                 | 4.0                | 4AM                     | 4.0                    |
+| Currency    | 10 USD → EUR      | 8.5    | 8.5                 | 8.5                | 8.5                     | 8.5                    |
+| Cooking     | 1 cup flour → gal | 0.0625 | 0.0625              | 0.0625             | 0.0625                  | 0.0625                 |
+| Clothing    | US 6 → EUR        | 38     | 38.0                | N/A                | 38                      | N/A                    |
+
+
+---
+
+## 6. References in Code
 
 - **System prompts:** `config.py` → `get_system_prompt(is_timezone, is_reasoning)`.
 - **User prompt construction:** `preprocessing.py` → `create_prompt(...)` (with_guide / no_guide / math_only), and `create_conversion_guide(...)` for the guide text.
 - **API call:** `api.py` → `call_model(model_name, prompt, domain)` builds messages with the appropriate system prompt and the user prompt from the TSV.
 - **Conditions and paths:** `config.py` → `CONDITIONS`, `DEFAULT_BASE_DIR`, `PREPROCESSED_SUBDIR`.
+
