@@ -79,26 +79,6 @@ MODEL_CONFIGS = {
         "timeout": 600,  
         "max_workers": 50,
     },
-    # ── Prospective Together AI models (run benchmark_inference_time.py to tune timeout/max_workers) ──
-    "deepseek-r1": {
-        "litellm_model": "together_ai/deepseek-ai/DeepSeek-R1",
-        "reasoning": True,
-        "extra_body": {"thinking": {"type": "enabled"}},
-        "timeout": 300,
-        "max_workers": 30,       # tune after benchmark
-    },
-    "glm4.7-fp8": {
-        "litellm_model": "together_ai/zai-org/GLM-4.7",
-        "reasoning": False,
-        "timeout": 120,
-        "max_workers": 40,      # tune after benchmark
-    },
-    "mistral-small-24b": {
-        "litellm_model": "together_ai/mistralai/Mistral-Small-24B-Instruct-2501",
-        "reasoning": False,
-        "timeout": 120,
-        "max_workers": 40,      # tune after benchmark
-    },
     "gpt-oss-120b": {
         "litellm_model": "together_ai/openai/gpt-oss-120b",
         "reasoning": False,
