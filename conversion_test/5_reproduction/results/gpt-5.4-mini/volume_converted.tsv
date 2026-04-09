@@ -1,0 +1,76 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+volume	californium	"Convert 180 gallons of californium to ounces.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	180	23040.00476961979	Easy	<answer>23040.036</answer>	23040.036	0.0	0	2.4563963413238525
+volume	basketane	"Convert 3 liters of basketane to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	3	3000.0	Easy	<answer>3000</answer>	3000.0	0.0	0	0.8697102069854736
+volume	nitrogen	"Convert 60 liters of nitrogen to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	60	60000.0	Easy	<answer>60000</answer>	60000.0	0.0	0	0.8461992740631104
+volume	nitrogen	"Convert 96 teaspoons of nitrogen to cups.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	96	1.999998669191161	Easy	<answer>1.185185</answer>	1.185185	40.74071056860692	0	0.8924038410186768
+volume	matcha latte	"Convert 45 liters of matcha latte to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	45	45000.0	Easy	<answer>45000</answer>	45000.0	0.0	0	1.4290430545806885

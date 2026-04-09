@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+temperature		Convert 19 Kelvin to degrees Fahrenheit. Provide only the numerical value.	19.0	-425.47	Easy
+temperature		Convert 250 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	250.0	482.0	Easy
+temperature		Convert 194.82 Kelvin to degrees Celsius. Provide only the numerical value.	194.82	-78.32999999999998	Hard
+temperature		Convert 284.93 degrees Celsius to Kelvin. Provide only the numerical value.	284.93	558.0799999999999	Hard

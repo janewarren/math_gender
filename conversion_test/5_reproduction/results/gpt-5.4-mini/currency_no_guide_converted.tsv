@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+currency	null	Convert 75 CAD to USD. Provide only the numerical value.	75.0	54.74452554744525	Easy	<answer>55.5</answer>	55.5	1.380000000000011	0	2.0098490715026855
+currency	null	Convert 6000 AUD to USD. Provide only the numerical value.	6000.0	4166.666666666667	Easy	<answer>3900</answer>	3900.0	6.4000000000000075	0	0.8652670383453369
+currency	null	Convert 0.1234 SLL to LBP. Provide only the numerical value.	0.1234	431.2446895424837	Hard	<answer>554.3</answer>	554.3	28.5349161257077	0	0.8717761039733887
+currency	null	Convert 365.24 LBP to IRR. Provide only the numerical value.	365.24	5079.256702279369	Hard	<answer>172529.88</answer>	172529.88	3296.7544881631093	0	0.7758910655975342

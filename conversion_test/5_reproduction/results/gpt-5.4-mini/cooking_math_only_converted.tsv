@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+cooking	null	what is 110*8	110.0	880.0	Easy	<answer>880</answer>	880.0	0.0	0	0.6320650577545166
+cooking	null	what is 360*48	360.0	17280.0	Easy	<answer>17280</answer>	17280.0	0.0	0	0.7104403972625732
+cooking	null	what is 14.142*8	14.142	113.136	Hard	<answer>113.136</answer>	113.136	0.0	0	0.769550085067749
+cooking	null	what is 6.626*236.588	6.626	1567.632088	Hard	<answer>1568.324088</answer>	1568.324088	0.0	0	0.7880234718322754

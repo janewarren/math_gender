@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+currency		Convert 75 CAD to USD. Provide only the numerical value.	75.0	54.74452554744525	Easy
+currency		Convert 6000 AUD to USD. Provide only the numerical value.	6000.0	4166.666666666667	Easy
+currency		Convert 0.1234 SLL to LBP. Provide only the numerical value.	0.1234	431.2446895424837	Hard
+currency		Convert 365.24 LBP to IRR. Provide only the numerical value.	365.24	5079.256702279369	Hard

@@ -1,0 +1,89 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+currency	null	"Convert 180 CHF to CNH.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	180.0	1601.5384615384617	Easy	<answer>14.036023054755043</answer>	14.036023054755043	99.12359125978955	0	0.8522119522094727
+currency	null	"Convert 1200 JPY to GBP.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	1200.0	5.633440514469453	Easy	<answer>5.63</answer>	5.63	0.0	0	0.6394352912902832
+currency	null	"Convert 48.291 VND to IDR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	48.291	31.11642564619722	Hard	<answer>31.11445027106137</answer>	31.11445027106137	0.0	0	0.8413872718811035
+currency	null	"Convert 1.732 LAK to IRR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	1.732	95.86327908816004	Hard	<answer>95842.676</answer>	95842.676	99878.50784121302	0	2.333348512649536

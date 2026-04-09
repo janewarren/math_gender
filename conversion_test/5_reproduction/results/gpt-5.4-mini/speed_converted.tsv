@@ -1,0 +1,41 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+speed	null	"Convert 9000 mphs to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	9000.0	14484.10048103307	Easy	<answer>14484.06</answer>	14484.06	0.0	0	0.8168656826019287
+speed	null	"Convert 100000 km/hs to knots.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	100000.0	53995.7	Easy	<answer>53995.7</answer>	53995.7	0.0	0	0.7990949153900146
+speed	null	"Convert 16.294 m/s to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	16.294	58.658353073317535	Hard	<answer>58.6584</answer>	58.6584	0.0	0	0.7725443840026855
+speed	null	"Convert 582.493 knots to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	582.493	1078.7766433253018	Hard	<answer>1078.7588936778162</answer>	1078.758893677816	0.0	0	0.9532985687255859

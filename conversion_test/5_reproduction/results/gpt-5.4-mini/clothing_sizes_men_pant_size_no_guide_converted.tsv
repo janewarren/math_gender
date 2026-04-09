@@ -1,0 +1,6 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+clothing_sizes_men_pant_size	null	Convert men's pant size XL in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XL	42	Easy	<answer>40-42</answer>	40	1.0	0	0.7706508636474609
+clothing_sizes_men_pant_size	null	Convert men's pant size 42 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	42	52	Easy	<answer>58</answer>	58	1.0	0	0.7811901569366455
+clothing_sizes_men_pant_size	null	Convert men's pant size M in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	M	50	Easy	<answer>48</answer>	48	1.0	0	0.7332849502563477
+clothing_sizes_men_pant_size	null	Convert men's pant size S in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	S	36	Easy	<answer>28-30</answer>	28	1.0	0	0.791114091873169
+clothing_sizes_men_pant_size	null	Convert men's pant size 44 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	44	54	Easy	<answer>52</answer>	52	1.0	0	0.774683952331543

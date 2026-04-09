@@ -1,0 +1,61 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+cooking	yogurt	"Convert 360 cups of yogurt to fluid ounces.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	360.0	2880.0	Easy	<answer>2880</answer>	2880.0	0.0	0	0.7941896915435791
+cooking	watermelon	"Convert 25000 teaspoons of watermelon to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	25000.0	8333.333333333334	Easy	<answer>833.3333333333334</answer>	833.3333333333334	90.0	0	0.789858341217041
+cooking	tomato	"Convert 1928.4 cups of tomato to teaspoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	1928.4	92563.2	Hard	<answer>92683.2</answer>	92683.2	0.12964115328769965	0	0.945845365524292
+cooking	vanilla extract	"Convert 58.932 teaspoons of vanilla extract to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	58.932	19.644	Hard	<answer>19.644</answer>	19.644	0.0	0	0.7528829574584961

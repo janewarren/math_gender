@@ -1,0 +1,1181 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds	model	condition	source_file	is_correct
+bits_bytes		"Convert 25 bits to megabytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	25.0	3.125e-06	Easy	<answer>0.000003125</answer>	3.125e-06	0.0	0	69.01747822761536	gpt-5.4-mini	in_domain_with_guide	bits_bytes_converted.tsv	True
+bits_bytes		"Convert 1500 megabytes to gigabytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	1500.0	1.5	Easy	<answer>1.875</answer>	1.875	25.0	0	3.0236377716064453	gpt-5.4-mini	in_domain_with_guide	bits_bytes_converted.tsv	False
+bits_bytes		"Convert 5.4829 bytes to gigabytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	5.4829	5.4829000000000006e-09	Hard	<answer>6.853625e-10</answer>	6.853625e-10	87.50000000000001	0	0.9617352485656738	gpt-5.4-mini	in_domain_with_guide	bits_bytes_converted.tsv	False
+bits_bytes		"Convert 56.983 bits to megabytes.
+
+Conversion guide:
+Conversion factors (relative to bits):
+  bits: 1.0
+  bytes: 0.125
+  gigabits: 1e-09
+  gigabytes: 1.25e-10
+  kilobits: 0.001
+  kilobytes: 0.000125
+  megabits: 1e-06
+  megabytes: 1.25e-07
+
+Provide only the numerical value."	56.983	7.122874999999999e-06	Hard	<answer>7.122875e-06</answer>	7.122875e-06	0.0	0	1.0085325241088867	gpt-5.4-mini	in_domain_with_guide	bits_bytes_converted.tsv	True
+bits_bytes		what is 9000*0.001	9000.0	9.0	Easy	<answer>9</answer>	9.0	0.0	0	2.3180923461914062	gpt-5.4-mini	math_only	bits_bytes_math_only_converted.tsv	True
+bits_bytes		what is 75*1.250000e-07	75.0	9.375e-06	Easy	<answer>9.375e-06</answer>	9.375e-06	0.0	0	0.9939837455749512	gpt-5.4-mini	math_only	bits_bytes_math_only_converted.tsv	True
+bits_bytes		what is 49.281*1.000000e-09	49.281	4.9281e-08	Hard	<answer>4.9281e-08</answer>	4.9281e-08	0.0	0	0.9772095680236816	gpt-5.4-mini	math_only	bits_bytes_math_only_converted.tsv	True
+bits_bytes		what is 8492.5*0.001	8492.5	8.4925	Hard	<answer>8.4925</answer>	8.4925	0.0	0	0.795332670211792	gpt-5.4-mini	math_only	bits_bytes_math_only_converted.tsv	True
+bits_bytes		Convert 300 bits to megabytes. Provide only the numerical value.	300.0	3.75e-05	Easy	<answer>0.0000375</answer>	3.75e-05	0.0	0	1.9949982166290283	gpt-5.4-mini	in_domain_no_guide	bits_bytes_no_guide_converted.tsv	True
+bits_bytes		Convert 320 bytes to gigabytes. Provide only the numerical value.	320.0	3.2e-07	Easy	<answer>3.2e-7</answer>	3.2e-07	0.0	0	0.7995200157165527	gpt-5.4-mini	in_domain_no_guide	bits_bytes_no_guide_converted.tsv	True
+bits_bytes		Convert 11.235 kilobits to bits. Provide only the numerical value.	11.235	11235.0	Hard	<answer>11235</answer>	11235.0	0.0	0	0.905750036239624	gpt-5.4-mini	in_domain_no_guide	bits_bytes_no_guide_converted.tsv	True
+bits_bytes		Convert 8.8541 bits to bytes. Provide only the numerical value.	8.8541	1.1067625	Hard	<answer>1.1067625</answer>	1.1067625	0.0	0	1.02107834815979	gpt-5.4-mini	in_domain_no_guide	bits_bytes_no_guide_converted.tsv	True
+clothing_size		"Convert men's pant size S in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	S	36	Easy	<answer>36</answer>	36	0.0	0	1.2498469352722168	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_pant_size_converted.tsv	True
+clothing_size		"Convert men's pant size 34 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	34	44	Easy	<answer>44</answer>	44	0.0	0	0.8363125324249268	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_pant_size_converted.tsv	True
+clothing_size		"Convert men's pant size 38 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  34 → 44
+  36 → 46
+  38 → 48
+  40 → 50
+  42 → 52
+  44 → 54
+  46 → 56
+
+Provide only the size and nothing else."	38	48	Easy	<answer>48</answer>	48	0.0	0	0.7743828296661377	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_pant_size_converted.tsv	True
+clothing_size		"Convert men's pant size XXXL in US alphanumeric to US numeric sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to US numeric):
+  L → 40
+  M → 38
+  S → 36
+  XL → 42
+  XS → 34
+  XXL → 44
+  XXXL → 46
+
+Provide only the size and nothing else."	XXXL	46	Easy	<answer>46</answer>	46	0.0	0	0.8267867565155029	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_pant_size_converted.tsv	True
+clothing_size		"Convert men's pant size S in US alphanumeric to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric to Italy):
+  L → 52
+  M → 50
+  S → 48
+  XL → 54
+  XS → 46
+  XXL → 56
+  XXXL → 58
+
+Provide only the size and nothing else."	S	48	Easy	<answer>48</answer>	48	0.0	0	0.76670241355896	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_pant_size_converted.tsv	True
+clothing_size		Convert men's pant size XL in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XL	42	Easy	<answer>40-42</answer>	40	1.0	0	0.7706508636474609	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert men's pant size 42 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	42	52	Easy	<answer>58</answer>	58	1.0	0	0.7811901569366455	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert men's pant size M in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	M	50	Easy	<answer>48</answer>	48	1.0	0	0.7332849502563477	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert men's pant size S in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	S	36	Easy	<answer>28-30</answer>	28	1.0	0	0.791114091873169	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert men's pant size 44 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	44	54	Easy	<answer>52</answer>	52	1.0	0	0.774683952331543	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_pant_size_no_guide_converted.tsv	False
+clothing_size		"Convert men's shoe size 7.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  6 → 38
+  6.5 → 38.5
+  7 → 39
+  7.5 → 40
+  8 → 41
+  8.5 → 42
+  9 → 43
+  9.5 → 43.25
+  10 → 43.5
+  10.5 → 44
+  11 → 44.5
+  11.5 → 45
+  12 → 46
+  12.5 → 46.5
+  13 → 47
+  14 → 48.5
+
+Provide only the size and nothing else."	7.5	40.0	Easy	<answer>40</answer>	40.0	0.0	0	0.7315106391906738	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_shoe_size_converted.tsv	True
+clothing_size		"Convert men's shoe size 12.5 in US to EUR sizing.
+
+Conversion guide:
+Size conversion table (US to EUR):
+  6 → 38
+  6.5 → 38.5
+  7 → 39
+  7.5 → 40
+  8 → 41
+  8.5 → 42
+  9 → 43
+  9.5 → 43.25
+  10 → 43.5
+  10.5 → 44
+  11 → 44.5
+  11.5 → 45
+  12 → 46
+  12.5 → 46.5
+  13 → 47
+  14 → 48.5
+
+Provide only the size and nothing else."	12.5	46.5	Easy	<answer>46.5</answer>	46.5	0.0	0	0.7165513038635254	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_shoe_size_converted.tsv	True
+clothing_size		"Convert men's shoe size 7 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  6 → 23.5
+  6.5 → 24
+  7 → 24.5
+  7.5 → 25
+  8 → 25.5
+  8.5 → 26
+  9 → 27
+  9.5 → 27.25
+  10 → 27.5
+  10.5 → 28
+  11 → 28.5
+  11.5 → 29
+  12 → 29.5
+  12.5 → 30
+  13 → 30.5
+  13.5 → 31
+  14 → 31.5
+
+Provide only the size and nothing else."	7.0	24.5	Easy	<answer>24.5</answer>	24.5	0.0	0	0.7311198711395264	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_shoe_size_converted.tsv	True
+clothing_size		"Convert men's shoe size 10.5 in US to UK sizing.
+
+Conversion guide:
+Size conversion table (US to UK):
+  6 → 5.5
+  6.5 → 6
+  7 → 6.5
+  7.5 → 7
+  8 → 7.5
+  8.5 → 8
+  9 → 8.5
+  9.5 → 9
+  10 → 9.5
+  10.5 → 10
+  11 → 10.5
+  11.5 → 11
+  12 → 11.5
+  12.5 → 12
+  13 → 12.5
+  14 → 13.5
+
+Provide only the size and nothing else."	10.5	10.0	Easy	<answer>10</answer>	10.0	0.0	0	0.626532793045044	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_shoe_size_converted.tsv	True
+clothing_size		"Convert men's shoe size 11.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  6 → 24.5
+  6.5 → 25
+  7 → 25.5
+  7.5 → 26
+  8 → 26.5
+  8.5 → 27
+  9 → 27.5
+  9.5 → 28
+  10 → 28.5
+  10.5 → 29
+  11 → 29.5
+  11.5 → 30
+  12 → 30.5
+  12.5 → 31
+  13 → 31.5
+  13.5 → 32
+  14 → 32.5
+
+Provide only the size and nothing else."	11.5	30.0	Easy	<answer>30</answer>	30.0	0.0	0	0.8290860652923584	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_men_shoe_size_converted.tsv	True
+clothing_size		Convert men's shoe size 6 in US to Mexico sizing. Provide only the size and nothing else.	6.0	24.5	Easy	<answer>5</answer>	5.0	1.0	0	0.8541998863220215	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert men's shoe size 12.5 in US to Japan sizing. Provide only the size and nothing else.	12.5	30.0	Easy	<answer>30.5</answer>	30.5	1.0	0	0.7337665557861328	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert men's shoe size 14 in US to UK sizing. Provide only the size and nothing else.	14.0	13.5	Easy	<answer>13</answer>	13.0	1.0	0	0.752993106842041	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert men's shoe size 7 in US to EUR sizing. Provide only the size and nothing else.	7.0	39.0	Easy	<answer>40</answer>	40.0	1.0	0	0.7020015716552734	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert men's shoe size 12.5 in US to Mexico sizing. Provide only the size and nothing else.	12.5	31.0	Easy	<answer>30.5</answer>	30.5	1.0	0	0.8047921657562256	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_men_shoe_size_no_guide_converted.tsv	False
+clothing_size		"Convert women's bra size 38A in UK to Italy sizing.
+
+Conversion guide:
+Size conversion table (UK to Italy):
+  32A → 1A
+  32B → 1B
+  32C → 1C
+  32D → 1D
+  34A → 2A
+  34B → 2B
+  34C → 2C
+  34D → 2D
+  36A → 3A
+  36B → 3B
+  36C → 3C
+  36D → 3D
+  38A → 4A
+  38B → 4B
+  38C → 4C
+  38D → 4D
+
+Provide only the size and nothing else."	38A	4A	Easy	<answer>4A</answer>	4A	0.0	0	0.7422821521759033	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_bra_size_converted.tsv	True
+clothing_size		"Convert women's bra size 34A in UK to EUR sizing.
+
+Conversion guide:
+Size conversion table (UK to EUR):
+  32A → 70A
+  32B → 70B
+  32C → 70C
+  32D → 70D
+  34A → 75A
+  34B → 75B
+  34C → 75C
+  34D → 75D
+  36A → 80A
+  36B → 80B
+  36C → 80C
+  36D → 80D
+  38A → 85A
+  38B → 85B
+  38C → 85C
+  38D → 85D
+
+Provide only the size and nothing else."	34A	75A	Easy	<answer>75A</answer>	75A	0.0	0	0.610938310623169	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_bra_size_converted.tsv	True
+clothing_size		"Convert women's bra size 38C in UK to Australia sizing.
+
+Conversion guide:
+Size conversion table (UK to Australia):
+  32A → 10A
+  32B → 10B
+  32C → 10C
+  32D → 10D
+  34A → 12A
+  34B → 12B
+  34C → 12C
+  34D → 12D
+  36A → 14A
+  36B → 14B
+  36C → 14C
+  36D → 14D
+  38A → 16A
+  38B → 16B
+  38C → 16C
+  38D → 16D
+
+Provide only the size and nothing else."	38C	16C	Easy	<answer>16C</answer>	16C	0.0	0	0.9267890453338624	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_bra_size_converted.tsv	True
+clothing_size		"Convert women's bra size 32A in UK to Japan sizing.
+
+Conversion guide:
+Size conversion table (UK to Japan):
+  32A → 70B
+  32B → 70C
+  32C → 70D
+  32D → 70E
+  34A → 75B
+  34B → 75C
+  34C → 75D
+  34D → 75E
+  36A → 80B
+  36B → 80C
+  36C → 80D
+  36D → 80E
+  38A → 85B
+  38B → 85C
+  38C → 85D
+  38D → 85E
+
+Provide only the size and nothing else."	32A	70B	Easy	<answer>70B</answer>	70B	0.0	0	0.7901315689086914	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_bra_size_converted.tsv	True
+clothing_size		"Convert women's bra size 38D in UK to Italy sizing.
+
+Conversion guide:
+Size conversion table (UK to Italy):
+  32A → 1A
+  32B → 1B
+  32C → 1C
+  32D → 1D
+  34A → 2A
+  34B → 2B
+  34C → 2C
+  34D → 2D
+  36A → 3A
+  36B → 3B
+  36C → 3C
+  36D → 3D
+  38A → 4A
+  38B → 4B
+  38C → 4C
+  38D → 4D
+
+Provide only the size and nothing else."	38D	4D	Easy	<answer>4D</answer>	4D	0.0	0	0.7282209396362305	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_bra_size_converted.tsv	True
+clothing_size		Convert women's bra size 34C in UK to Australia sizing. Provide only the size and nothing else.	34C	12C	Easy	<answer>12C</answer>	12C	0.0	0	0.8884942531585693	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_bra_size_no_guide_converted.tsv	True
+clothing_size		Convert women's bra size 34A in UK to US sizing. Provide only the size and nothing else.	34A	34AA	Easy	<answer>34A</answer>	34A	1.0	0	0.7737090587615967	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_bra_size_no_guide_converted.tsv	False
+clothing_size		Convert women's bra size 36B in UK to France sizing. Provide only the size and nothing else.	36B	95B	Easy	<answer>90B</answer>	90B	1.0	0	0.7677013874053955	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_bra_size_no_guide_converted.tsv	False
+clothing_size		Convert women's bra size 32C in UK to Italy sizing. Provide only the size and nothing else.	32C	1C	Easy	<answer>3C</answer>	3C	1.0	0	1.9872353076934812	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_bra_size_no_guide_converted.tsv	False
+clothing_size		Convert women's bra size 34D in UK to Italy sizing. Provide only the size and nothing else.	34D	2D	Easy	<answer>4D</answer>	4D	1.0	0	0.7430088520050049	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_bra_size_no_guide_converted.tsv	False
+clothing_size		"Convert women's pant size 12 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	12	44	Easy	<answer>44</answer>	44	0.0	0	0.7342047691345215	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_pant_size_converted.tsv	True
+clothing_size		"Convert women's pant size 12 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	12	44	Easy	<answer>44</answer>	44	0.0	0	0.7204194068908691	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_pant_size_converted.tsv	True
+clothing_size		"Convert women's pant size 2 in US numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (US numeric to EU numeric):
+  0 → 32
+  2 → 34
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+  18 → 50
+
+Provide only the size and nothing else."	2	34	Easy	<answer>34</answer>	34	0.0	0	0.712233304977417	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_pant_size_converted.tsv	True
+clothing_size		"Convert women's pant size 6 in UK numeric to EU numeric sizing.
+
+Conversion guide:
+Size conversion table (UK numeric to EU numeric):
+  4 → 36
+  6 → 38
+  8 → 40
+  10 → 42
+  12 → 44
+  14 → 46
+  16 → 48
+
+Provide only the size and nothing else."	6	38	Easy	<answer>38</answer>	38	0.0	0	0.7294418811798096	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_pant_size_converted.tsv	True
+clothing_size		"Convert women's pant size XXXL in US alphanumeric (0-18) to Italy sizing.
+
+Conversion guide:
+Size conversion table (US alphanumeric (0-18) to Italy):
+  (Two-step conversion: US alphanumeric (0-18) → US numeric → Italy)
+  L → 48
+  M → 44
+  S → 40
+  XL → 50
+  XS → 36
+  XXL → 52
+  XXXL → 54
+
+Provide only the size and nothing else."	XXXL	54	Easy	<answer>54</answer>	54	0.0	0	0.7096579074859619	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_pant_size_converted.tsv	True
+clothing_size		Convert women's pant size XXXL in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	XXXL	54	Easy	<answer>52</answer>	52	1.0	0	0.7528157234191895	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert women's pant size 16 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	16	48	Easy	<answer>44</answer>	44	1.0	0	0.7194044589996338	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert women's pant size 10 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	10	42	Easy	<answer>38</answer>	38	1.0	0	0.6961097717285156	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_pant_size_no_guide_converted.tsv	False
+clothing_size		Convert women's pant size M in US alphanumeric (0-18) to Italy sizing. Provide only the size and nothing else.	M	44	Easy	<answer>44</answer>	44	0.0	0	0.7367010116577148	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_pant_size_no_guide_converted.tsv	True
+clothing_size		Convert women's pant size 18 in US numeric to EU numeric sizing. Provide only the size and nothing else.	18	50	Easy	<answer>48</answer>	48	1.0	0	0.9569902420043944	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_pant_size_no_guide_converted.tsv	False
+clothing_size		"Convert women's shoe size 28.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	28.5	42.5	Easy	<answer>42.5</answer>	42.5	0.0	0	1.4654695987701416	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_shoe_size_converted.tsv	True
+clothing_size		"Convert women's shoe size 8.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	8.5	24.5	Easy	<answer>24.5</answer>	24.5	0.0	0	0.7524504661560059	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_shoe_size_converted.tsv	True
+clothing_size		"Convert women's shoe size 10 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	10.0	26.0	Easy	<answer>26</answer>	26.0	0.0	0	0.8722803592681885	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_shoe_size_converted.tsv	True
+clothing_size		"Convert women's shoe size 6.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	6.5	22.5	Easy	<answer>22.5</answer>	22.5	0.0	0	0.7415773868560791	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_shoe_size_converted.tsv	True
+clothing_size		"Convert women's shoe size 6.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	6.5	23.5	Easy	<answer>23.5</answer>	23.5	0.0	0	0.6730654239654541	gpt-5.4-mini	in_domain_with_guide	clothing_sizes_women_shoe_size_converted.tsv	True
+clothing_size		Convert women's shoe size 45 in EUR to Japan sizing. Provide only the size and nothing else.	45.0	29.0	Easy	<answer>29.5</answer>	29.5	1.0	0	0.7220535278320312	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert women's shoe size 7 in US to Mexico sizing. Provide only the size and nothing else.	7.0	25.0	Easy	<answer>4.5</answer>	4.5	1.0	0	0.666435718536377	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert women's shoe size 6.5 in US to EUR sizing. Provide only the size and nothing else.	6.5	37.0	Easy	<answer>37.5</answer>	37.5	1.0	0	0.9356656074523926	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_shoe_size_no_guide_converted.tsv	False
+clothing_size		Convert women's shoe size 7.5 in US to Mexico sizing. Provide only the size and nothing else.	7.5	24.5	Easy	<answer>24.5</answer>	24.5	0.0	0	0.8344953060150146	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_shoe_size_no_guide_converted.tsv	True
+clothing_size		Convert women's shoe size 43.5 in EUR to Japan sizing. Provide only the size and nothing else.	43.5	27.5	Easy	<answer>27.5</answer>	27.5	0.0	0	0.7697842121124268	gpt-5.4-mini	in_domain_no_guide	clothing_sizes_women_shoe_size_no_guide_converted.tsv	True
+cooking	yogurt	"Convert 360 cups of yogurt to fluid ounces.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	360.0	2880.0	Easy	<answer>2880</answer>	2880.0	0.0	0	0.7941896915435791	gpt-5.4-mini	in_domain_with_guide	cooking_converted.tsv	True
+cooking	watermelon	"Convert 25000 teaspoons of watermelon to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	25000.0	8333.333333333334	Easy	<answer>833.3333333333334</answer>	833.3333333333334	90.0	0	0.789858341217041	gpt-5.4-mini	in_domain_with_guide	cooking_converted.tsv	False
+cooking	tomato	"Convert 1928.4 cups of tomato to teaspoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	1928.4	92563.2	Hard	<answer>92683.2</answer>	92683.2	0.1296411532876996	0	0.945845365524292	gpt-5.4-mini	in_domain_with_guide	cooking_converted.tsv	False
+cooking	vanilla extract	"Convert 58.932 teaspoons of vanilla extract to tablespoons.
+
+Conversion guide:
+Conversion factors (relative to cups):
+  cups: 1.0
+  fluid_ounces: 8.0
+  gallons: 0.0625
+  liters: 0.236588
+  milliliters: 236.588
+  pints: 0.5
+  quarts: 0.25
+  tablespoons: 16.0
+  teaspoons: 48.0
+
+Provide only the numerical value."	58.932	19.644	Hard	<answer>19.644</answer>	19.644	0.0	0	0.7528829574584961	gpt-5.4-mini	in_domain_with_guide	cooking_converted.tsv	True
+cooking		what is 110*8	110.0	880.0	Easy	<answer>880</answer>	880.0	0.0	0	0.6320650577545166	gpt-5.4-mini	math_only	cooking_math_only_converted.tsv	True
+cooking		what is 360*48	360.0	17280.0	Easy	<answer>17280</answer>	17280.0	0.0	0	0.7104403972625732	gpt-5.4-mini	math_only	cooking_math_only_converted.tsv	True
+cooking		what is 14.142*8	14.142	113.136	Hard	<answer>113.136</answer>	113.136	0.0	0	0.769550085067749	gpt-5.4-mini	math_only	cooking_math_only_converted.tsv	True
+cooking		what is 6.626*236.588	6.626	1567.632088	Hard	<answer>1568.324088</answer>	1568.324088	0.0	0	0.7880234718322754	gpt-5.4-mini	math_only	cooking_math_only_converted.tsv	True
+cooking		Convert 200 cups to milliliters. Provide only the numerical value.	200.0	47317.6	Easy	<answer>47317.6</answer>	47317.6	0.0	0	0.8199806213378906	gpt-5.4-mini	in_domain_no_guide	cooking_no_guide_converted.tsv	True
+cooking	milk	Convert 22 cups of milk to teaspoons. Provide only the numerical value.	22.0	1056.0	Easy	<answer>1056</answer>	1056.0	0.0	0	0.9563069343566896	gpt-5.4-mini	in_domain_no_guide	cooking_no_guide_converted.tsv	True
+cooking	yogurt	Convert 49.281 cups of yogurt to milliliters. Provide only the numerical value.	49.281	11659.293228	Hard	<answer>1164.586</answer>	1164.586	90.01152147710613	0	1.1407382488250732	gpt-5.4-mini	in_domain_no_guide	cooking_no_guide_converted.tsv	False
+cooking	milk	Convert 0.00482 cups of milk to milliliters. Provide only the numerical value.	0.00482	1.1403541599999998	Hard	<answer>1.1373</answer>	1.1373	0.2678255674535187	0	0.70912766456604	gpt-5.4-mini	in_domain_no_guide	cooking_no_guide_converted.tsv	False
+currency		"Convert 180 CHF to CNH.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	180.0	1601.5384615384617	Easy	<answer>14.036023054755043</answer>	14.036023054755043	99.12359125978956	0	0.8522119522094727	gpt-5.4-mini	in_domain_with_guide	currency_converted.tsv	False
+currency		"Convert 1200 JPY to GBP.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	1200.0	5.633440514469453	Easy	<answer>5.63</answer>	5.63	0.0	0	0.6394352912902832	gpt-5.4-mini	in_domain_with_guide	currency_converted.tsv	True
+currency		"Convert 48.291 VND to IDR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	48.291	31.11642564619722	Hard	<answer>31.11445027106137</answer>	31.11445027106137	0.0	0	0.8413872718811035	gpt-5.4-mini	in_domain_with_guide	currency_converted.tsv	True
+currency		"Convert 1.732 LAK to IRR.
+
+Conversion guide:
+Exchange rates (relative to USD):
+  GBP: 0.73
+  CHF: 0.78
+  EUR: 0.85
+  USD: 1.0
+  CAD: 1.37
+  AUD: 1.44
+  CNH: 6.94
+  SLL: 24.48
+  JPY: 155.5
+  GNF: 8751.0
+  UZS: 12250.0
+  IDR: 16766.0
+  LAK: 21495.0
+  VND: 26019.92
+  LBP: 85550.0
+  IRR: 1189712.0
+
+Provide only the numerical value."	1.732	95.86327908816004	Hard	<answer>95842.676</answer>	95842.676	99878.50784121302	0	2.333348512649536	gpt-5.4-mini	in_domain_with_guide	currency_converted.tsv	False
+currency		what is 900*0.9176470588	900.0	825.8823529411765	Easy	<answer>825.88235292</answer>	825.88235292	0.0	0	0.7923145294189453	gpt-5.4-mini	math_only	currency_math_only_converted.tsv	True
+currency		what is 260*9.7760255971	260.0	2541.766655239401	Easy	<answer>2547.766655246</answer>	2547.766655246	0.236056287630924	0	1.0643253326416016	gpt-5.4-mini	math_only	currency_math_only_converted.tsv	False
+currency		what is 56.983*13.9066277031	56.983	792.4413664056107	Hard	<answer>792.5842246759623</answer>	792.5842246759623	0.0	0	0.6773343086242676	gpt-5.4-mini	math_only	currency_math_only_converted.tsv	True
+currency		what is 6.2831*2.4562907096	6.2831	15.433120157696264	Hard	<answer>15.4401049207</answer>	15.4401049207	0.0	0	2.233276128768921	gpt-5.4-mini	math_only	currency_math_only_converted.tsv	True
+currency		Convert 75 CAD to USD. Provide only the numerical value.	75.0	54.74452554744525	Easy	<answer>55.5</answer>	55.5	1.380000000000011	0	2.009849071502685	gpt-5.4-mini	in_domain_no_guide	currency_no_guide_converted.tsv	False
+currency		Convert 6000 AUD to USD. Provide only the numerical value.	6000.0	4166.666666666667	Easy	<answer>3900</answer>	3900.0	6.400000000000008	0	0.8652670383453369	gpt-5.4-mini	in_domain_no_guide	currency_no_guide_converted.tsv	False
+currency		Convert 0.1234 SLL to LBP. Provide only the numerical value.	0.1234	431.2446895424837	Hard	<answer>554.3</answer>	554.3	28.5349161257077	0	0.8717761039733887	gpt-5.4-mini	in_domain_no_guide	currency_no_guide_converted.tsv	False
+currency		Convert 365.24 LBP to IRR. Provide only the numerical value.	365.24	5079.256702279369	Hard	<answer>172529.88</answer>	172529.88	3296.7544881631093	0	0.7758910655975342	gpt-5.4-mini	in_domain_no_guide	currency_no_guide_converted.tsv	False
+density	matcha latte	"Convert 10 g/cm³s of matcha latte to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	10.0	10000.0	Easy	<answer>10000</answer>	10000.0	0.0	0	0.6471056938171387	gpt-5.4-mini	in_domain_with_guide	density_converted.tsv	True
+density	ethanol	"Convert 320 kg/m³s of ethanol to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	320.0	0.32	Easy	<answer>0.32</answer>	0.32	0.0	0	0.8172669410705566	gpt-5.4-mini	in_domain_with_guide	density_converted.tsv	True
+density	californium	"Convert 5.2941 kg/m³s of californium to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	5.2941	0.0052941	Hard	<answer>0.0052941</answer>	0.0052941	0.0	0	0.6545987129211426	gpt-5.4-mini	in_domain_with_guide	density_converted.tsv	True
+density	astatine	"Convert 0.1234 g/cm³s of astatine to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	0.1234	123.4	Hard	<answer>123.4</answer>	123.4	0.0	0	0.7573764324188232	gpt-5.4-mini	in_domain_with_guide	density_converted.tsv	True
+density		what is 950*2.767990e+04	950.0	26295909.47475388	Easy	<answer>26295905</answer>	26295905.0	0.0	0	1.0526556968688965	gpt-5.4-mini	math_only	density_math_only_converted.tsv	True
+density		what is 10*1000	10.0	10000.0	Easy	<answer>10000</answer>	10000.0	0.0	0	0.7167584896087646	gpt-5.4-mini	math_only	density_math_only_converted.tsv	True
+density		what is 273.15*1000	273.15	273150.0	Hard	<answer>273150</answer>	273150.0	0.0	0	0.6773433685302734	gpt-5.4-mini	math_only	density_math_only_converted.tsv	True
+density		what is 8492.5*0.016018463	8492.5	136.03679710063255	Hard	<answer>135.99929395</answer>	135.99929395	0.0	0	0.9229321479797364	gpt-5.4-mini	math_only	density_math_only_converted.tsv	True
+density	carbon dioxide	Convert 99 g/cm³s of carbon dioxide to kg/m³s. Provide only the numerical value.	99.0	99000.0	Easy	<answer>99000</answer>	99000.0	0.0	0	0.7679238319396973	gpt-5.4-mini	in_domain_no_guide	density_no_guide_converted.tsv	True
+density	bubble gum	Convert 400 kg/m³s of bubble gum to lb/in³s. Provide only the numerical value.	400.0	0.0144509168	Easy	<answer>0.000144471</answer>	0.000144471	99.00026412165074	0	0.9434216022491456	gpt-5.4-mini	in_domain_no_guide	density_no_guide_converted.tsv	False
+density	glucose	Convert 763.9 g/cm³s of glucose to lb/ft³s. Provide only the numerical value.	763.9	47688.7201718	Hard	<answer>47.6875</answer>	47.6875	99.9000025586172	0	0.6854307651519775	gpt-5.4-mini	in_domain_no_guide	density_no_guide_converted.tsv	False
+density	gasoline	Convert 11.235 kg/m³s of gasoline to g/cm³s. Provide only the numerical value.	11.235	0.011235	Hard	<answer>0.011235</answer>	0.011235	0.0	0	0.6899588108062744	gpt-5.4-mini	in_domain_no_guide	density_no_guide_converted.tsv	True
+energy	butter	"Convert 500 watt-hours of butter to joules.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	500.0	1800003.441689181	Easy	<answer>1800000</answer>	1800000.0	0.0	0	0.7095847129821777	gpt-5.4-mini	in_domain_with_guide	energy_converted.tsv	True
+energy	candy	"Convert 80 BTUs of candy to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	80.0	0.0234456220512548	Easy	<answer>0.0929776</answer>	0.0929776	296.5670000000016	0	0.7711050510406494	gpt-5.4-mini	in_domain_with_guide	energy_converted.tsv	False
+energy	honey	"Convert 6743.02 kilocalories of honey to kilojoules.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	6743.02	28212.795680000003	Hard	<answer>28207.75688</answer>	28207.75688	0.0	0	0.6834700107574463	gpt-5.4-mini	in_domain_with_guide	energy_converted.tsv	True
+energy	butter	"Convert 127.42 BTUs of butter to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	127.42	0.0373430145221362	Hard	<answer>0.03733826548</answer>	0.03733826548	0.0	0	0.942742109298706	gpt-5.4-mini	in_domain_with_guide	energy_converted.tsv	True
+energy		what is 100000*3.412151e+03	100000.0	341215088.3653697	Easy	<answer>341215100</answer>	341215100.0	0.0	0	0.7282993793487549	gpt-5.4-mini	math_only	energy_math_only_converted.tsv	True
+energy		what is 10*2.777772e-04	10.0	0.0027777724665391	Easy	<answer>0.002777772</answer>	0.002777772	0.0	0	0.7793068885803223	gpt-5.4-mini	math_only	energy_math_only_converted.tsv	True
+energy		what is 1.618*4.184	1.618	6.769712	Hard	<answer>6.769392</answer>	6.769392	0.0	0	0.7358779907226562	gpt-5.4-mini	math_only	energy_math_only_converted.tsv	True
+energy		what is 5.4829*0.2390057361	5.4829	1.310444550669216	Hard	<answer>1.31081755223169</answer>	1.31081755223169	0.0	0	0.8150994777679443	gpt-5.4-mini	math_only	energy_math_only_converted.tsv	True
+energy	apples	Convert 12 BTUs of apples to kilowatt-hours. Provide only the numerical value.	12.0	0.0035168433076882	Easy	<answer>0.0035168528420667</answer>	0.0035168528420667	0.0	0	0.8533980846405029	gpt-5.4-mini	in_domain_no_guide	energy_no_guide_converted.tsv	True
+energy	lettuce	Convert 70 watt-hours of lettuce to joules. Provide only the numerical value.	70.0	252000.48183648536	Easy	<answer>252000</answer>	252000.0	0.0	0	0.9625353813171388	gpt-5.4-mini	in_domain_no_guide	energy_no_guide_converted.tsv	True
+energy	chocolate	Convert 1297.195 joules of chocolate to watt-hours. Provide only the numerical value.	1297.195	0.3603312554732313	Hard	<answer>0.360332</answer>	0.360332	0.0	0	0.9610869884490968	gpt-5.4-mini	in_domain_no_guide	energy_no_guide_converted.tsv	True
+energy	milk	Convert 6743.02 calories of milk to joules. Provide only the numerical value.	6743.02	28212.795680000003	Hard	<answer>28209.5768</answer>	28209.5768	0.0	0	0.7072453498840332	gpt-5.4-mini	in_domain_no_guide	energy_no_guide_converted.tsv	True
+moles_to_particles	vomitoxin	"Convert 275 moles of vomitoxin to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	275.0	1.656088709e+26	Easy	<answer>1.656088209e+26</answer>	1.656088209e+26	0.0	0	0.8459699153900146	gpt-5.4-mini	in_domain_with_guide	moles_to_particles_converted.tsv	True
+moles_to_particles	metallic hydrogen	"Convert 4000 moles of metallic hydrogen to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	4000.0	2.408856304e+27	Easy	<answer>2.408856304e+27</answer>	2.408856304e+27	0.0	0	0.808243989944458	gpt-5.4-mini	in_domain_with_guide	moles_to_particles_converted.tsv	True
+moles_to_particles	californium	"Convert 0.0039 moles of californium to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	0.0039	2.3486348964e+21	Hard	<answer>2.3486346939999998e+21</answer>	2.348634694e+21	0.0	0	0.8444163799285889	gpt-5.4-mini	in_domain_with_guide	moles_to_particles_converted.tsv	True
+moles_to_particles	carbon dioxide	"Convert 638.29 moles of carbon dioxide to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	638.29	3.8438722257004e+26	Hard	<answer>3.843392567204e+26</answer>	3.843392567204e+26	0.0	0	0.8310873508453369	gpt-5.4-mini	in_domain_with_guide	moles_to_particles_converted.tsv	True
+moles_to_particles		what is 240*6.022141e+23	240.0	1.4453137824e+26	Easy	<answer>1.445314e+26</answer>	1.445314e+26	0.0	0	0.8735811710357666	gpt-5.4-mini	math_only	moles_to_particles_math_only_converted.tsv	True
+moles_to_particles		what is 28*6.022141e+23	28.0	1.6861994128e+25	Easy	<answer>1.68619948e+25</answer>	1.68619948e+25	0.0	0	0.9329655170440674	gpt-5.4-mini	math_only	moles_to_particles_math_only_converted.tsv	True
+moles_to_particles		what is 1.618*6.022141e+23	1.618	9.74382374968e+23	Hard	<answer>9.739259097658e+23</answer>	9.739259097658e+23	0.0	0	0.9076228141784668	gpt-5.4-mini	math_only	moles_to_particles_math_only_converted.tsv	True
+moles_to_particles		what is 134.79*6.022141e+23	134.79	8.117243530404e+25	Hard	<answer>8.11603307579e+25</answer>	8.11603307579e+25	0.0	0	0.8187198638916016	gpt-5.4-mini	math_only	moles_to_particles_math_only_converted.tsv	True
+moles_to_particles	matcha latte	Convert 22 moles of matcha latte to particles. Provide only the numerical value.	22.0	1.3248709672e+25	Easy	<answer>1.324e25</answer>	1.324e+25	0.0	0	0.8391730785369873	gpt-5.4-mini	in_domain_no_guide	moles_to_particles_no_guide_converted.tsv	True
+moles_to_particles	snake venom	Convert 1 mole of snake venom to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	<answer>6.02214076e23</answer>	6.02214076e+23	0.0	0	0.8445346355438232	gpt-5.4-mini	in_domain_no_guide	moles_to_particles_no_guide_converted.tsv	True
+moles_to_particles	aerogel	Convert 104.83 moles of aerogel to particles. Provide only the numerical value.	104.83	6.313010158708e+25	Hard	<answer>6.31051006e+25</answer>	6.31051006e+25	0.0	0	0.8889799118041992	gpt-5.4-mini	in_domain_no_guide	moles_to_particles_no_guide_converted.tsv	True
+moles_to_particles	coffee	Convert 9.9284 moles of coffee to particles. Provide only the numerical value.	9.9284	5.9790222321584e+24	Hard	<answer>5.9768008e+24</answer>	5.9768008e+24	0.0	0	0.8269612789154053	gpt-5.4-mini	in_domain_no_guide	moles_to_particles_no_guide_converted.tsv	True
+speed		"Convert 9000 mphs to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	9000.0	14484.10048103307	Easy	<answer>14484.06</answer>	14484.06	0.0	0	0.8168656826019287	gpt-5.4-mini	in_domain_with_guide	speed_converted.tsv	True
+speed		"Convert 100000 km/hs to knots.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	100000.0	53995.7	Easy	<answer>53995.7</answer>	53995.7	0.0	0	0.7990949153900146	gpt-5.4-mini	in_domain_with_guide	speed_converted.tsv	True
+speed		"Convert 16.294 m/s to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	16.294	58.658353073317535	Hard	<answer>58.6584</answer>	58.6584	0.0	0	0.7725443840026855	gpt-5.4-mini	in_domain_with_guide	speed_converted.tsv	True
+speed		"Convert 582.493 knots to km/hs.
+
+Conversion guide:
+Conversion factors (relative to km_h):
+  km_h: 1.0
+  knots: 0.539957
+  m_s: 0.277778
+  mph: 0.621371
+
+Provide only the numerical value."	582.493	1078.7766433253018	Hard	<answer>1078.7588936778162</answer>	1078.758893677816	0.0	0	0.953298568725586	gpt-5.4-mini	in_domain_with_guide	speed_converted.tsv	True
+speed		what is 15*3.59999712	15.0	53.99995680003455	Easy	<answer>53.9999568</answer>	53.9999568	0.0	0	0.8754150867462158	gpt-5.4-mini	math_only	speed_math_only_converted.tsv	True
+speed		what is 72*0.621371	72.0	44.738712	Easy	<answer>44.739</answer>	44.739	0.0	0	0.8013110160827637	gpt-5.4-mini	math_only	speed_math_only_converted.tsv	True
+speed		what is 471.93*0.539957	471.93	254.82190701	Hard	<answer>254.72860901</answer>	254.72860901	0.0	0	1.0043301582336426	gpt-5.4-mini	math_only	speed_math_only_converted.tsv	True
+speed		what is 14.142*3.59999712	14.142	50.91115927107258	Hard	<answer>50.91037609984</answer>	50.91037609984	0.0	0	0.9173915386199952	gpt-5.4-mini	math_only	speed_math_only_converted.tsv	True
+speed		Convert 96 km/hs to mphs. Provide only the numerical value.	96.0	59.651616	Easy	<answer>59.652</answer>	59.652	0.0	0	0.923821210861206	gpt-5.4-mini	in_domain_no_guide	speed_no_guide_converted.tsv	True
+speed		Convert 1000 mphs to km/hs. Provide only the numerical value.	1000.0	1609.3444978925634	Easy	<answer>1609.344</answer>	1609.344	0.0	0	0.749854564666748	gpt-5.4-mini	in_domain_no_guide	speed_no_guide_converted.tsv	True
+speed		Convert 8932.1 mphs to km/hs. Provide only the numerical value.	8932.1	14374.825989626166	Hard	<answer>14372.22944</answer>	14372.22944	0.0	0	0.8278334140777588	gpt-5.4-mini	in_domain_no_guide	speed_no_guide_converted.tsv	True
+speed		Convert 104.83 km/hs to mphs. Provide only the numerical value.	104.83	65.13832193	Hard	<answer>65.1308</answer>	65.1308	0.0	0	0.8243522644042969	gpt-5.4-mini	in_domain_no_guide	speed_no_guide_converted.tsv	True
+temperature		"Convert 2 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	2.0	275.15	Easy	<answer>275.15</answer>	275.15	0.0	0	0.7545688152313232	gpt-5.4-mini	in_domain_with_guide	temperature_converted.tsv	True
+temperature		"Convert 600 Kelvin to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	600.0	326.85	Easy	<answer>326.85</answer>	326.85	0.0	0	0.7422013282775879	gpt-5.4-mini	in_domain_with_guide	temperature_converted.tsv	True
+temperature		"Convert 0.2394 degrees Celsius to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	0.2394	32.43092	Hard	<answer>32.43092</answer>	32.43092	0.0	0	0.7881348133087158	gpt-5.4-mini	in_domain_with_guide	temperature_converted.tsv	True
+temperature		"Convert 6743.02 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	6743.02	7016.17	Hard	<answer>7016.17</answer>	7016.17	0.0	0	0.7251124382019043	gpt-5.4-mini	in_domain_with_guide	temperature_converted.tsv	True
+temperature		what is ((1200-273.15)*9/5)+32	1200.0	1700.33	Easy	<answer>1700.33</answer>	1700.33	0.0	0	0.8134160041809082	gpt-5.4-mini	math_only	temperature_math_only_converted.tsv	True
+temperature		what is ((25000-273.15)*9/5)+32	25000.0	44540.33	Easy	<answer>44880.33</answer>	44880.33	0.7633531228888515	0	0.7841205596923828	gpt-5.4-mini	math_only	temperature_math_only_converted.tsv	False
+temperature		what is (0.0039-32)*5/9	0.0039	-17.77561111111111	Hard	<answer>-17.77327777777778</answer>	-17.77327777777778	0.0	0	0.7242441177368164	gpt-5.4-mini	math_only	temperature_math_only_converted.tsv	True
+temperature		what is (15.932-273.15)	15.932	-257.218	Hard	<answer>-257.218</answer>	-257.218	0.0	0	1.1090946197509766	gpt-5.4-mini	math_only	temperature_math_only_converted.tsv	True
+temperature		Convert 19 Kelvin to degrees Fahrenheit. Provide only the numerical value.	19.0	-425.47	Easy	<answer>-428.47</answer>	-428.47	0.7051025924271981	0	0.7827451229095459	gpt-5.4-mini	in_domain_no_guide	temperature_no_guide_converted.tsv	False
+temperature		Convert 250 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	250.0	482.0	Easy	<answer>482</answer>	482.0	0.0	0	0.7577381134033203	gpt-5.4-mini	in_domain_no_guide	temperature_no_guide_converted.tsv	True
+temperature		Convert 194.82 Kelvin to degrees Celsius. Provide only the numerical value.	194.82	-78.32999999999998	Hard	<answer>-78.33</answer>	-78.33	0.0	0	1.391669750213623	gpt-5.4-mini	in_domain_no_guide	temperature_no_guide_converted.tsv	True
+temperature		Convert 284.93 degrees Celsius to Kelvin. Provide only the numerical value.	284.93	558.0799999999999	Hard	<answer>558.08</answer>	558.08	0.0	0	0.7474040985107422	gpt-5.4-mini	in_domain_no_guide	temperature_no_guide_converted.tsv	True
+timezone		"Convert 11:00 PM in Hilo time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:00 PM	6:00 PM	Easy	<answer>6:00 PM</answer>	6:00PM	0.0	0	1.10198712348938	gpt-5.4-mini	in_domain_with_guide	timezone_converted.tsv	True
+timezone		"Convert 3:00 AM in London time to Tokyo time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:00 AM	12:00 PM	Easy	<answer>12:00PM</answer>	12:00PM	0.0	0	0.736992597579956	gpt-5.4-mini	in_domain_with_guide	timezone_converted.tsv	True
+timezone		"Convert 6:02 PM in Delhi time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:02 PM	7:32 AM	Hard	<answer>8:32 AM</answer>	8:32AM	60.0	0	0.6610875129699707	gpt-5.4-mini	in_domain_with_guide	timezone_converted.tsv	False
+timezone		"Convert 9:19 PM in Noorabad time to Hilo time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9:19 PM	5:49 AM	Hard	<answer>7:49 AM</answer>	7:49AM	120.0	0	0.7504279613494873	gpt-5.4-mini	in_domain_with_guide	timezone_converted.tsv	False
+timezone		what is (22-14.0)%24	10:00 PM	8:00 AM	Easy	<answer>8</answer>	8AM	0.0	0	0.7825930118560791	gpt-5.4-mini	math_only	timezone_math_only_converted.tsv	True
+timezone		what is (12-5.0)%24	12:00 PM	7:00 AM	Easy	<answer>7.0</answer>	7AM	0.0	0	0.886455774307251	gpt-5.4-mini	math_only	timezone_math_only_converted.tsv	True
+timezone		what is (20.4-11.0)%24	8:24 PM	9:24 AM	Hard	<answer>9.4</answer>	9:24AM	0.0	0	0.7501590251922607	gpt-5.4-mini	math_only	timezone_math_only_converted.tsv	True
+timezone		what is (6.3+13.0)%24	6:18 AM	7:18 PM	Hard	<answer>19.3</answer>	7:18PM	0.0	0	0.7392618656158447	gpt-5.4-mini	math_only	timezone_math_only_converted.tsv	True
+timezone		Convert 9:00 PM in Llieda time to Yorba Linda time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9:00 PM	12:00 PM	Easy	<answer>12PM</answer>	12PM	0.0	0	0.794288158416748	gpt-5.4-mini	in_domain_no_guide	timezone_no_guide_converted.tsv	True
+timezone		Convert 2:00 PM in Hilo time to Zhemuzhen time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:00 PM	8:00 AM	Easy	<answer>8:00AM</answer>	8:00AM	0.0	0	0.8106560707092285	gpt-5.4-mini	in_domain_no_guide	timezone_no_guide_converted.tsv	True
+timezone		Convert 12:22 PM in London time to Istanbul time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12:22 PM	3:22 PM	Hard	<answer>3:22PM</answer>	3:22PM	0.0	0	0.8794808387756348	gpt-5.4-mini	in_domain_no_guide	timezone_no_guide_converted.tsv	True
+timezone		Convert 2:14 PM in Kafue time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:14 PM	5:44 PM	Hard	<answer>1:14 PM</answer>	1:14PM	270.0	0	2.055353879928589	gpt-5.4-mini	in_domain_no_guide	timezone_no_guide_converted.tsv	False
+volume	californium	"Convert 180 gallons of californium to ounces.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	180	23040.00476961979	Easy	<answer>23040.036</answer>	23040.036	0.0	0	2.4563963413238525	gpt-5.4-mini	in_domain_with_guide	volume_converted.tsv	True
+volume	basketane	"Convert 3 liters of basketane to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	3	3000.0	Easy	<answer>3000</answer>	3000.0	0.0	0	0.8697102069854736	gpt-5.4-mini	in_domain_with_guide	volume_converted.tsv	True
+volume	nitrogen	"Convert 60 liters of nitrogen to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	60	60000.0	Easy	<answer>60000</answer>	60000.0	0.0	0	0.8461992740631104	gpt-5.4-mini	in_domain_with_guide	volume_converted.tsv	True
+volume	nitrogen	"Convert 96 teaspoons of nitrogen to cups.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	96	1.999998669191161	Easy	<answer>1.185185</answer>	1.185185	40.74071056860692	0	0.8924038410186768	gpt-5.4-mini	in_domain_with_guide	volume_converted.tsv	False
+volume	matcha latte	"Convert 45 liters of matcha latte to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	45	45000.0	Easy	<answer>45000</answer>	45000.0	0.0	0	1.4290430545806885	gpt-5.4-mini	in_domain_with_guide	volume_converted.tsv	True
+volume		what is 45*0.0208333195	45.0	0.9374993761833572	Easy	<answer>0.9374993775</answer>	0.9374993775	0.0	0	0.8711488246917725	gpt-5.4-mini	math_only	volume_math_only_converted.tsv	True
+volume		what is 250*0.0208333195	250.0	5.208329867685317	Easy	<answer>5.208329875</answer>	5.208329875	0.0	0	1.139657735824585	gpt-5.4-mini	math_only	volume_math_only_converted.tsv	True
+volume		what is 0.2994*4.9289216232	0.2994	1.4757191339776272	Hard	<answer>1.47672740869328</answer>	1.47672740869328	0.0	0	0.8067669868469238	gpt-5.4-mini	math_only	volume_math_only_converted.tsv	True
+volume		what is 0.00482*4.9289216232	0.00482	0.0237574022236879	Hard	<answer>0.023758019243904</answer>	0.023758019243904	0.0	0	0.7895500659942627	gpt-5.4-mini	math_only	volume_math_only_converted.tsv	True
+volume	glucose	Convert 8 gallons of glucose to ounces. Provide only the numerical value.	8.0	1024.0002119831015	Easy	<answer>1024</answer>	1024.0	0.0	0	0.8099637031555176	gpt-5.4-mini	in_domain_no_guide	volume_no_guide_converted.tsv	True
+volume	nitrogen	Convert 12 liters of nitrogen to milliliters. Provide only the numerical value.	12.0	12000.0	Easy	<answer>12000</answer>	12000.0	0.0	0	0.7429711818695068	gpt-5.4-mini	in_domain_no_guide	volume_no_guide_converted.tsv	True
+volume	californium	Convert 0.0019 teaspoons of californium to milliliters. Provide only the numerical value.	0.0019	0.0093649510840263	Hard	<answer>0.09430835</answer>	0.09430835	907.035158580388	0	0.8497467041015625	gpt-5.4-mini	in_domain_no_guide	volume_no_guide_converted.tsv	False
+volume	gasoline	Convert 9.9284 teaspoons of gasoline to cups. Provide only the numerical value.	9.9284	0.2068415290333076	Hard	<answer>0.4136833333</answer>	0.4136833333	100.000133064857	0	0.7128870487213135	gpt-5.4-mini	in_domain_no_guide	volume_no_guide_converted.tsv	False

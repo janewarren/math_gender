@@ -1,0 +1,49 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+temperature	null	"Convert 2 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	2.0	275.15	Easy	<answer>275.15</answer>	275.15	0.0	0	0.7545688152313232
+temperature	null	"Convert 600 Kelvin to degrees Celsius.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	600.0	326.85	Easy	<answer>326.85</answer>	326.85	0.0	0	0.7422013282775879
+temperature	null	"Convert 0.2394 degrees Celsius to degrees Fahrenheit.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	0.2394	32.43092	Hard	<answer>32.43092</answer>	32.43092	0.0	0	0.7881348133087158
+temperature	null	"Convert 6743.02 degrees Celsius to Kelvin.
+
+Conversion guide:
+Temperature conversion formulas:
+  Celsius to Fahrenheit: F = (C × 9/5) + 32
+  Fahrenheit to Celsius: C = (F - 32) × 5/9
+  Celsius to Kelvin: K = C + 273.15
+  Kelvin to Celsius: C = K - 273.15
+  Fahrenheit to Kelvin: K = (F - 32) × 5/9 + 273.15
+  Kelvin to Fahrenheit: F = (K - 273.15) × 9/5 + 32
+
+Provide only the numerical value."	6743.02	7016.17	Hard	<answer>7016.17</answer>	7016.17	0.0	0	0.7251124382019043

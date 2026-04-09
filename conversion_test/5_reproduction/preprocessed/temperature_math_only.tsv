@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+temperature		what is ((1200-273.15)*9/5)+32	1200.0	1700.33	Easy
+temperature		what is ((25000-273.15)*9/5)+32	25000.0	44540.33	Easy
+temperature		what is (0.0039-32)*5/9	0.0039	-17.77561111111111	Hard
+temperature		what is (15.932-273.15)	15.932	-257.218	Hard

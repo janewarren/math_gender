@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+density	carbon dioxide	Convert 99 g/cm³s of carbon dioxide to kg/m³s. Provide only the numerical value.	99.0	99000.0	Easy	<answer>99000</answer>	99000.0	0.0	0	0.7679238319396973
+density	bubble gum	Convert 400 kg/m³s of bubble gum to lb/in³s. Provide only the numerical value.	400.0	0.0144509168	Easy	<answer>0.000144471</answer>	0.000144471	99.00026412165074	0	0.9434216022491455
+density	glucose	Convert 763.9 g/cm³s of glucose to lb/ft³s. Provide only the numerical value.	763.9	47688.7201718	Hard	<answer>47.6875</answer>	47.6875	99.9000025586172	0	0.6854307651519775
+density	gasoline	Convert 11.235 kg/m³s of gasoline to g/cm³s. Provide only the numerical value.	11.235	0.011235	Hard	<answer>0.011235</answer>	0.011235	0.0	0	0.6899588108062744

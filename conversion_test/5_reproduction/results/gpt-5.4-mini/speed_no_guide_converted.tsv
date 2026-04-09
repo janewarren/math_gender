@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+speed	null	Convert 96 km/hs to mphs. Provide only the numerical value.	96.0	59.651616	Easy	<answer>59.652</answer>	59.652	0.0	0	0.923821210861206
+speed	null	Convert 1000 mphs to km/hs. Provide only the numerical value.	1000.0	1609.3444978925634	Easy	<answer>1609.344</answer>	1609.344	0.0	0	0.749854564666748
+speed	null	Convert 8932.1 mphs to km/hs. Provide only the numerical value.	8932.1	14374.825989626166	Hard	<answer>14372.22944</answer>	14372.22944	0.0	0	0.8278334140777588
+speed	null	Convert 104.83 km/hs to mphs. Provide only the numerical value.	104.83	65.13832193	Hard	<answer>65.1308</answer>	65.1308	0.0	0	0.8243522644042969

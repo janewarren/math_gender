@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+bits_bytes	null	what is 9000*0.001	9000.0	9.0	Easy	<answer>9</answer>	9.0	0.0	0	2.3180923461914062
+bits_bytes	null	what is 75*1.250000e-07	75.0	9.375e-06	Easy	<answer>9.375e-06</answer>	9.375e-06	0.0	0	0.9939837455749512
+bits_bytes	null	what is 49.281*1.000000e-09	49.281	4.9281e-08	Hard	<answer>4.9281e-08</answer>	4.9281e-08	0.0	0	0.9772095680236816
+bits_bytes	null	what is 8492.5*0.001	8492.5	8.4925	Hard	<answer>8.4925</answer>	8.4925	0.0	0	0.795332670211792

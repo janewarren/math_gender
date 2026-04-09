@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+density	null	what is 950*2.767990e+04	950.0	26295909.47475388	Easy	<answer>26295905</answer>	26295905.0	0.0	0	1.0526556968688965
+density	null	what is 10*1000	10.0	10000.0	Easy	<answer>10000</answer>	10000.0	0.0	0	0.7167584896087646
+density	null	what is 273.15*1000	273.15	273150.0	Hard	<answer>273150</answer>	273150.0	0.0	0	0.6773433685302734
+density	null	what is 8492.5*0.016018463	8492.5	136.03679710063255	Hard	<answer>135.99929395</answer>	135.99929395	0.0	0	0.9229321479797363

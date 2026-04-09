@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+timezone	null	what is (22-14.0)%24	10:00 PM	8:00 AM	Easy	<answer>8</answer>	8AM	0.0	0	0.7825930118560791
+timezone	null	what is (12-5.0)%24	12:00 PM	7:00 AM	Easy	<answer>7.0</answer>	7AM	0.0	0	0.886455774307251
+timezone	null	what is (20.4-11.0)%24	8:24 PM	9:24 AM	Hard	<answer>9.4</answer>	9:24AM	0.0	0	0.7501590251922607
+timezone	null	what is (6.3+13.0)%24	6:18 AM	7:18 PM	Hard	<answer>19.3</answer>	7:18PM	0.0	0	0.7392618656158447

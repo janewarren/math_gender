@@ -1,0 +1,53 @@
+domain	distractor	prompt	number	answer	difficulty
+density	matcha latte	"Convert 10 g/cm³s of matcha latte to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	10.0	10000.0	Easy
+density	ethanol	"Convert 320 kg/m³s of ethanol to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	320.0	0.32	Easy
+density	californium	"Convert 5.2941 kg/m³s of californium to g/cm³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	5.2941	0.0052941	Hard
+density	astatine	"Convert 0.1234 g/cm³s of astatine to kg/m³s.
+
+Conversion guide:
+Conversion factors (relative to g_cm3):
+  g_L: 1000.0
+  g_cm3: 1.0
+  g_ml: 1.0
+  kg_L: 1.0
+  kg_m3: 1000.0
+  lb_ft3: 62.427962
+  lb_in3: 0.036127292
+
+Provide only the numerical value."	0.1234	123.4	Hard

@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+moles_to_particles	null	what is 240*6.022141e+23	240.0	1.4453137824e+26	Easy	<answer>1.445314e+26</answer>	1.445314e+26	0.0	0	0.8735811710357666
+moles_to_particles	null	what is 28*6.022141e+23	28.0	1.6861994128e+25	Easy	<answer>1.68619948e+25</answer>	1.68619948e+25	0.0	0	0.9329655170440674
+moles_to_particles	null	what is 1.618*6.022141e+23	1.618	9.74382374968e+23	Hard	<answer>9.739259097658e+23</answer>	9.739259097658e+23	0.0	0	0.9076228141784668
+moles_to_particles	null	what is 134.79*6.022141e+23	134.79	8.117243530404e+25	Hard	<answer>8.11603307579e+25</answer>	8.11603307579e+25	0.0	0	0.8187198638916016

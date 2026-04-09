@@ -38,7 +38,7 @@ conversion_test/2_analysis/reasoning.csv
 conversion_test/2_analysis/results.csv
 conversion_test/audit_broken.py
 conversion_test/3_error_taxonomy/error_mappings
-
+conversion_test/2_analysis/reasoning_tokens_long.csv
 # include
 !conversion_test/conversions/
 

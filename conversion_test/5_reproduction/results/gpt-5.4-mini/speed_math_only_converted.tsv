@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+speed	null	what is 15*3.59999712	15.0	53.99995680003455	Easy	<answer>53.9999568</answer>	53.9999568	0.0	0	0.8754150867462158
+speed	null	what is 72*0.621371	72.0	44.738712	Easy	<answer>44.739</answer>	44.739	0.0	0	0.8013110160827637
+speed	null	what is 471.93*0.539957	471.93	254.82190701	Hard	<answer>254.72860901</answer>	254.72860901	0.0	0	1.0043301582336426
+speed	null	what is 14.142*3.59999712	14.142	50.91115927107258	Hard	<answer>50.91037609984</answer>	50.91037609984	0.0	0	0.9173915386199951

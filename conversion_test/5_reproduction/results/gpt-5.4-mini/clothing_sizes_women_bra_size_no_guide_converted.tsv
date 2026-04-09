@@ -1,0 +1,6 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+clothing_sizes_women_bra_size	null	Convert women's bra size 34C in UK to Australia sizing. Provide only the size and nothing else.	34C	12C	Easy	<answer>12C</answer>	12C	0.0	0	0.8884942531585693
+clothing_sizes_women_bra_size	null	Convert women's bra size 34A in UK to US sizing. Provide only the size and nothing else.	34A	34AA	Easy	<answer>34A</answer>	34A	1.0	0	0.7737090587615967
+clothing_sizes_women_bra_size	null	Convert women's bra size 36B in UK to France sizing. Provide only the size and nothing else.	36B	95B	Easy	<answer>90B</answer>	90B	1.0	0	0.7677013874053955
+clothing_sizes_women_bra_size	null	Convert women's bra size 32C in UK to Italy sizing. Provide only the size and nothing else.	32C	1C	Easy	<answer>3C</answer>	3C	1.0	0	1.9872353076934814
+clothing_sizes_women_bra_size	null	Convert women's bra size 34D in UK to Italy sizing. Provide only the size and nothing else.	34D	2D	Easy	<answer>4D</answer>	4D	1.0	0	0.7430088520050049

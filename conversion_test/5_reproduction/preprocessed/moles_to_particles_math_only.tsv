@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+moles_to_particles		what is 240*6.022141e+23	240.0	1.4453137824e+26	Easy
+moles_to_particles		what is 28*6.022141e+23	28.0	1.6861994128e+25	Easy
+moles_to_particles		what is 1.618*6.022141e+23	1.618	9.74382374968e+23	Hard
+moles_to_particles		what is 134.79*6.022141e+23	134.79	8.117243530404e+25	Hard

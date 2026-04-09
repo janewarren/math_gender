@@ -1,0 +1,6 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+clothing_sizes_men_shoe_size	null	Convert men's shoe size 6 in US to Mexico sizing. Provide only the size and nothing else.	6.0	24.5	Easy	<answer>5</answer>	5	1.0	0	0.8541998863220215
+clothing_sizes_men_shoe_size	null	Convert men's shoe size 12.5 in US to Japan sizing. Provide only the size and nothing else.	12.5	30.0	Easy	<answer>30.5</answer>	30.5	1.0	0	0.7337665557861328
+clothing_sizes_men_shoe_size	null	Convert men's shoe size 14 in US to UK sizing. Provide only the size and nothing else.	14.0	13.5	Easy	<answer>13</answer>	13	1.0	0	0.752993106842041
+clothing_sizes_men_shoe_size	null	Convert men's shoe size 7 in US to EUR sizing. Provide only the size and nothing else.	7.0	39.0	Easy	<answer>40</answer>	40	1.0	0	0.7020015716552734
+clothing_sizes_men_shoe_size	null	Convert men's shoe size 12.5 in US to Mexico sizing. Provide only the size and nothing else.	12.5	31.0	Easy	<answer>30.5</answer>	30.5	1.0	0	0.8047921657562256

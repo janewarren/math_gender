@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+moles_to_particles	matcha latte	Convert 22 moles of matcha latte to particles. Provide only the numerical value.	22.0	1.3248709672e+25	Easy	<answer>1.324e25</answer>	1.324e+25	0.0	0	0.8391730785369873
+moles_to_particles	snake venom	Convert 1 mole of snake venom to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy	<answer>6.02214076e23</answer>	6.02214076e+23	0.0	0	0.8445346355438232
+moles_to_particles	aerogel	Convert 104.83 moles of aerogel to particles. Provide only the numerical value.	104.83	6.313010158708e+25	Hard	<answer>6.31051006e+25</answer>	6.31051006e+25	0.0	0	0.8889799118041992
+moles_to_particles	coffee	Convert 9.9284 moles of coffee to particles. Provide only the numerical value.	9.9284	5.9790222321584e+24	Hard	<answer>5.9768008e+24</answer>	5.9768008e+24	0.0	0	0.8269612789154053

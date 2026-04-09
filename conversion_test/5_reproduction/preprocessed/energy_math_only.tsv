@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+energy		what is 100000*3.412151e+03	100000.0	341215088.3653697	Easy
+energy		what is 10*2.777772e-04	10.0	0.0027777724665391	Easy
+energy		what is 1.618*4.184	1.618	6.769712	Hard
+energy		what is 5.4829*0.2390057361	5.4829	1.310444550669216	Hard

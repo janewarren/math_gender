@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+moles_to_particles	matcha latte	Convert 22 moles of matcha latte to particles. Provide only the numerical value.	22.0	1.3248709672e+25	Easy
+moles_to_particles	snake venom	Convert 1 mole of snake venom to atom. Provide only the numerical value.	1.0	6.02214076e+23	Easy
+moles_to_particles	aerogel	Convert 104.83 moles of aerogel to particles. Provide only the numerical value.	104.83	6.313010158708e+25	Hard
+moles_to_particles	coffee	Convert 9.9284 moles of coffee to particles. Provide only the numerical value.	9.9284	5.9790222321584e+24	Hard

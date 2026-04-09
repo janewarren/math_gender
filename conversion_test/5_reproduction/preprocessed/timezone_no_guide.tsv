@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+timezone		Convert 9:00 PM in Llieda time to Yorba Linda time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9:00 PM	12:00 PM	Easy
+timezone		Convert 2:00 PM in Hilo time to Zhemuzhen time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:00 PM	8:00 AM	Easy
+timezone		Convert 12:22 PM in London time to Istanbul time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12:22 PM	3:22 PM	Hard
+timezone		Convert 2:14 PM in Kafue time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:14 PM	5:44 PM	Hard

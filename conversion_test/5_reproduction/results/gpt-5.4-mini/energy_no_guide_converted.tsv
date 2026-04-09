@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+energy	apples	Convert 12 BTUs of apples to kilowatt-hours. Provide only the numerical value.	12.0	0.0035168433076882	Easy	<answer>0.0035168528420667</answer>	0.0035168528420667	0.0	0	0.8533980846405029
+energy	lettuce	Convert 70 watt-hours of lettuce to joules. Provide only the numerical value.	70.0	252000.48183648536	Easy	<answer>252000</answer>	252000.0	0.0	0	0.9625353813171387
+energy	chocolate	Convert 1297.195 joules of chocolate to watt-hours. Provide only the numerical value.	1297.195	0.3603312554732313	Hard	<answer>0.360332</answer>	0.360332	0.0	0	0.9610869884490967
+energy	milk	Convert 6743.02 calories of milk to joules. Provide only the numerical value.	6743.02	28212.795680000003	Hard	<answer>28209.5768</answer>	28209.5768	0.0	0	0.7072453498840332

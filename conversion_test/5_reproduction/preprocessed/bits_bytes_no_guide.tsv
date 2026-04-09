@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+bits_bytes		Convert 300 bits to megabytes. Provide only the numerical value.	300.0	3.75e-05	Easy
+bits_bytes		Convert 320 bytes to gigabytes. Provide only the numerical value.	320.0	3.2e-07	Easy
+bits_bytes		Convert 11.235 kilobits to bits. Provide only the numerical value.	11.235	11235.0	Hard
+bits_bytes		Convert 8.8541 bits to bytes. Provide only the numerical value.	8.8541	1.1067625	Hard

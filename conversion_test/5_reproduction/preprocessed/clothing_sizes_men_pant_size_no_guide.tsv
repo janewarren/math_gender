@@ -1,0 +1,6 @@
+domain	distractor	prompt	number	answer	difficulty
+clothing_sizes_men_pant_size		Convert men's pant size XL in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	XL	42	Easy
+clothing_sizes_men_pant_size		Convert men's pant size 42 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	42	52	Easy
+clothing_sizes_men_pant_size		Convert men's pant size M in US alphanumeric to EU numeric sizing. Provide only the size and nothing else.	M	50	Easy
+clothing_sizes_men_pant_size		Convert men's pant size S in US alphanumeric to US numeric sizing. Provide only the size and nothing else.	S	36	Easy
+clothing_sizes_men_pant_size		Convert men's pant size 44 in UK numeric to EU numeric sizing. Provide only the size and nothing else.	44	54	Easy

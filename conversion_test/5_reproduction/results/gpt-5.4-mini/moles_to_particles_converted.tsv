@@ -1,0 +1,37 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+moles_to_particles	vomitoxin	"Convert 275 moles of vomitoxin to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	275.0	1.656088709e+26	Easy	<answer>1.656088209e+26</answer>	1.656088209e+26	0.0	0	0.8459699153900146
+moles_to_particles	metallic hydrogen	"Convert 4000 moles of metallic hydrogen to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	4000.0	2.408856304e+27	Easy	<answer>2.408856304e+27</answer>	2.408856304e+27	0.0	0	0.808243989944458
+moles_to_particles	californium	"Convert 0.0039 moles of californium to particles.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	0.0039	2.3486348964e+21	Hard	<answer>2.3486346939999998e+21</answer>	2.3486346939999998e+21	0.0	0	0.8444163799285889
+moles_to_particles	carbon dioxide	"Convert 638.29 moles of carbon dioxide to atoms.
+
+Conversion guide:
+Conversion factors (relative to moles):
+  atoms: 6.02214076e+23
+  moles: 1.0
+  particles: 6.02214076e+23
+
+Provide only the numerical value."	638.29	3.8438722257004e+26	Hard	<answer>3.843392567204e+26</answer>	3.843392567204e+26	0.0	0	0.8310873508453369

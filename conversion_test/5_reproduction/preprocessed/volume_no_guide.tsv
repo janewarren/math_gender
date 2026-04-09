@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+volume	glucose	Convert 8 gallons of glucose to ounces. Provide only the numerical value.	8.0	1024.0002119831015	Easy
+volume	nitrogen	Convert 12 liters of nitrogen to milliliters. Provide only the numerical value.	12.0	12000.0	Easy
+volume	californium	Convert 0.0019 teaspoons of californium to milliliters. Provide only the numerical value.	0.0019	0.0093649510840263	Hard
+volume	gasoline	Convert 9.9284 teaspoons of gasoline to cups. Provide only the numerical value.	9.9284	0.2068415290333076	Hard

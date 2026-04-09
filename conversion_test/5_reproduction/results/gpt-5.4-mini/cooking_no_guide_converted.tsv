@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+cooking	null	Convert 200 cups to milliliters. Provide only the numerical value.	200.0	47317.6	Easy	<answer>47317.6</answer>	47317.6	0.0	0	0.8199806213378906
+cooking	milk	Convert 22 cups of milk to teaspoons. Provide only the numerical value.	22.0	1056.0	Easy	<answer>1056</answer>	1056.0	0.0	0	0.9563069343566895
+cooking	yogurt	Convert 49.281 cups of yogurt to milliliters. Provide only the numerical value.	49.281	11659.293228	Hard	<answer>1164.586</answer>	1164.586	90.01152147710613	0	1.1407382488250732
+cooking	milk	Convert 0.00482 cups of milk to milliliters. Provide only the numerical value.	0.00482	1.1403541599999998	Hard	<answer>1.1373</answer>	1.1373	0.2678255674535187	0	0.70912766456604

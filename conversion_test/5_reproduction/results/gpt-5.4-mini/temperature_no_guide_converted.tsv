@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+temperature	null	Convert 19 Kelvin to degrees Fahrenheit. Provide only the numerical value.	19.0	-425.47	Easy	<answer>-428.47</answer>	-428.47	0.7051025924271981	0	0.7827451229095459
+temperature	null	Convert 250 degrees Celsius to degrees Fahrenheit. Provide only the numerical value.	250.0	482.0	Easy	<answer>482</answer>	482.0	0.0	0	0.7577381134033203
+temperature	null	Convert 194.82 Kelvin to degrees Celsius. Provide only the numerical value.	194.82	-78.32999999999998	Hard	<answer>-78.33</answer>	-78.33	0.0	0	1.391669750213623
+temperature	null	Convert 284.93 degrees Celsius to Kelvin. Provide only the numerical value.	284.93	558.0799999999999	Hard	<answer>558.08</answer>	558.08	0.0	0	0.7474040985107422

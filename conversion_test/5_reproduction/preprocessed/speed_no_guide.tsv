@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+speed		Convert 96 km/hs to mphs. Provide only the numerical value.	96.0	59.651616	Easy
+speed		Convert 1000 mphs to km/hs. Provide only the numerical value.	1000.0	1609.3444978925634	Easy
+speed		Convert 8932.1 mphs to km/hs. Provide only the numerical value.	8932.1	14374.825989626166	Hard
+speed		Convert 104.83 km/hs to mphs. Provide only the numerical value.	104.83	65.13832193	Hard

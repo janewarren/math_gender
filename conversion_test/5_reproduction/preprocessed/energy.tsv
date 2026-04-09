@@ -1,0 +1,53 @@
+domain	distractor	prompt	number	answer	difficulty
+energy	butter	"Convert 500 watt-hours of butter to joules.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	500.0	1800003.441689181	Easy
+energy	candy	"Convert 80 BTUs of candy to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	80.0	0.0234456220512548	Easy
+energy	honey	"Convert 6743.02 kilocalories of honey to kilojoules.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	6743.02	28212.795680000003	Hard
+energy	butter	"Convert 127.42 BTUs of butter to kilowatt-hours.
+
+Conversion guide:
+Conversion factors (relative to kilocalories):
+  btu: 3.96567
+  calories: 1000
+  joules: 4184
+  kilocalories: 1.0
+  kilojoules: 4.184
+  kilowatt_hours: 0.00116222
+  watt_hours: 1.16222
+
+Provide only the numerical value."	127.42	0.0373430145221362	Hard

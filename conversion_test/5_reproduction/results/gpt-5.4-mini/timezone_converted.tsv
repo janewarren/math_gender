@@ -1,0 +1,105 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+timezone	null	"Convert 11:00 PM in Hilo time to Nagai time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	11:00 PM	6:00 PM	Easy	<answer>6:00 PM</answer>	6:00PM	0.0	0	1.1019871234893799
+timezone	null	"Convert 3:00 AM in London time to Tokyo time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	3:00 AM	12:00 PM	Easy	<answer>12:00PM</answer>	12:00PM	0.0	0	0.736992597579956
+timezone	null	"Convert 6:02 PM in Delhi time to New York time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	6:02 PM	7:32 AM	Hard	<answer>8:32 AM</answer>	8:32AM	60.0	0	0.6610875129699707
+timezone	null	"Convert 9:19 PM in Noorabad time to Hilo time. Assume you are thinking about standard time, not daylight savings.
+
+Conversion guide:
+City timezones (relative to GMT):
+  Hilo: GMT-10.0
+  Los Angeles: GMT-8.0
+  Salem: GMT-8.0
+  Yorba Linda: GMT-8.0
+  New York: GMT-5.0
+  Altoona: GMT-5.0
+  London: GMT+0.0
+  Llieda: GMT+1.0
+  Kafue: GMT+2.0
+  Istanbul: GMT+3.0
+  Delhi: GMT+5.5
+  Noorabad: GMT+5.5
+  Dhaka: GMT+6.0
+  Jakarta: GMT+7.0
+  Shanghai: GMT+8.0
+  Manila: GMT+8.0
+  Zhemuzhen: GMT+8.0
+  Tokyo: GMT+9.0
+  Nagai: GMT+9.0
+  Lavrentiya: GMT+12.0
+
+Provide the time in the same format (e.g., 1AM, 3:49PM)."	9:19 PM	5:49 AM	Hard	<answer>7:49 AM</answer>	7:49AM	120.0	0	0.7504279613494873

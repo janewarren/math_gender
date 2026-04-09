@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty
+timezone		what is (22-14.0)%24	10:00 PM	8:00 AM	Easy
+timezone		what is (12-5.0)%24	12:00 PM	7:00 AM	Easy
+timezone		what is (20.4-11.0)%24	8:24 PM	9:24 AM	Hard
+timezone		what is (6.3+13.0)%24	6:18 AM	7:18 PM	Hard

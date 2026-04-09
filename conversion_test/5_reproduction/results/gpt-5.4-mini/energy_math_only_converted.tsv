@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+energy	null	what is 100000*3.412151e+03	100000.0	341215088.3653697	Easy	<answer>341215100</answer>	341215100.0	0.0	0	0.7282993793487549
+energy	null	what is 10*2.777772e-04	10.0	0.0027777724665391	Easy	<answer>0.002777772</answer>	0.002777772	0.0	0	0.7793068885803223
+energy	null	what is 1.618*4.184	1.618	6.769712	Hard	<answer>6.769392</answer>	6.769392	0.0	0	0.7358779907226562
+energy	null	what is 5.4829*0.2390057361	5.4829	1.310444550669216	Hard	<answer>1.31081755223169</answer>	1.31081755223169	0.0	0	0.8150994777679443

@@ -1,0 +1,76 @@
+domain	distractor	prompt	number	answer	difficulty
+volume	californium	"Convert 180 gallons of californium to ounces.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	180	23040.00476961979	Easy
+volume	basketane	"Convert 3 liters of basketane to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	3	3000.0	Easy
+volume	nitrogen	"Convert 60 liters of nitrogen to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	60	60000.0	Easy
+volume	nitrogen	"Convert 96 teaspoons of nitrogen to cups.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	96	1.9999986691911615	Easy
+volume	matcha latte	"Convert 45 liters of matcha latte to milliliters.
+
+Conversion guide:
+Conversion factors (relative to liters):
+  cups: 4.22675
+  gallons: 0.264172
+  liters: 1.0
+  milliliters: 1000.0
+  ounces: 33.814023
+  pints: 2.11338
+  quarts: 1.05669
+  tablespoons: 67.628045
+  teaspoons: 202.884135
+
+Provide only the numerical value."	45	45000.0	Easy

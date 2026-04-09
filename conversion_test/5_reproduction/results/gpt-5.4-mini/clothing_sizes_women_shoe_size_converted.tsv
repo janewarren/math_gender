@@ -1,0 +1,106 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 28.5 in Mexico to EUR sizing.
+
+Conversion guide:
+Size conversion table (Mexico to EUR):
+  23 → 37
+  23.5 → 37.5
+  24 → 38
+  24.5 → 38.5
+  25 → 39
+  25.5 → 39.5
+  26 → 40
+  26.5 → 40.5
+  27 → 41
+  27.5 → 41.5
+  28 → 42
+  28.5 → 42.5
+  29 → 43
+  29.5 → 43.5
+  30 → 44
+
+Provide only the size and nothing else."	28.5	42.5	Easy	<answer>42.5</answer>	42.5	0.0	0	1.4654695987701416
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 8.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	8.5	24.5	Easy	<answer>24.5</answer>	24.5	0.0	0	0.7524504661560059
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 10 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	10.0	26.0	Easy	<answer>26</answer>	26	0.0	0	0.8722803592681885
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6.5 in US to Japan sizing.
+
+Conversion guide:
+Size conversion table (US to Japan):
+  5 → 21
+  5.5 → 21.5
+  6 → 22
+  6.5 → 22.5
+  7 → 23
+  7.5 → 23.5
+  8 → 24
+  8.5 → 24.5
+  9 → 25
+  9.5 → 25.5
+  10 → 26
+  10.5 → 26.5
+  11 → 27
+  11.5 → 27.5
+  12 → 28
+
+Provide only the size and nothing else."	6.5	22.5	Easy	<answer>22.5</answer>	22.5	0.0	0	0.7415773868560791
+clothing_sizes_women_shoe_size	null	"Convert women's shoe size 6.5 in US to Mexico sizing.
+
+Conversion guide:
+Size conversion table (US to Mexico):
+  5 → 22
+  5.5 → 22.5
+  6 → 23
+  6.5 → 23.5
+  7 → 25
+  7.5 → 24.5
+  8 → 25
+  8.5 → 25.5
+  9 → 26
+  9.5 → 27.5
+  10 → 27
+  10.5 → 27.5
+  11 → 28
+  11.5 → 28.5
+  12 → 29
+
+Provide only the size and nothing else."	6.5	23.5	Easy	<answer>23.5</answer>	23.5	0.0	0	0.6730654239654541

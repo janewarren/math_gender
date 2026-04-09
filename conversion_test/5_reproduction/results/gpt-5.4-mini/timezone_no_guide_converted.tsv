@@ -1,0 +1,5 @@
+domain	distractor	prompt	number	answer	difficulty	raw_response	model_answer	loss	reasoning_tokens	call_seconds
+timezone	null	Convert 9:00 PM in Llieda time to Yorba Linda time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	9:00 PM	12:00 PM	Easy	<answer>12PM</answer>	12PM	0.0	0	0.794288158416748
+timezone	null	Convert 2:00 PM in Hilo time to Zhemuzhen time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:00 PM	8:00 AM	Easy	<answer>8:00AM</answer>	8:00AM	0.0	0	0.8106560707092285
+timezone	null	Convert 12:22 PM in London time to Istanbul time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	12:22 PM	3:22 PM	Hard	<answer>3:22PM</answer>	3:22PM	0.0	0	0.8794808387756348
+timezone	null	Convert 2:14 PM in Kafue time to Noorabad time. Assume you are thinking about standard time, not daylight savings. Provide the time in the same format (e.g., 1AM, 3:49PM).	2:14 PM	5:44 PM	Hard	<answer>1:14 PM</answer>	1:14PM	270.0	0	2.055353879928589
