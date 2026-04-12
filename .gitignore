@@ -39,6 +39,13 @@ conversion_test/2_analysis/results.csv
 conversion_test/audit_broken.py
 conversion_test/3_error_taxonomy/error_mappings
 conversion_test/2_analysis/reasoning_tokens_long.csv
+conversion_test/6_wrong_questions/rounds
+conversion_test/6_wrong_questions/master.tsv
+conversion_test/6_wrong_questions/state.json
+conversion_test/5_reproduction/results.csv
+conversion_test/5_reproduction/preprocessed
+conversion_test/5_reproduction/results/gpt-5.4-mini
+
 # include
 !conversion_test/conversions/
 
