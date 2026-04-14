@@ -174,9 +174,18 @@ def run_round(master: pd.DataFrame, pending_ids: list[int], round_num: int) -> l
     pending = master[master["row_id"].isin(set(pending_ids))].copy()
     log.info("Round %d: %d questions to process", round_num, len(pending))
 
+    round_file = ROUNDS_DIR / f"round_{round_num:03d}.tsv"
+
+    # Load any existing results for this round (from a prior partial run)
+    prior_df = None
+    if round_file.exists():
+        prior_df = pd.read_csv(round_file, sep="\t")
+        prior_ids = set(prior_df["row_id"])
+        log.info("  Found existing round file with %d rows; will merge after inference",
+                 len(prior_df))
+
     results = {}
     t0 = time.time()
-    checkpoint_interval = 5000
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as pool:
         futures = {}
@@ -205,13 +214,44 @@ def run_round(master: pd.DataFrame, pending_ids: list[int], round_num: int) -> l
 
     elapsed = time.time() - t0
 
-    round_df = pd.DataFrame(results.values())
-    round_file = ROUNDS_DIR / f"round_{round_num:03d}.tsv"
+    new_df = pd.DataFrame(results.values())
+
+    # Merge with prior results: keep prior rows whose IDs were NOT retried
+    if prior_df is not None:
+        new_ids = set(new_df["row_id"])
+        keep_prior = prior_df[~prior_df["row_id"].isin(new_ids)]
+        round_df = pd.concat([keep_prior, new_df], ignore_index=True)
+        log.info("  Merged: %d prior + %d new = %d total round results",
+                 len(keep_prior), len(new_df), len(round_df))
+    else:
+        round_df = new_df
+
     round_df.to_csv(round_file, sep="\t", index=False)
 
     n_correct = round_df["is_correct"].sum()
-    n_errors = round_df["raw_response"].astype(str).str.startswith("ERROR:").sum()
-    still_wrong_ids = round_df[~round_df["is_correct"]]["row_id"].tolist()
+    error_mask = round_df["raw_response"].astype(str).str.startswith("ERROR:")
+    n_errors = error_mask.sum()
+
+    # Abort if most of the NEW results are errors (API key exhausted / down)
+    new_error_mask = new_df["raw_response"].astype(str).str.startswith("ERROR:")
+    new_error_rate = new_error_mask.sum() / len(new_df) if len(new_df) else 0
+    if new_error_rate > 0.5:
+        quota_errors = new_df["raw_response"].astype(str).str.contains("quota|exceeded", case=False)
+        n_quota = quota_errors.sum()
+        log.error("  Round %d ABORTED: %.0f%% errors in new batch (%d quota errors). "
+                  "API key likely exhausted. Saving checkpoint.",
+                  round_num, new_error_rate * 100, n_quota)
+        newly_correct = round_df[round_df["is_correct"]]["row_id"].values
+        if len(newly_correct):
+            master.loc[master["row_id"].isin(newly_correct), "first_correct_round"] = round_num
+            master.to_csv(MASTER_FILE, sep="\t", index=False)
+        raise SystemExit(f"Stopping: {new_error_mask.sum()}/{len(new_df)} errors in round {round_num}. "
+                         "Check API key and billing, then re-run to resume.")
+
+    # Compute still-wrong from the FULL merged round (not just new batch)
+    genuinely_wrong = round_df[~round_df["is_correct"] & ~error_mask]["row_id"].tolist()
+    error_ids = round_df[error_mask]["row_id"].tolist()
+    still_wrong_ids = genuinely_wrong + error_ids
 
     # Update master: mark newly correct questions
     newly_correct = round_df[round_df["is_correct"]]["row_id"].values
@@ -219,9 +259,9 @@ def run_round(master: pd.DataFrame, pending_ids: list[int], round_num: int) -> l
     master.to_csv(MASTER_FILE, sep="\t", index=False)
 
     call_times = round_df["call_seconds"].dropna()
-    log.info("  Round %d done in %.0fs: %d correct, %d still wrong, %d errors  "
+    log.info("  Round %d done in %.0fs: %d correct, %d genuinely wrong, %d errors (will retry)  "
              "(mean call: %.1fs)",
-             round_num, elapsed, n_correct, len(still_wrong_ids), n_errors,
+             round_num, elapsed, n_correct, len(genuinely_wrong), n_errors,
              call_times.mean() if len(call_times) else 0)
 
     return still_wrong_ids
