@@ -45,6 +45,8 @@ conversion_test/6_wrong_questions/state.json
 conversion_test/5_reproduction/results.csv
 conversion_test/5_reproduction/preprocessed
 conversion_test/5_reproduction/results/gpt-5.4-mini
+conversion_test/full_results/timezone_typo_backup
+conversion_test/full_results/volume_backup_20260312_115332
 
 # include
 !conversion_test/conversions/
